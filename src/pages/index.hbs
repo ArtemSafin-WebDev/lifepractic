@@ -1,0 +1,70 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="home">
+    <div class="container">
+        <div class="home__row">
+            <div class="home__left-col">
+                <div class="home__desktop-illustration">
+                    {{> main-illustration }}
+                </div>
+
+                <div class="home__mobile-illustration">
+                    <img src="img/mobile-main-illustration.svg" alt="" class="home__mobile-illustration-image"
+                        width="100">
+                </div>
+            </div>
+            <div class="home__right-col">
+                <div class="home__main-content">
+                    <h1 class="home__main-heading">
+                        Консультация<br> психотерапевта онлайн<br> из любой точки мира
+                    </h1>
+                    <ul class="home__features-list">
+                        <li class="home__features-list-item">
+                            <div class="home__features-icon-container">
+                                <img src="img/features/1.svg" alt="" class="home__features-icon">
+                            </div>
+                            <h4 class="home__features-title">
+                                Гарантированно<br> профессионалы
+                            </h4>
+                        </li>
+                        <li class="home__features-list-item">
+                            <div class="home__features-icon-container">
+                                <img src="img/features/2.svg" alt="" class="home__features-icon">
+                            </div>
+                            <h4 class="home__features-title">
+
+                                Удобный выбор<br> расписания
+                            </h4>
+                        </li>
+                        <li class="home__features-list-item">
+                            <div class="home__features-icon-container">
+                                <img src="img/features/3.svg" alt="" class="home__features-icon">
+                            </div>
+                            <h4 class="home__features-title">
+
+                                Стоимость сеанса<br> <strong>2500 ₽</strong>
+                            </h4>
+                        </li>
+                    </ul>
+                    <div class="home__buttons">
+                        <a href="#" class="home__choose-btn">
+                            <div class="home__choose-btn-people">
+                                <img src="img/home/people-1.jpg" alt="" class="home__choose-btn-people-image">
+                                <img src="img/home/people-2.jpg" alt="" class="home__choose-btn-people-image">
+                                <img src="img/home/people-3.jpg" alt="" class="home__choose-btn-people-image">
+                            </div>
+                            Подобрать психолога
+                        </a>
+                        <a href="#" class="home__register-btn">
+                            Регистрация
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}
