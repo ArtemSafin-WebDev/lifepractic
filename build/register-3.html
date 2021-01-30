@@ -110,48 +110,39 @@
         <div class="auth__row">
             <div class="auth__content">
                 <h1 class="auth__heading">
-                    Регистрация
+                    Введите пароль
                 </h1>
                 <div class="auth__heading-text">
                     <p>
-                        Пожалуйста, введите свой номер телефона,<br> мы пришлем вам проверочный код
+                        Для защиты ваших данных необходимо<br> придумать безопасный пароль.
                     </p>
                 </div>
                 <form action="/" method="POST" class="auth__form" data-need-validation autocomplete="new-password">
                     <div class="auth__form-row">
-                        <label for="name" class="auth__form-label">
-                            Ваше имя
+                        <label for="password1" class="auth__form-label">
+                            Пароль
                         </label>
                         <div class="auth__form-input-wrapper">
-                            <input type="text" name="name" id="name" class="auth__form-input" required>
+                            <input type="password" name="password1" id="password1" class="auth__form-input" required>
                         </div>
                     </div>
                     <div class="auth__form-row">
-                        <label for="phone" class="auth__form-label">
-                            Телефон
+                        <label for="password2" class="auth__form-label">
+                            Повторить пароль
                         </label>
                         <div class="auth__form-input-wrapper">
-                            <input type="tel" name="phone" id="phone" class="auth__form-input js-phone-input" required data-parsley-phone>
-                            <button class="auth__form-get-code-btn" type="button">
-                                Получить код
-                            </button>
-                            <div class="auth__form-input-remark">
-                                Пожалуйста, введите свой номер телефона, мы пришлем вам проверочный код
-                            </div>
+                            <input type="password" name="password2" id="password2" class="auth__form-input" required data-parsley-equalto="#password1">
                         </div>
                     </div>
+                   
+                    
                     <div class="auth__form-bottom-block">
-                        <a href="#" class="auth__form-already-has-an-account">
-                            <svg width="14" height="14" aria-hidden="true" class="icon-person">
-                                <use xlink:href="#person"></use>
-                            </svg>
-                            <span class="auth__form-already-has-an-account-text">У меня уже есть аккаунт</span>
-                        </a>
+                       
                         <div class="auth__form-bottom-btns">
                             <a href="#" class="auth__form-btn">
                                 Назад
                             </a>
-                            <button class="auth__form-btn auth__form-btn--submit" disabled>
+                            <button class="auth__form-btn auth__form-btn--submit">
                                 Далее
                             </button>
                         </div>

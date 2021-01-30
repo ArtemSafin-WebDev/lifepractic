@@ -1,0 +1,21 @@
+.corner-illustration {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 90rem;
+    height: 49rem;
+    z-index: -1;
+    pointer-events: none;
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    @media screen and(max-width: 720px) {
+        display: none;
+    }
+
+    
+}

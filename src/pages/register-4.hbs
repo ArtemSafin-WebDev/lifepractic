@@ -1,0 +1,56 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="auth">
+    <div class="container">
+        <div class="auth__row">
+            <div class="auth__content">
+                <h1 class="auth__heading">
+                    Вход
+                </h1>
+                <div class="auth__heading-text">
+                    <p>
+                        Пожалуйста, введите свой номер телефона,<br> мы пришлем вам проверочный код
+                    </p>
+                </div>
+                <form action="/" method="POST" class="auth__form" data-need-validation autocomplete="new-password">
+                    <div class="auth__form-row">
+                        <label for="name" class="auth__form-label">
+                            Ваше имя
+                        </label>
+                        <div class="auth__form-input-wrapper">
+                            <input type="text" name="name" id="name" class="auth__form-input" required>
+                        </div>
+                    </div>
+                    <div class="auth__form-row">
+                        <label for="password" class="auth__form-label">
+                            Пароль
+                        </label>
+                        <div class="auth__form-input-wrapper">
+                            <input type="password" name="password" id="password" class="auth__form-input" required >
+                        </div>
+                    </div>
+
+                    <div class="auth__form-bottom-block">
+                        <a href="#" class="auth__form-already-has-an-account">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-lock">
+                                <use xlink:href="#lock"></use>
+                            </svg>
+                            <span class="auth__form-already-has-an-account-text">Забыли логин и пароль</span>
+                        </a>
+                        <div class="auth__form-bottom-btns">
+                           
+                            <button class="auth__form-btn auth__form-btn--submit">
+                                Войти
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{/content}}
+{{/extend}}

@@ -1,0 +1,66 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="auth">
+    <div class="container">
+        <div class="auth__row">
+            <div class="auth__content">
+                <h1 class="auth__heading">
+                    Регистрация
+                </h1>
+                <div class="auth__heading-text">
+                    <p>
+                        Пожалуйста, введите свой номер телефона,<br> мы пришлем вам проверочный код
+                    </p>
+                </div>
+                <form action="/" method="POST" class="auth__form" data-need-validation autocomplete="new-password">
+                    <div class="auth__form-row">
+                        <label for="name" class="auth__form-label">
+                            Ваше имя
+                        </label>
+                        <div class="auth__form-input-wrapper">
+                            <input type="text" name="name" id="name" class="auth__form-input" required value="Татьяна">
+                        </div>
+                    </div>
+                    <div class="auth__form-row">
+                        <label for="phone" class="auth__form-label">
+                            Телефон
+                        </label>
+                        <div class="auth__form-input-wrapper">
+                            <input type="tel" name="phone" id="phone" class="auth__form-input js-phone-input" required data-parsley-phone value="+7 (904) 666-70-00">
+                         
+                          
+                        </div>
+                    </div>
+                    <div class="auth__form-row">
+                        <label for="code" class="auth__form-label">
+                            Код из смс
+                        </label>
+                        <div class="auth__form-input-wrapper">
+                            <input type="text" name="phone" id="code" class="auth__form-input" required >
+                         
+                            <div class="auth__form-input-remark">
+                                На указанный вами номер было отправлено SMS с кодом подтверждения. Отправить еще раз (3) через 284 сек.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="auth__form-bottom-block">
+                       
+                        <div class="auth__form-bottom-btns">
+                            <a href="#" class="auth__form-btn">
+                                Назад
+                            </a>
+                            <button class="auth__form-btn auth__form-btn--submit">
+                                Далее
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{/content}}
+{{/extend}}

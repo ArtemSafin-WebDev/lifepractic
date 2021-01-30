@@ -1,0 +1,48 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="auth">
+    <div class="container">
+        <div class="auth__row">
+            <div class="auth__content">
+                <h1 class="auth__heading auth__heading--single">
+                    Введите новый пароль
+                </h1>
+                
+                <form action="/" method="POST" class="auth__form" data-need-validation autocomplete="new-password">
+                    <div class="auth__form-row">
+                        <label for="password1" class="auth__form-label">
+                            Новый пароль
+                        </label>
+                        <div class="auth__form-input-wrapper">
+                            <input type="password" name="password1" id="password1" class="auth__form-input" required>
+                        </div>
+                    </div>
+                    <div class="auth__form-row">
+                        <label for="password2" class="auth__form-label">
+                            Повторить пароль
+                        </label>
+                        <div class="auth__form-input-wrapper">
+                            <input type="password" name="password2" id="password2" class="auth__form-input" required data-parsley-equalto="#password1">
+                        </div>
+                    </div>
+                   
+                    
+                    <div class="auth__form-bottom-block">
+                       
+                        <div class="auth__form-bottom-btns">
+                         
+                            <button class="auth__form-btn auth__form-btn--submit">
+                                сохранить
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{/content}}
+{{/extend}}

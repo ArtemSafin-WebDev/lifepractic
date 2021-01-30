@@ -1,0 +1,45 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="auth">
+    <div class="container">
+        <div class="auth__row">
+            <div class="auth__content">
+                <h1 class="auth__heading">
+                    Восстановление пароля
+                </h1>
+                <div class="auth__heading-text">
+                    <p>
+                        Пожалуйста, введите свой номер телефона, мы пришлем вам проверочный код
+                    </p>
+                </div>
+                <form action="/" method="POST" class="auth__form" data-need-validation autocomplete="new-password">
+                   
+                    <div class="auth__form-row">
+                        <label for="phone" class="auth__form-label">
+                            Телефон
+                        </label>
+                        <div class="auth__form-input-wrapper">
+                            <input type="tel" name="phone" id="phone" class="auth__form-input js-phone-input" required data-parsley-phone>
+                         
+                           
+                        </div>
+                    </div>
+                    <div class="auth__form-bottom-block">
+                      
+                        <div class="auth__form-bottom-btns">
+                           
+                            <button class="auth__form-btn auth__form-btn--submit">
+                                Получить код
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{/content}}
+{{/extend}}

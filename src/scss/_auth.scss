@@ -14,8 +14,11 @@
 }
 
 .auth__content {
-    width: 85rem;
+    max-width: 85rem;
+    width: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 
     @include breakpoint(mobile) {
         margin: 0;
@@ -26,9 +29,17 @@
 .auth__heading {
     font-size: 5.8rem;
     line-height: 6.8rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
     text-align: center;
     font-weight: 400;
+
+    &--single {
+        margin-bottom: 6rem;
+
+        @include breakpoint(mobile) {
+            margin-bottom: 3rem;
+        }
+    }
 
     @include breakpoint(mobile) {
         font-size: 3.2rem;
@@ -198,6 +209,7 @@
     font-size: 1.4rem;
     line-height: 2.2rem;
     color: #7abed1;
+    align-self: flex-start;
     &:link,
     &:visited {
         color: #7abed1;
@@ -226,10 +238,15 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-top: 3.5rem;
+    margin-top: 2rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 2rem;
+    }
 }
 
-.auth__form-btn {
+.auth__form-btn,
+.auth__enter-link {
     padding: 1.7rem 2.4rem;
     font-size: 1.4rem;
     line-height: 1.7rem;
@@ -242,6 +259,7 @@
     flex-shrink: 0;
     border-radius: 1rem;
     margin-right: 1.5rem;
+    white-space: nowrap;
     color: black;
     transition: background-color 0.2s, border-color 0.2s, opacity 0.2s, color 0.2s;
     &:link,
@@ -253,9 +271,7 @@
         background-color: black;
         color: white;
     }
-    &:last-child {
-        margin-right: 0;
-    }
+  
 
     @include breakpoint(mobile) {
         min-width: auto;
@@ -264,10 +280,20 @@
     }
 }
 
-.auth__form-btn--submit {
+.auth__form-btn:last-child {
+    margin-right: 0;
+}
+
+.auth__form-btn--submit,
+.auth__enter-link {
     background: #e56a59;
     border-color: #e56a59;
     color: white;
+
+    &:link,
+    &:visited {
+        color: white;
+    }
 
     &[disabled] {
         cursor: default;
@@ -279,5 +305,19 @@
             background: #d35241;
             border-color: #d35241;
         }
+    }
+}
+
+
+.auth__enter-link {
+    margin: 0 auto;
+    margin-top: -1rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+
+    @include breakpoint(mobile) {
+        width: auto;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 }

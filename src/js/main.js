@@ -6,6 +6,7 @@ import homeAnimations from './homeAnimations';
 import mobileMenu from './mobileMenu';
 import phoneMask from './phoneMask';
 import validation from './validation';
+import cornerAnimation from './cornerAnimation';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -23,6 +24,7 @@ window.addEventListener('load', function() {
         document.body.classList.add('animatable');
         if (!window.matchMedia("(max-width: 640px)").matches) {
             homeAnimations();
+            cornerAnimation();
         }
     }, 300);
 })
