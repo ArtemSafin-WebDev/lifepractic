@@ -1,0 +1,425 @@
+.poll {
+    margin-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+    }
+}
+
+.poll__main-heading {
+    text-align: center;
+    font-size: 5.8rem;
+    line-height: 6.8rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        font-size: 3.2rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.poll__main-heading-text {
+    font-weight: 300;
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    text-align: center;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin-bottom: 3rem;
+        br {
+            display: none;
+        }
+    }
+}
+
+.poll__main-poll-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 85rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        margin: 0;
+    }
+}
+
+.poll__main-poll-form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &--not-centered {
+        align-items: flex-start;
+        padding-top: 1.5rem;
+
+        @include breakpoint(mobile) {
+            align-items: initial;
+            padding-top: 0;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: initial;
+    }
+}
+
+.poll__main-poll-form-row-left-col {
+    width: 30rem;
+    flex-shrink: 0;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-shrink: 1;
+        padding: 0;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.poll__main-poll-form-row-right-col {
+    width: 50%;
+    flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
+}
+
+.poll__main-poll-form-label-text {
+    font-size: 1.7rem;
+    line-height: 2.1rem;
+    position: relative;
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        display: flex;
+        margin-right: 1.8rem;
+    }
+}
+
+
+
+.poll__main-poll-form-label-text-details {
+   
+
+    
+    position: absolute;
+    left: 100%;
+    left: clamp(1rem, 100%, 27.5rem);
+    top: -1rem;
+
+    @include breakpoint(mobile) {
+        left: clamp(1rem, 100%, calc(100vw - 2 * var(--content-padding) - 1.8rem));
+    }
+
+    & > svg {
+        fill: #d9d9d9;
+        transition: fill 0.2s;
+        width: 1.8rem;
+        height: 1.8rem;
+        display: block;
+        flex-shrink: 0;
+    }
+
+    &:hover {
+        .poll__main-poll-form-label-text-details-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+        & > svg {
+            fill: #7abed1;
+        }
+    }
+}
+
+.poll__main-poll-form-label-text-details-dropdown {
+    width: 47rem;
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%);
+    padding-bottom: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+}
+
+.poll__main-poll-form-label-text-details-dropdown-inner {
+    background: #ffffff;
+
+    border-radius: 1rem;
+    position: relative;
+    padding: 3rem;
+
+    filter: drop-shadow(0 0.7rem 2.4rem rgba(0, 0, 0, 0.08));
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100%;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 1rem 1.2rem 0 1.2rem;
+        border-color: #fff transparent transparent transparent;
+    }
+}
+
+.poll__main-poll-form-checkboxes-items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: -0.8rem;
+
+    @include breakpoint(mobile) {
+        margin: -0.4rem;
+    }
+}
+
+.poll__main-poll-form-checkboxes-item {
+    width: 33.33%;
+    padding: 0.8rem;
+
+    @include breakpoint(mobile) {
+        padding: 0.4rem;
+        flex-grow: 1;
+    }
+}
+
+.poll__main-poll-form-checkbox {
+    display: block;
+    cursor: pointer;
+
+    .no-touch &:hover {
+        .poll__main-poll-form-checkbox-content {
+            background: rgba(238, 251, 255, 0.67);
+            border-color: #7abed1;
+            font-weight: 400;
+        }
+    }
+}
+
+.poll__main-poll-form-checkbox-input {
+    @include visuallyHidden();
+}
+
+.poll__main-poll-form-checkbox-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    text-align: center;
+    transition: border-color 0.3s, background-color 0.3s;
+    padding: 0 1.4rem;
+    min-height: 5.2rem;
+    white-space: nowrap;
+
+    @include breakpoint(mobile) {
+        border-radius: 0.8rem;
+        min-height: 4rem;
+        font-size: 1.2rem;
+    }
+}
+
+.poll__main-poll-form-checkbox-input:checked ~ .poll__main-poll-form-checkbox-content {
+    border-color: #7abed1;
+    font-weight: 400;
+}
+
+.poll__main-poll-form-block {
+    padding: 4.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    @include breakpoint(mobile) {
+        padding: 2.5rem 0;
+    }
+}
+
+.poll__main-poll-form-checkbox-content-small-text {
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+}
+
+.poll__main-poll-form-remark-text {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    color: #ababab;
+    margin-top: 2rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.2;
+        margin-top: 1rem;
+    }
+}
+
+.poll__main-poll-form-additional-questions {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+}
+
+.poll__main-poll-form-additional-questions-row {
+    display: flex;
+    padding: 3rem;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+    }
+
+    &:last-child {
+        border: none;
+    }
+}
+
+.poll__main-poll-form-additional-questions-col {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.poll__main-poll-form-additional-questions-label-text {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    padding-right: 2rem;
+}
+
+.poll__main-poll-form-additional-questions-checkbox {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 1.2rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .no-touch &:hover {
+        .poll__main-poll-form-additional-questions-checkbox-mark {
+            background: rgba(238, 251, 255, 0.67);
+            border-color: #7abed1;
+        }
+    }
+}
+
+.poll__main-poll-form-additional-questions-checkbox-input {
+    @include visuallyHidden();
+}
+
+.poll__main-poll-form-additional-questions-checkbox-mark {
+    width: 1.9rem;
+    height: 1.9rem;
+    flex-shrink: 0;
+    border: 1px solid rgba(#000000, 0.2);
+    border-radius: 0.4rem;
+    margin-right: 1.4rem;
+    transition: background-color 0.2s, border-color 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &::before {
+        content: '';
+        display: block;
+        flex-shrink: 0;
+        width: 0.9rem;
+        height: 0.9rem;
+        background: #7abed1;
+        border-radius: 0.2rem;
+        transition: opacity 0.2s;
+        opacity: 0;
+    }
+}
+
+.poll__main-poll-form-additional-questions-checkbox-text {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: #6e6e6e;
+    transition: color 0.2s;
+    margin-top: 0.2rem;
+}
+
+.poll__main-poll-form-additional-questions-checkbox-input:checked ~ .poll__main-poll-form-additional-questions-checkbox-mark {
+    border-color: #7abed1;
+
+    &::before {
+        opacity: 1;
+    }
+}
+
+.poll__main-poll-form-additional-questions-checkbox-input:checked ~ .poll__main-poll-form-additional-questions-checkbox-text {
+    color: black;
+}
+
+.poll__main-poll-form-submit-block {
+    padding-left: 30rem;
+    padding-top: 3rem;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        padding-top: 2rem;
+    }
+}
+
+.poll__main-poll-form-submit-block-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: -0.8rem;
+    justify-content: flex-end;
+
+    @include breakpoint(mobile) {
+        margin: -.4rem;
+    }
+}
+
+.poll__main-poll-form-submit-block-item {
+    width: 33.33%;
+    padding: 0.8rem;
+
+    .auth__form-btn--submit {
+        width: 100% !important;
+    }
+
+    @include breakpoint(mobile) {
+        width: 50%;
+        padding: 0.4rem;
+    }
+}

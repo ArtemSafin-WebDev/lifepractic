@@ -8,6 +8,8 @@
     <script src="assets/js/ie11CustomProperties.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.min.css" />
     <title>
         {{ title }}
@@ -30,9 +32,14 @@
 
 
         {{#if hasCornerImage}}
-            <div class="corner-illustration">
-                 {{> corner-illustration }}
-            </div>
+        <div class="corner-illustration">
+            {{> corner-illustration }}
+        </div>
+        {{/if}}
+        {{#if hasCornerImage}}
+        <div class="right-corner-illustration">
+            {{> right-corner-illustration }}
+        </div>
         {{/if}}
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

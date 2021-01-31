@@ -1,0 +1,644 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+<section class="stages">
+    <div class="container">
+        <div class="stages__items-wrapper">
+            <div class="stages__items">
+                <div class="stages__card active">
+                    <div class="stages__card-number">
+                        1
+                    </div>
+                    Пожелания и запросы
+                </div>
+                <div class="stages__divider">
+
+                </div>
+                <div class="stages__card">
+                    <div class="stages__card-number">
+                        2
+                    </div>
+                    Авторизация
+                </div>
+                <div class="stages__divider">
+
+                </div>
+                <div class="stages__card">
+                    <div class="stages__card-number">
+                        3
+                    </div>
+                    Выбор терапевта
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="poll">
+    <div class="container">
+        <div class="poll__content">
+            <h1 class="poll__main-heading">
+                Заполните анкету
+            </h1>
+            <div class="poll__main-heading-text">
+                Пожалуйста, ответьте на несколько вопросов. Это необходимо нам для того,<br> чтобы подобрать для вас
+                наиболее подходящего специалиста
+            </div>
+            <form method="POST" action="/" class="poll__main-poll-form">
+                <div class="poll__main-poll-form-block">
+
+
+                    <div class="poll__main-poll-form-row">
+                        <div class="poll__main-poll-form-row-left-col">
+                            <div class="poll__main-poll-form-label-text">
+                                C кем вам было бы комфортнее работать?
+                            </div>
+                        </div>
+                        <div class="poll__main-poll-form-row-right-col">
+                            <div class="poll__main-poll-form-checkboxes-items">
+                                <div class="poll__main-poll-form-checkboxes-item">
+                                    <label class="poll__main-poll-form-checkbox">
+                                        <input type="radio" name="gender" value="1"
+                                            class="poll__main-poll-form-checkbox-input">
+                                        <span class="poll__main-poll-form-checkbox-content">
+                                            Женщина
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="poll__main-poll-form-checkboxes-item">
+                                    <label class="poll__main-poll-form-checkbox">
+                                        <input type="radio" name="gender" value="2"
+                                            class="poll__main-poll-form-checkbox-input">
+                                        <span class="poll__main-poll-form-checkbox-content">
+                                            Мужчина
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="poll__main-poll-form-checkboxes-item">
+                                    <label class="poll__main-poll-form-checkbox">
+                                        <input type="radio" name="gender" value="3"
+                                            class="poll__main-poll-form-checkbox-input">
+                                        <span class="poll__main-poll-form-checkbox-content">
+                                            Без разницы
+                                        </span>
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="poll__main-poll-form-row">
+                        <div class="poll__main-poll-form-row-left-col">
+                            <div class="poll__main-poll-form-label-text">
+                                Важен ли возраст психолога?
+                            </div>
+                        </div>
+                        <div class="poll__main-poll-form-row-right-col">
+                            <div class="poll__main-poll-form-checkboxes-items">
+                                <div class="poll__main-poll-form-checkboxes-item">
+                                    <label class="poll__main-poll-form-checkbox">
+                                        <input type="radio" name="age" value="1"
+                                            class="poll__main-poll-form-checkbox-input">
+                                        <span class="poll__main-poll-form-checkbox-content">
+                                            Помоложе
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="poll__main-poll-form-checkboxes-item">
+                                    <label class="poll__main-poll-form-checkbox">
+                                        <input type="radio" name="age" value="2"
+                                            class="poll__main-poll-form-checkbox-input">
+                                        <span class="poll__main-poll-form-checkbox-content">
+                                            Постарше
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="poll__main-poll-form-checkboxes-item">
+                                    <label class="poll__main-poll-form-checkbox">
+                                        <input type="radio" name="age" value="3"
+                                            class="poll__main-poll-form-checkbox-input">
+                                        <span class="poll__main-poll-form-checkbox-content">
+                                            Без разницы
+                                        </span>
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="poll__main-poll-form-row">
+                        <div class="poll__main-poll-form-row-left-col">
+                            <div class="poll__main-poll-form-label-text">
+                                Предпочтительное время для сеанса (по мск)
+                            </div>
+                        </div>
+                        <div class="poll__main-poll-form-row-right-col">
+                            <div class="poll__main-poll-form-checkboxes-items">
+                                <div class="poll__main-poll-form-checkboxes-item">
+                                    <label class="poll__main-poll-form-checkbox">
+                                        <input type="radio" name="time" value="1"
+                                            class="poll__main-poll-form-checkbox-input">
+                                        <span class="poll__main-poll-form-checkbox-content">
+                                            с 10 до 12 часов
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="poll__main-poll-form-checkboxes-item">
+                                    <label class="poll__main-poll-form-checkbox">
+                                        <input type="radio" name="time" value="2"
+                                            class="poll__main-poll-form-checkbox-input">
+                                        <span class="poll__main-poll-form-checkbox-content">
+                                            с 13 до 17 часов
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="poll__main-poll-form-checkboxes-item">
+                                    <label class="poll__main-poll-form-checkbox">
+                                        <input type="radio" name="time" value="3"
+                                            class="poll__main-poll-form-checkbox-input">
+                                        <span class="poll__main-poll-form-checkbox-content">
+                                            с 18 до 20 часов
+                                        </span>
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poll__main-poll-form-block">
+                    <div class="poll__main-poll-form-row">
+                        <div class="poll__main-poll-form-row-left-col">
+                            <div class="poll__main-poll-form-label-text">
+                                Важно наличие детей у психолога?
+                            </div>
+                        </div>
+                        <div class="poll__main-poll-form-row-right-col">
+                            <div class="poll__main-poll-form-checkboxes-items">
+                                <div class="poll__main-poll-form-checkboxes-item">
+                                    <label class="poll__main-poll-form-checkbox">
+                                        <input type="radio" name="children" value="1"
+                                            class="poll__main-poll-form-checkbox-input">
+                                        <span class="poll__main-poll-form-checkbox-content">
+                                            Да
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="poll__main-poll-form-checkboxes-item">
+                                    <label class="poll__main-poll-form-checkbox">
+                                        <input type="radio" name="children" value="2"
+                                            class="poll__main-poll-form-checkbox-input">
+                                        <span class="poll__main-poll-form-checkbox-content">
+                                            Нет
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="poll__main-poll-form-checkboxes-item">
+                                    <label class="poll__main-poll-form-checkbox">
+                                        <input type="radio" name="children" value="3"
+                                            class="poll__main-poll-form-checkbox-input">
+                                        <span class="poll__main-poll-form-checkbox-content">
+                                            Без разницы
+                                        </span>
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="poll__main-poll-form-row">
+                        <div class="poll__main-poll-form-row-left-col">
+                            <div class="poll__main-poll-form-label-text">
+                                Расскажите, о ваших ожиданиях от работы с психологом
+
+                                <div class="poll__main-poll-form-label-text-details">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-info">
+                                        <use xlink:href="#info"></use>
+                                    </svg>
+                                    <div class="poll__main-poll-form-label-text-details-dropdown">
+                                        <div class="poll__main-poll-form-label-text-details-dropdown-inner">
+                                            <p>
+                                                Вне зависимости от запроса советуем настраиваться
+                                                на длительную работу. Поначалу психотерапевт поможет снять остроту
+                                                актуальной проблемы, далее по ходу работы формируются новые запросы. Это
+                                                влияет на сроки терапии.
+                                                Для части задач психотерапевт сможет предположить
+                                                за какое количество сессий удастся достигнуть желаемого результата. Но
+                                                остановиться можно в любой момент.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="poll__main-poll-form-row-right-col">
+                            <div class="poll__main-poll-form-checkboxes-items">
+                                <div class="poll__main-poll-form-checkboxes-item">
+                                    <label class="poll__main-poll-form-checkbox">
+                                        <input type="radio" name="duration" value="1"
+                                            class="poll__main-poll-form-checkbox-input">
+                                        <span class="poll__main-poll-form-checkbox-content">
+                                            1-3 сеанса
+                                            <span class="poll__main-poll-form-checkbox-content-small-text">
+                                                (Быстрое решение)
+                                            </span>
+
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="poll__main-poll-form-checkboxes-item">
+                                    <label class="poll__main-poll-form-checkbox">
+                                        <input type="radio" name="duration" value="2"
+                                            class="poll__main-poll-form-checkbox-input">
+                                        <span class="poll__main-poll-form-checkbox-content">
+                                            от 1 месяца
+                                            <span class="poll__main-poll-form-checkbox-content-small-text">
+                                                (Проработать детальнее)
+                                            </span>
+                                        </span>
+                                    </label>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poll__main-poll-form-block">
+                    <div class="poll__main-poll-form-row poll__main-poll-form-row--not-centered">
+                        <div class="poll__main-poll-form-row-left-col">
+                            <div class="poll__main-poll-form-label-text">
+                                Что вы хотели бы обсудить?
+                            </div>
+                            <div class="poll__main-poll-form-remark-text">
+                                <p>
+                                    Выберите одну или несколько главных тем, с которыми хотите разобраться. Это поможет
+                                    алгоритму точнее подобрать для вас психотерапевта.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="poll__main-poll-form-row-right-col">
+                            <div class="poll__main-poll-form-additional-questions">
+                                <div class="poll__main-poll-form-additional-questions-row">
+                                    <div class="poll__main-poll-form-additional-questions-col">
+                                        <div class="poll__main-poll-form-additional-questions-label-text">
+                                            Стресс и тревожность
+                                        </div>
+                                    </div>
+                                    <div class="poll__main-poll-form-additional-questions-col">
+                                        <label class="poll__main-poll-form-additional-questions-checkbox">
+                                            <input type="checkbox" name="stress"
+                                                class="poll__main-poll-form-additional-questions-checkbox-input"
+                                                checked>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-mark">
+
+                                            </span>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-text">
+                                                Справиться со стрессом
+                                            </span>
+                                        </label>
+                                        <label class="poll__main-poll-form-additional-questions-checkbox">
+                                            <input type="checkbox" name="stress"
+                                                class="poll__main-poll-form-additional-questions-checkbox-input">
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-mark">
+
+                                            </span>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-text">
+                                                Тревожность
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="poll__main-poll-form-additional-questions-row">
+                                    <div class="poll__main-poll-form-additional-questions-col">
+                                        <div class="poll__main-poll-form-additional-questions-label-text">
+                                            Отношения и семья
+                                        </div>
+                                    </div>
+                                    <div class="poll__main-poll-form-additional-questions-col">
+                                        <label class="poll__main-poll-form-additional-questions-checkbox">
+                                            <input type="checkbox" name="stress"
+                                                class="poll__main-poll-form-additional-questions-checkbox-input"
+                                                checked>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-mark">
+
+                                            </span>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-text">
+                                                Планирование семьи
+                                            </span>
+                                        </label>
+                                        <label class="poll__main-poll-form-additional-questions-checkbox">
+                                            <input type="checkbox" name="stress"
+                                                class="poll__main-poll-form-additional-questions-checkbox-input">
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-mark">
+
+                                            </span>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-text">
+                                                Расставание, развод
+                                            </span>
+                                        </label>
+                                        <label class="poll__main-poll-form-additional-questions-checkbox">
+                                            <input type="checkbox" name="stress"
+                                                class="poll__main-poll-form-additional-questions-checkbox-input">
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-mark">
+
+                                            </span>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-text">
+                                                Семейные вопросы
+                                            </span>
+                                        </label>
+                                        <label class="poll__main-poll-form-additional-questions-checkbox">
+                                            <input type="checkbox" name="stress"
+                                                class="poll__main-poll-form-additional-questions-checkbox-input">
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-mark">
+
+                                            </span>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-text">
+                                                Проблемы с парнетнером
+                                            </span>
+                                        </label>
+                                        <label class="poll__main-poll-form-additional-questions-checkbox">
+                                            <input type="checkbox" name="stress"
+                                                class="poll__main-poll-form-additional-questions-checkbox-input">
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-mark">
+
+                                            </span>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-text">
+                                                Частые ссоры
+                                            </span>
+                                        </label>
+                                        <label class="poll__main-poll-form-additional-questions-checkbox">
+                                            <input type="checkbox" name="stress"
+                                                class="poll__main-poll-form-additional-questions-checkbox-input">
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-mark">
+
+                                            </span>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-text">
+                                                Измена
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="poll__main-poll-form-additional-questions-row">
+                                    <div class="poll__main-poll-form-additional-questions-col">
+                                        <div class="poll__main-poll-form-additional-questions-label-text">
+                                            Дети
+                                        </div>
+                                    </div>
+                                    <div class="poll__main-poll-form-additional-questions-col">
+                                        <label class="poll__main-poll-form-additional-questions-checkbox">
+                                            <input type="checkbox" name="stress"
+                                                class="poll__main-poll-form-additional-questions-checkbox-input"
+                                                checked>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-mark">
+
+                                            </span>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-text">
+                                                Беременность
+                                            </span>
+                                        </label>
+                                        <label class="poll__main-poll-form-additional-questions-checkbox">
+                                            <input type="checkbox" name="stress"
+                                                class="poll__main-poll-form-additional-questions-checkbox-input">
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-mark">
+
+                                            </span>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-text">
+                                                Послеродовая адаптация
+                                            </span>
+                                        </label>
+                                        <label class="poll__main-poll-form-additional-questions-checkbox">
+                                            <input type="checkbox" name="stress"
+                                                class="poll__main-poll-form-additional-questions-checkbox-input">
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-mark">
+
+                                            </span>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-text">
+                                                Воспитание
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="poll__main-poll-form-additional-questions-row">
+                                    <div class="poll__main-poll-form-additional-questions-col">
+                                        <div class="poll__main-poll-form-additional-questions-label-text">
+                                            Кризисная психологическая поддержка
+                                        </div>
+                                    </div>
+                                    <div class="poll__main-poll-form-additional-questions-col">
+                                        <label class="poll__main-poll-form-additional-questions-checkbox">
+                                            <input type="checkbox" name="stress"
+                                                class="poll__main-poll-form-additional-questions-checkbox-input"
+                                                checked>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-mark">
+
+                                            </span>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-text">
+                                                Переживание потери
+                                            </span>
+                                        </label>
+                                        <label class="poll__main-poll-form-additional-questions-checkbox">
+                                            <input type="checkbox" name="stress"
+                                                class="poll__main-poll-form-additional-questions-checkbox-input">
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-mark">
+
+                                            </span>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-text">
+                                                Опыт насилия
+                                            </span>
+                                        </label>
+
+                                    </div>
+                                </div>
+                                <div class="poll__main-poll-form-additional-questions-row">
+                                    <div class="poll__main-poll-form-additional-questions-col">
+                                        <div class="poll__main-poll-form-additional-questions-label-text">
+                                            Самосовершен&shy;ствование
+                                        </div>
+                                    </div>
+                                    <div class="poll__main-poll-form-additional-questions-col">
+                                        <label class="poll__main-poll-form-additional-questions-checkbox">
+                                            <input type="checkbox" name="stress"
+                                                class="poll__main-poll-form-additional-questions-checkbox-input"
+                                                checked>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-mark">
+
+                                            </span>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-text">
+                                                Повысить осознанность
+                                            </span>
+                                        </label>
+                                        <label class="poll__main-poll-form-additional-questions-checkbox">
+                                            <input type="checkbox" name="stress"
+                                                class="poll__main-poll-form-additional-questions-checkbox-input">
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-mark">
+
+                                            </span>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-text">
+                                                Потеря смысла, апатия, низкий уровень энергии
+                                            </span>
+                                        </label>
+                                        <label class="poll__main-poll-form-additional-questions-checkbox">
+                                            <input type="checkbox" name="stress"
+                                                class="poll__main-poll-form-additional-questions-checkbox-input">
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-mark">
+
+                                            </span>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-text">
+                                                Вопросы с сексуальностью
+                                            </span>
+                                        </label>
+                                        <label class="poll__main-poll-form-additional-questions-checkbox">
+                                            <input type="checkbox" name="stress"
+                                                class="poll__main-poll-form-additional-questions-checkbox-input">
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-mark">
+
+                                            </span>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-text">
+                                                Финансовые проблемы
+                                            </span>
+                                        </label>
+                                        <label class="poll__main-poll-form-additional-questions-checkbox">
+                                            <input type="checkbox" name="stress"
+                                                class="poll__main-poll-form-additional-questions-checkbox-input">
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-mark">
+
+                                            </span>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-text">
+                                                Одиночество
+                                            </span>
+                                        </label>
+                                        <label class="poll__main-poll-form-additional-questions-checkbox">
+                                            <input type="checkbox" name="stress"
+                                                class="poll__main-poll-form-additional-questions-checkbox-input">
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-mark">
+
+                                            </span>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-text">
+                                                Избавиться от вредной привычки
+                                            </span>
+                                        </label>
+
+                                    </div>
+                                </div>
+                                <div class="poll__main-poll-form-additional-questions-row">
+                                    <div class="poll__main-poll-form-additional-questions-col">
+                                        <div class="poll__main-poll-form-additional-questions-label-text">
+                                            Работа
+                                        </div>
+                                    </div>
+                                    <div class="poll__main-poll-form-additional-questions-col">
+                                        <label class="poll__main-poll-form-additional-questions-checkbox">
+                                            <input type="checkbox" name="stress"
+                                                class="poll__main-poll-form-additional-questions-checkbox-input"
+                                                checked>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-mark">
+
+                                            </span>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-text">
+                                                Сложности в рабочих отношениях
+                                            </span>
+                                        </label>
+                                        <label class="poll__main-poll-form-additional-questions-checkbox">
+                                            <input type="checkbox" name="stress"
+                                                class="poll__main-poll-form-additional-questions-checkbox-input"
+                                                checked>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-mark">
+
+                                            </span>
+                                            <span class="poll__main-poll-form-additional-questions-checkbox-text">
+                                                Профориентация и карьерные вопросы
+                                            </span>
+                                        </label>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="poll__main-poll-form-block">
+
+                    <div class="poll__main-poll-form-row">
+                        <div class="poll__main-poll-form-row-left-col">
+                            <div class="poll__main-poll-form-label-text">
+                                Важен ли опыт работы с ЛГБТК+
+                                <div class="poll__main-poll-form-label-text-details">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-info">
+                                        <use xlink:href="#info"></use>
+                                    </svg>
+                                    <div class="poll__main-poll-form-label-text-details-dropdown">
+                                        <div class="poll__main-poll-form-label-text-details-dropdown-inner">
+                                            <p>
+                                                Вне зависимости от запроса советуем настраиваться
+                                                на длительную работу. Поначалу психотерапевт поможет снять остроту
+                                                актуальной проблемы, далее по ходу работы формируются новые запросы. Это
+                                                влияет на сроки терапии.
+                                                Для части задач психотерапевт сможет предположить
+                                                за какое количество сессий удастся достигнуть желаемого результата. Но
+                                                остановиться можно в любой момент.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="poll__main-poll-form-row-right-col">
+                            <div class="poll__main-poll-form-checkboxes-items">
+                                <div class="poll__main-poll-form-checkboxes-item">
+                                    <label class="poll__main-poll-form-checkbox">
+                                        <input type="radio" name="gay" value="1"
+                                            class="poll__main-poll-form-checkbox-input">
+                                        <span class="poll__main-poll-form-checkbox-content">
+                                            Да
+
+
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="poll__main-poll-form-checkboxes-item">
+                                    <label class="poll__main-poll-form-checkbox">
+                                        <input type="radio" name="gay" value="2"
+                                            class="poll__main-poll-form-checkbox-input">
+                                        <span class="poll__main-poll-form-checkbox-content">
+                                            Нет
+
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="poll__main-poll-form-checkboxes-item">
+                                    <label class="poll__main-poll-form-checkbox">
+                                        <input type="radio" name="gay" value="2"
+                                            class="poll__main-poll-form-checkbox-input">
+                                        <span class="poll__main-poll-form-checkbox-content">
+                                            Без разницы
+
+                                        </span>
+                                    </label>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poll__main-poll-form-submit-block">
+                    <div class="poll__main-poll-form-submit-block-wrapper">
+                        <div class="poll__main-poll-form-submit-block-item">
+                            <button class="auth__form-btn auth__form-btn--submit" type="submit">
+                                Далее
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+{{/content}}
+{{/extend}}

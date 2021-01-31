@@ -3,8 +3,8 @@
     padding-bottom: 20rem;
 
     @include breakpoint(mobile) {
-        padding-top: 6rem;
-        padding-bottom: 12rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
 }
 
@@ -157,7 +157,7 @@
 
     @include breakpoint(mobile) {
         font-size: 16px;
-        height: 5.4rem;
+        height: 5rem;
         padding-left: 1.3rem;
         padding: 1.3rem;
     }
@@ -179,7 +179,7 @@
     }
 
     @include breakpoint(mobile) {
-        padding: 1.7rem 1.2rem;
+        padding: 1.5rem 1.2rem;
     }
 }
 
@@ -277,6 +277,8 @@
         min-width: auto;
         width: 50%;
         flex-shrink: 1;
+        font-size: 1.4rem;
+        padding: 1.5rem 2rem;
     }
 }
 
