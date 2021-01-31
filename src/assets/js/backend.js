@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 setTimeout(function() {
                     helpSuccess.classList.remove('active');
                     helpForm.reset();
+                    $(helpForm).parsley().reset();
                 }, 5000);
             }
         });

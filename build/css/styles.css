@@ -3782,7 +3782,7 @@ select:-webkit-autofill:focus {
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   background: rgba(0, 0, 0, 0.51);
-  z-index: 800;
+  z-index: 1500;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3800,6 +3800,12 @@ select:-webkit-autofill:focus {
     visibility: inherit;
     -webkit-transition: opacity .4s, visibility .4s;
     transition: opacity .4s, visibility .4s; }
+  @media only screen and (max-width: 640px) {
+    .modals__modal {
+      padding: var(--content-padding);
+      background: rgba(0, 0, 0, 0.7);
+      -webkit-backdrop-filter: blur(2px);
+              backdrop-filter: blur(2px); } }
 
 .modals__modal-inner {
   margin: auto;
@@ -3835,6 +3841,16 @@ select:-webkit-autofill:focus {
     bottom: 5.8rem;
     -webkit-filter: drop-shadow(-0.6rem 0.8rem 0.8rem rgba(0, 0, 0, 0.1));
             filter: drop-shadow(-0.6rem 0.8rem 0.8rem rgba(0, 0, 0, 0.1)); }
+  @media only screen and (max-width: 640px) {
+    .modals__modal-inner--help,
+    .modals__help-form-success {
+      padding: 2rem;
+      padding-bottom: 8rem;
+      background-size: 26rem auto; }
+      .modals__modal-inner--help::before,
+      .modals__help-form-success::before {
+        left: 3rem;
+        bottom: 3rem; } }
 
 .modals__help-form-success {
   position: absolute;
@@ -3871,11 +3887,22 @@ select:-webkit-autofill:focus {
   line-height: 4.2rem;
   margin-bottom: 3rem;
   font-weight: 400; }
+  @media only screen and (max-width: 640px) {
+    .modals__help-form-success-heading {
+      font-size: 3rem;
+      line-height: 1.2;
+      margin-bottom: 2rem; }
+      .modals__help-form-success-heading br {
+        display: none; } }
 
 .modals__help-form-success-text {
   font-weight: 300;
   font-size: 2rem;
   line-height: 2.8rem; }
+  @media only screen and (max-width: 640px) {
+    .modals__help-form-success-text {
+      font-size: 1.6rem;
+      line-height: 1.2; } }
 
 .modals__modal-close {
   position: absolute;
@@ -3903,6 +3930,19 @@ select:-webkit-autofill:focus {
     background-color: white; }
     .modals__modal-close:hover svg {
       fill: black; }
+  @media only screen and (max-width: 640px) {
+    .modals__modal-close {
+      width: 1.7rem;
+      height: 1.7rem;
+      left: auto;
+      right: 1.4rem;
+      top: 1.4rem;
+      bottom: auto;
+      background: transparent; }
+      .modals__modal-close svg {
+        fill: black;
+        width: 100%;
+        height: 100%; } }
 
 .modals__help-form-heading {
   font-size: 2.5rem;
