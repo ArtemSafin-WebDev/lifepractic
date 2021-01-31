@@ -2,6 +2,11 @@
     padding-top: 8rem;
     padding-bottom: 20rem;
 
+    &--after-poll {
+        padding-bottom: 13rem;
+        padding-top: 0;
+    }
+
     @include breakpoint(mobile) {
         padding-top: 3rem;
         padding-bottom: 3rem;
@@ -14,7 +19,7 @@
 }
 
 .auth__content {
-    max-width: 85rem;
+    max-width: 87rem;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -122,7 +127,8 @@
     }
 }
 
-.auth__form-input {
+.auth__form-input,
+.modals__help-form-input {
     height: 5.4rem;
     padding-left: 2.4rem;
     padding-right: 2.4rem;
@@ -246,7 +252,8 @@
 }
 
 .auth__form-btn,
-.auth__enter-link {
+.auth__enter-link,
+.modals__help-form-submit {
     padding: 1.7rem 2.4rem;
     font-size: 1.4rem;
     line-height: 1.7rem;
@@ -287,7 +294,8 @@
 }
 
 .auth__form-btn--submit,
-.auth__enter-link {
+.auth__enter-link,
+.modals__help-form-submit {
     background: #e56a59;
     border-color: #e56a59;
     color: white;
@@ -322,4 +330,88 @@
         padding-left: 3rem;
         padding-right: 3rem;
     }
+}
+
+
+.auth__choses-specialists {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5.5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
+}
+
+.auth__choses-specialists-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.auth__choses-specialists-list-item {
+    margin-right: 1.4rem;
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include breakpoint(mobile) {
+        margin-right: 1.2rem;
+    }
+}
+
+.auth__choses-specialists-text {
+    font-weight: 300;
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    text-align: center;
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin-bottom: 3rem;
+        br {
+            display: none;
+        }
+    }
+}
+
+.auth__choses-specialists-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 5.4rem;
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-bottom: 100%;
+    }
+
+    @include breakpoint(mobile) {
+        width: 4.2rem;
+    }
+}
+
+.auth__choses-specialists-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include objectFitCover();
+}
+
+.auth__completion-buttons {
+    display: flex;
+    align-items: center;
+    max-width: 38.2rem;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -2rem;
 }

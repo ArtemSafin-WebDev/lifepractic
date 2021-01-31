@@ -1,0 +1,21 @@
+document.addEventListener('DOMContentLoaded', function() {
+    var helpForm = document.querySelector('#help-form');
+
+    if (helpForm) {
+        var helpSuccess = helpForm.querySelector('.modals__help-form-success');
+        helpForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (
+                $(helpForm)
+                    .parsley()
+                    .isValid()
+            ) {
+                helpSuccess.classList.add('active');
+                setTimeout(function() {
+                    helpSuccess.classList.remove('active');
+                    helpForm.reset();
+                }, 5000);
+            }
+        });
+    }
+});

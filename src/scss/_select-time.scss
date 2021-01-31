@@ -1,0 +1,191 @@
+.select-time {
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+}
+
+.select-time__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.select-time__top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3.4rem;
+}
+
+.select-time__text {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+}
+
+.select-time__arrows {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.select-time__arrow {
+    width: 4.2rem;
+    height: 4.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.8rem;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    border-radius: 1rem;
+    transition: background-color 0.2s, border-color 0.2s, opacity 0.2s;
+    svg {
+        width: 0.6rem;
+        height: 1.2rem;
+        fill: black;
+        display: block;
+        flex-shrink: 0;
+        transition: fill 0.2s;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &.swiper-button-disabled {
+        cursor: default;
+        opacity: 0.5;
+    }
+
+    &:not(.swiper-button-disabled):hover {
+        background-color: black;
+        border-color: black;
+
+        svg {
+            fill: white;
+        }
+    }
+}
+
+.select-time__slider {
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        width: 14%;
+    }
+}
+
+.select-time__card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+
+    &:hover {
+        .select-time__card-inner {
+            background: rgba(122, 190, 209, 0.1);
+        }
+    }
+}
+
+.select-time__card-inner {
+    display: flex;
+    flex-direction: column;
+
+    transition: background-color 0.2s;
+    padding-top: 1.6rem;
+    padding-bottom: 1.8rem;
+    border-radius: 0.8rem;
+}
+
+.select-time__card-date {
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: 0.3rem;
+
+    &--weekend {
+        color: rgba(#e56a59, 0.6);
+    }
+}
+
+.select-time__card-month {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1;
+    margin-bottom: 1.6rem;
+    color: #000000;
+    &--weekend {
+        color: rgba(#e56a59, 0.6);
+    }
+}
+
+.select-time__card-checkboxes {
+    display: flex;
+    flex-direction: column;
+}
+
+.select-time__card-checkbox {
+    cursor: pointer;
+    user-select: none;
+    display: block;
+    margin-bottom: 0.8rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.select-time__card-checkbox-input {
+    @include visuallyHidden();
+}
+
+.select-time__card-checkbox-content {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    padding: 0.6rem;
+    border-radius: 0.4rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.select-time__card-checkbox-input:checked ~ .select-time__card-checkbox-content {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.select-time__card-day {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    margin-bottom: 1rem;
+    color: #cacaca;
+}
+
+
+.select-time__form-btns {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: initial;
+    }
+
+    .auth__form-btn {
+        flex-shrink: 1;
+
+        @include breakpoint(mobile) {
+            width: 100%;
+            margin: 0;
+            margin-bottom: 1rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .auth__form-btn--submit {
+        flex-grow: 1;
+    }
+}

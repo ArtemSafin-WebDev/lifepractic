@@ -1,0 +1,39 @@
+<div class="modals">
+    <div class="modals__modal js-modal" id="help">
+        <div class="modals__modal-inner modals__modal-inner--help">
+            <button class="modals__modal-close js-close-modal">
+                <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                    <use xlink:href="#cross"></use>
+                </svg>
+            </button>
+            <form action="/" method="POST" class="modals__help-form" id="help-form" data-need-validation>
+                <h3 class="modals__help-form-heading">
+                    Чем мы можем вам помочь?
+                </h3>
+                <div class="modals__help-form-row">
+                    <input type="text" class="modals__help-form-input" required placeholder="Имя">
+                </div>
+                <div class="modals__help-form-row">
+                    <input type="tel" class="modals__help-form-input js-phone-input" required data-parsley-phone
+                        placeholder="+7 (___)-___-__-__">
+                </div>
+                <div class="modals__help-form-row">
+                    <textarea name="comment" class="modals__help-form-input" placeholder="Сообщение"></textarea>
+                </div>
+                <button type="submit" class="modals__help-form-submit">
+                    Отправить
+                </button>
+
+                <div class="modals__help-form-success">
+                    <h3 class="modals__help-form-success-heading">
+                        Спасибо! Ваша<br> заявка отправлена!
+                    </h3>
+                    <div class="modals__help-form-success-text">
+                        Наши специалисты свяжутся<br>
+                        с Вами после обработки заявки
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -214,7 +214,7 @@
 
     .no-touch &:hover {
         .poll__main-poll-form-checkbox-content {
-            background: rgba(238, 251, 255, 0.67);
+          
             border-color: #7abed1;
             font-weight: 400;
         }
@@ -250,6 +250,7 @@
 
 .poll__main-poll-form-checkbox-input:checked ~ .poll__main-poll-form-checkbox-content {
     border-color: #7abed1;
+    background: rgba(238, 251, 255, 0.67);
     font-weight: 400;
 }
 
@@ -332,7 +333,7 @@
 
     .no-touch &:hover {
         .poll__main-poll-form-additional-questions-checkbox-mark {
-            background: rgba(238, 251, 255, 0.67);
+           
             border-color: #7abed1;
         }
     }

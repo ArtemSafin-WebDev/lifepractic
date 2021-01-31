@@ -7,6 +7,10 @@ import mobileMenu from './mobileMenu';
 import phoneMask from './phoneMask';
 import validation from './validation';
 import cornerAnimation from './cornerAnimation';
+import onlyNumeric from './onlyNumeric';
+import selectTime from './selectTime';
+import chooseSpecialist from './chooseSpecialist';
+import modals from './modals';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -15,7 +19,10 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileMenu();
     phoneMask();
     validation();
-  
+    onlyNumeric();
+    selectTime();
+    chooseSpecialist();
+    modals();
 });
 
 window.addEventListener('load', function() {

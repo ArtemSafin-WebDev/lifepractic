@@ -1,0 +1,139 @@
+{{#extend "layout"}}
+{{#content "main"}}
+<section class="stages stages--after-poll">
+    <div class="container">
+        <div class="stages__items-wrapper">
+            <div class="stages__items">
+                <div class="stages__card">
+                    <div class="stages__card-number">
+                        1
+                    </div>
+                    Пожелания и запросы
+                </div>
+                <div class="stages__divider">
+
+                </div>
+                <div class="stages__card active">
+                    <div class="stages__card-number">
+                        2
+                    </div>
+                    Авторизация
+                </div>
+                <div class="stages__divider">
+
+                </div>
+                <div class="stages__card">
+                    <div class="stages__card-number">
+                        3
+                    </div>
+                    Выбор терапевта
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="auth auth--after-poll">
+    <div class="container">
+        <div class="auth__row">
+            <div class="auth__content">
+                <h1 class="auth__heading">
+                    Мы подобрали 5 специалистов
+                </h1>
+                <div class="auth__choses-specialists">
+                    <ul class="auth__choses-specialists-list">
+                        <li class="auth__choses-specialists-list-item">
+                            <div class="auth__choses-specialists-image-container">
+                                <img src="img/specialists/1.jpg" alt="" class="auth__choses-specialists-image">
+                            </div>
+                        </li>
+                        <li class="auth__choses-specialists-list-item">
+                            <div class="auth__choses-specialists-image-container">
+                                <img src="img/specialists/2.jpg" alt="" class="auth__choses-specialists-image">
+                            </div>
+                        </li>
+                        <li class="auth__choses-specialists-list-item">
+                            <div class="auth__choses-specialists-image-container">
+                                <img src="img/specialists/3.jpg" alt="" class="auth__choses-specialists-image">
+                            </div>
+                        </li>
+                        <li class="auth__choses-specialists-list-item">
+                            <div class="auth__choses-specialists-image-container">
+                                <img src="img/specialists/4.jpg" alt="" class="auth__choses-specialists-image">
+                            </div>
+                        </li>
+                        <li class="auth__choses-specialists-list-item">
+                            <div class="auth__choses-specialists-image-container">
+                                <img src="img/specialists/5.jpg" alt="" class="auth__choses-specialists-image">
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="auth__choses-specialists-text">
+                        чтобы посмотреть зарегистрируйтесь
+                    </div>
+                </div>
+                <form action="/" method="POST" class="auth__form" data-need-validation autocomplete="new-password">
+                    <div class="auth__form-row">
+                        <label for="name" class="auth__form-label">
+                            Ваше имя
+                        </label>
+                        <div class="auth__form-input-wrapper">
+                            <input type="text" name="name" id="name" class="auth__form-input" required>
+                        </div>
+                    </div>
+                    <div class="auth__form-row">
+                        <label for="phone" class="auth__form-label">
+                            Телефон
+                        </label>
+                        <div class="auth__form-input-wrapper">
+                            <input type="tel" name="phone" id="phone" class="auth__form-input js-phone-input" required
+                                data-parsley-phone>
+
+                        </div>
+                    </div>
+                    <div class="auth__form-row">
+                        <label for="code" class="auth__form-label">
+                            Код из смс
+                        </label>
+                        <div class="auth__form-input-wrapper">
+                            <input type="text" name="phone" id="code" class="auth__form-input" required>
+
+                            <div class="auth__form-input-remark">
+                                На указанный вами номер было отправлено SMS с кодом подтверждения. Отправить еще раз (3)
+                                через 284 сек.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="auth__form-row">
+                        <label for="age" class="auth__form-label">
+                            Сколько вам лет?
+                        </label>
+                        <div class="auth__form-input-wrapper">
+                            <input type="text" name="age" id="age"
+                                class="auth__form-input js-numeric-input-no-formatting" required>
+                        </div>
+                    </div>
+                    <div class="auth__form-bottom-block">
+                        <a href="#" class="auth__form-already-has-an-account">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-person">
+                                <use xlink:href="#person"></use>
+                            </svg>
+                            <span class="auth__form-already-has-an-account-text">У меня уже есть аккаунт</span>
+                        </a>
+                        <div class="auth__form-bottom-btns">
+                            <a href="#" class="auth__form-btn">
+                                Назад
+                            </a>
+                            <button class="auth__form-btn auth__form-btn--submit" disabled>
+                                Далее
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{/content}}
+{{/extend}}

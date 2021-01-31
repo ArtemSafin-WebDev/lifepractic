@@ -1,0 +1,341 @@
+
+.choose-specialist {
+    margin-bottom: 8.4rem;
+}
+
+
+.choose-specialist__wrapper {
+   max-width: 99rem;
+   margin: 0 auto;
+   width: 100%;
+}
+
+.choose-specialist__heading {
+    font-size: 5.8rem;
+    line-height: 6.8rem;
+    margin-bottom: 7rem;
+    text-align: center;
+    font-weight: 400;
+
+    @include breakpoint(small-tablet) {
+        br {
+            display: none;
+        }
+    }
+
+
+    @include breakpoint(mobile) {
+        font-size: 3.2rem;
+        line-height: 1.2;
+        margin-bottom: 3rem;
+    }
+}
+
+.choose-specialist__choices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include breakpoint(mobile) {
+        margin: -.8rem;
+        margin-bottom: 3rem;
+        // justify-content: initial;
+    }
+}
+
+.choose-specialist__choices-item {
+    margin: 0 1.1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 3.5rem;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        padding: 0.8rem;
+        margin: 0;
+        width: 50%;
+        align-items: center;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        width: 10rem;
+        height: 3px;
+        background: #7ABED1;
+        transition: opacity .3s;
+        pointer-events: none;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        border-radius: 6px;
+        opacity: 0;
+        bottom: 0;
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
+    &.active {
+        &::before {
+            opacity: 1;
+        }
+        .choose-specialist__choices-item-image-container::after {
+            opacity: 1;
+        }
+
+        .choose-specialist__choices-title {
+            color: #7ABED1;
+        }
+    }
+}
+
+.choose-specialist__choices-item-image-container {
+    position: relative;
+  
+   
+    margin-bottom: 2.2rem;
+  
+    width: 16rem;
+
+    .choose-specialist__choices-item--need-help & {
+        background: #f7f7f7;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 17.4rem;
+        height: 17.4rem;
+        border: .3rem solid #7ABED1;
+        border-radius: 50%;
+        pointer-events: none;
+        transition: opacity .3s;
+        opacity: 0;
+
+        @include breakpoint(small-tablet) {
+            width: 13rem;
+            height: 13rem;
+        }
+
+        @include breakpoint(mobile) {
+            width: 11rem;
+            height: 11rem;
+            border-width: .2rem;
+            
+        }
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+    }
+
+    @include breakpoint(small-tablet) {
+        width: 12rem;
+    }
+
+    @include breakpoint(mobile) {
+        width: 10rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.choose-specialist__choices-item-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    @include objectFitCover();
+}
+
+.choose-specialist__choices-title {
+    font-weight: 300;
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    transition: color .2s;
+    text-align: center;
+    max-width: 16rem;
+    @include breakpoint(small-tablet) {
+        max-width: 12rem;
+    }
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        font-size: 1.6rem;
+        line-height: 1.2;
+        br {
+            display: none;
+        }
+    }
+    a {
+        text-decoration: underline;
+        &:link,
+        &:visited {
+            color: #7abed1;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.choose-specialist__choices-item-need-help {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.7rem;
+    line-height: 1.2;
+    color: #000000;
+    position: absolute;
+    width: 100%;
+
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+    }
+}
+
+.choose-specialist__schedules {
+    position: relative;
+}
+.choose-specialist__schedule {
+    min-height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s, transform 0s linear 0.4s, visibility 0s linear 0.4s;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(20%);
+    
+    &.active {
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        z-index: 2;
+        transform: translateX(0);
+        transition: all 0.4s, transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+}
+
+.choose-specialist__schedule-content {
+    display: flex;
+    padding: 6.2rem;
+    box-shadow: 0px 0.7rem 2.4rem rgba(0, 0, 0, 0.08);
+    border-radius: 1rem;
+    background: white;
+
+    @include breakpoint(mobile) {
+        padding: 1.8rem;
+        flex-direction: column;
+    }
+}
+
+.choose-specialist__schedule-left-col {
+    width: 28rem;
+    margin-right: auto;
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 3rem;
+    }
+}   
+
+.choose-specialist__schedule-right-col {
+    width: 48rem;
+    margin-left: 2rem;
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0;
+    }
+   
+}
+
+.choose-specialist__schedule-heading {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+    font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.choose-specialist__schedule-features {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+    padding-bottom: 3.2rem;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 2rem;
+    }
+}
+.choose-specialist__schedule-features-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1rem;
+    justify-content: space-between;
+}
+
+.choose-specialist__schedule-feature-item {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+}
+
+.choose-specialist__specialization {
+    padding-top: 3rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 2rem;
+    }
+    ul {
+        li {
+            font-weight: 300;
+            font-size: 1.4rem;
+            line-height: 2rem;
+            margin-bottom: 1.6rem;
+            color: #6E6E6E;
+            padding-left: 2.2rem;
+            position: relative;
+
+            &::before {
+                content: '';
+                width: 0.6rem;
+                height: 0.6rem;
+                border-radius: 50%;
+                background: #7ABED1;
+                position: absolute;
+                left: 0;
+                top: .6rem;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.choose-specialist__schedule-select-time {
+    margin-top: -.5rem;
+}
