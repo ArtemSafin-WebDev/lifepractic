@@ -9,7 +9,7 @@
                     practic
                 </span>
             </a>
-
+            {{#unless noNav}}
             <div class="page-header__mobile-menu">
                 <div class="page-header__mobile-menu-inner">
                     <nav class="page-header__nav">
@@ -57,7 +57,7 @@
                     </div>
                 </div>
             </div>
-
+            {{/unless}}
 
 
             {{#if login}}
@@ -89,6 +89,7 @@
                     </svg>
                 </a>
                 {{/unless}}
+                {{#unless noNav}}
                 <burger class="page-header__burger">
                     <span class="page-header__burger-content">
                         <span></span>
@@ -96,6 +97,7 @@
                         <span></span>
                     </span>
                 </burger>
+                {{/unless}}
             </div>
         </div>
     </div>
