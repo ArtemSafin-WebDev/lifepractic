@@ -11,6 +11,9 @@ import onlyNumeric from './onlyNumeric';
 import selectTime from './selectTime';
 import chooseSpecialist from './chooseSpecialist';
 import modals from './modals';
+import cardNumberMask from './cardNumberMask';
+import cardDateMask from './cardDateMask';
+import cvvMask from './cvvMask';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -23,6 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
     selectTime();
     chooseSpecialist();
     modals();
+    cardNumberMask();
+    cardDateMask();
+    cvvMask();
 });
 
 window.addEventListener('load', function() {

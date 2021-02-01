@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.min.css" />
     <title>
-        Life Practic - Регистрация
+        Life Practic - Оплата
     </title>
 </head>
 
@@ -72,31 +72,21 @@
                                         </svg>
                                     </a>
                                 </div>
-                                <a href="#" class="page-header__mobile-register-btn">
-                                    Регистрация
-                                </a>
                             </div>
                         </div>
                     </div>
         
         
         
-                    <div class="page-header__btns">
-                        <a href="register-1.html" class="page-header__btn page-header__btn--login">
-                            Войти
-                        </a>
-                        <a href="register-1.html" class="page-header__btn">
-                            Регистрация
-                        </a>
-                    </div>
+                    <a href="#" class="page-header__user">
+                        <div class="page-header__user-avatar">
+                        </div>
+                        <div class="page-header__user-name">
+                            Татьяна
+                        </div>
+                    </a>
         
                     <div class="page-header__mobile-btns">
-        
-                        <a href="#" class="page-header__mobile-login">
-                            <svg width="14" height="14" aria-hidden="true" class="icon-person">
-                                <use xlink:href="#person"></use>
-                            </svg>
-                        </a>
                         <burger class="page-header__burger">
                             <span class="page-header__burger-content">
                                 <span></span>
@@ -108,140 +98,159 @@
                 </div>
             </div>
         </header>        <main class="page-main">
-<section class="stages stages--after-poll">
+
+<section class="payment">
     <div class="container">
-        <div class="stages__items-wrapper">
-            <div class="stages__items">
-                <div class="stages__card">
-                    <div class="stages__card-number">
-                        1
+        <h1 class="payment__heading">
+            Оплата заказа
+        </h1>
+        <div class="payment__heading-text">
+            К оплате принимаются карты платежных систем VISA, Master Card и МИР.
+            Для оплаты введите данные вашей банковской карты в соответствующие поля
+        </div>
+        <div class="payment__content">
+            <div class="payment__details">
+                <div class="payment__details-description">
+                    <div class="payment__details-row">
+                        <div class="payment__details-col">
+                            <div class="payment__details-description-title">
+                                Описание платежа
+                            </div>
+                        </div>
+                        <div class="payment__details-col">
+                            <div class="payment__details-description-title">
+                                Номер заказа
+                            </div>
+                        </div>
+                        <div class="payment__details-col">
+                            <div class="payment__details-description-title">
+                                Сумма платежа
+                            </div>
+                        </div>
                     </div>
-                    Пожелания и запросы
                 </div>
-                <div class="stages__divider">
-
-                </div>
-                <div class="stages__card active">
-                    <div class="stages__card-number">
-                        2
+                <div class="payment__details-data">
+                    <div class="payment__details-row">
+                        <div class="payment__details-col">
+                            <div class="payment__details-data-title">
+                                Сеанс
+                                с психо&shy;терапевтом
+                            </div>
+                        </div>
+                        <div class="payment__details-col">
+                            <div class="payment__details-data-title">
+                                №12958
+                            </div>
+                        </div>
+                        <div class="payment__details-col">
+                            <div class="payment__details-data-title">
+                                <strong>
+                                    2500 ₽
+                                </strong>
+                            </div>
+                        </div>
                     </div>
-                    Авторизация
-                </div>
-                <div class="stages__divider">
-
-                </div>
-                <div class="stages__card">
-                    <div class="stages__card-number">
-                        3
-                    </div>
-                    Выбор терапевта
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-<section class="auth auth--after-poll">
-    <div class="container">
-        <div class="auth__row">
-            <div class="auth__content">
-                <h1 class="auth__heading">
-                    Мы подобрали 5 специалистов
-                </h1>
-                <div class="auth__choses-specialists">
-                    <ul class="auth__choses-specialists-list">
-                        <li class="auth__choses-specialists-list-item">
-                            <div class="auth__choses-specialists-image-container">
-                                <img src="img/specialists/1.jpg" alt="" class="auth__choses-specialists-image">
-                            </div>
-                        </li>
-                        <li class="auth__choses-specialists-list-item">
-                            <div class="auth__choses-specialists-image-container">
-                                <img src="img/specialists/2.jpg" alt="" class="auth__choses-specialists-image">
-                            </div>
-                        </li>
-                        <li class="auth__choses-specialists-list-item">
-                            <div class="auth__choses-specialists-image-container">
-                                <img src="img/specialists/3.jpg" alt="" class="auth__choses-specialists-image">
-                            </div>
-                        </li>
-                        <li class="auth__choses-specialists-list-item">
-                            <div class="auth__choses-specialists-image-container">
-                                <img src="img/specialists/4.jpg" alt="" class="auth__choses-specialists-image">
-                            </div>
-                        </li>
-                        <li class="auth__choses-specialists-list-item">
-                            <div class="auth__choses-specialists-image-container">
-                                <img src="img/specialists/5.jpg" alt="" class="auth__choses-specialists-image">
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="auth__choses-specialists-text">
-                        чтобы посмотреть зарегистрируйтесь
-                    </div>
-                </div>
-                <form action="/" method="POST" class="auth__form" data-need-validation autocomplete="new-password">
-                    <div class="auth__form-row">
-                        <label for="name" class="auth__form-label">
-                            Ваше имя
-                        </label>
-                        <div class="auth__form-input-wrapper">
-                            <input type="text" name="name" id="name" class="auth__form-input" required>
+            <div class="payment__secure">
+                <img src="img/lock.svg" alt="" class="payment__secure-icon">
+                Данные карты защищены по международному стандарту PCI DSS
+            </div>
+
+            <form action="/" method="POST" class="payment__form" data-need-validation id="payment-form">
+                <div class="payment__cards">
+                    <div class="payment__front-card">
+                        <div class="payment__systems">
+                            <img src="img/mastercard.svg" alt="" class="payment__systems-logo" width="100">
+                            <img src="img/visa.svg" alt="" class="payment__systems-logo" width="100">
+                            <img src="img/mir.png" alt="" class="payment__systems-logo" width="100">
                         </div>
+                        <div class="payment__card-inputs">
+                            <div class="payment__card-row">
+                                <div class="payment__card-input-wrapper">
+                                    <label for="cardnumber" class="payment__card-label">
+                                        Номер карты
+                                    </label>
+                                    <input type="tel" class="payment__card-input js-card-number" id="cardnumber"
+                                        placeholder="0000 0000 0000 0000" required data-parsley-cardnumber>
+                                </div>
+                            </div>
+                            <div class="payment__card-row">
+                                <div class="payment__card-input-wrapper">
+                                    <label for="cardname" class="payment__card-label">
+                                        Имя владельца
+                                    </label>
+                                    <input type="text" class="payment__card-input" id="cardname"
+                                        placeholder="Ivan Ivanov" required>
+                                </div>
+                                <div class="payment__card-input-wrapper payment__card-input-wrapper--short">
+                                    <label for="carddate" class="payment__card-label">
+                                        ММ/ГГ
+                                    </label>
+                                    <input type="tel" class="payment__card-input js-card-date" id="carddate"
+                                        placeholder="ММ/ГГ" required data-parsley-carddate>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </div>
-                    <div class="auth__form-row">
-                        <label for="phone" class="auth__form-label">
-                            Телефон
-                        </label>
-                        <div class="auth__form-input-wrapper">
-                            <input type="tel" name="phone" id="phone" class="auth__form-input js-phone-input" required
-                                data-parsley-phone>
+                    <div class="payment__back-card">
+                        <div class="payment__card-inputs">
+                            <div class="payment__back-card-bar"></div>
+                            <div class="payment__card-row">
+                                <div class="payment__card-input-wrapper">
+
+                                </div>
+                                <div class="payment__card-input-wrapper payment__card-input-wrapper--short">
+                                    <label for="cardcvv" class="payment__card-label">
+                                        CVV/CVC
+                                    </label>
+                                    <input type="text" class="payment__card-input js-card-cvv" id="cardcvv" required data-parsley-cardcvv>
+                                    <div class="payment__card-input-remark">
+                                        Последние 3<br> цифры на обороте
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
-                    <div class="auth__form-row">
-                        <label for="code" class="auth__form-label">
-                            Код из смс
-                        </label>
-                        <div class="auth__form-input-wrapper">
-                            <input type="text" name="phone" id="code" class="auth__form-input" required>
 
-                            <div class="auth__form-input-remark">
-                                На указанный вами номер было отправлено SMS с кодом подтверждения. Отправить еще раз (3)
-                                через 284 сек.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="auth__form-row">
-                        <label for="age" class="auth__form-label">
-                            Сколько вам лет?
+                    <div class="payment__email-check">
+                        <label for="emailcheck" class="payment__email-check-label">
+                            E-mail
                         </label>
-                        <div class="auth__form-input-wrapper">
-                            <input type="text" name="age" id="age"
-                                class="auth__form-input js-numeric-input-no-formatting" required>
+                        <div class="payment__email-check-inputs">
+                            <input type="email" class="payment__email-check-input" data-parsley-validate-if-empty="true" data-parsley-required-if-checked="#emailcheckbox" id="emailcheck">
+                            <label class="payment__email-check-checkbox">
+                                <input type="checkbox" name="emailcheckbox" id="emailcheckbox"
+                                    class="payment__email-check-checkbox-input" checked>
+                                <span class="payment__email-check-checkbox-mark">
+
+                                </span>
+                                <span class="payment__email-check-checkbox-text">
+                                    Отправить электронный чек на email
+                                </span>
+
+                            </label>
                         </div>
                     </div>
-                    <div class="auth__form-bottom-block">
-                        <a href="#" class="auth__form-already-has-an-account">
-                            <svg width="14" height="14" aria-hidden="true" class="icon-person">
-                                <use xlink:href="#person"></use>
-                            </svg>
-                            <span class="auth__form-already-has-an-account-text">У меня уже есть аккаунт</span>
+
+                    <div class="payment__btns">
+                        <a href="#" class="auth__form-btn">
+                            Назад
                         </a>
-                        <div class="auth__form-bottom-btns">
-                            <a href="#" class="auth__form-btn">
-                                Назад
-                            </a>
-                            <button class="auth__form-btn auth__form-btn--submit" disabled>
-                                Далее
-                            </button>
-                        </div>
+                        <button class="auth__form-btn auth__form-btn--submit">
+                            Далее
+                        </button>
                     </div>
-                </form>
-            </div>
+
+
+                </div>
+            </form>
         </div>
     </div>
 </section>
-
 
         </main>
 

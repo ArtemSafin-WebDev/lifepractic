@@ -49,14 +49,27 @@
                                 </svg>
                             </a>
                         </div>
-
+                        {{#unless login}}
                         <a href="#" class="page-header__mobile-register-btn">
                             Регистрация
                         </a>
+                        {{/unless}}
                     </div>
                 </div>
             </div>
 
+
+
+            {{#if login}}
+            <a href="#" class="page-header__user">
+                <div class="page-header__user-avatar">
+                    {{!-- <img src="user-avatar.jpg" alt=""> --}}
+                </div>
+                <div class="page-header__user-name">
+                    Татьяна
+                </div>
+            </a>
+            {{else}}
             <div class="page-header__btns">
                 <a href="register-1.html" class="page-header__btn page-header__btn--login">
                     Войти
@@ -65,13 +78,17 @@
                     Регистрация
                 </a>
             </div>
+            {{/if}}
 
             <div class="page-header__mobile-btns">
+                {{#unless login}}
+
                 <a href="#" class="page-header__mobile-login">
                     <svg width="14" height="14" aria-hidden="true" class="icon-person">
                         <use xlink:href="#person"></use>
                     </svg>
                 </a>
+                {{/unless}}
                 <burger class="page-header__burger">
                     <span class="page-header__burger-content">
                         <span></span>

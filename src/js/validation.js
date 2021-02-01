@@ -11,6 +11,69 @@ window.Parsley.addValidator('phone', {
     }
 });
 
+
+window.Parsley.addValidator('cardnumber', {
+    requirementType: 'string',
+    validateString: function(value) {
+      
+        
+        return /^[0-9]{16}$/.test(value.replace(/\s+/g, ''));
+    },
+    messages: {
+        en: 'Enter correct card number',
+        ru: 'Введите правильно номер карты'
+    }
+});
+
+window.Parsley.addValidator('cardcvv', {
+    requirementType: 'string',
+    validateString: function(value) {
+      
+        
+        return /^[0-9]{3}$/.test(value.replace(/\s+/g, ''));
+    },
+    messages: {
+        en: 'Enter correct card CVV',
+        ru: 'Введите правильно CVV код'
+    }
+});
+window.Parsley.addValidator('carddate', {
+    requirementType: 'string',
+    validateString: function(value) {
+        console.log('Тестируем срок действия', value)
+        
+        return /^[0-9]{2}\/[0-9]{2}$/.test(value.replace(/\s+/g, ''));
+    },
+    messages: {
+        en: 'Enter correct period',
+        ru: 'Введите правильно срок действия'
+    }
+});
+
+window.Parsley.addValidator('requiredIfChecked', {
+    requirementType: 'string',
+    validateString: function(value, requirement) {
+        console.log('Validating', value)
+
+        const checkbox = document.querySelector(requirement);
+
+        if (!checkbox) {
+            return false;
+        }
+
+        if (checkbox.checked && !value.trim()) {
+            return false;
+        }
+
+        return true;
+    },
+    messages: {
+        en: 'Required field',
+        ru: 'Обязательное поле'
+    },
+    priority: 33
+});
+
 Parsley.addMessages('ru', {
     defaultMessage: 'Некорректное значение.',
     type: {

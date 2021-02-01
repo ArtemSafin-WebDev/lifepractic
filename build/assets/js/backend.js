@@ -19,4 +19,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    var paymentForm = document.querySelector('#payment-form');
+
+    if (paymentForm) {
+        paymentForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+        })
+    }
 });
