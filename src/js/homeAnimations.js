@@ -74,6 +74,7 @@ export default function homeAnimations() {
         const person = mainIllustration.querySelector('.person');
         const thoughts = mainIllustration.querySelector('.thoughts');
         const monitor = mainIllustration.querySelector('.monitor');
+        const homeBush = document.querySelector('.home__bush')
         const introTimeline = gsap.timeline({
             paused: false,
             onComplete: () => {
@@ -173,6 +174,14 @@ export default function homeAnimations() {
                     duration: 0.5
                 },
                 '<0.3'
+            )
+            .to(
+                homeBush,
+                {
+                    autoAlpha: 1,
+                    duration: 0.5
+                },
+                '<0.2'
             )
             .to(
                 thoughts,
