@@ -18,7 +18,7 @@ import cvvMask from './cvvMask';
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
-    navLinksHover();
+    // navLinksHover();
     mobileMenu();
     phoneMask();
     validation();

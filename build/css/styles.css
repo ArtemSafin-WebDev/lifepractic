@@ -1324,7 +1324,7 @@ select:-webkit-autofill:focus {
   z-index: 2; }
 
 .page-header__mobile-menu {
-  margin-right: 2.7rem; }
+  margin-right: 3rem; }
   @media only screen and (max-width: 860px) {
     .page-header__mobile-menu {
       position: fixed;
@@ -1437,7 +1437,7 @@ select:-webkit-autofill:focus {
   .page-header__nav-link:link, .page-header__nav-link:visited {
     color: #6e6e6e; }
   .page-header__nav-link:hover {
-    color: white; }
+    color: #7abed1; }
   @media only screen and (max-width: 1024px) {
     .page-header__nav-link {
       font-size: 1.8rem; } }
@@ -2032,7 +2032,7 @@ select:-webkit-autofill:focus {
     width: 140%;
     padding-bottom: 100%;
     border-radius: 50%;
-    background: #bc5b4f;
+    background: #CA5C4E;
     -webkit-transition: -webkit-transform 1s;
     transition: -webkit-transform 1s;
     transition: transform 1s;
@@ -2613,7 +2613,8 @@ select:-webkit-autofill:focus {
   .auth__form-btn:not([disabled]):hover,
   .auth__enter-link:not([disabled]):hover,
   .modals__help-form-submit:not([disabled]):hover {
-    background-color: black;
+    background: #7ABED1;
+    border-color: #7ABED1;
     color: white; }
   @media only screen and (max-width: 640px) {
     .auth__form-btn,
@@ -3739,10 +3740,9 @@ select:-webkit-autofill:focus {
     cursor: default;
     opacity: 0.5; }
   .select-time__arrow:not(.swiper-button-disabled):hover {
-    background-color: black;
-    border-color: black; }
+    border-color: #7abed1; }
     .select-time__arrow:not(.swiper-button-disabled):hover svg {
-      fill: white; }
+      fill: #7abed1; }
 
 .select-time__slider .swiper-slide {
   display: -webkit-box;
@@ -4832,7 +4832,7 @@ textarea.modals__help-form-input {
     width: 140%;
     padding-bottom: 100%;
     border-radius: 50%;
-    background: #bc5b4f;
+    background: #CA5C4E;
     -webkit-transition: -webkit-transform 1s;
     transition: -webkit-transform 1s;
     transition: transform 1s;

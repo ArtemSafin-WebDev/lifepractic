@@ -57,11 +57,10 @@
     }
 
     &:not(.swiper-button-disabled):hover {
-        background-color: black;
-        border-color: black;
+        border-color: #7abed1;
 
         svg {
-            fill: white;
+            fill: #7abed1;
         }
     }
 }
@@ -160,7 +159,6 @@
     margin-bottom: 1rem;
     color: #cacaca;
 }
-
 
 .select-time__form-btns {
     display: flex;
