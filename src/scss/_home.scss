@@ -121,6 +121,11 @@
     flex-wrap: wrap;
     margin-bottom: 7rem;
 
+    &--standalone {
+        margin: 0;
+        justify-content: space-between;
+    }
+
     @include breakpoint(mobile) {
         margin-bottom: 3.6rem;
         flex-wrap: nowrap;
@@ -302,7 +307,7 @@
         border-radius: 50%;
        
 
-        background: #CA5C4E;
+        background: #D24932;
         transition: transform 1s;
         z-index: -1;
         transform: translateX(20%);

@@ -8,6 +8,7 @@ export default function selectTime() {
         const container = element.querySelector('.swiper-container');
         new Swiper(container, {
             slidesPerView: 5,
+            slidesPerGroup: 5,
             spaceBetween: 12,
             watchOverflow: true,
             touchStartPreventDefault: false,
@@ -20,6 +21,7 @@ export default function selectTime() {
             breakpoints: {
                 641: {
                     slidesPerView: 7,
+                    slidesPerGroup: 7,
                     spaceBetween: 12,
                 }
             }

@@ -1,4 +1,9 @@
 .page-header {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    top: 0;
     .home-page & {
         @include breakpointMF(small-tablet) {
             opacity: 0;

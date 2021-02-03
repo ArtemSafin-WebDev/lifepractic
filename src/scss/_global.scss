@@ -62,6 +62,10 @@ body {
     color: black;
     font-family: var(--rubik);
     overflow-y: scroll;
+
+    &.account-page {
+        background-color: #F0F7F9;
+    }
 }
 
 main {

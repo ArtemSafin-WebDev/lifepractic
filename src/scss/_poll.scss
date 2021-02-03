@@ -111,15 +111,14 @@
         line-height: 1.2;
         display: flex;
         margin-right: 1.8rem;
+
+        br {
+            display: none;
+        }
     }
 }
 
-
-
 .poll__main-poll-form-label-text-details {
-   
-
-    
     position: absolute;
     left: 100%;
     left: clamp(1rem, 100%, 27.5rem);
@@ -160,6 +159,18 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s, visibility 0s linear 0.3s;
+
+    &--gay {
+        width: 30rem;
+    }
+
+    @include breakpoint(mobile) {
+        right: -1rem;
+        left: auto;
+        width: 100%;
+        transform: none;
+        width: 24rem;
+    }
 }
 
 .poll__main-poll-form-label-text-details-dropdown-inner {
@@ -173,6 +184,13 @@
     font-weight: 300;
     font-size: 1.4rem;
     line-height: 2rem;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+        border-radius: 0.4rem;
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -184,6 +202,12 @@
         border-style: solid;
         border-width: 1rem 1.2rem 0 1.2rem;
         border-color: #fff transparent transparent transparent;
+
+        @include breakpoint(mobile) {
+            left: auto;
+            transform: none;
+            right: 0.7rem;
+        }
     }
 }
 
@@ -214,7 +238,6 @@
 
     .no-touch &:hover {
         .poll__main-poll-form-checkbox-content {
-          
             border-color: #7abed1;
             font-weight: 400;
         }
@@ -285,6 +308,10 @@
         font-size: 1.2rem;
         line-height: 1.2;
         margin-top: 1rem;
+
+        br {
+            display: none;
+        }
     }
 }
 
@@ -319,6 +346,12 @@
     font-size: 1.4rem;
     line-height: 1.4;
     padding-right: 2rem;
+
+    @include breakpoint(mobile) {
+        br {
+            display: none;
+        }
+    }
 }
 
 .poll__main-poll-form-additional-questions-checkbox {
@@ -333,7 +366,6 @@
 
     .no-touch &:hover {
         .poll__main-poll-form-additional-questions-checkbox-mark {
-           
             border-color: #7abed1;
         }
     }
@@ -407,7 +439,7 @@
     justify-content: flex-end;
 
     @include breakpoint(mobile) {
-        margin: -.4rem;
+        margin: -0.4rem;
     }
 }
 

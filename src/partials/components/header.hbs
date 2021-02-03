@@ -61,6 +61,7 @@
 
 
             {{#if login}}
+            {{#unless accountPage}}
             <a href="#" class="page-header__user">
                 <div class="page-header__user-avatar">
                     {{!-- <img src="user-avatar.jpg" alt=""> --}}
@@ -69,6 +70,7 @@
                     Татьяна
                 </div>
             </a>
+            {{/unless}}
             {{else}}
             <div class="page-header__btns">
                 <a href="register-1.html" class="page-header__btn page-header__btn--login">
