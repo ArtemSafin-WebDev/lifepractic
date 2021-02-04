@@ -15,6 +15,7 @@ import cardNumberMask from './cardNumberMask';
 import cardDateMask from './cardDateMask';
 import cvvMask from './cvvMask';
 import header from './header';
+import accountMenu from './accountMenu';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -31,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     cardDateMask();
     cvvMask();
     header();
+    accountMenu();
 });
 
 window.addEventListener('load', function() {

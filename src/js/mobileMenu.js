@@ -1,7 +1,7 @@
 import { lockScroll, unlockScroll } from './scrollBlocker';
 
 export default function mobileMenu() {
-    const btn = document.querySelector('.page-header__burger');
+    const btn = document.querySelector('.js-menu-burger');
     const menu = document.querySelector('.page-header__mobile-menu');
     let menuOpen = false;
 

@@ -8,6 +8,14 @@
         flex-direction: column;
         flex-grow: 1;
     }
+
+    @include breakpoint(small-tablet) {
+        padding-top: 4rem;
+    }
+
+    @include breakpoint(mobile) {
+        padding-top: 1rem;
+    }
 }
 
 .account__layout {
@@ -23,6 +31,7 @@
 
     @include breakpoint(small-tablet) {
         width: 20rem;
+        display: none;
     }
 }
 
@@ -179,7 +188,6 @@
     }
 }
 
-
 .account__main-content {
     background: #ffffff;
     box-shadow: -0.8rem 0px 3rem rgba(0, 0, 0, 0.05);
@@ -198,8 +206,11 @@
     padding-right: calc((100vw - 100% - 27rem) / 2);
 
     @include breakpoint(small-tablet) {
-        margin-right: calc(-1 * (100vw - 100% - 10rem) / 2);
-        padding-right: calc((100vw - 100% - 10rem) / 2);
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        background: transparent;
+        border-radius: 0;
     }
 }
 
@@ -210,6 +221,11 @@
 
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(small-tablet) {
+        max-width: none;
+        margin: 0;
+    }
 }
 
 .account__no-notes-card {
@@ -223,6 +239,11 @@
     justify-content: center;
     position: relative;
     z-index: 1;
+
+    @include breakpoint(mobile) {
+        padding: 5rem;
+        min-height: auto;
+    }
 }
 
 .account__no-notes-card-content {
@@ -232,6 +253,16 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(small-tablet) {
+        max-width: 36rem;
+    }
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        padding: 0;
+        margin: 0;
+    }
 }
 
 .account__no-notes-card-heading {
@@ -239,6 +270,17 @@
     line-height: 4.8rem;
     margin-bottom: 1rem;
     font-weight: 400;
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 2rem;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 2.8rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
 }
 
 .account__no-notes-card-text {
@@ -246,8 +288,21 @@
     font-size: 1.7rem;
     line-height: 2.4rem;
     margin-bottom: 3.5rem;
-}
 
+    @include breakpoint(small-tablet) {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+        font-weight: 300;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+}
 
 .account__no-notes-card-image {
     position: absolute;
@@ -257,6 +312,19 @@
     width: 45rem;
     height: auto;
     z-index: -1;
+
+    @include breakpoint(small-tablet) {
+        width: 35rem;
+    }
+    @include breakpoint(mobile) {
+        position: static;
+        left: auto;
+        top: auto;
+        transform: none;
+        width: 22rem;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+    }
 }
 
 .account__no-notes-features {
@@ -264,4 +332,10 @@
     width: 100%;
     margin-top: 3.6rem;
     max-width: 75rem;
+
+    @include breakpoint(small-tablet) {
+        margin: 0;
+        max-width: none;
+        margin-top: 3rem;
+    }
 }

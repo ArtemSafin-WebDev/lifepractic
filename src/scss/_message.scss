@@ -177,6 +177,14 @@
         font-size: 1.4rem;
         line-height: 2.5rem;
         min-height: 6.2rem;
+
+        
+
+        @include breakpoint(mobile) {
+            font-size: 1.2rem;
+            line-height: 1.3;
+            min-height: 5rem;
+        }
     }
     &:link,
     &:visited {
@@ -252,6 +260,10 @@
         min-width: auto;
         padding-right: 1.8rem;
         min-height: 7.4rem;
+
+        &--small {
+            font-size: 2rem;
+        }
     }
 
     @include breakpoint(mobile) {

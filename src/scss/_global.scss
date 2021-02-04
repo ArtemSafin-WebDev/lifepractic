@@ -65,6 +65,9 @@ body {
 
     &.account-page {
         background-color: #F0F7F9;
+        @include breakpoint(small-tablet) {
+            background: white;
+        }
     }
 }
 
