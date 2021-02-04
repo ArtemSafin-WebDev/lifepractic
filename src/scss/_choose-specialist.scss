@@ -1,13 +1,15 @@
-
 .choose-specialist {
     margin-bottom: 8.4rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
 }
 
-
 .choose-specialist__wrapper {
-   max-width: 99rem;
-   margin: 0 auto;
-   width: 100%;
+    max-width: 99rem;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .choose-specialist__heading {
@@ -23,23 +25,23 @@
         }
     }
 
-
     @include breakpoint(mobile) {
-        font-size: 3.2rem;
-        line-height: 1.2;
-        margin-bottom: 3rem;
+        font-size: 2.8rem;
+        line-height: 3.2rem;
+        margin-bottom: 4rem;
     }
 }
 
 .choose-specialist__choices {
+}
+
+.choose-specialist__choices-list {
     display: flex;
-    flex-wrap: wrap;
+
     justify-content: center;
 
     @include breakpoint(mobile) {
-        margin: -.8rem;
-        margin-bottom: 3rem;
-        // justify-content: initial;
+        margin: -0.8rem;
     }
 }
 
@@ -54,8 +56,12 @@
     @include breakpoint(mobile) {
         padding: 0.8rem;
         margin: 0;
-        width: 50%;
+        width: 25%;
         align-items: center;
+        padding-bottom: 3.2rem;
+        &--need-help {
+            display: none;
+        }
     }
 
     &::before {
@@ -63,8 +69,8 @@
         display: block;
         width: 10rem;
         height: 3px;
-        background: #7ABED1;
-        transition: opacity .3s;
+        background: #7abed1;
+        transition: opacity 0.3s;
         pointer-events: none;
         left: 50%;
         transform: translateX(-50%);
@@ -73,7 +79,9 @@
         opacity: 0;
         bottom: 0;
         @include breakpoint(mobile) {
-            display: none;
+            width: 5.5rem;
+            height: 2px;
+            bottom: 0.8rem;
         }
     }
 
@@ -86,17 +94,16 @@
         }
 
         .choose-specialist__choices-title {
-            color: #7ABED1;
+            color: #7abed1;
         }
     }
 }
 
 .choose-specialist__choices-item-image-container {
     position: relative;
-  
-   
+
     margin-bottom: 2.2rem;
-  
+
     width: 16rem;
 
     .choose-specialist__choices-item--need-help & {
@@ -113,10 +120,10 @@
         transform: translate(-50%, -50%);
         width: 17.4rem;
         height: 17.4rem;
-        border: .3rem solid #7ABED1;
+        border: 0.3rem solid #7abed1;
         border-radius: 50%;
         pointer-events: none;
-        transition: opacity .3s;
+        transition: opacity 0.3s;
         opacity: 0;
 
         @include breakpoint(small-tablet) {
@@ -125,10 +132,9 @@
         }
 
         @include breakpoint(mobile) {
-            width: 11rem;
-            height: 11rem;
-            border-width: .2rem;
-            
+            width: 6.6rem;
+            height: 6.6rem;
+            border-width: 0.2rem;
         }
     }
 
@@ -143,8 +149,8 @@
     }
 
     @include breakpoint(mobile) {
-        width: 10rem;
-        margin-bottom: 1.5rem;
+        width: 6rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -162,7 +168,7 @@
     font-weight: 300;
     font-size: 1.7rem;
     line-height: 2.2rem;
-    transition: color .2s;
+    transition: color 0.2s;
     text-align: center;
     max-width: 16rem;
     @include breakpoint(small-tablet) {
@@ -171,8 +177,9 @@
 
     @include breakpoint(mobile) {
         max-width: none;
-        font-size: 1.6rem;
-        line-height: 1.2;
+        font-weight: 300;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
         br {
             display: none;
         }
@@ -200,7 +207,6 @@
     position: absolute;
     width: 100%;
 
-
     @include breakpoint(mobile) {
         font-size: 1.4rem;
     }
@@ -222,7 +228,7 @@
     display: flex;
     flex-direction: column;
     transform: translateX(20%);
-    
+
     &.active {
         position: relative;
         opacity: 1;
@@ -241,7 +247,9 @@
     background: white;
 
     @include breakpoint(mobile) {
-        padding: 1.8rem;
+        padding: 1.6rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
         flex-direction: column;
     }
 }
@@ -252,9 +260,9 @@
     @include breakpoint(mobile) {
         width: 100%;
         margin: 0;
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
     }
-}   
+}
 
 .choose-specialist__schedule-right-col {
     width: 48rem;
@@ -263,7 +271,6 @@
         width: 100%;
         margin: 0;
     }
-   
 }
 
 .choose-specialist__schedule-heading {
@@ -273,7 +280,8 @@
     font-weight: 400;
 
     @include breakpoint(mobile) {
-        font-size: 2.4rem;
+        font-size: 1.7rem;
+        line-height: 2.2rem;
         margin-bottom: 2rem;
     }
 }
@@ -291,6 +299,11 @@
     flex-wrap: wrap;
     margin: -1rem;
     justify-content: space-between;
+
+    @include breakpoint(mobile) {
+        justify-content: initial;
+        margin: -1.5rem;
+    }
 }
 
 .choose-specialist__schedule-feature-item {
@@ -301,6 +314,14 @@
     font-weight: 300;
     font-size: 1.4rem;
     line-height: 2.2rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 300;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        width: auto;
+        padding: 1.5rem;
+    }
 }
 
 .choose-specialist__specialization {
@@ -315,7 +336,7 @@
             font-size: 1.4rem;
             line-height: 2rem;
             margin-bottom: 1.6rem;
-            color: #6E6E6E;
+            color: #6e6e6e;
             padding-left: 2.2rem;
             position: relative;
 
@@ -324,10 +345,10 @@
                 width: 0.6rem;
                 height: 0.6rem;
                 border-radius: 50%;
-                background: #7ABED1;
+                background: #7abed1;
                 position: absolute;
                 left: 0;
-                top: .6rem;
+                top: 0.6rem;
             }
             &:last-child {
                 margin-bottom: 0;
@@ -337,5 +358,38 @@
 }
 
 .choose-specialist__schedule-select-time {
-    margin-top: -.5rem;
+    margin-top: -0.5rem;
+}
+
+.choose-specialist__help {
+    background: #f7f7f7;
+    border-radius: 1rem;
+    padding: 2rem 2.4rem;
+    margin-top: 3rem;
+    display: none;
+    @include breakpoint(mobile) {
+        display: block;
+    }
+}
+
+.choose-specialist__help-heading {
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+    margin-bottom: .6rem;
+}
+
+.choose-specialist__help-text {
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+
+    a {
+        color: #7ABED1;
+        border-bottom: 1px solid #7ABED1;
+        &:link,
+        &:visited {
+            color: #7ABED1;
+        }
+    }
 }

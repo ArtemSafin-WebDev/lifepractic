@@ -14,6 +14,7 @@ import modals from './modals';
 import cardNumberMask from './cardNumberMask';
 import cardDateMask from './cardDateMask';
 import cvvMask from './cvvMask';
+import header from './header';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     cardNumberMask();
     cardDateMask();
     cvvMask();
+    header();
 });
 
 window.addEventListener('load', function() {

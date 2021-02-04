@@ -27,8 +27,8 @@
     text-align: center;
 
     @include breakpoint(mobile) {
-        font-size: 1.4rem;
-        line-height: 1.2;
+        font-size: 1.3rem;
+        line-height: 1.8rem;
         margin-bottom: 3rem;
         br {
             display: none;

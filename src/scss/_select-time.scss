@@ -39,6 +39,12 @@
     border: 1px solid rgba(0, 0, 0, 0.09);
     border-radius: 1rem;
     transition: background-color 0.2s, border-color 0.2s, opacity 0.2s;
+
+    @include breakpoint(mobile) {
+        width: 3.6rem;
+        height: 3.6rem;
+        margin-right: 0.4rem;
+    }
     svg {
         width: 0.6rem;
         height: 1.2rem;
@@ -100,6 +106,8 @@
     font-size: 2.5rem;
     line-height: 1;
     margin-bottom: 0.3rem;
+
+   
 
     &--weekend {
         color: rgba(#e56a59, 0.6);
@@ -176,14 +184,17 @@
         @include breakpoint(mobile) {
             width: 100%;
             margin: 0;
-            margin-bottom: 1rem;
-            &:last-child {
-                margin-bottom: 0;
-            }
+           
+           
         }
     }
 
     .auth__form-btn--submit {
         flex-grow: 1;
+
+        @include breakpoint(mobile) {
+            order: -1;
+            margin-bottom: 1rem;
+        }
     }
 }

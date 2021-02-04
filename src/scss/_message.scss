@@ -114,6 +114,11 @@
     @include breakpoint(small-tablet) {
         margin: 0;
     }
+
+    @include breakpoint(mobile) {
+        margin-top: -4rem;
+        margin-bottom: -2rem;
+    }
 }
 
 .message__image-container {
