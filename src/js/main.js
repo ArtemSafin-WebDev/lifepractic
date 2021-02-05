@@ -16,6 +16,9 @@ import cardDateMask from './cardDateMask';
 import cvvMask from './cvvMask';
 import header from './header';
 import accountMenu from './accountMenu';
+import customSelects from './customSelects';
+import myNotesTabs from './myNotesTabs';
+import fileUpload from './fileUpload';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -33,6 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
     cvvMask();
     header();
     accountMenu();
+    customSelects();
+    myNotesTabs();
+    fileUpload();
 });
 
 window.addEventListener('load', function() {

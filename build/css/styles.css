@@ -981,7 +981,7 @@ html {
   @media screen and (max-width: 1024px) {
     html {
       font-size: 7px; } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 860px) {
     html {
       font-size: 8px; } }
   @media screen and (max-width: 640px) {
@@ -1236,7 +1236,8 @@ select:-webkit-autofill:focus {
   left: 0;
   width: 100%;
   z-index: 100;
-  top: 0; }
+  top: 0;
+  pointer-events: none; }
   @media only screen and (min-width: 641px) {
     .home-page .page-header {
       opacity: 0;
@@ -1287,7 +1288,8 @@ select:-webkit-autofill:focus {
   font-size: 16px;
   line-height: 19px;
   position: relative;
-  z-index: 130; }
+  z-index: 130;
+  pointer-events: initial; }
   @media only screen and (max-width: 860px) {
     .page-header__logo {
       font-size: 2.4rem;
@@ -1343,7 +1345,8 @@ select:-webkit-autofill:focus {
   z-index: 2; }
 
 .page-header__mobile-menu {
-  margin-right: 3rem; }
+  margin-right: 3rem;
+  pointer-events: initial; }
   @media only screen and (max-width: 860px) {
     .page-header__mobile-menu {
       position: fixed;
@@ -1480,7 +1483,8 @@ select:-webkit-autofill:focus {
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  pointer-events: initial; }
   @media only screen and (max-width: 860px) {
     .page-header__btns {
       display: none; } }
@@ -1524,7 +1528,8 @@ select:-webkit-autofill:focus {
           -ms-flex-align: center;
               align-items: center;
       position: relative;
-      z-index: 130; } }
+      z-index: 130;
+      pointer-events: initial; } }
 
 .page-header__mobile-login {
   margin-right: 5rem;
@@ -1789,7 +1794,8 @@ select:-webkit-autofill:focus {
       -ms-flex-align: center;
           align-items: center;
   color: #272d32;
-  margin-left: 7rem; }
+  margin-left: 7rem;
+  pointer-events: initial; }
   .page-header__user:link, .page-header__user:visited {
     color: #272d32; }
   .no-touch .page-header__user:hover {
@@ -5346,6 +5352,10 @@ textarea.modals__help-form-input {
         left: -2rem; } }
   .account__menu-link:link, .account__menu-link:visited {
     color: black; }
+  .account__menu-link:not(.active):hover {
+    color: var(--primary-color); }
+    .account__menu-link:not(.active):hover svg {
+      fill: var(--primary-color); }
   .account__menu-link.active {
     font-weight: 400; }
     .account__menu-link.active::before {
@@ -5366,14 +5376,16 @@ textarea.modals__help-form-input {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: -10rem;
-  padding-top: 10rem;
+  padding-top: 6.2rem;
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 2rem;
-  padding-bottom: 10rem;
+  padding-bottom: 6.2rem;
   padding-left: 6.2rem;
   padding-right: 6.2rem;
   margin-right: calc(-1 * (100vw - 100% - 27rem) / 2);
   padding-right: calc((100vw - 100% - 27rem) / 2); }
+  .account__main-content--fullwidth {
+    padding-right: 6.2rem; }
   @media only screen and (max-width: 860px) {
     .account__main-content {
       -webkit-box-shadow: none;
@@ -5510,3 +5522,1298 @@ textarea.modals__help-form-input {
       margin: 0;
       max-width: none;
       margin-top: 3rem; } }
+
+.account__my-notes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.account__my-notes-tabs-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-bottom: 4.4rem; }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-tabs-nav {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      margin-bottom: 3rem;
+      -webkit-box-ordinal-group: -9;
+          -ms-flex-order: -10;
+              order: -10; } }
+
+.account__my-notes-tabs-nav-link {
+  font-size: 3.5rem;
+  line-height: 4.8rem;
+  color: rgba(0, 0, 0, 0.3);
+  margin-right: 6rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition: color 0.2s, border-color 0.2s;
+  transition: color 0.2s, border-color 0.2s; }
+  .account__my-notes-tabs-nav-link:last-child {
+    margin-right: 0; }
+  .account__my-notes-tabs-nav-link:link, .account__my-notes-tabs-nav-link:visited {
+    color: rgba(0, 0, 0, 0.3); }
+  .account__my-notes-tabs-nav-link.active {
+    border-color: transparent; }
+  .account__my-notes-tabs-nav-link.active, .account__my-notes-tabs-nav-link:hover {
+    color: black; }
+  @media screen and (max-width: 1200px) {
+    .account__my-notes-tabs-nav-link {
+      font-size: 3rem;
+      line-height: 1.2;
+      margin-right: 4rem; } }
+  @media only screen and (max-width: 860px) {
+    .account__my-notes-tabs-nav-link {
+      margin-right: 4rem;
+      font-size: 2.6rem; } }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-tabs-nav-link {
+      font-size: 2.2rem;
+      line-height: 1.2;
+      margin: 0;
+      margin-bottom: 1rem; }
+      .account__my-notes-tabs-nav-link:last-child {
+        margin-bottom: 0; } }
+
+.account__my-notes-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media screen and (max-width: 980px) {
+    .account__my-notes-row {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-row {
+      display: contents; } }
+
+.account__my-notes-left-col {
+  width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+  @media screen and (max-width: 980px) {
+    .account__my-notes-left-col {
+      width: 100%;
+      -webkit-box-flex: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0; } }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-left-col {
+      display: contents; } }
+
+.account__my-notes-right-col {
+  width: 22rem;
+  margin-left: 4.6rem; }
+  @media screen and (max-width: 980px) {
+    .account__my-notes-right-col {
+      width: 100%;
+      margin: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-ordinal-group: 0;
+          -ms-flex-order: -1;
+              order: -1;
+      margin-bottom: 5rem; } }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-right-col {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      display: contents; } }
+
+.account__my-notes-titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-bottom: 3rem; }
+  @media only screen and (max-width: 1200px) {
+    .account__my-notes-titles {
+      margin-bottom: 2rem; } }
+  @media only screen and (max-width: 860px) {
+    .account__my-notes-titles {
+      display: none; } }
+
+.account__my-notes-title-col:nth-child(1) {
+  width: 36rem;
+  margin-right: 5rem; }
+  @media screen and (max-width: 1700px) {
+    .account__my-notes-title-col:nth-child(1) {
+      width: 26rem;
+      margin-right: 3rem; } }
+  @media screen and (max-width: 1100px) {
+    .account__my-notes-title-col:nth-child(1) {
+      width: 24rem;
+      margin-right: 2rem; } }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-title-col:nth-child(1) {
+      width: 33.33%;
+      padding: 0.4rem;
+      margin: 0; } }
+
+.account__my-notes-title-col:nth-child(2) {
+  width: 16rem;
+  margin-right: 3rem; }
+  @media screen and (max-width: 1100px) {
+    .account__my-notes-title-col:nth-child(2) {
+      width: 14rem;
+      margin-right: 2rem; } }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-title-col:nth-child(2) {
+      width: 33.33%;
+      padding: 0.4rem;
+      margin: 0; } }
+
+.account__my-notes-title-col:nth-child(3) {
+  width: 20rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-title-col:nth-child(3) {
+      width: 33.33%;
+      padding: 0.4rem;
+      margin: 0; } }
+
+.account__my-notes-title-col:link, .account__my-notes-title-col:visited {
+  color: rgba(0, 0, 0, 0.35); }
+
+.account__my-notes-titles-text {
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  color: rgba(0, 0, 0, 0.35); }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-titles-text {
+      font-size: 1.3rem;
+      line-height: 1.2; } }
+
+.account__my-notes-results-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.account__my-notes-results-list-item {
+  margin-bottom: 0.4rem; }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-results-list-item {
+      margin-bottom: 0.8rem; } }
+  .account__my-notes-results-list-item:first-child .account__my-notes-results-card {
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem; }
+    @media only screen and (max-width: 640px) {
+      .account__my-notes-results-list-item:first-child .account__my-notes-results-card {
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem; } }
+  .account__my-notes-results-list-item:last-child {
+    margin-bottom: 0; }
+    .account__my-notes-results-list-item:last-child .account__my-notes-results-card {
+      border-bottom-left-radius: 2rem;
+      border-bottom-right-radius: 2rem; }
+      @media only screen and (max-width: 640px) {
+        .account__my-notes-results-list-item:last-child .account__my-notes-results-card {
+          border-bottom-left-radius: 1rem;
+          border-bottom-right-radius: 1rem; } }
+
+.account__my-notes-results-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f9f9f9;
+  color: black;
+  padding: 2.5em 0;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  font-size: 1rem; }
+  @media screen and (max-width: 1700px) {
+    .account__my-notes-results-card {
+      padding: 2em 0; } }
+  @media only screen and (max-width: 860px) {
+    .account__my-notes-results-card {
+      font-size: 1.2rem;
+      position: static; } }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-results-card {
+      padding: 2rem;
+      font-size: 1rem;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: initial;
+          -ms-flex-align: initial;
+              align-items: initial;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
+  .account__my-notes-results-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -0.7em;
+    right: -0.7em;
+    background-color: #fff;
+    background: #ffffff;
+    -webkit-box-shadow: 0px 0.7em 2.4em rgba(0, 0, 0, 0.08);
+            box-shadow: 0px 0.7em 2.4em rgba(0, 0, 0, 0.08);
+    border-radius: 1rem;
+    z-index: -1;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    opacity: 0; }
+    @media only screen and (max-width: 860px) {
+      .account__my-notes-results-card::before {
+        display: none; } }
+  @media only screen and (min-width: 861px) {
+    .account__my-notes-results-card:hover {
+      background-color: transparent;
+      z-index: 30; }
+      .account__my-notes-results-card:hover::before {
+        opacity: 1; } }
+
+.account__my-notes-results-card-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .account__my-notes-results-card-col:nth-child(1) {
+    width: 36em;
+    margin-right: 5em; }
+    @media screen and (max-width: 1700px) {
+      .account__my-notes-results-card-col:nth-child(1) {
+        width: 26em;
+        margin-right: 3em; } }
+    @media screen and (max-width: 1100px) {
+      .account__my-notes-results-card-col:nth-child(1) {
+        width: 24em;
+        margin-right: 2em; } }
+  .account__my-notes-results-card-col:nth-child(2) {
+    width: 16em;
+    margin-right: 3em;
+    -ms-flex-item-align: stretch;
+        align-self: stretch; }
+    @media screen and (max-width: 1100px) {
+      .account__my-notes-results-card-col:nth-child(2) {
+        width: 14em;
+        margin-right: 2em; } }
+  .account__my-notes-results-card-col:nth-child(3) {
+    width: 20em;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-item-align: stretch;
+        align-self: stretch; }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-results-card-col {
+      display: contents; } }
+
+.account__my-notes-results-card-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto 0;
+  padding-left: 3.5em; }
+  @media screen and (max-width: 1700px) {
+    .account__my-notes-results-card-user {
+      padding-left: 2.5em; } }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-results-card-user {
+      padding-left: 0;
+      margin: 0;
+      margin-bottom: 1rem;
+      width: 100%; } }
+
+.account__my-notes-results-card-user-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 6em;
+  height: 6em;
+  margin-right: 1.5em;
+  -ms-flex-negative: 0;
+      flex-shrink: 0; }
+  @media screen and (max-width: 1700px) {
+    .account__my-notes-results-card-user-image-container {
+      width: 4em;
+      height: 4em; } }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-results-card-user-image-container {
+      width: 5em;
+      height: 5em; } }
+
+.account__my-notes-results-card-user-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  font-family: 'object-fit: cover; object-position: center;'; }
+
+.account__my-notes-results-card-user-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.account__my-notes-results-card-user-name {
+  font-size: 2.5em;
+  line-height: 1.2;
+  margin-bottom: 0.2em;
+  font-weight: 400; }
+  @media screen and (max-width: 1700px) {
+    .account__my-notes-results-card-user-name {
+      font-size: 1.8em; } }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-results-card-user-name {
+      font-size: 1.8em; } }
+
+.account__my-notes-results-card-user-role {
+  font-weight: 300;
+  font-size: 1.4em;
+  line-height: 1.2;
+  color: #6e6e6e; }
+  @media screen and (max-width: 1700px) {
+    .account__my-notes-results-card-user-role {
+      font-size: 1.2em; } }
+
+.account__my-notes-results-card-date {
+  font-size: 1.4em;
+  line-height: 1.35;
+  padding-top: 0.7em;
+  -ms-flex-item-align: start;
+      align-self: flex-start; }
+  @media screen and (max-width: 1700px) {
+    .account__my-notes-results-card-date {
+      font-size: 1.2em; } }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-results-card-date {
+      font-size: 1.4rem;
+      padding: 0;
+      margin-bottom: 1rem; } }
+
+.account__my-notes-results-card-subscription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-results-card-subscription {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: initial;
+          -ms-flex-align: initial;
+              align-items: initial;
+      display: contents; } }
+
+.account__my-notes-results-card-status {
+  font-weight: 300;
+  font-size: 1.4em;
+  line-height: 1.2;
+  color: #6bc18f;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding-top: 0.75em;
+  margin-right: 1.42em; }
+  @media screen and (max-width: 1700px) {
+    .account__my-notes-results-card-status {
+      font-size: 1.2em; } }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-results-card-status {
+      font-size: 1.4rem;
+      padding: 0;
+      margin-bottom: 2rem;
+      margin-left: auto; } }
+
+.account__my-notes-results-card-subscribe-btn {
+  font-size: 1.2em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 3rem;
+  padding: 1.25em 1.6em;
+  border: 1px solid #e56a59;
+  border-radius: 0.8em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #e56a59;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  white-space: nowrap;
+  margin-left: auto; }
+  .account__my-notes-results-card-subscribe-btn:link, .account__my-notes-results-card-subscribe-btn:visited {
+    color: #e56a59; }
+  .account__my-notes-results-card-subscribe-btn:hover {
+    background-color: #e56a59;
+    color: white; }
+  @media screen and (max-width: 1100px) {
+    .account__my-notes-results-card-subscribe-btn {
+      font-size: 1em;
+      margin-right: 1.5rem; } }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-results-card-subscribe-btn {
+      width: 100%;
+      font-size: 1.2rem;
+      margin: 0;
+      margin-top: 1rem; } }
+
+.account__my-notes-results-card-actions {
+  position: relative;
+  padding: 1em 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 3rem; }
+  @media screen and (max-width: 1100px) {
+    .account__my-notes-results-card-actions {
+      margin-right: 1.5rem; } }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-results-card-actions {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      z-index: 10; } }
+  .account__my-notes-results-card-actions svg {
+    width: 2.4em;
+    height: 0.6em;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    fill: #c7c7c7;
+    -webkit-transition: fill 0.2s;
+    transition: fill 0.2s;
+    display: block; }
+    @media only screen and (max-width: 640px) {
+      .account__my-notes-results-card-actions svg {
+        width: 2rem; } }
+  .account__my-notes-results-card-actions:hover svg {
+    fill: #7abed1; }
+  .account__my-notes-results-card-actions:hover .account__my-notes-results-card-actions-dropdown {
+    opacity: 1;
+    visibility: inherit;
+    -webkit-transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity 0.3s, visibility 0.3s; }
+
+.account__my-notes-results-card-actions-dropdown {
+  position: absolute;
+  top: 100%;
+  padding-top: 1em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s;
+  transition: opacity 0.3s, visibility 0s linear 0.3s;
+  z-index: 60; }
+  @media only screen and (max-width: 860px) {
+    .account__my-notes-results-card-actions-dropdown {
+      -webkit-transform: none;
+              transform: none;
+      right: 0;
+      left: auto;
+      padding-top: 0; } }
+
+.account__my-notes-results-card-actions-dropdown-inner {
+  width: 22em;
+  background-color: #fff;
+  padding: 2.8em;
+  -webkit-box-shadow: 0px 0.7em 2.4em rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 0.7em 2.4em rgba(0, 0, 0, 0.08);
+  border-radius: 1rem;
+  position: relative; }
+  .account__my-notes-results-card-actions-dropdown-inner::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 1em 1em 1em;
+    border-color: transparent transparent #ffffff transparent;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: 100%; }
+    @media only screen and (max-width: 640px) {
+      .account__my-notes-results-card-actions-dropdown-inner::before {
+        display: none; } }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-results-card-actions-dropdown-inner {
+      padding: 1.6rem;
+      width: 20rem; } }
+
+.account__my-notes-results-card-actions-dropdown-link {
+  font-weight: 300;
+  font-size: 1.4em;
+  line-height: 1.2em;
+  display: block;
+  color: black;
+  margin-bottom: 1.4em; }
+  .account__my-notes-results-card-actions-dropdown-link:last-child {
+    margin-bottom: 0; }
+  .account__my-notes-results-card-actions-dropdown-link:link, .account__my-notes-results-card-actions-dropdown-link:visited {
+    color: black; }
+  .account__my-notes-results-card-actions-dropdown-link:hover {
+    color: #7abed1; }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-results-card-actions-dropdown-link {
+      font-size: 1.3rem;
+      margin-bottom: 1rem; } }
+
+@media screen and (max-width: 980px) {
+  .account__my-notes-calendar {
+    margin-right: 4rem; } }
+
+@media only screen and (max-width: 640px) {
+  .account__my-notes-calendar {
+    width: 23rem;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin-bottom: 3rem; } }
+
+.account__my-notes-calendar-table table,
+.account__my-notes-calendar-table th,
+.account__my-notes-calendar-table td,
+.account__my-notes-calendar-table thead,
+.account__my-notes-calendar-table tbody {
+  display: block; }
+
+.account__my-notes-calendar-table th,
+.account__my-notes-calendar-table td {
+  width: 14.28%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.account__my-notes-calendar-table thead tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: -0.4rem;
+  margin-bottom: 1rem; }
+
+.account__my-notes-calendar-table thead th {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  text-align: center;
+  color: rgba(110, 110, 110, 0.2);
+  text-transform: uppercase;
+  padding: 0.4rem; }
+
+.account__my-notes-calendar-table tbody tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: -0.4rem;
+  margin-bottom: 1rem; }
+  .account__my-notes-calendar-table tbody tr:last-child {
+    margin-bottom: 0; }
+
+.account__my-notes-calendar-table tbody td {
+  padding: 0.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .account__my-notes-calendar-table tbody td a {
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.5rem;
+    position: relative;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    text-align: center;
+    font-weight: 300;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .account__my-notes-calendar-table tbody td a.current {
+      color: #000000;
+      font-weight: 400;
+      background: #f2f2f2; }
+    .account__my-notes-calendar-table tbody td a.marked {
+      color: #7abed1;
+      font-weight: 400; }
+      .account__my-notes-calendar-table tbody td a.marked:link, .account__my-notes-calendar-table tbody td a.marked:visited {
+        color: #7abed1; }
+      .account__my-notes-calendar-table tbody td a.marked::before {
+        content: '';
+        width: 4px;
+        height: 4px;
+        background-color: #7abed1;
+        border-radius: 50%;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+        bottom: -0.4rem;
+        margin-top: 0.3rem;
+        position: absolute;
+        pointer-events: none; }
+    .account__my-notes-calendar-table tbody td a:not(.marked):not(.current):hover {
+      color: #7abed1; }
+
+.account__my-notes-calendar-select-month {
+  margin-bottom: 2.5rem; }
+  .account__my-notes-calendar-select-month .choices {
+    font-weight: 300;
+    font-size: 1.7rem;
+    line-height: 1.2;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    position: relative;
+    color: black; }
+  .account__my-notes-calendar-select-month .choices.is-open {
+    z-index: 30; }
+  .account__my-notes-calendar-select-month .choices[data-type*='select-one'] .choices__inner {
+    padding-bottom: 0; }
+  .account__my-notes-calendar-select-month .choices__inner {
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    border: none;
+    font-size: 1.7rem;
+    line-height: 1.2;
+    min-height: auto;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s; }
+  .account__my-notes-calendar-select-month .choices__list--single {
+    padding: 0;
+    padding-right: 2rem; }
+  .account__my-notes-calendar-select-month .choices[data-type*='select-one']:after {
+    border: none;
+    margin: 0;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 5'%3E%3Cpath d='M5,5a.74.74,0,0,1-.48-.17L.24,1.19a.66.66,0,0,1-.06-1h0a.75.75,0,0,1,1-.06L5,3.41,8.81.17a.73.73,0,0,1,1,.06.65.65,0,0,1-.05,1L5.47,4.83A.73.73,0,0,1,5,5Z' /%3E%3C/svg%3E");
+    width: 12px;
+    height: 6px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; }
+    @media screen and (max-width: 1400px) {
+      .account__my-notes-calendar-select-month .choices[data-type*='select-one']:after {
+        width: 10px;
+        height: 5px; } }
+  .account__my-notes-calendar-select-month .choices__list--dropdown {
+    word-break: initial;
+    border: none;
+    border-radius: 1rem;
+    background: #ffffff;
+    -webkit-box-shadow: -0.8rem 0 3rem rgba(0, 0, 0, 0.05);
+            box-shadow: -0.8rem 0 3rem rgba(0, 0, 0, 0.05);
+    margin-top: 1rem;
+    width: auto;
+    left: auto;
+    right: 0;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%); }
+  .account__my-notes-calendar-select-month .choices__list--dropdown .choices__item {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: #6e6e6e;
+    white-space: nowrap;
+    padding: 1rem 3rem !important;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+    position: relative; }
+    .account__my-notes-calendar-select-month .choices__list--dropdown .choices__item:first-child {
+      padding-top: 2.5rem !important; }
+    .account__my-notes-calendar-select-month .choices__list--dropdown .choices__item:last-child {
+      padding-bottom: 2.5rem !important; }
+  .account__my-notes-calendar-select-month .choices__list--dropdown .choices__item--selectable.is-highlighted {
+    color: black;
+    background: transparent; }
+    .account__my-notes-calendar-select-month .choices__list--dropdown .choices__item--selectable.is-highlighted::before {
+      opacity: 1; }
+  .account__my-notes-calendar-select-month .choices__list--dropdown .choices__list {
+    max-height: 23rem;
+    -webkit-overflow-scrolling: touch; }
+    .account__my-notes-calendar-select-month .choices__list--dropdown .choices__list::-webkit-scrollbar {
+      background-color: white;
+      width: 0.2rem; }
+    .account__my-notes-calendar-select-month .choices__list--dropdown .choices__list::-webkit-scrollbar-thumb {
+      background-color: #7abed1; }
+    .account__my-notes-calendar-select-month .choices__list--dropdown .choices__list::-webkit-scrollbar-button {
+      display: none; }
+    .account__my-notes-calendar-select-month .choices__list--dropdown .choices__list::-webkit-scrollbar-track {
+      background-color: white; }
+    @media only screen and (max-width: 640px) {
+      .account__my-notes-calendar-select-month .choices__list--dropdown .choices__list {
+        max-height: 18rem; } }
+  .account__my-notes-calendar-select-month .choices__placeholder {
+    opacity: 1;
+    color: #6e6e6e; }
+  .account__my-notes-calendar-select-month .choices.is-open .choices__inner {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; }
+  .account__my-notes-calendar-select-month .choices__list--dropdown .choices__item--selectable {
+    padding: 0; }
+
+.account__my-notes-tab-items {
+  position: relative; }
+
+.account__my-notes-tab-item {
+  min-height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s, visibility 0s linear 0.4s;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .account__my-notes-tab-item.active {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: opacity 0.4s, visibility 0.4s;
+    transition: opacity 0.4s, visibility 0.4s; }
+
+.account__my-notes-choose-specialist {
+  background-color: #f1fafc;
+  border-radius: 1rem;
+  padding: 2.2rem;
+  position: relative;
+  z-index: 1;
+  margin-top: 4rem; }
+  @media screen and (max-width: 980px) {
+    .account__my-notes-choose-specialist {
+      width: 25rem;
+      margin-bottom: auto;
+      margin-left: 2rem; } }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-choose-specialist {
+      width: 100%;
+      margin: 0;
+      -webkit-box-ordinal-group: 101;
+          -ms-flex-order: 100;
+              order: 100;
+      padding: 2rem;
+      margin-top: 4rem; } }
+  .account__my-notes-choose-specialist::before {
+    content: '';
+    width: 3.2rem;
+    height: 1.2rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-image: url("../img/tail.svg");
+    z-index: -1;
+    position: absolute;
+    top: 100%;
+    left: 2.5rem; }
+
+@media only screen and (max-width: 860px) {
+  .account__my-notes {
+    margin-bottom: 30rem; } }
+
+@media only screen and (max-width: 640px) {
+  .account__my-notes {
+    margin-bottom: 6rem; } }
+
+.account__my-notes-choose-specialist-heading {
+  font-size: 1.7rem;
+  line-height: 2rem;
+  margin-bottom: 1.4rem;
+  font-weight: 400; }
+
+.account__my-notes-choose-specialist-text {
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-bottom: 3.2rem; }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-choose-specialist-text {
+      margin-bottom: 2rem; } }
+
+.account__my-notes-choose-specialist-link {
+  width: 100%;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  text-align: center;
+  border: 1px solid #7abed1;
+  border-radius: 1rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-transform: uppercase;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem 1rem;
+  -webkit-transition: color 0.2s, background-color 0.2s;
+  transition: color 0.2s, background-color 0.2s; }
+  .account__my-notes-choose-specialist-link:hover {
+    background-color: #7abed1;
+    color: white; }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-choose-specialist-link {
+      font-size: 1.2rem;
+      padding: 1.6rem; } }
+
+@media only screen and (max-width: 860px) {
+  .account__my-account {
+    margin-bottom: 15rem; } }
+
+@media only screen and (max-width: 640px) {
+  .account__my-account {
+    margin-bottom: 6rem; } }
+
+.account__my-account-heading,
+.account__my-history-heading {
+  font-size: 3.5rem;
+  line-height: 4.8rem;
+  font-weight: 400;
+  margin-bottom: 4rem; }
+  @media only screen and (max-width: 640px) {
+    .account__my-account-heading,
+    .account__my-history-heading {
+      font-size: 2.6rem;
+      line-height: 1.2;
+      margin-bottom: 4rem; } }
+
+.account__my-account-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 52rem; }
+
+.account__my-account-form-row {
+  margin-bottom: 2rem;
+  position: relative; }
+  .account__my-account-form-row .parsley-errors-list {
+    width: 100%;
+    -webkit-box-ordinal-group: 21;
+        -ms-flex-order: 20;
+            order: 20;
+    font-weight: 300; }
+    .account__my-account-form-row .parsley-errors-list.filled {
+      margin-top: 0.5rem;
+      font-size: 1.4rem;
+      line-height: 1.2;
+      color: var(--primary-color); }
+  .account__my-account-form-row input:-webkit-autofill,
+  .account__my-account-form-row input:-webkit-autofill:hover,
+  .account__my-account-form-row input:-webkit-autofill:focus,
+  .account__my-account-form-row input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important; }
+
+.account__my-account-form-label {
+  left: 1.5rem;
+  position: absolute;
+  top: 1.5rem;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  color: rgba(0, 0, 0, 0.35);
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+  padding: 0 1rem;
+  background-color: #fff;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  pointer-events: none; }
+
+.account__my-account-form-input {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  height: 5.4rem;
+  font-weight: 300;
+  font-size: 1.7rem;
+  color: black;
+  padding: 0 2.5rem;
+  background-image: url("../img/pencil.svg");
+  background-size: 1rem 1rem;
+  background-position: right 2rem center;
+  background-repeat: no-repeat;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s; }
+  .account__my-account-form-input.parsley-error {
+    border-color: var(--primary-color); }
+  .account__my-account-form-input::-webkit-input-placeholder {
+    opacity: 0; }
+  .account__my-account-form-input:-moz-placeholder {
+    opacity: 0; }
+  .account__my-account-form-input::-moz-placeholder {
+    opacity: 0; }
+  .account__my-account-form-input:-ms-input-placeholder {
+    opacity: 0; }
+
+.account__my-account-form-input:not(:-moz-placeholder-shown) ~ .account__my-account-form-label {
+  transform: scale(0.8) translateY(-3.4rem) translateX(0.2rem); }
+
+.account__my-account-form-input:not(:-ms-input-placeholder) ~ .account__my-account-form-label {
+  transform: scale(0.8) translateY(-3.4rem) translateX(0.2rem); }
+
+.account__my-account-form-input:not(:placeholder-shown) ~ .account__my-account-form-label,
+.account__my-account-form-input:focus ~ .account__my-account-form-label {
+  -webkit-transform: scale(0.8) translateY(-3.4rem) translateX(0.2rem);
+          transform: scale(0.8) translateY(-3.4rem) translateX(0.2rem); }
+
+.account__my-account-file-upload {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  min-width: 22.6rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding: 0 2.5rem;
+  height: 5.4rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border: 1px dashed #c5c5c5;
+  color: rgba(0, 0, 0, 0.35);
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  border-radius: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .account__my-account-file-upload svg {
+    fill: #c5c5c5;
+    width: 1.8rem;
+    height: 1.6rem;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-left: 1rem; }
+
+.account__my-account-file-upload-input {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; }
+
+.account__my-account-submit {
+  margin-left: auto;
+  padding: 1.6rem 2.7rem;
+  background: #e56a59;
+  border-radius: 1rem;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  text-transform: uppercase;
+  text-align: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  color: white;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s; }
+  .account__my-account-submit:hover {
+    background: #d35241; }
+
+.account__my-history {
+  max-width: 98rem; }
+  @media only screen and (max-width: 860px) {
+    .account__my-history {
+      margin-bottom: 15rem; } }
+  @media only screen and (max-width: 640px) {
+    .account__my-history {
+      margin-bottom: 6rem; } }
+
+.account__my-history-table table,
+.account__my-history-table th,
+.account__my-history-table td,
+.account__my-history-table thead,
+.account__my-history-table tbody {
+  display: block; }
+
+.account__my-history-table th:nth-child(1),
+.account__my-history-table td:nth-child(1) {
+  width: 14.5rem; }
+  @media only screen and (max-width: 640px) {
+    .account__my-history-table th:nth-child(1),
+    .account__my-history-table td:nth-child(1) {
+      width: 7rem; } }
+
+.account__my-history-table th:nth-child(2),
+.account__my-history-table td:nth-child(2) {
+  width: 26rem;
+  padding-right: 2rem; }
+  @media only screen and (max-width: 640px) {
+    .account__my-history-table th:nth-child(2),
+    .account__my-history-table td:nth-child(2) {
+      width: 18rem; } }
+
+.account__my-history-table th:nth-child(3),
+.account__my-history-table td:nth-child(3) {
+  width: 21rem;
+  padding-right: 2rem; }
+  @media only screen and (max-width: 640px) {
+    .account__my-history-table th:nth-child(3),
+    .account__my-history-table td:nth-child(3) {
+      width: 18rem; } }
+
+.account__my-history-table th:nth-child(4),
+.account__my-history-table td:nth-child(4) {
+  width: 18rem;
+  padding-right: 2rem; }
+  @media only screen and (max-width: 640px) {
+    .account__my-history-table th:nth-child(4),
+    .account__my-history-table td:nth-child(4) {
+      width: 14rem; } }
+
+.account__my-history-table th:nth-child(5),
+.account__my-history-table td:nth-child(5) {
+  width: 14rem; }
+  @media only screen and (max-width: 640px) {
+    .account__my-history-table th:nth-child(5),
+    .account__my-history-table td:nth-child(5) {
+      width: 16rem; } }
+
+.account__my-history-table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.account__my-history-table thead th {
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  color: rgba(0, 0, 0, 0.35); }
+  @media only screen and (max-width: 640px) {
+    .account__my-history-table thead th {
+      font-size: 1.2rem; } }
+
+.account__my-history-table thead tr {
+  margin-bottom: 3.6rem;
+  padding: 0 3.4rem; }
+  @media only screen and (max-width: 640px) {
+    .account__my-history-table thead tr {
+      margin-bottom: 2rem;
+      padding: 0 1.6rem; } }
+
+.account__my-history-table tbody tr {
+  padding: 2rem 3.4rem;
+  margin-bottom: 0.5rem; }
+  .account__my-history-table tbody tr:first-child {
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem; }
+  .account__my-history-table tbody tr:last-child {
+    margin-bottom: 0;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem; }
+  .account__my-history-table tbody tr:nth-child(even) {
+    background-color: #f2f9fb; }
+  .account__my-history-table tbody tr:nth-child(odd) {
+    background-color: #fcfcfc; }
+  @media only screen and (max-width: 640px) {
+    .account__my-history-table tbody tr {
+      padding: 1.6rem; } }
+
+.account__my-history-table-number {
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  margin-right: 1rem; }
+  @media only screen and (max-width: 640px) {
+    .account__my-history-table-number {
+      font-size: 1.2rem;
+      line-height: 1.2; } }
+
+.account__my-history-table-specialist {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  margin-bottom: 0.6rem; }
+  .account__my-history-table-specialist:last-child {
+    margin-bottom: 0; }
+  @media only screen and (max-width: 640px) {
+    .account__my-history-table-specialist {
+      font-size: 1.2rem;
+      line-height: 1.2; } }
+
+.account__my-history-table-event {
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.2; }
+  @media only screen and (max-width: 640px) {
+    .account__my-history-table-event {
+      font-size: 1.2rem;
+      line-height: 1.2; } }
+
+.account__my-history-table-date {
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  margin-bottom: 0.6rem; }
+  @media only screen and (max-width: 640px) {
+    .account__my-history-table-date {
+      font-size: 1.2rem;
+      line-height: 1.2; } }
+
+.account__my-history-table-time {
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.2; }
+  @media only screen and (max-width: 640px) {
+    .account__my-history-table-time {
+      font-size: 1.2rem;
+      line-height: 1.2; } }
+
+.account__my-history-table-price {
+  font-size: 1.4rem;
+  line-height: 1.2; }
+  @media only screen and (max-width: 640px) {
+    .account__my-history-table-price {
+      font-size: 1.2rem;
+      line-height: 1.2; } }
+
+.account__my-history-table-status {
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  color: #6e6e6e;
+  padding: .8rem 2rem;
+  border: 1px solid #cacaca;
+  border-radius: 0.6rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  text-align: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 11rem;
+  white-space: nowrap; }
+  .account__my-history-table-status--cancelled {
+    color: var(--primary-color);
+    border-color: var(--primary-color); }
+  .account__my-history-table-status--paid {
+    color: #6BC18F;
+    border-color: #6BC18F; }
+  @media only screen and (max-width: 640px) {
+    .account__my-history-table-status {
+      font-size: 1rem;
+      line-height: 1.2;
+      padding: 0.5rem 0;
+      min-width: auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }

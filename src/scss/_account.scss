@@ -73,6 +73,7 @@
     height: 13rem;
     overflow: hidden;
     position: relative;
+
     border-radius: 50%;
 
     @include breakpoint(small-tablet) {
@@ -180,6 +181,14 @@
         color: black;
     }
 
+    &:not(.active):hover {
+        color: var(--primary-color);
+
+        svg {
+            fill: var(--primary-color);
+        }
+    }
+
     &.active {
         font-weight: 400;
         &::before {
@@ -196,14 +205,18 @@
     display: flex;
     flex-direction: column;
     margin-top: -10rem;
-    padding-top: 10rem;
+    padding-top: 6.2rem;
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
-    padding-bottom: 10rem;
+    padding-bottom: 6.2rem;
     padding-left: 6.2rem;
     padding-right: 6.2rem;
     margin-right: calc(-1 * (100vw - 100% - 27rem) / 2);
     padding-right: calc((100vw - 100% - 27rem) / 2);
+
+    &--fullwidth {
+        padding-right: 6.2rem;
+    }
 
     @include breakpoint(small-tablet) {
         box-shadow: none;
@@ -337,5 +350,1343 @@
         margin: 0;
         max-width: none;
         margin-top: 3rem;
+    }
+}
+
+.account__my-notes {
+    display: flex;
+    flex-direction: column;
+}
+
+.account__my-notes-tabs-nav {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 4.4rem;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        margin-bottom: 3rem;
+        order: -10;
+    }
+}
+
+.account__my-notes-tabs-nav-link {
+    font-size: 3.5rem;
+    line-height: 4.8rem;
+    color: rgba(black, 0.3);
+    margin-right: 6rem;
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(black, 0.3);
+    transition: color 0.2s, border-color 0.2s;
+    &:last-child {
+        margin-right: 0;
+    }
+    &:link,
+    &:visited {
+        color: rgba(black, 0.3);
+    }
+
+    &.active {
+        border-color: transparent;
+    }
+
+    &.active,
+    &:hover {
+        color: black;
+    }
+
+    @media screen and (max-width: 1200px) {
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-right: 4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        margin-right: 4rem;
+        font-size: 2.6rem;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        margin: 0;
+        margin-bottom: 1rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.account__my-notes-row {
+    display: flex;
+
+    @media screen and (max-width: 980px) {
+        flex-direction: column;
+    }
+
+    @include breakpoint(mobile) {
+        display: contents;
+    }
+}
+
+.account__my-notes-left-col {
+    width: 50%;
+    flex-grow: 1;
+    @media screen and (max-width: 980px) {
+        width: 100%;
+        flex-grow: 0;
+    }
+
+    @include breakpoint(mobile) {
+        display: contents;
+    }
+}
+
+.account__my-notes-right-col {
+    width: 22rem;
+    margin-left: 4.6rem;
+    @media screen and (max-width: 980px) {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        order: -1;
+        margin-bottom: 5rem;
+    }
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        display: contents;
+    }
+}
+
+.account__my-notes-titles {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 3rem;
+
+    @include breakpoint(laptop) {
+        margin-bottom: 2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        display: none;
+    }
+}
+
+.account__my-notes-title-col {
+    &:nth-child(1) {
+        width: 36rem;
+        margin-right: 5rem;
+
+        @media screen and (max-width: 1700px) {
+            width: 26rem;
+            margin-right: 3rem;
+        }
+
+        @media screen and (max-width: 1100px) {
+            width: 24rem;
+            margin-right: 2rem;
+        }
+
+        @include breakpoint(mobile) {
+            width: 33.33%;
+            padding: 0.4rem;
+            margin: 0;
+        }
+    }
+    &:nth-child(2) {
+        width: 16rem;
+        margin-right: 3rem;
+
+        @media screen and (max-width: 1100px) {
+            width: 14rem;
+            margin-right: 2rem;
+        }
+
+        @include breakpoint(mobile) {
+            width: 33.33%;
+            padding: 0.4rem;
+            margin: 0;
+        }
+    }
+    &:nth-child(3) {
+        width: 20rem;
+        flex-grow: 1;
+
+        @include breakpoint(mobile) {
+            width: 33.33%;
+            padding: 0.4rem;
+            margin: 0;
+        }
+    }
+    &:link,
+    &:visited {
+        color: rgba(0, 0, 0, 0.35);
+    }
+}
+
+.account__my-notes-titles-text {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: rgba(0, 0, 0, 0.35);
+
+    @include breakpoint(mobile) {
+        font-size: 1.3rem;
+        line-height: 1.2;
+    }
+}
+
+.account__my-notes-results-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.account__my-notes-results-list-item {
+    margin-bottom: 0.4rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 0.8rem;
+    }
+    &:first-child {
+        .account__my-notes-results-card {
+            border-top-left-radius: 2rem;
+            border-top-right-radius: 2rem;
+
+            @include breakpoint(mobile) {
+                border-top-left-radius: 1rem;
+                border-top-right-radius: 1rem;
+            }
+        }
+    }
+    &:last-child {
+        margin-bottom: 0;
+        .account__my-notes-results-card {
+            border-bottom-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+
+            @include breakpoint(mobile) {
+                border-bottom-left-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+            }
+        }
+    }
+}
+
+.account__my-notes-results-card {
+    display: flex;
+    background-color: #f9f9f9;
+    color: black;
+    padding: 2.5em 0;
+    position: relative;
+    align-items: center;
+    z-index: 1;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+    @media screen and (max-width: 1700px) {
+        padding: 2em 0;
+    }
+
+    @include breakpoint(small-tablet) {
+        font-size: 1.2rem;
+        position: static;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+        font-size: 1rem;
+        flex-direction: row;
+        align-items: initial;
+        flex-wrap: wrap;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -0.7em;
+        right: -0.7em;
+        background-color: #fff;
+        background: #ffffff;
+        box-shadow: 0px 0.7em 2.4em rgba(0, 0, 0, 0.08);
+        border-radius: 1rem;
+        z-index: -1;
+        transition: opacity 0.3s;
+        opacity: 0;
+
+        @include breakpoint(small-tablet) {
+            display: none;
+        }
+    }
+
+    &:hover {
+        @include breakpointMF(tablet) {
+            background-color: transparent;
+            z-index: 30;
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.account__my-notes-results-card-col {
+    display: flex;
+    flex-direction: column;
+    &:nth-child(1) {
+        width: 36em;
+        margin-right: 5em;
+
+        @media screen and (max-width: 1700px) {
+            width: 26em;
+            margin-right: 3em;
+        }
+        @media screen and (max-width: 1100px) {
+            width: 24em;
+            margin-right: 2em;
+        }
+    }
+    &:nth-child(2) {
+        width: 16em;
+        margin-right: 3em;
+        align-self: stretch;
+        @media screen and (max-width: 1100px) {
+            width: 14em;
+            margin-right: 2em;
+        }
+    }
+    &:nth-child(3) {
+        width: 20em;
+        flex-grow: 1;
+        align-self: stretch;
+    }
+
+    @include breakpoint(mobile) {
+        display: contents;
+    }
+}
+
+.account__my-notes-results-card-user {
+    display: flex;
+    align-items: center;
+    margin: auto 0;
+    padding-left: 3.5em;
+    @media screen and (max-width: 1700px) {
+        padding-left: 2.5em;
+    }
+
+    @include breakpoint(mobile) {
+        padding-left: 0;
+        margin: 0;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+}
+
+.account__my-notes-results-card-user-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 6em;
+    height: 6em;
+    margin-right: 1.5em;
+    flex-shrink: 0;
+
+    @media screen and (max-width: 1700px) {
+        width: 4em;
+        height: 4em;
+    }
+
+    @include breakpoint(mobile) {
+        width: 5em;
+        height: 5em;
+    }
+}
+
+.account__my-notes-results-card-user-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include objectFitCover();
+}
+
+.account__my-notes-results-card-user-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.account__my-notes-results-card-user-name {
+    font-size: 2.5em;
+    line-height: 1.2;
+    margin-bottom: 0.2em;
+    font-weight: 400;
+
+    @media screen and (max-width: 1700px) {
+        font-size: 1.8em;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.8em;
+    }
+}
+
+.account__my-notes-results-card-user-role {
+    font-weight: 300;
+    font-size: 1.4em;
+    line-height: 1.2;
+    color: #6e6e6e;
+    @media screen and (max-width: 1700px) {
+        font-size: 1.2em;
+    }
+}
+
+.account__my-notes-results-card-date {
+    font-size: 1.4em;
+    line-height: 1.35;
+    padding-top: 0.7em;
+    align-self: flex-start;
+
+    @media screen and (max-width: 1700px) {
+        font-size: 1.2em;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+.account__my-notes-results-card-subscription {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: initial;
+        display: contents;
+    }
+}
+
+.account__my-notes-results-card-status {
+    font-weight: 300;
+    font-size: 1.4em;
+    line-height: 1.2;
+    color: #6bc18f;
+    align-self: flex-start;
+    padding-top: 0.75em;
+    margin-right: 1.42em;
+    @media screen and (max-width: 1700px) {
+        font-size: 1.2em;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        padding: 0;
+        margin-bottom: 2rem;
+        margin-left: auto;
+    }
+}
+
+.account__my-notes-results-card-subscribe-btn {
+    font-size: 1.2em;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+
+    flex-shrink: 0;
+    margin-right: 3rem;
+    padding: 1.25em 1.6em;
+    border: 1px solid #e56a59;
+    border-radius: 0.8em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #e56a59;
+    transition: all 0.2s;
+    white-space: nowrap;
+    margin-left: auto;
+    &:link,
+    &:visited {
+        color: #e56a59;
+    }
+    &:hover {
+        background-color: #e56a59;
+        color: white;
+    }
+
+    @media screen and (max-width: 1100px) {
+        font-size: 1em;
+        margin-right: 1.5rem;
+    }
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        font-size: 1.2rem;
+        margin: 0;
+        margin-top: 1rem;
+    }
+}
+
+.account__my-notes-results-card-actions {
+    position: relative;
+    padding: 1em 0;
+    justify-content: center;
+    margin-right: 3rem;
+
+    @media screen and (max-width: 1100px) {
+        margin-right: 1.5rem;
+    }
+
+    @include breakpoint(mobile) {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        z-index: 10;
+    }
+    svg {
+        width: 2.4em;
+        height: 0.6em;
+        flex-shrink: 0;
+        fill: #c7c7c7;
+        transition: fill 0.2s;
+        display: block;
+
+        @include breakpoint(mobile) {
+            width: 2rem;
+        }
+    }
+
+    &:hover {
+        svg {
+            fill: #7abed1;
+        }
+
+        .account__my-notes-results-card-actions-dropdown {
+            opacity: 1;
+            visibility: inherit;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+    }
+}
+
+.account__my-notes-results-card-actions-dropdown {
+    position: absolute;
+    top: 100%;
+    padding-top: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+    z-index: 60;
+
+    @include breakpoint(small-tablet) {
+        transform: none;
+        right: 0;
+        left: auto;
+        padding-top: 0;
+    }
+}
+
+.account__my-notes-results-card-actions-dropdown-inner {
+    width: 22em;
+    background-color: #fff;
+    padding: 2.8em;
+    box-shadow: 0px 0.7em 2.4em rgba(0, 0, 0, 0.08);
+    border-radius: 1rem;
+    position: relative;
+    &::before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 1em 1em 1em;
+        border-color: transparent transparent #ffffff transparent;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 100%;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        padding: 1.6rem;
+        width: 20rem;
+    }
+}
+
+.account__my-notes-results-card-actions-dropdown-link {
+    font-weight: 300;
+    font-size: 1.4em;
+    line-height: 1.2em;
+    display: block;
+    color: black;
+    margin-bottom: 1.4em;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &:link,
+    &:visited {
+        color: black;
+    }
+
+    &:hover {
+        color: #7abed1;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.account__my-notes-calendar {
+    @media screen and (max-width: 980px) {
+        margin-right: 4rem;
+    }
+
+    @include breakpoint(mobile) {
+        width: 23rem;
+        order: -1;
+        margin-bottom: 3rem;
+    }
+}
+
+.account__my-notes-calendar-table {
+    table,
+    th,
+    td,
+    thead,
+    tbody {
+        display: block;
+    }
+
+    th,
+    td {
+        width: 14.28%;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    thead {
+        tr {
+            display: flex;
+
+            margin: -0.4rem;
+            margin-bottom: 1rem;
+        }
+        th {
+            font-size: 1.4rem;
+            line-height: 2rem;
+            text-align: center;
+            color: rgba(#6e6e6e, 0.2);
+            text-transform: uppercase;
+            padding: 0.4rem;
+        }
+    }
+
+    tbody {
+        tr {
+            display: flex;
+            margin: -0.4rem;
+            margin-bottom: 1rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        td {
+            padding: 0.4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            a {
+                padding: 0.2rem 0.6rem;
+                border-radius: 0.5rem;
+                position: relative;
+                font-size: 1.4rem;
+                line-height: 2.2rem;
+                text-align: center;
+                font-weight: 300;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                &.current {
+                    color: #000000;
+                    font-weight: 400;
+                    background: #f2f2f2;
+                }
+
+                &.marked {
+                    color: #7abed1;
+                    font-weight: 400;
+
+                    &:link,
+                    &:visited {
+                        color: #7abed1;
+                    }
+
+                    &::before {
+                        content: '';
+                        width: 4px;
+                        height: 4px;
+                        background-color: #7abed1;
+                        border-radius: 50%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        bottom: -0.4rem;
+                        margin-top: 0.3rem;
+                        position: absolute;
+                        pointer-events: none;
+                    }
+                }
+
+                &:not(.marked):not(.current):hover {
+                    color: #7abed1;
+                }
+            }
+        }
+    }
+}
+
+.account__my-notes-calendar-select-month {
+    margin-bottom: 2.5rem;
+
+    .choices {
+        font-weight: 300;
+        font-size: 1.7rem;
+        line-height: 1.2;
+        display: inline-flex;
+        position: relative;
+        color: black;
+    }
+
+    .choices.is-open {
+        z-index: 30;
+    }
+
+    .choices[data-type*='select-one'] .choices__inner {
+        padding-bottom: 0;
+    }
+
+    .choices__inner {
+        padding: 0;
+        background: transparent;
+        border-radius: 0;
+        border: none;
+        font-size: 1.7rem;
+        line-height: 1.2;
+        min-height: auto;
+        display: inline-flex;
+        align-items: center;
+        transition: background-color 0.2s;
+    }
+
+    .choices__list--single {
+        padding: 0;
+        padding-right: 2rem;
+    }
+
+    .choices[data-type*='select-one']:after {
+        border: none;
+        margin: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 5'%3E%3Cpath d='M5,5a.74.74,0,0,1-.48-.17L.24,1.19a.66.66,0,0,1-.06-1h0a.75.75,0,0,1,1-.06L5,3.41,8.81.17a.73.73,0,0,1,1,.06.65.65,0,0,1-.05,1L5.47,4.83A.73.73,0,0,1,5,5Z' /%3E%3C/svg%3E");
+        width: 12px;
+        height: 6px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @media screen and (max-width: 1400px) {
+            width: 10px;
+            height: 5px;
+        }
+    }
+
+    .choices__list--dropdown {
+        word-break: initial;
+        border: none;
+        border-radius: 1rem;
+        background: #ffffff;
+
+        box-shadow: -0.8rem 0 3rem rgba(0, 0, 0, 0.05);
+        margin-top: 1rem;
+        width: auto;
+        left: auto;
+        right: 0;
+
+        transform: translateX(50%);
+    }
+
+    .choices__list--dropdown .choices__item {
+        font-weight: 300;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        color: #6e6e6e;
+        white-space: nowrap;
+        padding: 1rem 3rem !important;
+
+        transition: color 0.2s;
+
+        position: relative;
+
+        &:first-child {
+            padding-top: 2.5rem !important;
+        }
+
+        &:last-child {
+            padding-bottom: 2.5rem !important;
+        }
+    }
+
+    .choices__list--dropdown .choices__item--selectable.is-highlighted {
+        color: black;
+        background: transparent;
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    .choices__list--dropdown .choices__list {
+        max-height: 23rem;
+
+        -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {
+            background-color: white;
+            width: 0.2rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #7abed1;
+            // border-radius: 0.4rem;
+        }
+
+        &::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: white;
+        }
+
+        @include breakpoint(mobile) {
+            max-height: 18rem;
+        }
+    }
+
+    .choices__placeholder {
+        opacity: 1;
+        color: #6e6e6e;
+    }
+
+    .choices.is-open .choices__inner {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .choices__list--dropdown .choices__item--selectable {
+        padding: 0;
+    }
+}
+
+.account__my-notes-tab-items {
+    position: relative;
+}
+
+.account__my-notes-tab-item {
+    min-height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+
+    &.active {
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        z-index: 2;
+        transform: translateX(0);
+        transition: opacity 0.4s, visibility 0.4s;
+    }
+}
+
+.account__my-notes-choose-specialist {
+    background-color: #f1fafc;
+    border-radius: 1rem;
+    padding: 2.2rem;
+    position: relative;
+    z-index: 1;
+    margin-top: 4rem;
+
+    @media screen and (max-width: 980px) {
+        width: 25rem;
+        margin-bottom: auto;
+        margin-left: 2rem;
+    }
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0;
+        order: 100;
+        padding: 2rem;
+        margin-top: 4rem;
+    }
+    &::before {
+        content: '';
+        width: 3.2rem;
+        height: 1.2rem;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-image: url('../img/tail.svg');
+        z-index: -1;
+        position: absolute;
+        top: 100%;
+        left: 2.5rem;
+    }
+}
+
+.account__my-notes {
+    @include breakpoint(small-tablet) {
+        margin-bottom: 30rem;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 6rem;
+    }
+}
+
+.account__my-notes-choose-specialist-heading {
+    font-size: 1.7rem;
+    line-height: 2rem;
+    margin-bottom: 1.4rem;
+    font-weight: 400;
+}
+
+.account__my-notes-choose-specialist-text {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    margin-bottom: 3.2rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
+}
+
+.account__my-notes-choose-specialist-link {
+    width: 100%;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    text-align: center;
+    border: 1px solid #7abed1;
+    border-radius: 1rem;
+    display: inline-flex;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    transition: color 0.2s, background-color 0.2s;
+
+    &:hover {
+        background-color: #7abed1;
+        color: white;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        padding: 1.6rem;
+    }
+}
+
+.account__my-account {
+    @include breakpoint(small-tablet) {
+        margin-bottom: 15rem;
+    }
+    @include breakpoint(mobile) {
+        margin-bottom: 6rem;
+    }
+}
+
+.account__my-account-heading,
+.account__my-history-heading {
+    font-size: 3.5rem;
+    line-height: 4.8rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.6rem;
+        line-height: 1.2;
+        margin-bottom: 4rem;
+    }
+}
+
+.account__my-account-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 52rem;
+}
+
+.account__my-account-form-row {
+    margin-bottom: 2rem;
+    position: relative;
+
+    .parsley-errors-list {
+        width: 100%;
+        order: 20;
+        font-weight: 300;
+        &.filled {
+            margin-top: 0.5rem;
+            font-size: 1.4rem;
+            line-height: 1.2;
+            color: var(--primary-color);
+        }
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px white inset !important;
+    }
+}
+
+.account__my-account-form-label {
+    left: 1.5rem;
+    position: absolute;
+    top: 1.5rem;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    color: rgba(0, 0, 0, 0.35);
+    transform-origin: left center;
+    padding: 0 1rem;
+    background-color: #fff;
+    transition: transform 0.3s;
+    pointer-events: none;
+}
+
+.account__my-account-form-input {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    height: 5.4rem;
+    font-weight: 300;
+    font-size: 1.7rem;
+    color: black;
+    padding: 0 2.5rem;
+    background-image: url('../img/pencil.svg');
+    background-size: 1rem 1rem;
+    background-position: right 2rem center;
+    background-repeat: no-repeat;
+    transition: border-color 0.2s;
+    &.parsley-error {
+        border-color: var(--primary-color);
+    }
+    @include placeholder {
+        opacity: 0;
+    }
+}
+
+.account__my-account-form-input:not(:placeholder-shown) ~ .account__my-account-form-label,
+.account__my-account-form-input:focus ~ .account__my-account-form-label {
+    transform: scale(0.8) translateY(-3.4rem) translateX(0.2rem);
+}
+
+.account__my-account-file-upload {
+    display: inline-flex;
+    min-width: 22.6rem;
+    align-items: center;
+    position: relative;
+    padding: 0 2.5rem;
+    height: 5.4rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 1px dashed #c5c5c5;
+    color: rgba(0, 0, 0, 0.35);
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    border-radius: 1rem;
+    justify-content: space-between;
+    svg {
+        fill: #c5c5c5;
+        width: 1.8rem;
+        height: 1.6rem;
+        flex-shrink: 0;
+        margin-left: 1rem;
+    }
+}
+
+.account__my-account-file-upload-input {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.account__my-account-submit {
+    margin-left: auto;
+    padding: 1.6rem 2.7rem;
+    background: #e56a59;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: white;
+    transition: background-color 0.2s;
+    &:hover {
+        background: #d35241;
+    }
+}
+
+.account__my-history {
+    max-width: 98rem;
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 15rem;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 6rem;
+    }
+}
+
+.account__my-history-table {
+    table,
+    th,
+    td,
+    thead,
+    tbody {
+        display: block;
+    }
+
+    th,
+    td {
+        &:nth-child(1) {
+            width: 14.5rem;
+            @include breakpoint(mobile) {
+                width: 7rem;
+            }
+        }
+        &:nth-child(2) {
+            width: 26rem;
+            padding-right: 2rem;
+
+            @include breakpoint(mobile) {
+                width: 18rem;
+            }
+        }
+        &:nth-child(3) {
+            width: 21rem;
+            padding-right: 2rem;
+            @include breakpoint(mobile) {
+                width: 18rem;
+            }
+        }
+        &:nth-child(4) {
+            width: 18rem;
+            padding-right: 2rem;
+
+            @include breakpoint(mobile) {
+                width: 14rem;
+            }
+        }
+        &:nth-child(5) {
+            width: 14rem;
+
+            @include breakpoint(mobile) {
+                width: 16rem;
+            }
+        }
+    }
+
+    tr {
+        display: flex;
+    }
+
+    thead {
+        th {
+            font-weight: 300;
+            font-size: 1.4rem;
+            line-height: 1.2;
+            color: rgba(0, 0, 0, 0.35);
+
+            @include breakpoint(mobile) {
+                font-size: 1.2rem;
+            }
+        }
+
+        tr {
+            margin-bottom: 3.6rem;
+            padding: 0 3.4rem;
+
+            @include breakpoint(mobile) {
+                margin-bottom: 2rem;
+                padding: 0 1.6rem;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            padding: 2rem 3.4rem;
+            margin-bottom: 0.5rem;
+
+            &:first-child {
+                border-top-left-radius: 2rem;
+                border-top-right-radius: 2rem;
+            }
+            &:last-child {
+                margin-bottom: 0;
+                border-bottom-left-radius: 2rem;
+                border-bottom-right-radius: 2rem;
+            }
+            &:nth-child(even) {
+                background-color: #f2f9fb;
+            }
+            &:nth-child(odd) {
+                background-color: #fcfcfc;
+            }
+
+            @include breakpoint(mobile) {
+                padding: 1.6rem;
+            }
+        }
+    }
+}
+
+.account__my-history-table-number {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin-right: 1rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+}
+
+.account__my-history-table-specialist {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin-bottom: 0.6rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+}
+
+.account__my-history-table-event {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.2;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+}
+
+.account__my-history-table-date {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin-bottom: 0.6rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+}
+
+.account__my-history-table-time {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.2;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+}
+
+.account__my-history-table-price {
+    font-size: 1.4rem;
+    line-height: 1.2;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+}
+
+.account__my-history-table-status {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: #6e6e6e;
+    padding: .8rem 2rem;
+    border: 1px solid #cacaca;
+    border-radius: 0.6rem;
+    flex-shrink: 0;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 11rem;
+    white-space: nowrap;
+    &--cancelled {
+        color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+
+    &--paid {
+        color: #6BC18F;
+        border-color: #6BC18F;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+        line-height: 1.2;
+        padding: 0.5rem 0;
+        min-width: auto;
+        display: flex;
     }
 }

@@ -1,0 +1,156 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<div class="account">
+    <div class="container">
+
+
+        <div class="account__layout">
+            <div class="account__layout-left-col">
+                <div class="account__panel">
+                    <div class="account__user">
+                        <div class="account__image-container">
+                            <img src="img/account-user-photo.jpg" alt="" class="account__image">
+                        </div>
+                        <div class="account__user-name">
+                            Татьяна
+                        </div>
+
+                        <a href="#" class="account__user-phone">
+                            7 (999) 435 46 46
+                        </a>
+                    </div>
+
+                    <nav class="account__menu">
+                        <a href="#" class="account__menu-link active">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-account-pencil">
+                                <use xlink:href="#account-pencil"></use>
+                            </svg>
+                            <span class="account__menu-link-text">
+                                Мои сеансы
+                            </span>
+
+                        </a>
+                        <a href="#" class="account__menu-link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-account-person">
+                                <use xlink:href="#account-person"></use>
+                            </svg>
+
+                            <span class="account__menu-link-text">
+                                Личные данные
+                            </span>
+                        </a>
+                        <a href="#" class="account__menu-link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-account-cards">
+                                <use xlink:href="#account-cards"></use>
+                            </svg>
+
+
+
+                            <span class="account__menu-link-text">
+                                Мои платежи
+                            </span>
+                        </a>
+                        <a href="#" class="account__menu-link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-account-exit">
+                                <use xlink:href="#account-exit"></use>
+                            </svg>
+
+
+                            <span class="account__menu-link-text">
+                                Выйти
+                            </span>
+                        </a>
+                    </nav>
+
+                </div>
+            </div>
+            <div class="account__layout-right-col">
+                <div class="account__main-content account__main-content--fullwidth">
+                    <div class="account__my-account">
+                        <h1 class="account__my-account-heading">
+                            Учетная запись
+                        </h1>
+                        <form action="/" method="POST" class="account__my-account-form" data-need-validation>
+                            <div class="account__my-account-form-row">
+
+                                <input type="text" class="account__my-account-form-input" name="name" id="name"
+                                    placeholder="Имя" value="Татьяна" required>
+
+                                <label for="name" class="account__my-account-form-label">
+                                    Ваше имя
+                                </label>
+                            </div>
+                            <div class="account__my-account-form-row">
+
+                                <input type="tel" class="account__my-account-form-input js-phone-input" name="phone"
+                                    id="phone" placeholder="Телефон" required data-parsley-phone>
+
+                                <label for="phone" class="account__my-account-form-label">
+                                    Телефон
+                                </label>
+                            </div>
+                            <div class="account__my-account-form-row">
+
+                                <input type="email" class="account__my-account-form-input" name="email" id="email"
+                                    placeholder="Email">
+
+                                <label for="email" class="account__my-account-form-label">
+                                    E-mail
+                                </label>
+                            </div>
+                            <div class="account__my-account-form-row">
+
+                                <input type="text" class="account__my-account-form-input" name="age" id="age"
+                                    placeholder="Сколько вам лет?">
+
+                                <label for="age" class="account__my-account-form-label">
+                                    Сколько вам лет?
+                                </label>
+                            </div>
+                            <div class="account__my-account-form-row">
+                                <label class="account__my-account-file-upload js-file-upload">
+                                    <input type="file" class="account__my-account-file-upload-input">
+                                    <span class="account__my-account-file-upload-text js-file-upload-text">
+                                        Загрузить фото
+                                    </span>
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-file">
+                                        <use xlink:href="#file"></use>
+                                    </svg>
+                                </label>
+
+                            </div>
+                            <div class="account__my-account-form-row">
+
+                                <input type="password" class="account__my-account-form-input" name="newpass" id="password"
+                                    placeholder="Новый пароль">
+
+                                <label for="password" class="account__my-account-form-label">
+                                    Новый пароль
+                                </label>
+                            </div>
+                            <div class="account__my-account-form-row">
+
+                                <input type="password" class="account__my-account-form-input" name="newpass2" id="password2"
+                                    placeholder="Новый пароль" data-parsley-equalto="#password">
+
+                                <label for="password2" class="account__my-account-form-label">
+                                    Повторите пароль
+                                </label>
+                            </div>
+                            <button class="account__my-account-submit">
+                                Сохранить изменения
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+{{/content}}
+{{/extend}}
