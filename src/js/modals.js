@@ -5,6 +5,9 @@ export default function() {
 
 
     function openModal(id) {
+        if (activeModal) {
+            closeModal(activeModal);
+        }
         const modal = document.querySelector(id);
         if (modal) {
             lockScroll();

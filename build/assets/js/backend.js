@@ -27,4 +27,16 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
         })
     }
+
+
+    var cancelForm = document.querySelector('#cancel-form');
+
+    if (cancelForm) {
+        cancelForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (window.openModal) {
+                window.openModal('#cancelled')
+            }
+        })
+    }
 });

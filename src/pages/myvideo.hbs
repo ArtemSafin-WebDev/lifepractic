@@ -1,0 +1,148 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<div class="account">
+    <div class="container">
+
+
+        <div class="account__layout">
+            <div class="account__layout-left-col">
+                <div class="account__panel">
+                    <div class="account__user">
+                        <div class="account__image-container">
+                            <img src="img/account-user-photo.jpg" alt="" class="account__image">
+                        </div>
+                        <div class="account__user-name">
+                            Татьяна
+                        </div>
+
+                        <a href="#" class="account__user-phone">
+                            7 (999) 435 46 46
+                        </a>
+                    </div>
+
+                    <nav class="account__menu">
+                        <a href="#" class="account__menu-link active">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-account-pencil">
+                                <use xlink:href="#account-pencil"></use>
+                            </svg>
+                            <span class="account__menu-link-text">
+                                Мои сеансы
+                            </span>
+
+                        </a>
+                        <a href="#" class="account__menu-link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-account-person">
+                                <use xlink:href="#account-person"></use>
+                            </svg>
+
+                            <span class="account__menu-link-text">
+                                Личные данные
+                            </span>
+                        </a>
+                        <a href="#" class="account__menu-link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-account-cards">
+                                <use xlink:href="#account-cards"></use>
+                            </svg>
+
+
+
+                            <span class="account__menu-link-text">
+                                Мои платежи
+                            </span>
+                        </a>
+                        <a href="#" class="account__menu-link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-account-exit">
+                                <use xlink:href="#account-exit"></use>
+                            </svg>
+
+
+                            <span class="account__menu-link-text">
+                                Выйти
+                            </span>
+                        </a>
+                    </nav>
+
+                </div>
+            </div>
+            <div class="account__layout-right-col">
+                <div class="account__main-content account__main-content--fullwidth">
+                    <div class="account__my-video">
+                        <h1 class="account__my-video-heading">
+                            <a href="#" class="account__my-video-back-link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-arrow-left">
+                                    <use xlink:href="#arrow-left"></use>
+                                </svg>
+
+                            </a>
+                            Сеанс с психотерапевтом
+                        </h1>
+                        <div class="account__my-video-row">
+
+
+                            <div class="account__my-video-left-col">
+                                <div class="account__my-video-card">
+                                    <div class="account__my-video-coming-soon">
+                                        <div class="account__my-video-coming-soon-text">
+                                            Сеанс с вашим психотерапевтом начнется через: 30 минут
+                                        </div>
+                                        <div class="account__my-video-coming-soon-link">
+                                            Ссылка будет доступна <br>за час до сеанса
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="account__my-video-right-col">
+                                <div class="account__my-video-change-time">
+                                    <div class="account__my-video-change-time-current-text">
+                                        Дата и время сеанса:
+                                    </div>
+                                    <div class="account__my-video-change-time-current-time">
+                                        14 декабря в 11:00 по мск
+                                    </div>
+                                    <a href="#change-time" class="account__my-video-change-time-btn js-open-modal">
+                                        Изменить время сеанса
+                                    </a>
+                                    <a href="#cancel" class="account__my-video-change-time-cancel-btn js-open-modal">
+                                        Отменить сеанс
+                                    </a>
+                                </div>
+                                <div class="account__my-video-about-specialist">
+                                    <div class="account__my-video-about-specialist-info">
+                                        <div class="account__my-video-about-specialist-image-container">
+                                            <img src="img/specialists/1.jpg" alt=""
+                                                class="account__my-video-about-specialist-image">
+                                        </div>
+                                        <div class="account__my-video-about-specialist-content">
+                                            <div class="account__my-video-about-specialist-name">
+                                                Тенькова Зарина
+                                            </div>
+                                            <div class="account__my-video-about-specialist-experience">
+                                                Опыт 7 лет
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="account__my-video-about-specialist-text">
+                                        Детский психолог, недирективный игровой терапевт. Специалист...
+                                    </div>
+                                    <a href="#about" class="account__my-video-about-specialist-more-link js-open-modal">
+                                        Подробнее
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+{{/content}}
+{{/extend}}
