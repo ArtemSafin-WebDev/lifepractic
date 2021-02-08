@@ -13,7 +13,7 @@
                         Пожалуйста, введите свой номер телефона, мы пришлем вам проверочный код
                     </p>
                 </div>
-                <form action="/" method="POST" class="auth__form" data-need-validation autocomplete="new-password">
+                <form action="/" method="POST" class="auth__form js-validate-on-the-fly" data-need-validation autocomplete="new-password">
 
                     <div class="auth__form-row">
                         <label for="phone" class="auth__form-label">
@@ -41,7 +41,7 @@
 
                         <div class="auth__form-bottom-btns">
 
-                            <button class="auth__form-btn auth__form-btn--submit">
+                            <button class="auth__form-btn auth__form-btn--submit" type="submit" disabled>
                                 Сменить пароль
                             </button>
                         </div>

@@ -327,6 +327,11 @@ textarea.modals__help-form-input {
         color: var(--primary-color);
         font-weight: 400;
 
+        &:link,
+        &:visited {
+            color: var(--primary-color);
+        }
+
         &:hover {
             color: white;
             background-color: var(--primary-color);

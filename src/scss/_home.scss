@@ -257,11 +257,13 @@
     font-size: 1.7rem;
     line-height: 2rem;
     overflow: hidden;
-    position: relative;
-    z-index: 1;
+  
     align-self: flex-start;
 
-
+    &:link,
+    &:visited {
+        color: white;
+    }
 
     @include breakpoint(small-tablet) {
         font-size: 2.2rem;
@@ -280,55 +282,9 @@
     }
 
 
-   
+    
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        padding-bottom: 100%;
-        border-radius: 50%;
-        background: #df5c4a;
-        transition: transform 0.5s;
-
-        z-index: -1;
-        transform: translateX(-20%);
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 140%;
-        padding-bottom: 100%;
-        border-radius: 50%;
-       
-
-        background: #D24932;
-        transition: transform 1s;
-        z-index: -1;
-        transform: translateX(20%);
-    }
-
-    &:link,
-    &:visited {
-        color: white;
-    }
-
-    .no-touch &:hover {
-        &::before {
-            transform: translateX(10%) scale(2);
-            transition: transform 0.7s ease-out;
-        }
-
-        &::after {
-            transform: translateX(-20%) scale(2.4);
-            transition: transform 1.4s ease-out 0.2s;
-        }
-    }
+    @include redHover();
 }
 
 .home__choose-btn-people {
@@ -373,74 +329,25 @@
     padding: 2.5rem 1.9rem;
     z-index: 1;
     text-transform: uppercase;
-    overflow: hidden;
-    transition: color 0.2s ease 0.3s;
-
+    
    
     @include breakpoint(small-tablet) {
         font-size: 2.2rem;
         line-height: 1.2;
         padding: 2.6rem 2.4rem;
-        
-       
-       
     }
   
-
     @include breakpoint(mobile) {
         display: none;
-
-       
     }
-    &::before {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        padding-bottom: 100%;
-        border-radius: 50%;
-        background: #8ad0e4c4;
-        transition: transform 0.5s;
-
-        z-index: -1;
-        transform: translateX(-20%);
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 140%;
-        padding-bottom: 100%;
-        border-radius: 50%;
-        background: #7abed1;
-        transition: transform 1s;
-
-        
-        z-index: -1;
-        transform: translateX(20%);
-    }
+    
 
     &:link,
     &:visited {
         color: black;
     }
 
-    &:hover {
-        color: white;
-        transition: color 0.2s ease 0.1s;
-        &::before {
-            transform: translateX(10%) scale(2);
-            transition: transform 0.5s ease-out;
-        }
-
-        &::after {
-            transform: translateX(-20%) scale(2.4);
-            transition: transform 1s ease-out 0.2s;
-        }
-    }
+    @include blueHover();
 }
 
 .home__main-illustration {

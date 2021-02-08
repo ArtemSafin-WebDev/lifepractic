@@ -19,6 +19,7 @@ import accountMenu from './accountMenu';
 import customSelects from './customSelects';
 import myNotesTabs from './myNotesTabs';
 import fileUpload from './fileUpload';
+import uploadAvatar from './uploadAvatar';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     customSelects();
     myNotesTabs();
     fileUpload();
+    uploadAvatar();
 });
 
 window.addEventListener('load', function() {

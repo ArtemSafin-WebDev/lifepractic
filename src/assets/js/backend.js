@@ -39,4 +39,34 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         })
     }
+
+
+    var validateOnTheFly = Array.prototype.slice.call(document.querySelectorAll('.js-validate-on-the-fly'));
+
+    validateOnTheFly.forEach(function(form) {
+        var inputs =  Array.prototype.slice.call(form.querySelectorAll('input'));
+        var submit = form.querySelector('button[type="submit"]')
+
+        var handleValidation = function() {
+            if ($(form).parsley().isValid()) {
+                submit.disabled = false;
+            } else {
+                submit.disabled = true;
+            }
+        }
+
+        inputs.forEach(input => {
+            if (input.matches('[type="checkbox"], select')) {
+                input.addEventListener('change', function() {
+                    handleValidation();
+                })
+            } else {
+                input.addEventListener('input', function() {
+                    handleValidation();
+                })
+            }
+        })
+
+        handleValidation();
+    })
 });

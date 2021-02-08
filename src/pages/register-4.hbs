@@ -13,7 +13,7 @@
                         Пожалуйста, введите свой номер телефона,<br> мы пришлем вам проверочный код
                     </p>
                 </div>
-                <form action="/" method="POST" class="auth__form" data-need-validation autocomplete="new-password">
+                <form action="/" method="POST" class="auth__form js-validate-on-the-fly" data-need-validation autocomplete="new-password">
                     <div class="auth__form-row">
                         <label for="name" class="auth__form-label">
                             Ваше имя
@@ -27,7 +27,7 @@
                             Пароль
                         </label>
                         <div class="auth__form-input-wrapper">
-                            <input type="password" name="password" id="password" class="auth__form-input" required >
+                            <input type="password" name="password" id="password" class="auth__form-input" required>
                         </div>
                     </div>
 
@@ -40,7 +40,7 @@
                         </a>
                         <div class="auth__form-bottom-btns">
                            
-                            <button class="auth__form-btn auth__form-btn--submit">
+                            <button class="auth__form-btn auth__form-btn--submit" disabled type="submit">
                                 Войти
                             </button>
                         </div>

@@ -188,10 +188,9 @@
     border-radius: 1rem;
     padding: 1.7rem 4.5rem;
     transition: color 0.2s, background-color 0.2s, border-color 0.2s;
-    &:hover {
-        background-color: #7abed1;
-        color: white;
-    }
+    
+
+    @include blueHover();
 
     @include breakpoint(mobile) {
         padding: 1.5rem 1.2rem;
@@ -283,10 +282,12 @@
         color: black;
     }
 
-    &:not([disabled]):hover {
-        background: #7ABED1;
-        border-color: #7ABED1;
-        color: white;
+    &:not([disabled]):not(.auth__form-btn--submit) {
+        // background: #7ABED1;
+        // border-color: #7ABED1;
+        // color: white;
+
+        @include blueHover();
     }
   
 
@@ -307,7 +308,7 @@
 .auth__enter-link,
 .modals__help-form-submit {
     background: #e56a59;
-    border-color: #e56a59;
+    border: none;
     color: white;
 
     &:link,
@@ -321,10 +322,7 @@
     }
 
     &:not([disabled]) {
-        &:hover {
-            background: #d35241;
-            border-color: #d35241;
-        }
+        @include redHover();
     }
 }
 
