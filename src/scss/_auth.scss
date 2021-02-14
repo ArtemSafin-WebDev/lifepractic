@@ -282,7 +282,7 @@
         color: black;
     }
 
-    &:not([disabled]):not(.auth__form-btn--submit) {
+    &:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link) {
         // background: #7ABED1;
         // border-color: #7ABED1;
         // color: white;
