@@ -41,6 +41,25 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
+    var accountForm = document.querySelector('#account-form');
+    var accountSuccess = document.querySelector('.account__success');
+
+    if (accountForm) {
+        accountForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            if ($(accountForm).parsley()
+            .isValid() && accountSuccess) {
+                accountSuccess.classList.add('active');
+                setTimeout(function() {
+                    accountSuccess.classList.remove('active');
+                    accountForm.reset();
+                    $(accountForm).parsley().reset();
+                }, 4000)
+            }
+        })
+    }
+
+
     var validateOnTheFly = Array.prototype.slice.call(document.querySelectorAll('.js-validate-on-the-fly'));
 
     validateOnTheFly.forEach(function(form) {

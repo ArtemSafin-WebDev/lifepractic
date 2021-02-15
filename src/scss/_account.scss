@@ -200,7 +200,7 @@
 .account__main-content {
     background: #ffffff;
     box-shadow: -0.8rem 0px 3rem rgba(0, 0, 0, 0.05);
-
+    position: relative;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -1855,9 +1855,8 @@
     justify-content: center;
     flex-shrink: 0;
     color: black;
-    transition: all .2s;
+    transition: all 0.2s;
 
-    
     &:link,
     &:visited {
         color: black;
@@ -1883,9 +1882,6 @@
     padding: 4rem;
     padding-bottom: 3rem;
     margin-bottom: 2.5rem;
-
-
-    
 
     @include breakpoint(mobile) {
         padding: 2rem;
@@ -2026,5 +2022,54 @@
         flex-shrink: 0;
         fill: currentColor;
         margin-left: 1rem;
+    }
+}
+
+.account__success {
+    position: absolute;
+    left: 6.4rem;
+    bottom: 2rem;
+    z-index: 20;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility 0s linear .3s;
+
+    @include breakpoint(small-tablet) {
+        position: fixed;
+        left: auto;
+        right: var(--content-padding);
+        bottom: 2rem;
+    }
+
+    &.active {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity .3s, visibility .3s;
+    }
+}
+
+.account__success-image {
+    width: 26.6rem;
+    height: auto;
+    display: block;
+
+    @include breakpoint(mobile) {
+        width: 18rem;
+    }
+}
+
+.account__success-text {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    bottom: 2.8rem;
+    right: 6.5rem;
+    position: absolute;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.2;
+        right: 3rem;
+        bottom: 1.45rem;
     }
 }

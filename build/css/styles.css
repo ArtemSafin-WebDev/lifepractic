@@ -5916,6 +5916,7 @@ textarea.modals__help-form-input {
   background: #ffffff;
   -webkit-box-shadow: -0.8rem 0px 3rem rgba(0, 0, 0, 0.05);
           box-shadow: -0.8rem 0px 3rem rgba(0, 0, 0, 0.05);
+  position: relative;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -7674,8 +7675,8 @@ textarea.modals__help-form-input {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   color: black;
-  -webkit-transition: all .2s;
-  transition: all .2s; }
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
   .account__my-video-coming-soon-link:link, .account__my-video-coming-soon-link:visited {
     color: black; }
   .account__my-video-coming-soon-link[href]:hover {
@@ -7912,6 +7913,49 @@ textarea.modals__help-form-input {
         flex-shrink: 0;
     fill: currentColor;
     margin-left: 1rem; }
+
+.account__success {
+  position: absolute;
+  left: 6.4rem;
+  bottom: 2rem;
+  z-index: 20;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .3s, visibility 0s linear .3s;
+  transition: opacity .3s, visibility 0s linear .3s; }
+  @media only screen and (max-width: 860px) {
+    .account__success {
+      position: fixed;
+      left: auto;
+      right: var(--content-padding);
+      bottom: 2rem; } }
+  .account__success.active {
+    opacity: 1;
+    visibility: inherit;
+    -webkit-transition: opacity .3s, visibility .3s;
+    transition: opacity .3s, visibility .3s; }
+
+.account__success-image {
+  width: 26.6rem;
+  height: auto;
+  display: block; }
+  @media only screen and (max-width: 640px) {
+    .account__success-image {
+      width: 18rem; } }
+
+.account__success-text {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  bottom: 2.8rem;
+  right: 6.5rem;
+  position: absolute; }
+  @media only screen and (max-width: 640px) {
+    .account__success-text {
+      font-size: 1.2rem;
+      line-height: 1.2;
+      right: 3rem;
+      bottom: 1.45rem; } }
 
 .not-found__bg-image {
   position: absolute;
