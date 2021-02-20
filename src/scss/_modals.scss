@@ -244,6 +244,8 @@ textarea.modals__help-form-input {
 
 .modals__help-form-submit {
     margin-top: 3.2rem;
+
+    @include redHover();
 }
 
 .modals__modal-cancel {

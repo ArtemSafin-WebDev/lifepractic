@@ -328,6 +328,9 @@
 .page-header__burger {
     flex-shrink: 0;
     display: block;
+
+    padding: 1.5rem;
+    margin: -1.5rem;
 }
 
 .page-header__burger--account {

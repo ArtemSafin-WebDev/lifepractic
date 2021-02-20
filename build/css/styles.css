@@ -1,5 +1,5 @@
 /**
- * Swiper 6.4.8
+ * Swiper 6.4.15
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: January 22, 2021
+ * Released on: February 18, 2021
  */
 @font-face {
   font-family: 'swiper-icons';
@@ -1551,7 +1551,9 @@ select:-webkit-autofill:focus {
 .page-header__burger {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  display: block; }
+  display: block;
+  padding: 1.5rem;
+  margin: -1.5rem; }
 
 .page-header__burger--account {
   z-index: 30;
@@ -1956,7 +1958,7 @@ select:-webkit-autofill:focus {
   font-size: 5.8rem;
   line-height: 6.8rem;
   font-weight: 400;
-  margin-bottom: 8rem; }
+  margin-bottom: 6rem; }
   @media only screen and (min-width: 641px) {
     .home-page .home__main-heading {
       opacity: 0;
@@ -2125,8 +2127,8 @@ select:-webkit-autofill:focus {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  -webkit-transition: color 0.2s ease 0.1s, border-color .2s;
-  transition: color 0.2s ease 0.1s, border-color .2s; }
+  -webkit-transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s;
+  transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s; }
   .home__choose-btn:link, .home__choose-btn:visited {
     color: white; }
   @media only screen and (max-width: 860px) {
@@ -2740,6 +2742,8 @@ select:-webkit-autofill:focus {
   -webkit-box-ordinal-group: 26;
       -ms-flex-order: 25;
           order: 25; }
+  .auth__form-input-remark a:link, .auth__form-input-remark a:visited {
+    color: #7abed1; }
 
 .auth__form-bottom-block {
   padding-left: 24.8rem;
@@ -2830,17 +2834,17 @@ select:-webkit-autofill:focus {
   .modals__help-form-submit:link,
   .modals__help-form-submit:visited {
     color: black; }
-  .auth__form-btn:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link),
-  .auth__enter-link:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link),
-  .modals__help-form-submit:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link) {
+  .auth__form-btn:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit),
+  .auth__enter-link:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit),
+  .modals__help-form-submit:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit) {
     position: relative;
     z-index: 1;
     overflow: hidden;
     -webkit-transition: color 0.2s ease 0.3s, border-color .2s;
     transition: color 0.2s ease 0.3s, border-color .2s; }
-    .auth__form-btn:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link)::before,
-    .auth__enter-link:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link)::before,
-    .modals__help-form-submit:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link)::before {
+    .auth__form-btn:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit)::before,
+    .auth__enter-link:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit)::before,
+    .modals__help-form-submit:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit)::before {
       content: '';
       position: absolute;
       top: 100%;
@@ -2856,9 +2860,9 @@ select:-webkit-autofill:focus {
       z-index: -1;
       -webkit-transform: translateX(-20%);
               transform: translateX(-20%); }
-    .auth__form-btn:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link)::after,
-    .auth__enter-link:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link)::after,
-    .modals__help-form-submit:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link)::after {
+    .auth__form-btn:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit)::after,
+    .auth__enter-link:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit)::after,
+    .modals__help-form-submit:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit)::after {
       content: '';
       position: absolute;
       top: 100%;
@@ -2874,25 +2878,25 @@ select:-webkit-autofill:focus {
       z-index: -1;
       -webkit-transform: translateX(20%);
               transform: translateX(20%); }
-    .no-touch .auth__form-btn:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):hover, .no-touch
-    .auth__enter-link:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):hover, .no-touch
-    .modals__help-form-submit:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):hover {
+    .no-touch .auth__form-btn:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit):hover, .no-touch
+    .auth__enter-link:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit):hover, .no-touch
+    .modals__help-form-submit:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit):hover {
       color: white;
       border-color: #7abed1;
       -webkit-transition: color 0.2s ease 0.1s, border-color .2s;
       transition: color 0.2s ease 0.1s, border-color .2s; }
-      .no-touch .auth__form-btn:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):hover::before, .no-touch
-      .auth__enter-link:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):hover::before, .no-touch
-      .modals__help-form-submit:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):hover::before {
+      .no-touch .auth__form-btn:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit):hover::before, .no-touch
+      .auth__enter-link:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit):hover::before, .no-touch
+      .modals__help-form-submit:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit):hover::before {
         -webkit-transform: translateX(10%) scale(2);
                 transform: translateX(10%) scale(2);
         -webkit-transition: -webkit-transform 0.5s ease-out;
         transition: -webkit-transform 0.5s ease-out;
         transition: transform 0.5s ease-out;
         transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out; }
-      .no-touch .auth__form-btn:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):hover::after, .no-touch
-      .auth__enter-link:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):hover::after, .no-touch
-      .modals__help-form-submit:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):hover::after {
+      .no-touch .auth__form-btn:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit):hover::after, .no-touch
+      .auth__enter-link:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit):hover::after, .no-touch
+      .modals__help-form-submit:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit):hover::after {
         -webkit-transform: translateX(-20%) scale(2.4);
                 transform: translateX(-20%) scale(2.4);
         -webkit-transition: -webkit-transform 1s ease-out 0.2s;
@@ -2936,8 +2940,8 @@ select:-webkit-autofill:focus {
     position: relative;
     z-index: 1;
     overflow: hidden;
-    -webkit-transition: color 0.2s ease 0.1s, border-color .2s;
-    transition: color 0.2s ease 0.1s, border-color .2s; }
+    -webkit-transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s;
+    transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s; }
     .auth__form-btn--submit:not([disabled])::before,
     .auth__enter-link:not([disabled])::before,
     .modals__help-form-submit:not([disabled])::before {
@@ -4529,7 +4533,63 @@ textarea.modals__help-form-input {
   display: flex; }
 
 .modals__help-form-submit {
-  margin-top: 3.2rem; }
+  margin-top: 3.2rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s;
+  transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s; }
+  .modals__help-form-submit::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    background: #df5c4a;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    z-index: -1;
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%); }
+  .modals__help-form-submit::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 140%;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    background: #d24932;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+    z-index: -1;
+    -webkit-transform: translateX(20%);
+            transform: translateX(20%); }
+  .no-touch .modals__help-form-submit:hover {
+    color: white;
+    border-color: #d24932;
+    -webkit-transition: color 0.2s ease .1s, border-color .2s;
+    transition: color 0.2s ease .1s, border-color .2s; }
+    .no-touch .modals__help-form-submit:hover::before {
+      -webkit-transform: translateX(10%) scale(2);
+              transform: translateX(10%) scale(2);
+      -webkit-transition: -webkit-transform 0.7s ease-out;
+      transition: -webkit-transform 0.7s ease-out;
+      transition: transform 0.7s ease-out;
+      transition: transform 0.7s ease-out, -webkit-transform 0.7s ease-out; }
+    .no-touch .modals__help-form-submit:hover::after {
+      -webkit-transform: translateX(-20%) scale(2.4);
+              transform: translateX(-20%) scale(2.4);
+      -webkit-transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s, -webkit-transform 1.4s ease-out 0.2s; }
 
 .modals__modal-cancel {
   padding: 4rem;
@@ -6094,14 +6154,13 @@ textarea.modals__help-form-input {
   margin-bottom: 4.4rem; }
   @media only screen and (max-width: 640px) {
     .account__my-notes-tabs-nav {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      margin-bottom: 3rem;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
       -webkit-box-ordinal-group: -9;
           -ms-flex-order: -10;
-              order: -10; } }
+              order: -10;
+      margin-bottom: 2.2rem; } }
 
 .account__my-notes-tabs-nav-link {
   font-size: 3.5rem;
@@ -6136,10 +6195,9 @@ textarea.modals__help-form-input {
       font-size: 2.6rem; } }
   @media only screen and (max-width: 640px) {
     .account__my-notes-tabs-nav-link {
-      font-size: 2.2rem;
-      line-height: 1.2;
-      margin: 0;
-      margin-bottom: 1rem; }
+      font-size: 1.4rem;
+      line-height: 1.9rem;
+      margin-right: 0; }
       .account__my-notes-tabs-nav-link:last-child {
         margin-bottom: 0; } }
 
@@ -6353,7 +6411,10 @@ textarea.modals__help-form-input {
       background-color: transparent;
       z-index: 30; }
       .account__my-notes-results-card:hover::before {
-        opacity: 1; } }
+        opacity: 1; }
+      .account__my-notes-results-card:hover .account__my-notes-results-card-subscribe-btn {
+        background-color: #e56a59;
+        color: white; } }
 
 .account__my-notes-results-card-col {
   display: -webkit-box;
@@ -6410,7 +6471,7 @@ textarea.modals__help-form-input {
     .account__my-notes-results-card-user {
       padding-left: 0;
       margin: 0;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
       width: 100%; } }
 
 .account__my-notes-results-card-user-image-container {
@@ -6466,7 +6527,9 @@ textarea.modals__help-form-input {
       font-size: 1.8em; } }
   @media only screen and (max-width: 640px) {
     .account__my-notes-results-card-user-name {
-      font-size: 1.8em; } }
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      margin-bottom: 0.3rem; } }
 
 .account__my-notes-results-card-user-role {
   font-weight: 300;
@@ -6476,6 +6539,11 @@ textarea.modals__help-form-input {
   @media screen and (max-width: 1700px) {
     .account__my-notes-results-card-user-role {
       font-size: 1.2em; } }
+  @media only screen and (max-width: 640px) {
+    .account__my-notes-results-card-user-role {
+      font-weight: 300;
+      font-size: 1.4rem;
+      line-height: 1.2; } }
 
 .account__my-notes-results-card-date {
   font-size: 1.4em;
@@ -6488,9 +6556,14 @@ textarea.modals__help-form-input {
       font-size: 1.2em; } }
   @media only screen and (max-width: 640px) {
     .account__my-notes-results-card-date {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
+      line-height: 2.1rem;
       padding: 0;
-      margin-bottom: 1rem; } }
+      margin: 0;
+      -ms-flex-item-align: baseline;
+          align-self: baseline; }
+      .account__my-notes-results-card-date br {
+        display: none; } }
 
 .account__my-notes-results-card-subscription {
   display: -webkit-box;
@@ -6527,10 +6600,15 @@ textarea.modals__help-form-input {
       font-size: 1.2em; } }
   @media only screen and (max-width: 640px) {
     .account__my-notes-results-card-status {
-      font-size: 1.4rem;
       padding: 0;
-      margin-bottom: 2rem;
-      margin-left: auto; } }
+      margin-bottom: 0;
+      margin-left: auto;
+      -ms-flex-item-align: baseline;
+          align-self: baseline;
+      font-weight: 300;
+      font-size: 1.3rem;
+      line-height: 1.2;
+      margin-right: 0; } }
 
 .account__my-notes-results-card-subscribe-btn {
   font-size: 1.2em;
@@ -6557,11 +6635,13 @@ textarea.modals__help-form-input {
   transition: all 0.2s;
   white-space: nowrap;
   margin-left: auto;
+  -webkit-transition: color .2s, background-color .2s;
+  transition: color .2s, background-color .2s;
   position: relative;
   z-index: 1;
   overflow: hidden;
-  -webkit-transition: color 0.2s ease 0.1s, border-color .2s;
-  transition: color 0.2s ease 0.1s, border-color .2s; }
+  -webkit-transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s;
+  transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s; }
   .account__my-notes-results-card-subscribe-btn:link, .account__my-notes-results-card-subscribe-btn:visited {
     color: #e56a59; }
   .account__my-notes-results-card-subscribe-btn::before {
@@ -6624,7 +6704,15 @@ textarea.modals__help-form-input {
       width: 100%;
       font-size: 1.2rem;
       margin: 0;
-      margin-top: 1rem; } }
+      margin-top: 2rem;
+      background: #e56a59;
+      border-radius: 1rem;
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      padding: 1.8rem 2rem;
+      color: white; }
+      .account__my-notes-results-card-subscribe-btn:link, .account__my-notes-results-card-subscribe-btn:visited {
+        color: white; } }
 
 .account__my-notes-results-card-actions {
   position: relative;
@@ -6639,9 +6727,10 @@ textarea.modals__help-form-input {
   @media only screen and (max-width: 640px) {
     .account__my-notes-results-card-actions {
       position: absolute;
-      right: 1rem;
-      top: 1rem;
-      z-index: 10; } }
+      right: 2rem;
+      top: 2.4rem;
+      z-index: 10;
+      margin-right: 0; } }
   .account__my-notes-results-card-actions svg {
     width: 2.4em;
     height: 0.6em;
@@ -6738,7 +6827,8 @@ textarea.modals__help-form-input {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
-    margin-bottom: 3rem; } }
+    margin-bottom: 3rem;
+    display: none; } }
 
 .account__my-notes-calendar-table table,
 .account__my-notes-calendar-table th,
@@ -7922,8 +8012,8 @@ textarea.modals__help-form-input {
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity .3s, visibility 0s linear .3s;
-  transition: opacity .3s, visibility 0s linear .3s; }
+  -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s;
+  transition: opacity 0.3s, visibility 0s linear 0.3s; }
   @media only screen and (max-width: 860px) {
     .account__success {
       position: fixed;
@@ -7933,8 +8023,8 @@ textarea.modals__help-form-input {
   .account__success.active {
     opacity: 1;
     visibility: inherit;
-    -webkit-transition: opacity .3s, visibility .3s;
-    transition: opacity .3s, visibility .3s; }
+    -webkit-transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity 0.3s, visibility 0.3s; }
 
 .account__success-image {
   width: 26.6rem;
@@ -8088,8 +8178,8 @@ textarea.modals__help-form-input {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  -webkit-transition: color 0.2s ease 0.1s, border-color .2s;
-  transition: color 0.2s ease 0.1s, border-color .2s; }
+  -webkit-transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s;
+  transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s; }
   .not-found__link:link, .not-found__link:visited {
     color: white; }
   .not-found__link::before {

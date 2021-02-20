@@ -364,9 +364,9 @@
     margin-bottom: 4.4rem;
 
     @include breakpoint(mobile) {
-        flex-direction: column;
-        margin-bottom: 3rem;
+        justify-content: space-between;
         order: -10;
+        margin-bottom: 2.2rem;
     }
 }
 
@@ -408,10 +408,9 @@
     }
 
     @include breakpoint(mobile) {
-        font-size: 2.2rem;
-        line-height: 1.2;
-        margin: 0;
-        margin-bottom: 1rem;
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        margin-right: 0;
         &:last-child {
             margin-bottom: 0;
         }
@@ -628,6 +627,11 @@
             &::before {
                 opacity: 1;
             }
+
+            .account__my-notes-results-card-subscribe-btn {
+                background-color: #e56a59;
+                color: white;
+            }
         }
     }
 }
@@ -680,7 +684,7 @@
     @include breakpoint(mobile) {
         padding-left: 0;
         margin: 0;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         width: 100%;
     }
 }
@@ -731,7 +735,9 @@
     }
 
     @include breakpoint(mobile) {
-        font-size: 1.8em;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        margin-bottom: 0.3rem;
     }
 }
 
@@ -742,6 +748,12 @@
     color: #6e6e6e;
     @media screen and (max-width: 1700px) {
         font-size: 1.2em;
+    }
+
+    @include breakpoint(mobile) {
+        font-weight: 300;
+        font-size: 1.4rem;
+        line-height: 1.2;
     }
 }
 
@@ -756,9 +768,14 @@
     }
 
     @include breakpoint(mobile) {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+        line-height: 2.1rem;
         padding: 0;
-        margin-bottom: 1rem;
+        margin: 0;
+        align-self: baseline;
+        br {
+            display: none;
+        }
     }
 }
 
@@ -787,10 +804,14 @@
     }
 
     @include breakpoint(mobile) {
-        font-size: 1.4rem;
         padding: 0;
-        margin-bottom: 2rem;
+        margin-bottom: 0;
         margin-left: auto;
+        align-self: baseline;
+        font-weight: 300;
+        font-size: 1.3rem;
+        line-height: 1.2;
+        margin-right: 0;
     }
 }
 
@@ -812,7 +833,9 @@
     transition: all 0.2s;
     white-space: nowrap;
     margin-left: auto;
-    &:link,
+    transition: color .2s, background-color .2s;
+
+    &:link, 
     &:visited {
         color: #e56a59;
     }
@@ -827,7 +850,17 @@
         width: 100%;
         font-size: 1.2rem;
         margin: 0;
-        margin-top: 1rem;
+        margin-top: 2rem;
+        background: #e56a59;
+        border-radius: 1rem;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        padding: 1.8rem 2rem;
+        color: white;
+        &:link,
+        &:visited {
+            color: white;
+        }
     }
 }
 
@@ -843,9 +876,10 @@
 
     @include breakpoint(mobile) {
         position: absolute;
-        right: 1rem;
-        top: 1rem;
+        right: 2rem;
+        top: 2.4rem;
         z-index: 10;
+        margin-right: 0;
     }
     svg {
         width: 2.4em;
@@ -956,6 +990,7 @@
         width: 23rem;
         order: -1;
         margin-bottom: 3rem;
+        display: none;
     }
 }
 
@@ -2033,7 +2068,7 @@
     pointer-events: none;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .3s, visibility 0s linear .3s;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
 
     @include breakpoint(small-tablet) {
         position: fixed;
@@ -2045,7 +2080,7 @@
     &.active {
         opacity: 1;
         visibility: inherit;
-        transition: opacity .3s, visibility .3s;
+        transition: opacity 0.3s, visibility 0.3s;
     }
 }
 

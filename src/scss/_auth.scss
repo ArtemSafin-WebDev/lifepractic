@@ -205,6 +205,13 @@
     margin-top: 1.2rem;
     width: 100%;
     order: 25;
+
+    a {
+        &:link,
+        &:visited {
+            color: #7abed1;
+        }
+    }
 }
 
 .auth__form-bottom-block {
@@ -282,7 +289,7 @@
         color: black;
     }
 
-    &:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link) {
+    &:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit) {
         // background: #7ABED1;
         // border-color: #7ABED1;
         // color: white;
