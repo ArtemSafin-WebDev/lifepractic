@@ -232,6 +232,8 @@
     @include breakpoint(mobile) {
         flex-direction: column;
         align-items: initial;
+        display: inline-flex;
+        align-self: flex-start;
     }
 
     .home-page & {
@@ -279,6 +281,7 @@
         line-height: 1.7rem;
         padding: 1.5rem;
         padding-right: 1.8rem;
+        margin-right: 0;
     }
 
 
@@ -338,7 +341,11 @@
     }
   
     @include breakpoint(mobile) {
-        display: none;
+        margin-top: 2rem;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        padding: 2rem 4rem;
+        
     }
     
 

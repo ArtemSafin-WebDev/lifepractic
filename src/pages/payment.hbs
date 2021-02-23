@@ -85,12 +85,20 @@
                                     <input type="text" class="payment__card-input" id="cardname"
                                         placeholder="Ivan Ivanov" required>
                                 </div>
-                                <div class="payment__card-input-wrapper payment__card-input-wrapper--short">
+                                <div class="payment__card-input-wrapper payment__card-input-wrapper--shortest">
                                     <label for="carddate" class="payment__card-label">
                                         ММ/ГГ
                                     </label>
-                                    <input type="tel" class="payment__card-input js-card-date" id="carddate"
-                                        placeholder="ММ/ГГ" required data-parsley-carddate>
+                                    <div class="payment__card-combined-input-wrapper" id="dateerrors">
+                                        <input type="tel" class="payment__card-combined-input js-card-date" id="cardmonth" placeholder="ММ"
+                                            required data-parsley-carddate data-parsley-class-handler="#dateerrors">
+                                        <span class="payment__card-combined-input-divider">
+                                            /
+                                        </span>
+                                        <input type="tel" class="payment__card-combined-input js-card-date" id="cardyear" placeholder="ГГ"
+                                            required data-parsley-carddate data-parsley-class-handler="#dateerrors">
+                                    </div>
+
                                 </div>
                             </div>
 
@@ -108,7 +116,8 @@
                                     <label for="cardcvv" class="payment__card-label">
                                         CVV/CVC
                                     </label>
-                                    <input type="password" class="payment__card-input js-card-cvv" id="cardcvv" required data-parsley-cardcvv>
+                                    <input type="password" class="payment__card-input js-card-cvv" id="cardcvv" required
+                                        data-parsley-cardcvv>
                                     <div class="payment__card-input-remark">
                                         Последние 3<br> цифры на обороте
                                     </div>
@@ -123,7 +132,8 @@
                             E-mail
                         </label>
                         <div class="payment__email-check-inputs">
-                            <input type="email" class="payment__email-check-input" data-parsley-validate-if-empty="true" data-parsley-required-if-checked="#emailcheckbox" id="emailcheck">
+                            <input type="email" class="payment__email-check-input" data-parsley-validate-if-empty="true"
+                                data-parsley-required-if-checked="#emailcheckbox" id="emailcheck">
                             <label class="payment__email-check-checkbox">
                                 <input type="checkbox" name="emailcheckbox" id="emailcheckbox"
                                     class="payment__email-check-checkbox-input" checked>

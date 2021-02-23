@@ -71,7 +71,7 @@
 
     @include breakpoint(mobile) {
         padding: 0 1.8rem;
-        margin: -.8rem;
+        margin: -0.8rem;
     }
 }
 
@@ -260,6 +260,11 @@
 
     &--short {
         width: 11.2rem;
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+    &--shortest {
+        width: 9rem;
         flex-shrink: 0;
         flex-grow: 0;
     }
@@ -524,4 +529,49 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+
+.payment__card-combined-input-wrapper {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #efefef;
+    border-radius: 1rem;
+    padding: 0 1.3rem;
+    height: 4.2rem;
+    width: 100%;
+    justify-content: space-between;
+
+    &.parsley-error {
+        border-color: var(--primary-color);
+    }
+}
+
+.payment__card-combined-input {
+   
+    width: 2.2rem;
+  
+    text-transform: uppercase;
+    color: black;
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+
+ 
+
+    @include placeholder {
+        color: rgba(0, 0, 0, 0.1);
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 16px;
+    }
+}
+
+
+.payment__card-combined-input-divider {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: rgba(0, 0, 0, 0.1);
+    margin: 0 .3rem;
 }

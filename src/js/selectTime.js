@@ -1,12 +1,11 @@
+
 import { Swiper, Navigation } from 'swiper';
 
 Swiper.use([Navigation]);
 export default function selectTime() {
-    const elements = Array.from(document.querySelectorAll('.js-select-time'));
-
-    elements.forEach(element => {
+    function createSelectTimeSlider(element) {
         const container = element.querySelector('.swiper-container');
-        new Swiper(container, {
+        return new Swiper(container, {
             slidesPerView: 5,
             slidesPerGroup: 5,
             spaceBetween: 12,
@@ -22,9 +21,20 @@ export default function selectTime() {
                 641: {
                     slidesPerView: 7,
                     slidesPerGroup: 7,
-                    spaceBetween: 12,
+                    spaceBetween: 12
                 }
             }
         });
+    }
+
+    window.selectTime = {}
+
+    window.selectTime.createSelectTimeSlider = createSelectTimeSlider;
+    window.selectTime.sliderInstances = [];
+
+    const elements = Array.from(document.querySelectorAll('.js-select-time'));
+
+    elements.forEach(element => {
+        window.selectTime.sliderInstances.push(createSelectTimeSlider(element));
     });
 }

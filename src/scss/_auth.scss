@@ -69,6 +69,18 @@
     margin-bottom: 5.2rem;
     text-align: center;
 
+    p {
+        margin-bottom: 1.5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    em {
+        font-style: normal;
+        color: var(--primary-color);
+    }
+
     @include breakpoint(mobile) {
         font-size: 1.3rem;
         line-height: 1.8rem;
@@ -386,6 +398,18 @@
     font-size: 1.7rem;
     line-height: 2.5rem;
     text-align: center;
+
+    p {
+        margin-bottom: 1.5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    em {
+        font-style: normal;
+        color: var(--primary-color);
+    }
     @include breakpoint(mobile) {
         font-size: 1.4rem;
         line-height: 1.2;

@@ -42,7 +42,7 @@ window.Parsley.addValidator('carddate', {
     validateString: function(value) {
         console.log('Тестируем срок действия', value)
         
-        return /^[0-9]{2}\/[0-9]{2}$/.test(value.replace(/\s+/g, ''));
+        return /^[0-9]{2}$/.test(value.replace(/\s+/g, ''));
     },
     messages: {
         en: 'Enter correct period',

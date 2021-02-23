@@ -2097,7 +2097,12 @@ select:-webkit-autofill:focus {
               flex-direction: column;
       -webkit-box-align: initial;
           -ms-flex-align: initial;
-              align-items: initial; } }
+              align-items: initial;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -ms-flex-item-align: start;
+          align-self: flex-start; } }
   @media only screen and (min-width: 641px) {
     .home-page .home__buttons {
       opacity: 0;
@@ -2143,7 +2148,8 @@ select:-webkit-autofill:focus {
       font-size: 1.4rem;
       line-height: 1.7rem;
       padding: 1.5rem;
-      padding-right: 1.8rem; } }
+      padding-right: 1.8rem;
+      margin-right: 0; } }
   .home__choose-btn::before {
     content: '';
     position: absolute;
@@ -2261,7 +2267,10 @@ select:-webkit-autofill:focus {
       padding: 2.6rem 2.4rem; } }
   @media only screen and (max-width: 640px) {
     .home__register-btn {
-      display: none; } }
+      margin-top: 2rem;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      padding: 2rem 4rem; } }
   .home__register-btn:link, .home__register-btn:visited {
     color: black; }
   .home__register-btn::before {
@@ -2532,6 +2541,13 @@ select:-webkit-autofill:focus {
   line-height: 2.5rem;
   margin-bottom: 5.2rem;
   text-align: center; }
+  .auth__heading-text p {
+    margin-bottom: 1.5rem; }
+    .auth__heading-text p:last-child {
+      margin-bottom: 0; }
+  .auth__heading-text em {
+    font-style: normal;
+    color: var(--primary-color); }
   @media only screen and (max-width: 640px) {
     .auth__heading-text {
       font-size: 1.3rem;
@@ -3056,6 +3072,13 @@ select:-webkit-autofill:focus {
   font-size: 1.7rem;
   line-height: 2.5rem;
   text-align: center; }
+  .auth__choses-specialists-text p {
+    margin-bottom: 1.5rem; }
+    .auth__choses-specialists-text p:last-child {
+      margin-bottom: 0; }
+  .auth__choses-specialists-text em {
+    font-style: normal;
+    color: var(--primary-color); }
   @media only screen and (max-width: 640px) {
     .auth__choses-specialists-text {
       font-size: 1.4rem;
@@ -5005,7 +5028,7 @@ textarea.modals__help-form-input {
   @media only screen and (max-width: 640px) {
     .payment__details-row {
       padding: 0 1.8rem;
-      margin: -.8rem; } }
+      margin: -0.8rem; } }
 
 .payment__details-col {
   padding: 1.8rem;
@@ -5183,6 +5206,13 @@ textarea.modals__help-form-input {
   margin-right: 0.8rem; }
   .payment__card-input-wrapper--short {
     width: 11.2rem;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0; }
+  .payment__card-input-wrapper--shortest {
+    width: 9rem;
     -ms-flex-negative: 0;
         flex-shrink: 0;
     -webkit-box-flex: 0;
@@ -5469,6 +5499,50 @@ textarea.modals__help-form-input {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end; }
+
+.payment__card-combined-input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ffffff;
+  border: 1px solid #efefef;
+  border-radius: 1rem;
+  padding: 0 1.3rem;
+  height: 4.2rem;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .payment__card-combined-input-wrapper.parsley-error {
+    border-color: var(--primary-color); }
+
+.payment__card-combined-input {
+  width: 2.2rem;
+  text-transform: uppercase;
+  color: black;
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.7rem; }
+  .payment__card-combined-input::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.1); }
+  .payment__card-combined-input:-moz-placeholder {
+    color: rgba(0, 0, 0, 0.1); }
+  .payment__card-combined-input::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.1); }
+  .payment__card-combined-input:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.1); }
+  @media only screen and (max-width: 640px) {
+    .payment__card-combined-input {
+      font-size: 16px; } }
+
+.payment__card-combined-input-divider {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: rgba(0, 0, 0, 0.1);
+  margin: 0 .3rem; }
 
 .message {
   display: -webkit-box;
@@ -8016,15 +8090,17 @@ textarea.modals__help-form-input {
   transition: opacity 0.3s, visibility 0s linear 0.3s; }
   @media only screen and (max-width: 860px) {
     .account__success {
-      position: fixed;
+      position: relative;
+      margin-bottom: 2rem;
       left: auto;
-      right: var(--content-padding);
-      bottom: 2rem; } }
+      bottom: auto;
+      display: none; } }
   .account__success.active {
     opacity: 1;
     visibility: inherit;
     -webkit-transition: opacity 0.3s, visibility 0.3s;
-    transition: opacity 0.3s, visibility 0.3s; }
+    transition: opacity 0.3s, visibility 0.3s;
+    display: block; }
 
 .account__success-image {
   width: 26.6rem;
@@ -8037,15 +8113,17 @@ textarea.modals__help-form-input {
 .account__success-text {
   font-size: 1.4rem;
   line-height: 1.7rem;
-  bottom: 2.8rem;
-  right: 6.5rem;
-  position: absolute; }
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 12rem; }
   @media only screen and (max-width: 640px) {
     .account__success-text {
       font-size: 1.2rem;
       line-height: 1.2;
-      right: 3rem;
-      bottom: 1.45rem; } }
+      left: 8rem; } }
 
 .not-found__bg-image {
   position: absolute;
