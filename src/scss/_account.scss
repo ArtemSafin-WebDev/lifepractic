@@ -895,6 +895,22 @@
     }
 
     &:hover {
+        .account__my-notes-results-card-actions-dots {
+            span {
+                background: #7abed1;
+
+                &:nth-child(1) {
+                    transform: translateX(1rem);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    transform: translateX(-1rem);
+                    opacity: 0;
+                }
+            }
+        }
         svg {
             fill: #7abed1;
         }
@@ -904,6 +920,25 @@
             visibility: inherit;
             transition: opacity 0.3s, visibility 0.3s;
         }
+    }
+}
+
+.account__my-notes-results-card-actions-dots {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    span {
+        width: 0.5rem;
+        height: 0.5rem;
+        background-color: #C7C7C7;
+        margin-right: 0.5rem;
+        flex-shrink: 0;
+        border-radius: 50%;
+        transition: background-color .2s, transform .2s, opacity .2s;
+        &:last-child {
+            margin-right: 0;
+        }
+        
     }
 }
 

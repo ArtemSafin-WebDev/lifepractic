@@ -178,7 +178,7 @@
                         чтобы посмотреть зарегистрируйтесь
                     </div>
                 </div>
-                <form action="/" method="POST" class="auth__form" data-need-validation autocomplete="new-password">
+                <form action="/" method="POST" class="auth__form js-form-with-code" data-need-validation autocomplete="new-password">
                     <div class="auth__form-row">
                         <label for="name" class="auth__form-label">
                             Ваше имя
@@ -192,13 +192,27 @@
                             Телефон
                         </label>
                         <div class="auth__form-input-wrapper">
-                            <input type="tel" name="phone" id="phone" class="auth__form-input js-phone-input" required
-                                data-parsley-phone>
-                            <button class="auth__form-get-code-btn" type="button">
+                            <input type="tel" name="phone" id="phone" class="auth__form-input js-code-phone-input js-phone-input" required
+                                data-parsley-phone data-parsley-group="phonecode">
+                            <button class="auth__form-get-code-btn js-get-code" type="button">
                                 Получить код
                             </button>
-                            <div class="auth__form-input-remark">
+                            <div class="auth__form-input-remark js-get-code-remark">
                                 Пожалуйста, введите свой номер телефона, мы пришлем вам проверочный код
+                            </div>
+                        </div>
+                    </div>
+                    <div class="auth__form-row js-code-row" style="display: none;">
+                        <label for="code" class="auth__form-label">
+                            Код из смс
+                        </label>
+                        <div class="auth__form-input-wrapper">
+                            <input type="text" name="phone" id="code" class="auth__form-input" required>
+
+                            <div class="auth__form-input-remark">
+                                На указанный вами номер было отправлено SMS с кодом подтверждения. <a href="#" class="js-code-resend">Отправить
+                                    еще раз</a>
+                                через 284 сек.
                             </div>
                         </div>
                     </div>
@@ -207,7 +221,8 @@
                             Сколько вам лет?
                         </label>
                         <div class="auth__form-input-wrapper">
-                            <input type="text" name="age" id="age" class="auth__form-input js-numeric-input-no-formatting" required>
+                            <input type="text" name="age" id="age"
+                                class="auth__form-input js-numeric-input-no-formatting" required>
                         </div>
                     </div>
                     <div class="auth__form-bottom-block">
@@ -337,6 +352,7 @@
                         d="M236.5,695.07c-56.27,1.17-116.37-16.67-150.28-61.59-32.88-43.57-23.58-103-14.6-156.84,8.08-48.39,24.89-95.22,62-127.28,37.6-32.44,108.53-43.14,158.19-44.15,57.32-1.17,82.51,32,123.13,72.5,42.83,42.65,75.25,74.85,62.1,133.86-12,53.92-65.37,82.56-109.29,116.06C327.12,658.65,287.63,694,236.5,695.07Z" />
                 </g>
             </svg>        </div>
+
 
 
         <div class="modals">

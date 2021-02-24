@@ -1,0 +1,112 @@
+.remember {
+    position: fixed;
+    z-index: 300;
+    right: 6rem;
+    bottom: 2rem;
+    padding-bottom: 1.2rem;
+    transition: opacity .3s, visibility 0s linear .3s;
+    opacity: 0;
+    visibility: hidden;
+
+    @include breakpoint(mobile) {
+        right: 0;
+        width: 100%;
+        padding-right: var(--content-padding);
+        padding-left: var(--content-padding);
+    }
+    &.active {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity .3s, visibility .3s;
+    }
+}
+
+.remember__inner {
+    width: 33.6rem;
+    padding: 4rem;
+    background: #ebf5f8;
+    border-radius: 1.5rem;
+    position: relative;
+    z-index: 1;
+    background-image: url('../img/remember-bg.svg');
+    background-size: 25rem auto;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        padding: 2.4rem;
+    }
+    &::before {
+        content: '';
+        height: 1.2rem;
+        width: 2.4rem;
+        z-index: -1;
+        top: 100%;
+        right: 2.4rem;
+        position: absolute;
+        pointer-events: none;
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25.22 11.64' preserveAspectRatio='none'%3E%3Cpath fill='%23D1E8F0' d='M6.43,2.34l10.51,8.82a2,2,0,0,0,3.28-1.53V5a5,5,0,0,1,5-5H0A10,10,0,0,1,6.43,2.34Z' /%3E%3C/svg%3E");
+    }
+}
+
+.remember__heading {
+    font-size: 1.7rem;
+    line-height: 2rem;
+    margin-bottom: 1.9rem;
+    font-weight: 400;
+}
+
+.remember__text {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin-bottom: 2.4rem;
+}
+
+.remember__form {
+    display: flex;
+    align-items: center;
+    padding: 0.7rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+}
+
+.remember__form-input {
+    width: 30%;
+    flex-grow: 1;
+    padding-left: 1.3rem;
+    padding-right: 1.7rem;
+    font-weight: 300;
+    font-size: 1.4rem;
+    @include placeholder {
+        color: rgba(0, 0, 0, 0.35);
+    }
+}
+
+.remember__form-submit {
+    width: 3.2rem;
+    height: 3.2rem;
+    flex-shrink: 0;
+    background: #e56a59;
+    border-radius: 0.6rem;
+    position: relative;
+    transition: background-color .2s;
+
+    .no-touch &:hover {
+        background: #d24932;
+    }
+
+    svg {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        fill: white;
+        width: 0.6rem;
+        height: 1.2rem;
+        position: absolute;
+    }
+}
