@@ -223,6 +223,12 @@
         &:visited {
             color: #7abed1;
         }
+
+        &.disabled {
+            color: #6e6e6e;
+            cursor: default;
+            pointer-events: none;
+        }
     }
 }
 
