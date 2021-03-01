@@ -583,13 +583,14 @@
     z-index: 1;
     transition: background-color 0.3s;
     font-size: 1rem;
+    position: relative;
     @media screen and (max-width: 1700px) {
         padding: 2em 0;
     }
 
     @include breakpoint(small-tablet) {
         font-size: 1.2rem;
-        position: static;
+        position: relative;
     }
 
     @include breakpoint(mobile) {

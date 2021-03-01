@@ -1,3 +1,10 @@
+
+.modals {
+    body:not(.loaded) & {
+        display: none;
+    }
+}
+
 .modals__modal {
     position: fixed;
     left: 0;

@@ -3734,7 +3734,7 @@ select:-webkit-autofill:focus {
       margin-bottom: 4rem; } }
 
 .choose-specialist__wrapper {
-  max-width: 99rem;
+  max-width: 105rem;
   margin: 0 auto;
   width: 100%; }
 
@@ -4333,6 +4333,9 @@ select:-webkit-autofill:focus {
             -ms-flex-order: -1;
                 order: -1;
         margin-bottom: 1rem; } }
+
+body:not(.loaded) .modals {
+  display: none; }
 
 .modals__modal {
   position: fixed;
@@ -6583,14 +6586,15 @@ textarea.modals__help-form-input {
   z-index: 1;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
-  font-size: 1rem; }
+  font-size: 1rem;
+  position: relative; }
   @media screen and (max-width: 1700px) {
     .account__my-notes-results-card {
       padding: 2em 0; } }
   @media only screen and (max-width: 860px) {
     .account__my-notes-results-card {
       font-size: 1.2rem;
-      position: static; } }
+      position: relative; } }
   @media only screen and (max-width: 640px) {
     .account__my-notes-results-card {
       padding: 2rem;
