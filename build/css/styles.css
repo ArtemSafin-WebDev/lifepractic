@@ -966,13 +966,16 @@ button.swiper-pagination-bullet {
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 10px;
+  font-size: 11px;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent; }
   @media screen and (max-width: 1600px) {
     html {
-      font-size: 9px; } }
+      font-size: 10px; } }
   @media screen and (max-width: 1440px) {
+    html {
+      font-size: 9px; } }
+  @media screen and (max-width: 1300px) {
     html {
       font-size: 8px; } }
   @media screen and (max-width: 1260px) {
