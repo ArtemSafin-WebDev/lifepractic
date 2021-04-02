@@ -4010,24 +4010,10 @@ select:-webkit-autofill:focus {
       padding-bottom: 2rem; } }
 
 .choose-specialist__schedule-features-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: -1rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-  @media only screen and (max-width: 640px) {
-    .choose-specialist__schedule-features-items {
-      -webkit-box-pack: initial;
-          -ms-flex-pack: initial;
-              justify-content: initial;
-      margin: -1.5rem; } }
+  display: block; }
 
 .choose-specialist__schedule-feature-item {
-  width: 33.33%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4035,17 +4021,17 @@ select:-webkit-autofill:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 1rem;
   font-weight: 300;
   font-size: 1.4rem;
-  line-height: 2.2rem; }
+  line-height: 2.2rem;
+  margin-bottom: 2.6rem; }
+  .choose-specialist__schedule-feature-item:last-child {
+    margin-bottom: 0; }
   @media only screen and (max-width: 640px) {
     .choose-specialist__schedule-feature-item {
       font-weight: 300;
       font-size: 1.3rem;
-      line-height: 1.6rem;
-      width: auto;
-      padding: 1.5rem; } }
+      line-height: 1.6rem; } }
 
 .choose-specialist__specialization {
   padding-top: 3rem; }
@@ -4100,6 +4086,45 @@ select:-webkit-autofill:focus {
     border-bottom: 1px solid #7ABED1; }
     .choose-specialist__help-text a:link, .choose-specialist__help-text a:visited {
       color: #7ABED1; }
+
+.select-time__slider {
+  position: relative; }
+  .select-time__slider::after {
+    content: '';
+    position: absolute;
+    top: -2rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid #E56A59;
+    border-radius: .8rem;
+    z-index: 20;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity .3s, visibility 0s linear .3s;
+    transition: opacity .3s, visibility 0s linear .3s; }
+  .choose-specialist.error .select-time__slider::after {
+    opacity: 1;
+    visibility: inherit;
+    -webkit-transition: opacity .3s, visibility .3s;
+    transition: opacity .3s, visibility .3s; }
+
+.choose-specialist.error .select-time__text-regular {
+  display: none; }
+
+.select-time__text-error {
+  display: none;
+  color: var(--primary-color); }
+  .choose-specialist.error .select-time__text-error {
+    display: block; }
+  .select-time__text-error svg {
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: var(--primary-color);
+    vertical-align: middle;
+    margin-left: 0.5rem; }
 
 .select-time {
   display: -webkit-box;

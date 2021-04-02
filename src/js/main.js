@@ -20,6 +20,7 @@ import customSelects from './customSelects';
 import myNotesTabs from './myNotesTabs';
 import fileUpload from './fileUpload';
 import uploadAvatar from './uploadAvatar';
+import selectTimeForm from './selectTimeForm';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -41,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     myNotesTabs();
     fileUpload();
     uploadAvatar();
+    selectTimeForm();
 });
 
 window.addEventListener('load', function() {

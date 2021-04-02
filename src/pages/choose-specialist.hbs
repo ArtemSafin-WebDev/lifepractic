@@ -44,7 +44,7 @@
                 <div class="choose-specialist__choices">
                     <div class="choose-specialist__choices-list">
 
-                       
+
                         <a href="#" class="choose-specialist__choices-item">
                             <div class="choose-specialist__choices-item-image-container">
                                 <img src="img/specialists/1.jpg" alt="" class="choose-specialist__choices-item-image">
@@ -102,17 +102,15 @@
                                     </h2>
                                     <div class="choose-specialist__schedule-features">
                                         <div class="choose-specialist__schedule-features-items">
+                                            <div class="choose-specialist__schedule-feature-item">
+                                                Опыт: 7 лет • Стоимость: 1500₽
+                                            </div>
+                                            <div class="choose-specialist__schedule-feature-item">
+                                                Семейный психолог<br>
+                                                Профессиональный психолог<br>
+                                                Семейная клиническая психология
+                                            </div>
 
-
-                                            <div class="choose-specialist__schedule-feature-item">
-                                                Семейный<br> психолог
-                                            </div>
-                                            <div class="choose-specialist__schedule-feature-item">
-                                                Опыт<br> 7 лет
-                                            </div>
-                                            <div class="choose-specialist__schedule-feature-item">
-                                                Стоимость<br> 1500₽
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="choose-specialist__specialization">
@@ -138,7 +136,18 @@
                                     <div class="select-time choose-specialist__schedule-select-time js-select-time">
                                         <div class="select-time__top-row">
                                             <div class="select-time__text">
-                                                Выберите дату и время сессии (по МСК)
+                                                <div class="select-time__text-regular">
+                                                    Выберите дату и время сессии (по МСК)
+                                                </div>
+                                                <div class="select-time__text-error">
+                                                    Выберите дату и время сессии (по МСК)
+
+                                                    <svg width="14" height="14" aria-hidden="true"
+                                                        class="icon-warning">
+                                                        <use xlink:href="#warning"></use>
+                                                    </svg>
+                                                </div>
+
                                             </div>
                                             <div class="select-time__arrows">
                                                 <button class="select-time__arrow select-time__arrow--prev">
@@ -155,7 +164,7 @@
                                                 </button>
                                             </div>
                                         </div>
-                                        <form action="/" method="POST" class="select-time__form">
+                                        <form action="/" method="POST" class="select-time__form js-select-time-form">
                                             <div class="select-time__slider">
                                                 <div class="swiper-container">
                                                     <div class="swiper-wrapper">
