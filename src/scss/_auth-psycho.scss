@@ -1,0 +1,261 @@
+.auth-psycho {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+    padding-bottom: 10rem;
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px white inset !important;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+}
+
+.auth-psycho__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.auth-psycho__heading {
+    font-size: 5.8rem;
+    line-height: 6.8rem;
+    margin-bottom: 3rem;
+    font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 3.2rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.auth-psycho__heading-text {
+    font-weight: 300;
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+        margin-bottom: 3rem;
+        br {
+            display: none;
+        }
+    }
+}
+
+.auth-psycho__form {
+    max-width: 52rem;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    text-align: left;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        margin: 0;
+    }
+}
+
+.auth-psycho__form-row {
+    margin-bottom: 1.4rem;
+    position: relative;
+
+    .parsley-errors-list {
+        width: 100%;
+        order: 20;
+        font-weight: 300;
+        &.filled {
+            margin-top: 0.5rem;
+            font-size: 1.4rem;
+            line-height: 1.2;
+            color: var(--primary-color);
+        }
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
+}
+
+.auth-psycho__form-input {
+    height: 5.4rem;
+    padding: 0 2.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    display: block;
+    width: 100%;
+    font: inherit;
+    font-weight: 300;
+    font-size: 1.7rem;
+    background-image: url('../img/pencil.svg');
+    background-size: 0.9rem 0.9rem;
+    background-position: right 2rem center;
+    background-repeat: no-repeat;
+    @include placeholder {
+        opacity: 0;
+    }
+
+    &.parsley-error {
+        border-color: var(--primary-color);
+
+        & ~ .auth-psycho__form-label {
+            color: var(--primary-color);
+        }
+    }
+
+    &.parsley-success {
+        padding-right: 5.2rem;
+        background-image: url('../img/success.svg');
+        background-size: 1.76rem auto;
+        background-position: right 1.9rem center;
+        background-repeat: no-repeat;
+
+        @include breakpoint(mobile) {
+            padding-right: 3.2rem;
+            background-size: 1.4rem auto;
+            background-position: right 1.4rem center;
+        }
+    }
+}
+
+.auth-psycho__form-label {
+    position: absolute;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    background-color: #fff;
+    padding: 0.2rem 0.6rem;
+    color: rgba(0, 0, 0, 0.35);
+    left: 1.5rem;
+    transition: transform 0.4s, color 0.2s;
+    top: 1.2rem;
+}
+
+.auth-psycho__form-input:focus ~ .auth-psycho__form-label,
+.auth-psycho__form-input:not(:placeholder-shown) ~ .auth-psycho__form-label {
+    transform: scale(0.8) translateY(-3.1rem);
+}
+
+.auth-psycho__form-controls {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2rem;
+    padding-top: 3rem;
+
+    .parsley-errors-list {
+        display: none;
+    }
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+.auth-psycho__checkbox-input {
+    @include visuallyHidden();
+}
+
+.auth-psycho__checkbox {
+    display: flex;
+    align-items: flex-start;
+    user-select: none;
+    cursor: pointer;
+}
+
+.auth-psycho__checkbox-mark {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #7abed1;
+    border-radius: 0.4rem;
+    margin-right: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s;
+    .parsley-error & {
+        border-color: var(--primary-color);
+    }
+    &::before {
+        content: '';
+        width: 0.9rem;
+        height: 0.9rem;
+        background: #7abed1;
+        border-radius: 0.2rem;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+}
+
+.auth-psycho__checkbox-input:checked ~ .auth-psycho__checkbox-mark::before {
+    opacity: 1;
+}
+
+.auth-psycho__checkbox-text {
+    font-weight: 300;
+    font-size: 1.4rem;
+    width: 30%;
+    flex-grow: 1;
+    line-height: 130%;
+    margin-top: 0.2rem;
+}
+
+
+.auth-psycho__enter-link,
+.auth-psycho__submit {
+    padding: 1.6rem 2.4rem;
+    min-width: 18rem;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    text-transform: uppercase;
+    background: #e56a59;
+    border-radius: 1rem;
+    flex-shrink: 0;
+    justify-self: flex-end;
+    color: white;
+   
+    &:link,
+    &:visited {
+        color: white;
+    }
+    @include redHover();
+
+
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        font-size: 1.4rem;
+        padding: 1.5rem 2rem;
+    }
+}
+
+.auth-psycho__enter-link {
+    min-width: 29.5rem;
+    align-self: center;
+
+    @include breakpoint(mobile) {
+        min-width: auto;
+    }
+}
+
+.auth-psycho__form-remark {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #6e6e6e;
+    margin-top: 1rem;
+}

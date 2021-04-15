@@ -1,0 +1,58 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="auth-psycho">
+    <div class="container">
+        <div class="auth-psycho__content">
+            <h1 class="auth-psycho__heading">
+                Восстановление пароля
+            </h1>
+            <div class="auth-psycho__heading-text">
+                <p>
+                    Пожалуйста, введите свой номер телефона, мы пришлем вам проверочный код
+                </p>
+            </div>
+            <form action="/" method="POST" class="auth-psycho__form" data-need-validation>
+                <div class="auth-psycho__form-row">
+                    <input type="tel" class="auth-psycho__form-input js-phone-input" id="phone" placeholder="Телефон"
+                        required data-parsley-phone>
+                    <label for="phone" class="auth-psycho__form-label">
+                        Телефон
+                    </label>
+                </div>
+                <div class="auth-psycho__form-row">
+                    <input type="text" class="auth-psycho__form-input js-numeric-input-no-formatting" id="code" placeholder="Код из смс" required>
+                    <label for="code" class="auth-psycho__form-label">
+                        Код из смс
+                    </label>
+                    <div class="auth-psycho__form-remark">
+                        На указанный вами номер было отправлено SMS с кодом подтверждения. <a href="#">Отправить еще раз</a>  через 20 сек.
+                    </div>
+                </div>
+
+                <div class="auth-psycho__form-row">
+                    <div class="auth-psycho__form-controls">
+                        <label class="auth-psycho__checkbox">
+                            <input type="checkbox" name="policy" value="1" class="auth-psycho__checkbox-input" required>
+                            <span class="auth-psycho__checkbox-mark">
+
+                            </span>
+                            <span class="auth-psycho__checkbox-text">
+                                Я принимаю условия обработки персональных данных
+                            </span>
+                        </label>
+                        <button class="auth-psycho__submit">
+                            Сменить пароль
+                        </button>
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+</section>
+
+
+{{/content}}
+{{/extend}}

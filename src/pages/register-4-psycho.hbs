@@ -1,0 +1,53 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="auth-psycho">
+    <div class="container">
+        <div class="auth-psycho__content">
+            <h1 class="auth-psycho__heading">
+                Введите <br>
+                новый пароль
+            </h1>
+           
+            <form action="/" method="POST" class="auth-psycho__form" data-need-validation>
+                <div class="auth-psycho__form-row">
+                    <input type="password" class="auth-psycho__form-input" id="password1" placeholder="Новый пароль"
+                        required>
+                    <label for="password1" class="auth-psycho__form-label">
+                        Новый пароль
+                    </label>
+                </div>
+                 <div class="auth-psycho__form-row">
+                    <input type="password" class="auth-psycho__form-input" id="password2" placeholder="Повторите пароль"
+                        required data-parsley-equalto="#password1">
+                    <label for="password2" class="auth-psycho__form-label">
+                        Повторите пароль
+                    </label>
+                </div>
+
+                <div class="auth-psycho__form-row">
+                    <div class="auth-psycho__form-controls">
+                        <label class="auth-psycho__checkbox">
+                            <input type="checkbox" name="policy" value="1" class="auth-psycho__checkbox-input" required>
+                            <span class="auth-psycho__checkbox-mark">
+
+                            </span>
+                            <span class="auth-psycho__checkbox-text">
+                                Я принимаю условия обработки персональных данных
+                            </span>
+                        </label>
+                        <button class="auth-psycho__submit">
+                            сохранить
+                        </button>
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+</section>
+
+
+{{/content}}
+{{/extend}}

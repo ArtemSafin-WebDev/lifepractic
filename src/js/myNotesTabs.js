@@ -21,6 +21,10 @@ export default function myNotesTabs() {
             })
         })
 
-        openTab(0);
+        if (items.length) {
+            openTab(0);
+        }
+
+        
     })
 }

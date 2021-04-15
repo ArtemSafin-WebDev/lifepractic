@@ -1,0 +1,97 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<div class="account">
+    <div class="container">
+
+
+        <div class="account__layout">
+            <div class="account__layout-left-col">
+                <div class="account__panel">
+                    <div class="account__user">
+                        <div class="account__image-container">
+                            <img src="img/psycho.jpg" alt="" class="account__image">
+                        </div>
+                        <div class="account__user-name">
+                            Дмитрий Токмаков
+                        </div>
+                    </div>
+
+                    <nav class="account__menu">
+                        <a href="#" class="account__menu-link active">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-account-pencil">
+                                <use xlink:href="#account-pencil"></use>
+                            </svg>
+                            <span class="account__menu-link-text">
+                                Мои сеансы
+                            </span>
+
+                        </a>
+                        <a href="#" class="account__menu-link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-stats">
+                                <use xlink:href="#stats"></use>
+                            </svg>
+
+
+
+                            <span class="account__menu-link-text">
+                                Статистика
+                            </span>
+                        </a>
+                        <a href="#" class="account__menu-link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-account-person">
+                                <use xlink:href="#account-person"></use>
+                            </svg>
+
+                            <span class="account__menu-link-text">
+                                Личные данные
+                            </span>
+                        </a>
+
+                        <a href="#" class="account__menu-link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-account-exit">
+                                <use xlink:href="#account-exit"></use>
+                            </svg>
+
+
+                            <span class="account__menu-link-text">
+                                Выйти
+                            </span>
+                        </a>
+                    </nav>
+
+                </div>
+            </div>
+            <div class="account__layout-right-col">
+                <div class="account__main-content">
+                    <div class="account__no-notes">
+                        <div class="account__no-notes-card">
+                            <img src="img/mynotes-psycho-illustration.svg" alt="" class="account__no-notes-card-image">
+                            <div class="account__no-notes-card-content">
+                                <h3 class="account__no-notes-card-heading">
+                                    Нет записей
+                                </h3>
+                                <div class="account__no-notes-card-text">
+                                    <p>
+                                        Не расстраивайтесь!
+                                        Свяжитесь с нами и мы решим вашу проблему
+                                    </p>
+                                </div>
+                                <a href="#help" class="message__btn message__btn--small js-open-modal">
+                                    связаться с нами
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+{{/content}}
+{{/extend}}

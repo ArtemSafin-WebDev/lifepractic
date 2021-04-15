@@ -21,6 +21,8 @@ import myNotesTabs from './myNotesTabs';
 import fileUpload from './fileUpload';
 import uploadAvatar from './uploadAvatar';
 import selectTimeForm from './selectTimeForm';
+import recommendations from './recommendations';
+import mobileCalendar from './mobileCalendar';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -43,6 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
     fileUpload();
     uploadAvatar();
     selectTimeForm();
+    recommendations();
+    mobileCalendar();
 });
 
 window.addEventListener('load', function() {
