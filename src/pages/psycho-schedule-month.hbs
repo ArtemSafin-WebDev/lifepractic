@@ -1,0 +1,1615 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<div class="account">
+    <div class="container">
+
+
+        <div class="account__layout">
+            <div class="account__layout-left-col">
+                <div class="account__panel">
+                    <div class="account__user">
+                        <div class="account__image-container">
+                            <img src="img/psycho.jpg" alt="" class="account__image">
+                        </div>
+                        <div class="account__user-name">
+                            Дмитрий Токмаков
+                        </div>
+                    </div>
+
+                    <nav class="account__menu">
+                        <a href="#" class="account__menu-link active">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-account-pencil">
+                                <use xlink:href="#account-pencil"></use>
+                            </svg>
+                            <span class="account__menu-link-text">
+                                Мои сеансы
+                            </span>
+
+                        </a>
+                        <a href="#" class="account__menu-link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-stats">
+                                <use xlink:href="#stats"></use>
+                            </svg>
+
+
+
+                            <span class="account__menu-link-text">
+                                Статистика
+                            </span>
+                        </a>
+                        <a href="#" class="account__menu-link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-account-person">
+                                <use xlink:href="#account-person"></use>
+                            </svg>
+
+                            <span class="account__menu-link-text">
+                                Личные данные
+                            </span>
+                        </a>
+
+                        <a href="#" class="account__menu-link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-account-exit">
+                                <use xlink:href="#account-exit"></use>
+                            </svg>
+
+
+                            <span class="account__menu-link-text">
+                                Выйти
+                            </span>
+                        </a>
+                    </nav>
+
+                </div>
+            </div>
+            <div class="account__layout-right-col">
+                <div class="account__main-content account__main-content--fullwidth">
+                    <div class="account__my-notes">
+                        <h1 class="account__my-notes-main-heading">
+                            Расписание сеансов
+                        </h1>
+                        <div class="account__my-notes-controls-row account__my-notes-controls-row--no-margin">
+                            <div class="account__my-notes-controls-left-col">
+                                <div class="account__my-notes-dates">
+                                    <a href="#" class="account__my-notes-dates-link">
+                                        День
+                                    </a>
+                                    <a href="#" class="account__my-notes-dates-link active">
+                                        Неделя
+                                    </a>
+                                    <a href="#" class="account__my-notes-dates-link">
+                                        Месяц
+                                    </a>
+                                </div>
+
+                                <div class="account__calendar-dropdown-trigger">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-calendar">
+                                        <use xlink:href="#calendar"></use>
+                                    </svg>
+
+                                    <div class="account__my-notes-calendar-dropdown">
+                                        <div class="account__my-notes-calendar-dropdown-inner">
+                                            <form class="account__my-notes-calendar" action="/" method="GET">
+                                                <div class="account__my-notes-calendar-select-month">
+                                                    <select name="date" class="js-custom-select">
+                                                        <option value="1">
+                                                            Январь 2020
+                                                        </option>
+                                                        <option value="1">
+                                                            Февраль 2020
+                                                        </option>
+                                                        <option value="1">
+                                                            Март 2020
+                                                        </option>
+                                                        <option value="1">
+                                                            Апрель 2020
+                                                        </option>
+                                                        <option value="1">
+                                                            Май 2020
+                                                        </option>
+                                                        <option value="1">
+                                                            Июнь 2020
+                                                        </option>
+                                                        <option value="1">
+                                                            Июль 2020
+                                                        </option>
+                                                        <option value="1">
+                                                            Август 2020
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                                <div class="account__my-notes-calendar-table">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>
+                                                                    Пн
+                                                                </th>
+                                                                <th>
+                                                                    Вт
+                                                                </th>
+                                                                <th>
+                                                                    Ср
+                                                                </th>
+                                                                <th>
+                                                                    Чт
+                                                                </th>
+                                                                <th>
+                                                                    Пт
+                                                                </th>
+                                                                <th>
+                                                                    Сб
+                                                                </th>
+                                                                <th>
+                                                                    Вс
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        1
+                                                                    </a>
+
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        2
+                                                                    </a>
+
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        3
+                                                                    </a>
+
+                                                                </td>
+                                                                <td>
+
+                                                                    <a href="#">
+                                                                        4
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+
+                                                                    <a href="#">
+                                                                        5
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+
+                                                                    <a href="#">
+                                                                        6
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+
+                                                                    <a href="#">
+                                                                        7
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+
+                                                                    <a href="#">
+                                                                        8
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+
+                                                                    <a href="#">
+                                                                        9
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+
+                                                                    <a href="#">
+                                                                        10
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+
+                                                                    <a href="#">
+                                                                        11
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+
+                                                                    <a href="#">
+                                                                        12
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+
+                                                                    <a href="#">
+                                                                        13
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+
+                                                                    <a href="#" class="current">
+                                                                        14
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+
+                                                                    <a href="#">
+                                                                        15
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        16
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+
+                                                                    <a href="#">
+                                                                        17
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+
+                                                                    <a href="#">
+                                                                        18
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+
+                                                                    <a href="#">
+                                                                        19
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+
+                                                                    <a href="#">
+                                                                        20
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+
+                                                                    <a href="#">
+                                                                        21
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#" class="marked">
+                                                                        22
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+
+
+                                                                    <a href="#">
+                                                                        23
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+
+                                                                    <a href="#">
+                                                                        24
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        25
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        26
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        27
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        28
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        29
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        30
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        31
+                                                                    </a>
+                                                                </td>
+
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="account__my-notes-controls-right-col">
+                                <div class="account__my-notes-pagination">
+                                    <a href="#" class="account__my-notes-pagination-arrow">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-left">
+                                            <use xlink:href="#arrow-left"></use>
+                                        </svg>
+                                    </a>
+                                    <div class="account__my-notes-pagination-date">
+                                        Сегодня
+
+                                        <div class="account__my-notes-pagination-date-dropdown">
+                                            <div class="account__my-notes-pagination-date-dropdown-inner">
+                                                15 декабря 2020
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="account__my-notes-pagination-arrow">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="account__schedule-month">
+                            <div class="account__schedule-month-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                ПН
+                                            </th>
+                                            <th>
+                                                ВТ
+                                            </th>
+                                            <th>
+                                                СР
+                                            </th>
+                                            <th>
+                                                ЧТ
+                                            </th>
+                                            <th>
+                                                ПТ
+                                            </th>
+                                            <th class="holiday">
+                                                СБ
+                                            </th>
+                                            <th class="holiday">
+                                                ВС
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+
+                                            </td>
+                                            <td>
+                                                <div
+                                                    class="account__schedule-month-table-day account__schedule-month-table-day--highlighted">
+                                                    1
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div
+                                                    class="account__schedule-month-table-day account__schedule-month-table-day--highlighted">
+                                                    2
+                                                </div>
+                                                <div class="account__schedule-month-clients">
+                                                    <a href="#" class="account__schedule-month-clients-card">
+                                                        <div
+                                                            class="account__schedule-month-clients-card-photo-container">
+                                                            <img src="img/clients/client-2.jpg" alt=""
+                                                                class="account__schedule-month-clients-card-photo">
+                                                        </div>
+                                                        <div class="account__schedule-month-clients-card-name">
+                                                            Елизавета
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="account__schedule-month-clients-card">
+                                                        <div
+                                                            class="account__schedule-month-clients-card-photo-container">
+                                                            <img src="img/clients/client-3.jpg" alt=""
+                                                                class="account__schedule-month-clients-card-photo">
+                                                        </div>
+                                                        <div class="account__schedule-month-clients-card-name">
+                                                            Николай
+                                                        </div>
+                                                    </a>
+                                                    <div class="account__schedule-month-clients-card account__schedule-month-clients-card--total">
+                                                        <div
+                                                            class="account__schedule-month-clients-card-photo-container">
+                                                            <img src="img/clients/client-1.jpg" alt=""
+                                                                class="account__schedule-month-clients-card-photo">
+                                                        </div>
+                                                        <div
+                                                            class="account__schedule-month-clients-card-photo-container">
+                                                            <img src="img/clients/client-2.jpg" alt=""
+                                                                class="account__schedule-month-clients-card-photo">
+                                                        </div>
+                                                        <div
+                                                            class="account__schedule-month-clients-card-photo-container">
+                                                            <img src="img/clients/client-3.jpg" alt=""
+                                                                class="account__schedule-month-clients-card-photo">
+                                                        </div>
+                                                        <div class="account__schedule-month-clients-card-name">
+                                                            +10
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="account__schedule-month-dropdown">
+                                                    <div class="account__schedule-month-dropdown-inner">
+                                                        <div class="account__schedule-month-dropdown-date">
+                                                            18 декабря (пт)
+                                                        </div>
+                                                        <div class="account__schedule-month-dropdown-content">
+
+
+                                                            <div
+                                                                class="account__schedule-month-dropdown-scroll-wrapper">
+                                                                <ul class="account__schedule-month-dropdown-items">
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-2.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Елизавета
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    10:00-11:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-1.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Татьяна
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    11:00-12:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-3.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Николай
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    13:00-14:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-2.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Елизавета
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    10:00-11:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-1.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Татьяна
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    11:00-12:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-3.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Николай
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    13:00-14:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-2.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Елизавета
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    10:00-11:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-1.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Татьяна
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    11:00-12:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-3.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Николай
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    13:00-14:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    3
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    4
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div
+                                                    class="account__schedule-month-table-day account__schedule-month-table-day--highlighted">
+                                                    5
+                                                </div>
+                                                <div class="account__schedule-month-clients">
+                                                    <a href="#" class="account__schedule-month-clients-card">
+                                                        <div
+                                                            class="account__schedule-month-clients-card-photo-container">
+                                                            <img src="img/clients/client-2.jpg" alt=""
+                                                                class="account__schedule-month-clients-card-photo">
+                                                        </div>
+                                                        <div class="account__schedule-month-clients-card-name">
+                                                            Елизавета
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="account__schedule-month-clients-card">
+                                                        <div
+                                                            class="account__schedule-month-clients-card-photo-container">
+                                                            <img src="img/clients/client-3.jpg" alt=""
+                                                                class="account__schedule-month-clients-card-photo">
+                                                        </div>
+                                                        <div class="account__schedule-month-clients-card-name">
+                                                            Николай
+                                                        </div>
+                                                    </a>
+                                                    <div class="account__schedule-month-clients-card account__schedule-month-clients-card--total">
+                                                        <div
+                                                            class="account__schedule-month-clients-card-photo-container">
+                                                            <img src="img/clients/client-1.jpg" alt=""
+                                                                class="account__schedule-month-clients-card-photo">
+                                                        </div>
+                                                        <div
+                                                            class="account__schedule-month-clients-card-photo-container">
+                                                            <img src="img/clients/client-2.jpg" alt=""
+                                                                class="account__schedule-month-clients-card-photo">
+                                                        </div>
+                                                        <div
+                                                            class="account__schedule-month-clients-card-photo-container">
+                                                            <img src="img/clients/client-3.jpg" alt=""
+                                                                class="account__schedule-month-clients-card-photo">
+                                                        </div>
+                                                        <div class="account__schedule-month-clients-card-name">
+                                                            +10
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="account__schedule-month-dropdown">
+                                                    <div class="account__schedule-month-dropdown-inner">
+                                                        <div class="account__schedule-month-dropdown-date">
+                                                            18 декабря (пт)
+                                                        </div>
+                                                        <div class="account__schedule-month-dropdown-content">
+
+
+                                                            <div
+                                                                class="account__schedule-month-dropdown-scroll-wrapper">
+                                                                <ul class="account__schedule-month-dropdown-items">
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-2.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Елизавета
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    10:00-11:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-1.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Татьяна
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    11:00-12:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-3.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Николай
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    13:00-14:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-2.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Елизавета
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    10:00-11:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-1.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Татьяна
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    11:00-12:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-3.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Николай
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    13:00-14:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-2.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Елизавета
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    10:00-11:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-1.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Татьяна
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    11:00-12:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-3.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Николай
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    13:00-14:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    6
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    7
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    8
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    9
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    10
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    11
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    12
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    13
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    14
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    15
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div
+                                                    class="account__schedule-month-table-day account__schedule-month-table-day--current">
+                                                    16
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    17
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div
+                                                    class="account__schedule-month-table-day account__schedule-month-table-day--highlighted">
+                                                    18
+                                                </div>
+
+                                                <div class="account__schedule-month-clients">
+                                                    <a href="#" class="account__schedule-month-clients-card">
+                                                        <div
+                                                            class="account__schedule-month-clients-card-photo-container">
+                                                            <img src="img/clients/client-2.jpg" alt=""
+                                                                class="account__schedule-month-clients-card-photo">
+                                                        </div>
+                                                        <div class="account__schedule-month-clients-card-name">
+                                                            Елизавета
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="account__schedule-month-clients-card">
+                                                        <div
+                                                            class="account__schedule-month-clients-card-photo-container">
+                                                            <img src="img/clients/client-3.jpg" alt=""
+                                                                class="account__schedule-month-clients-card-photo">
+                                                        </div>
+                                                        <div class="account__schedule-month-clients-card-name">
+                                                            Николай
+                                                        </div>
+                                                    </a>
+                                                    <div class="account__schedule-month-clients-card account__schedule-month-clients-card--total">
+                                                        <div
+                                                            class="account__schedule-month-clients-card-photo-container">
+                                                            <img src="img/clients/client-1.jpg" alt=""
+                                                                class="account__schedule-month-clients-card-photo">
+                                                        </div>
+                                                        <div
+                                                            class="account__schedule-month-clients-card-photo-container">
+                                                            <img src="img/clients/client-2.jpg" alt=""
+                                                                class="account__schedule-month-clients-card-photo">
+                                                        </div>
+                                                        <div
+                                                            class="account__schedule-month-clients-card-photo-container">
+                                                            <img src="img/clients/client-3.jpg" alt=""
+                                                                class="account__schedule-month-clients-card-photo">
+                                                        </div>
+                                                        <div class="account__schedule-month-clients-card-name">
+                                                            +10
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="account__schedule-month-dropdown">
+                                                    <div class="account__schedule-month-dropdown-inner">
+                                                        <div class="account__schedule-month-dropdown-date">
+                                                            18 декабря (пт)
+                                                        </div>
+                                                        <div class="account__schedule-month-dropdown-content">
+
+
+                                                            <div
+                                                                class="account__schedule-month-dropdown-scroll-wrapper">
+                                                                <ul class="account__schedule-month-dropdown-items">
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-2.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Елизавета
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    10:00-11:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-1.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Татьяна
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    11:00-12:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-3.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Николай
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    13:00-14:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-2.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Елизавета
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    10:00-11:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-1.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Татьяна
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    11:00-12:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-3.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Николай
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    13:00-14:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-2.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Елизавета
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    10:00-11:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-1.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Татьяна
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    11:00-12:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="account__schedule-month-dropdown-item">
+                                                                        <a href="#"
+                                                                            class="account__schedule-month-dropdown-card">
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-photo-container">
+                                                                                <img src="img/clients/client-3.jpg"
+                                                                                    alt=""
+                                                                                    class="account__schedule-month-dropdown-card-photo">
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-content">
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-name">
+                                                                                    Николай
+                                                                                </div>
+                                                                                <div
+                                                                                    class="account__schedule-month-dropdown-card-time">
+                                                                                    13:00-14:00
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="account__schedule-month-dropdown-card-arrow">
+                                                                                <svg width="14" height="14"
+                                                                                    aria-hidden="true"
+                                                                                    class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right">
+                                                                                    </use>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    19
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    20
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    21
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    22
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    23
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    24
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    25
+                                                </div>
+                                            </td>
+                                            <td>
+
+                                                <div class="account__schedule-month-table-day">
+                                                    26
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    27
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    28
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    29
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    30
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="account__schedule-month-table-day">
+                                                    31
+                                                </div>
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+{{/content}}
+{{/extend}}

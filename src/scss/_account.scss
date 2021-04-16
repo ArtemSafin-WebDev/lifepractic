@@ -2182,7 +2182,7 @@
         padding-bottom: 1.4rem;
         margin-bottom: 1.6rem;
 
-        &--no-margin {
+        &--to-the-edge {
             margin-right: calc(-1 * var(--content-padding));
             padding-right: var(--content-padding);
         }
@@ -2903,13 +2903,13 @@
     align-items: center;
     display: flex;
     padding: 1rem 2.2rem;
-    transition: background-color .3s, transform .3s, box-shadow .3s;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     transform: translateZ(0);
     backface-visibility: hidden;
 
     @include breakpoint(mobile) {
-        padding: .5rem 1.2rem;
-        border-radius: .8rem;
+        padding: 0.5rem 1.2rem;
+        border-radius: 0.8rem;
     }
     .no-touch &:hover {
         box-shadow: 0px 0.7rem 2.4rem rgba(0, 0, 0, 0.08);
@@ -2965,5 +2965,416 @@
     color: rgba(0, 0, 0, 0.35);
     @include breakpoint(mobile) {
         display: none;
+    }
+}
+
+.account__schedule-month-table {
+    table,
+    thead,
+    tbody,
+    tr,
+    th,
+    td {
+        display: block;
+    }
+
+    tr {
+        display: grid;
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    th,
+    td {
+        border-right: 1px solid rgba(0, 0, 0, 0.08);
+        &:last-child {
+            border: none;
+        }
+    }
+
+    thead tr {
+        grid-auto-rows: 8.8rem;
+
+        @include breakpoint(mobile) {
+            grid-auto-rows: 5.8rem;
+        }
+    }
+
+    tbody tr {
+        grid-auto-rows: 12.6rem;
+
+        @include breakpoint(mobile) {
+            grid-auto-rows: 6.2rem;
+        }
+    }
+
+    th {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-weight: 300;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        color: rgba(0, 0, 0, 0.35);
+        text-align: center;
+
+        @include breakpoint(mobile) {
+            font-weight: 300;
+            font-size: 1.4rem;
+            line-height: 1.2;
+        }
+
+        &.holiday {
+            color: rgba(#e56a59, 0.4);
+        }
+    }
+
+    td {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem 0.8rem;
+        transition: background-color 0.2s;
+        position: relative;
+
+        @include breakpoint(small-tablet) {
+            padding: 0.3rem;
+        }
+
+        @include breakpoint(mobile) {
+            padding: 0.2rem;
+        }
+        &:hover {
+            background: #ffefee;
+            .account__schedule-month-table-day {
+                font-weight: 400;
+            }
+            .account__schedule-month-dropdown {
+                opacity: 1;
+                visibility: inherit;
+                transition: opacity 0.3s, visibility 0.3s;
+            }
+        }
+
+        &:nth-last-child(1),
+        &:nth-last-child(2) {
+            .account__schedule-month-dropdown {
+                left: auto;
+                right: 100%;
+            }
+
+            .account__schedule-month-dropdown-inner::before {
+                right: auto;
+                left: 100%;
+                transform: translateY(-50%) scaleX(-1);
+            }
+        }
+    }
+}
+
+.account__schedule-month-dropdown {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 70;
+    width: 24rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.account__schedule-month-dropdown-inner {
+    background-color: #fff;
+    // box-shadow: 0px 0.7rem 2.4rem rgba(0, 0, 0, 0.08);
+    filter: drop-shadow(0px 0.7rem 2.4rem rgba(0, 0, 0, 0.08));
+    border-radius: 1rem;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0.8rem;
+        height: 2.8rem;
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('../img/rounded-left-pointer.svg');
+    }
+}
+
+.account__schedule-month-dropdown-date {
+    height: 5.6rem;
+    font-size: 1.7rem;
+    line-height: 2.4rem;
+    color: #7abed1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.account__schedule-month-dropdown-content {
+    padding-right: 0.3rem;
+}
+
+.account__schedule-month-dropdown-scroll-wrapper {
+    max-height: 27.6rem;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+
+    &::-webkit-scrollbar {
+        background-color: white;
+        width: 0.3rem;
+        border-radius: 0.4rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #7abed1;
+        border-radius: 0.4rem;
+    }
+
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: white;
+    }
+}
+
+.account__schedule-month-dropdown-card {
+    display: flex;
+    align-items: center;
+    padding: 0 4rem;
+    .no-touch &:hover,
+    .touch &:active {
+        .account__schedule-month-dropdown-card-arrow {
+            border-color: #7abed1;
+
+            svg {
+                fill: #7abed1;
+            }
+        }
+    }
+}
+
+.account__schedule-month-dropdown-card-photo-container {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    margin-right: 1.2rem;
+}
+
+.account__schedule-month-dropdown-card-content {
+    width: 30%;
+    flex-grow: 1;
+}
+
+.account__schedule-month-dropdown-card-name {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+}
+
+.account__schedule-month-dropdown-card-time {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    color: rgba(0, 0, 0, 0.35);
+}
+
+.account__schedule-month-dropdown-card-arrow {
+    flex-shrink: 0;
+    margin-left: 1rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s;
+    svg {
+        width: 0.5rem;
+        height: 1rem;
+        fill: rgba(0, 0, 0, 0.15);
+        transition: fill 0.2s;
+    }
+}
+
+.account__schedule-month-dropdown-items {
+    padding: 2.5rem 0;
+}
+
+.account__schedule-month-dropdown-item {
+    margin-bottom: 2.5rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.account__schedule-month-table-day {
+    text-align: right;
+    margin-left: auto;
+    margin-bottom: auto;
+    font-weight: 300;
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    position: absolute;
+    right: 0.8rem;
+    top: 0.5rem;
+    z-index: 1;
+
+    @include breakpoint(mobile) {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0.8rem;
+
+        font-weight: 300;
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+
+    &--highlighted {
+        color: #7abed1;
+        font-size: 2rem;
+        line-height: 2.2rem;
+        font-weight: 400;
+
+        @include breakpoint(mobile) {
+            font-size: 1.2rem;
+            line-height: 1.2;
+        }
+    }
+
+    &--current {
+        font-weight: 400;
+        color: white;
+
+        @include breakpoint(mobile) {
+            font-weight: 300;
+            font-size: 1.2rem;
+            line-height: 1.2;
+        }
+        &::before {
+            content: '';
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 2.6rem;
+            height: 2.6rem;
+            border-radius: 50%;
+            background: #7abed1;
+            z-index: -1;
+            position: absolute;
+
+            @include breakpoint(mobile) {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+}
+
+.account__schedule-month-clients {
+    margin-top: auto;
+    padding-right: 2.5rem;
+
+    @include breakpoint(tablet) {
+        padding-right: 0;
+    }
+
+    @include breakpoint(mobile) {
+        padding-right: 0;
+    }
+}
+
+.account__schedule-month-clients-card {
+    margin-bottom: 0.2rem;
+    padding: 0.4rem 1rem;
+    display: flex;
+    align-items: center;
+    background: #f3f9fb;
+    border-radius: 1rem;
+    color: var(--text-color);
+
+    @include breakpoint(mobile) {
+        margin-bottom: 0;
+        padding: 0.4rem .2rem;
+        border-radius: .3rem;
+
+        &:not(.account__schedule-month-clients-card--total) {
+            display: none;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:link,
+    &:visited {
+        color: var(--text-color);
+    }
+}
+
+.account__schedule-month-clients-card-photo-container {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 0.7rem;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include breakpoint(mobile) {
+        width: 1rem;
+        height: 1rem;
+        margin-right: 0.2rem;
+    }
+}
+
+.account__schedule-month-clients-card-photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include objectFitCover();
+}
+
+.account__schedule-month-clients-card-name {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 300;
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+}
+
+.account__schedule-month-clients-card-photo-container + .account__schedule-month-clients-card-photo-container {
+    margin-left: -1.5rem;
+
+    @include breakpoint(mobile) {
+        margin-left: -.8rem;
     }
 }
