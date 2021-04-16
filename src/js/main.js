@@ -23,6 +23,7 @@ import uploadAvatar from './uploadAvatar';
 import selectTimeForm from './selectTimeForm';
 import recommendations from './recommendations';
 import mobileCalendar from './mobileCalendar';
+import videoPlayer from './videoPlayer';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -47,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
     selectTimeForm();
     recommendations();
     mobileCalendar();
+    videoPlayer();
 });
 
 window.addEventListener('load', function() {

@@ -955,7 +955,10 @@ button.swiper-pagination-bullet {
   --max-container-width: 153rem;
   --content-padding: 6rem;
   --primary-color: #E56A59;
-  --rubik: 'Rubik', sans-serif; }
+  --rubik: 'Rubik', sans-serif;
+  --plyr-color-main: #E56A59;
+  --plyr-audio-controls-background: transparent;
+  --plyr-audio-control-color: white; }
   @media only screen and (max-width: 1024px) {
     :root {
       --content-padding: 4rem; } }
@@ -5061,7 +5064,7 @@ textarea.modals__help-form-input {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin-right: 1.5rem;
-  border: 1px solid #7ABED1;
+  border: 1px solid #7abed1;
   border-radius: 1rem;
   position: relative;
   overflow: hidden;
@@ -5132,6 +5135,197 @@ textarea.modals__help-form-input {
       margin-bottom: 1.5rem; }
       .modals__modal-used-btn:last-child {
         margin-bottom: 0; } }
+
+.modals__modal-about-client-heading {
+  font-size: 1.7rem;
+  line-height: 2.4rem;
+  color: #7abed1;
+  font-weight: 400;
+  margin-bottom: 2rem; }
+
+.modals__modal-about-client-list-item {
+  border-top: 1px solid rgba(0, 0, 0, 0.2); }
+
+.modals__modal-about-client-card {
+  padding: 2.4rem 0; }
+  @media only screen and (max-width: 640px) {
+    .modals__modal-about-client-card {
+      padding: 1.8rem 0; } }
+
+.modals__modal-about-client-card-key {
+  font-weight: 300;
+  font-size: 1.7rem;
+  line-height: 2.1rem;
+  margin-bottom: 0.5rem; }
+
+.modals__modal-about-client-card-value {
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+  font-weight: 400; }
+  .modals__modal-about-client-card-value ul li {
+    margin-bottom: 0.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+    .modals__modal-about-client-card-value ul li::before {
+      content: '';
+      width: 0.4rem;
+      height: 0.4rem;
+      background: #7abed1;
+      border-radius: 50%;
+      margin-right: 1.3rem;
+      margin-top: 1rem; }
+    .modals__modal-about-client-card-value ul li:last-child {
+      margin-bottom: 0; }
+
+.modals__modal-cancel-reason-form {
+  width: 100%;
+  max-width: 52rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto; }
+
+.modals__modal-cancel-reason-textarea {
+  padding: 1.3rem 2.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  resize: none;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  height: 10rem;
+  border-radius: 1rem;
+  color: black;
+  background-image: url("../img/pencil.svg");
+  background-position: right 2rem top 2rem;
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
+  margin-bottom: 2.5rem; }
+  .modals__modal-cancel-reason-textarea::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.35); }
+  .modals__modal-cancel-reason-textarea:-moz-placeholder {
+    color: rgba(0, 0, 0, 0.35); }
+  .modals__modal-cancel-reason-textarea::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.35); }
+  .modals__modal-cancel-reason-textarea:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.35); }
+
+.modals__modal-cancel-reason-form-submit-btn {
+  padding: 1.5rem 5rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background: #e56a59;
+  border-radius: 1rem;
+  color: white;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  margin-left: auto;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s;
+  transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s; }
+  .modals__modal-cancel-reason-form-submit-btn:link, .modals__modal-cancel-reason-form-submit-btn:visited {
+    color: white; }
+  .modals__modal-cancel-reason-form-submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    background: #df5c4a;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    z-index: -1;
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%); }
+  .modals__modal-cancel-reason-form-submit-btn::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 140%;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    background: #d24932;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+    z-index: -1;
+    -webkit-transform: translateX(20%);
+            transform: translateX(20%); }
+  .no-touch .modals__modal-cancel-reason-form-submit-btn:hover {
+    color: white;
+    border-color: #d24932;
+    -webkit-transition: color 0.2s ease .1s, border-color .2s;
+    transition: color 0.2s ease .1s, border-color .2s; }
+    .no-touch .modals__modal-cancel-reason-form-submit-btn:hover::before {
+      -webkit-transform: translateX(10%) scale(2);
+              transform: translateX(10%) scale(2);
+      -webkit-transition: -webkit-transform 0.7s ease-out;
+      transition: -webkit-transform 0.7s ease-out;
+      transition: transform 0.7s ease-out;
+      transition: transform 0.7s ease-out, -webkit-transform 0.7s ease-out; }
+    .no-touch .modals__modal-cancel-reason-form-submit-btn:hover::after {
+      -webkit-transform: translateX(-20%) scale(2.4);
+              transform: translateX(-20%) scale(2.4);
+      -webkit-transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s, -webkit-transform 1.4s ease-out 0.2s; }
+  @media only screen and (max-width: 640px) {
+    .modals__modal-cancel-reason-form-submit-btn {
+      width: 100%; } }
+
+.modals__modal-cancelled-psycho {
+  padding-left: 46rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 3.5rem;
+  line-height: 4rem;
+  background-image: url("../img/cance-psycho-bg.svg");
+  background-size: auto 100%;
+  background-position: left center;
+  background-repeat: no-repeat;
+  min-height: 32rem;
+  font-size: 3.5rem;
+  line-height: 4rem; }
+  @media only screen and (max-width: 640px) {
+    .modals__modal-cancelled-psycho {
+      padding: 2rem;
+      font-size: 2rem;
+      line-height: 1.2;
+      background: none;
+      min-height: auto; } }
+
+.modals__modal-inner--cancelled-psycho {
+  max-width: 75.6rem; }
 
 .payment {
   padding-top: 8rem;
@@ -7911,14 +8105,14 @@ textarea.modals__help-form-input {
       -ms-flex-pack: center;
           justify-content: center;
   margin-right: 1.7rem;
-  border: 1px solid #e9e9e9;
   border-radius: 50%;
   -webkit-transition: color 0.2s, border-color 0.2s;
-  transition: color 0.2s, border-color 0.2s; }
+  transition: color 0.2s, border-color 0.2s;
+  border: 1px solid rgba(27, 27, 27, 0.1); }
   .account__my-video-back-link svg {
     width: 0.6rem;
     height: 1.2rem;
-    fill: #e9e9e9;
+    fill: rgba(0, 0, 0, 0.3);
     -webkit-transition: fill 0.2s;
     transition: fill 0.2s; }
   .account__my-video-back-link:hover {
@@ -7996,6 +8190,105 @@ textarea.modals__help-form-input {
   @media only screen and (max-width: 640px) {
     .account__my-video-card {
       min-height: 35rem; } }
+
+.account__my-video-connecting {
+  min-height: 54.8rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #f0f8fa;
+  color: black;
+  text-align: center; }
+  @media only screen and (max-width: 640px) {
+    .account__my-video-connecting {
+      min-height: 35rem; } }
+
+.account__my-video-connecting-photo-container {
+  width: 16.6rem;
+  height: 16.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1; }
+  .account__my-video-connecting-photo-container::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(122, 190, 209, 0.15);
+    border-radius: 50%;
+    z-index: -1;
+    -webkit-animation-name: connecting;
+            animation-name: connecting;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate; }
+
+@-webkit-keyframes connecting {
+  from {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85); }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes connecting {
+  from {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85); }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+.account__my-video-connecting-title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 400;
+  margin-bottom: 1.2rem; }
+
+.account__my-video-connecting-text {
+  font-weight: 300;
+  font-size: 1.7rem;
+  line-height: 1.8rem; }
+
+.account__my-video-connecting-photo {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  font-family: 'object-fit: cover; object-position: center;'; }
 
 .account__my-video-coming-soon-text {
   max-width: 40rem;
@@ -8180,6 +8473,8 @@ textarea.modals__help-form-input {
       transition: -webkit-transform 1s ease-out 0.2s;
       transition: transform 1s ease-out 0.2s;
       transition: transform 1s ease-out 0.2s, -webkit-transform 1s ease-out 0.2s; }
+  .account__my-video-change-time-btn:last-child {
+    margin-bottom: 0; }
 
 .account__my-video-change-time-cancel-btn {
   font-size: 1.4rem;
@@ -9545,8 +9840,8 @@ textarea.modals__help-form-input {
   @media only screen and (max-width: 640px) {
     .account__schedule-month-clients-card {
       margin-bottom: 0;
-      padding: 0.4rem .2rem;
-      border-radius: .3rem; }
+      padding: 0.4rem 0.2rem;
+      border-radius: 0.3rem; }
       .account__schedule-month-clients-card:not(.account__schedule-month-clients-card--total) {
         display: none; } }
   .account__schedule-month-clients-card:last-child {
@@ -9595,7 +9890,7 @@ textarea.modals__help-form-input {
   margin-left: -1.5rem; }
   @media only screen and (max-width: 640px) {
     .account__schedule-month-clients-card-photo-container + .account__schedule-month-clients-card-photo-container {
-      margin-left: -.8rem; } }
+      margin-left: -0.8rem; } }
 
 .not-found__bg-image {
   position: absolute;

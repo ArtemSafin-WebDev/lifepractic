@@ -12,6 +12,10 @@
     --primary-color: #E56A59;
     --rubik: 'Rubik', sans-serif;
 
+    --plyr-color-main: #E56A59;
+    --plyr-audio-controls-background: transparent;
+    --plyr-audio-control-color: white;
+
     @include breakpoint(tablet) {
         --content-padding: 4rem;
     }

@@ -1807,13 +1807,15 @@
     align-items: center;
     justify-content: center;
     margin-right: 1.7rem;
-    border: 1px solid #e9e9e9;
+
     border-radius: 50%;
     transition: color 0.2s, border-color 0.2s;
+
+    border: 1px solid rgba(#1b1b1b, 0.1);
     svg {
         width: 0.6rem;
         height: 1.2rem;
-        fill: #e9e9e9;
+        fill: rgba(0, 0, 0, 0.3);
         transition: fill 0.2s;
     }
 
@@ -1886,6 +1888,81 @@
     @include breakpoint(mobile) {
         min-height: 35rem;
     }
+}
+
+.account__my-video-connecting {
+    min-height: 54.8rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f0f8fa;
+    color: black;
+    text-align: center;
+    @include breakpoint(mobile) {
+        min-height: 35rem;
+    }
+}
+
+.account__my-video-connecting-photo-container {
+    width: 16.6rem;
+    height: 16.6rem;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    position: relative;
+
+    z-index: 1;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(122, 190, 209, 0.15);
+        border-radius: 50%;
+        z-index: -1;
+        animation-name: connecting;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+}
+
+@keyframes connecting {
+    from {
+        transform: scale(0.85);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.account__my-video-connecting-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 1.2rem;
+}
+
+.account__my-video-connecting-text {
+    font-weight: 300;
+    font-size: 1.7rem;
+    line-height: 1.8rem;
+}
+
+.account__my-video-connecting-photo {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    @include objectFitCover();
 }
 
 .account__my-video-coming-soon-text {
@@ -2005,6 +2082,10 @@
     margin-bottom: 2.5rem;
     transition: all 0.2s;
     @include blueHover();
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .account__my-video-change-time-cancel-btn {
@@ -3316,8 +3397,8 @@
 
     @include breakpoint(mobile) {
         margin-bottom: 0;
-        padding: 0.4rem .2rem;
-        border-radius: .3rem;
+        padding: 0.4rem 0.2rem;
+        border-radius: 0.3rem;
 
         &:not(.account__schedule-month-clients-card--total) {
             display: none;
@@ -3375,6 +3456,6 @@
     margin-left: -1.5rem;
 
     @include breakpoint(mobile) {
-        margin-left: -.8rem;
+        margin-left: -0.8rem;
     }
 }

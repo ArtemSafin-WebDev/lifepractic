@@ -40,6 +40,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    var cancelPsychoForm = document.querySelector('#cancel-psycho-form');
+
+    if (cancelPsychoForm) {
+        cancelPsychoForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (window.openModal) {
+                window.openModal('#cancelled-psycho');
+            }
+        });
+    }
 
     var accountForm = document.querySelector('#account-form');
     var accountSuccess = document.querySelector('.account__success');
