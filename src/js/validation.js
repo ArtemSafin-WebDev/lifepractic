@@ -1,4 +1,8 @@
 import 'parsleyjs';
+import dayjs from 'dayjs';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
+
+dayjs.extend(customParseFormat)
 
 window.Parsley.addValidator('phone', {
     requirementType: 'string',
@@ -11,12 +15,9 @@ window.Parsley.addValidator('phone', {
     }
 });
 
-
 window.Parsley.addValidator('cardnumber', {
     requirementType: 'string',
     validateString: function(value) {
-      
-        
         return /^[0-9]{16}$/.test(value.replace(/\s+/g, ''));
     },
     messages: {
@@ -28,8 +29,6 @@ window.Parsley.addValidator('cardnumber', {
 window.Parsley.addValidator('cardcvv', {
     requirementType: 'string',
     validateString: function(value) {
-      
-        
         return /^[0-9]{3}$/.test(value.replace(/\s+/g, ''));
     },
     messages: {
@@ -40,8 +39,8 @@ window.Parsley.addValidator('cardcvv', {
 window.Parsley.addValidator('carddate', {
     requirementType: 'string',
     validateString: function(value) {
-        console.log('Тестируем срок действия', value)
-        
+        console.log('Тестируем срок действия', value);
+
         return /^[0-9]{2}$/.test(value.replace(/\s+/g, ''));
     },
     messages: {
@@ -53,7 +52,7 @@ window.Parsley.addValidator('carddate', {
 window.Parsley.addValidator('requiredIfChecked', {
     requirementType: 'string',
     validateString: function(value, requirement) {
-        console.log('Validating', value)
+        console.log('Validating', value);
 
         const checkbox = document.querySelector(requirement);
 
@@ -72,6 +71,70 @@ window.Parsley.addValidator('requiredIfChecked', {
         ru: 'Обязательное поле'
     },
     priority: 33
+});
+
+window.Parsley.addValidator('passportseries', {
+    requirementType: 'string',
+    validateString: function(value) {
+        if (value.trim() === '') return true;
+        return /^[0-9]{4}$/.test(value);
+    },
+    messages: {
+        en: 'Enter correct passport series',
+        ru: 'Введите правильно серию паспорта'
+    }
+});
+window.Parsley.addValidator('passportnumber', {
+    requirementType: 'string',
+    validateString: function(value) {
+        if (value.trim() === '') return true;
+        return /^[0-9]{6}$/.test(value);
+    },
+    messages: {
+        en: 'Enter correct passport number',
+        ru: 'Введите правильно номер паспорта'
+    }
+});
+window.Parsley.addValidator('department', {
+    requirementType: 'string',
+    validateString: function(value) {
+        if (value.trim() === '') return true;
+        return /^[0-9]{3}\-[0-9]{3}$/.test(value);
+    },
+    messages: {
+        en: 'Enter correct department number',
+        ru: 'Введите правильно код подразделения'
+    }
+});
+window.Parsley.addValidator('snils', {
+    requirementType: 'string',
+    validateString: function(value) {
+        if (value.trim() === '') return true;
+        const newValue = value.toString().replace(/\s/g, '');
+        console.log('Validating new snils value', newValue);
+
+        return /^[0-9]{11}$/.test(newValue);
+    },
+    messages: {
+        en: 'Enter correct SNILS number',
+        ru: 'Введите правильно номер СНИЛС'
+    },
+    priority: 5
+});
+window.Parsley.addValidator('date', {
+    requirementType: 'string',
+    validateString: function(value) {
+        if (value.trim() === '') return true;
+        console.log('Validating date', {
+            value,
+            valid: dayjs(value, 'DD.MM.YYYY', true).isValid()
+        });
+        return dayjs(value, 'DD.MM.YYYY', true).isValid();
+    },
+    messages: {
+        en: 'Enter correct date',
+        ru: 'Введите правильно дату'
+    }
 });
 
 Parsley.addMessages('ru', {

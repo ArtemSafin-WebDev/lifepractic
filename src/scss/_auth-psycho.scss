@@ -211,8 +211,16 @@
     flex-grow: 1;
     line-height: 130%;
     margin-top: 0.2rem;
-}
 
+    a {
+        color: #7abed1;
+
+        &:link,
+        &:visited {
+            color: #7abed1;
+        }
+    }
+}
 
 .auth-psycho__enter-link,
 .auth-psycho__submit {
@@ -227,14 +235,12 @@
     flex-shrink: 0;
     justify-self: flex-end;
     color: white;
-   
+
     &:link,
     &:visited {
         color: white;
     }
     @include redHover();
-
-
 
     @include breakpoint(mobile) {
         width: 100%;

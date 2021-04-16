@@ -984,6 +984,9 @@ html {
   @media screen and (max-width: 1260px) {
     html {
       font-size: 7.2px; } }
+  @media screen and (max-width: 1200px) {
+    html {
+      font-size: 6.8px; } }
   @media screen and (max-width: 1024px) {
     html {
       font-size: 7px; } }
@@ -3139,8 +3142,8 @@ select:-webkit-autofill:focus {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 90rem;
-  height: 46.5rem;
+  width: 60rem;
+  height: 30rem;
   z-index: -1;
   pointer-events: none; }
   .corner-illustration svg {
@@ -4523,7 +4526,8 @@ body:not(.loaded) .modals {
   border-radius: 0.7rem;
   background: #9c9c9c;
   -webkit-transition: background-color 0.2s;
-  transition: background-color 0.2s; }
+  transition: background-color 0.2s;
+  z-index: 100; }
   .modals__modal-close svg {
     width: 1rem;
     height: 1rem;
@@ -6594,9 +6598,6 @@ textarea.modals__help-form-input {
   margin-bottom: 4.4rem; }
   @media only screen and (max-width: 640px) {
     .account__my-notes-tabs-nav {
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
       -webkit-box-ordinal-group: -9;
           -ms-flex-order: -10;
               order: -10;
@@ -6637,8 +6638,9 @@ textarea.modals__help-form-input {
     .account__my-notes-tabs-nav-link {
       font-size: 1.4rem;
       line-height: 1.9rem;
-      margin-right: 0; }
+      margin-right: 2rem; }
       .account__my-notes-tabs-nav-link:last-child {
+        margin-right: 0;
         margin-bottom: 0; } }
 
 .account__my-notes-main-heading {
@@ -7762,11 +7764,13 @@ textarea.modals__help-form-input {
           transform-origin: left center;
   padding: 0 1rem;
   background-color: #fff;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transition: color 0.3s, -webkit-transform 0.3s;
+  transition: color 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, color 0.3s;
+  transition: transform 0.3s, color 0.3s, -webkit-transform 0.3s;
   pointer-events: none; }
+  .parsley-error ~ .account__my-account-form-label {
+    color: var(--primary-color); }
 
 .account__my-account-form-input {
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -8974,7 +8978,7 @@ textarea.modals__help-form-input {
       padding: 0.4rem; } }
 
 .account__my-notes-day-table-item-inner {
-  padding-left: 4.8rem;
+  padding-left: 3.8rem;
   padding-right: 3.8rem;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -8985,7 +8989,7 @@ textarea.modals__help-form-input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  grid-template-columns: 20rem 1fr 20rem;
+  grid-template-columns: 18rem 1fr 16rem;
   -webkit-transition: background-color 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
   transition: background-color 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
@@ -9060,7 +9064,7 @@ textarea.modals__help-form-input {
   font-size: 1.4rem;
   line-height: 2rem;
   color: #6e6e6e;
-  padding-right: 6rem; }
+  padding-right: 3rem; }
   @media only screen and (max-width: 1200px) {
     .account__my-notes-day-table-item-text {
       padding-right: 0; } }
@@ -10323,6 +10327,791 @@ textarea.modals__help-form-input {
   font-size: 1.3rem;
   line-height: 1.4rem; }
 
+.account__my-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 107rem; }
+  .account__my-data input:-webkit-autofill,
+  .account__my-data input:-webkit-autofill:hover,
+  .account__my-data input:-webkit-autofill:focus,
+  .account__my-data input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important; }
+  .account__my-data .parsley-errors-list {
+    width: 100%;
+    -webkit-box-ordinal-group: 21;
+        -ms-flex-order: 20;
+            order: 20;
+    font-weight: 300; }
+    .account__my-data .parsley-errors-list.filled {
+      margin-top: 0.5rem;
+      font-size: 1.4rem;
+      line-height: 1.2;
+      color: var(--primary-color); }
+
+.account__my-data-checkboxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 4rem; }
+  @media only screen and (max-width: 640px) {
+    .account__my-data-checkboxes {
+      margin-bottom: 3rem;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; } }
+
+.account__my-data-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  margin-right: 3rem; }
+  @media only screen and (max-width: 640px) {
+    .account__my-data-checkbox {
+      margin-bottom: 1.5rem; }
+      .account__my-data-checkbox:last-child {
+        margin-bottom: 0; } }
+  .account__my-data-checkbox:last-child {
+    margin-right: 0; }
+
+.account__my-data-checkbox-input {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; }
+
+.account__my-data-checkbox-mark {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #7abed1;
+  border-radius: 0.4rem;
+  margin-right: 1.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s; }
+  .parsley-error .account__my-data-checkbox-mark {
+    border-color: var(--primary-color); }
+  .account__my-data-checkbox-mark::before {
+    content: '';
+    width: 0.9rem;
+    height: 0.9rem;
+    background: #7abed1;
+    border-radius: 0.2rem;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s; }
+
+.account__my-data-checkbox-text {
+  font-weight: 300;
+  font-size: 1.4rem;
+  width: 30%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  line-height: 130%;
+  margin-top: 0.1rem;
+  color: #6e6e6e;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
+
+.account__my-data-checkbox-input:checked ~ .account__my-data-checkbox-mark::before {
+  opacity: 1; }
+
+.account__my-data-checkbox-input:checked ~ .account__my-data-checkbox-text {
+  color: black; }
+
+.account__my-data-checkbox-info {
+  position: relative;
+  margin-left: 0.8rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 0.1rem; }
+  .account__my-data-checkbox-info > svg {
+    fill: #d9d9d9;
+    -webkit-transition: fill 0.2s;
+    transition: fill 0.2s;
+    width: 1.8rem;
+    height: 1.8rem;
+    display: block;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+  .account__my-data-checkbox-info:hover .account__my-data-checkbox-info-dropdown {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity 0.3s, visibility 0.3s; }
+  .account__my-data-checkbox-info:hover > svg {
+    fill: #7abed1; }
+
+.account__my-data-checkbox-info-dropdown {
+  width: 24rem;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding-top: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s;
+  transition: opacity 0.3s, visibility 0s linear 0.3s;
+  z-index: 20; }
+
+.account__my-data-checkbox-info-dropdown-inner {
+  background: #ffffff;
+  border-radius: 1rem;
+  position: relative;
+  padding: 1rem;
+  -webkit-filter: drop-shadow(0 0.7rem 2.4rem rgba(0, 0, 0, 0.08));
+          filter: drop-shadow(0 0.7rem 2.4rem rgba(0, 0, 0, 0.08));
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  text-align: center; }
+  @media only screen and (max-width: 640px) {
+    .account__my-data-checkbox-info-dropdown-inner {
+      padding: 2rem;
+      border-radius: 0.4rem;
+      font-size: 1.2rem;
+      line-height: 1.2; } }
+  .account__my-data-checkbox-info-dropdown-inner::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%) scaleY(-1);
+            transform: translateX(-50%) scaleY(-1);
+    bottom: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1rem 1.2rem 0 1.2rem;
+    border-color: #fff transparent transparent transparent; }
+
+.account__my-data-main-info {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2.2rem;
+  grid-column-gap: 2.8rem;
+  margin-bottom: 3.5rem; }
+  @media only screen and (max-width: 640px) {
+    .account__my-data-main-info {
+      grid-template-columns: repeat(1, minmax(0, 1fr)); } }
+
+.account__my-data-main-info-item {
+  position: relative; }
+
+.account__my-account-select {
+  text-align: left; }
+  .account__my-account-select .choices {
+    font-weight: 300;
+    font-size: 1.7rem;
+    line-height: 1.2;
+    margin-bottom: 0;
+    position: relative; }
+  .account__my-account-select .choices.is-open {
+    z-index: 30; }
+  .account__my-account-select .choices[data-type*='select-one'].is-open::after {
+    -webkit-transform: translateY(-50%) rotate(0deg);
+            transform: translateY(-50%) rotate(0deg); }
+  .account__my-account-select .choices[data-type*='select-one'] .choices__inner {
+    padding-bottom: 0rem; }
+  .account__my-account-select .choices__inner {
+    font-weight: 300;
+    font-size: 1.7rem;
+    line-height: 1.2;
+    padding: 0 2.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    min-height: 5.4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: transparent;
+    border-radius: 0;
+    border-radius: 1rem; }
+  .account__my-account-select .choices__list--single {
+    padding: 0;
+    padding-right: 2.5rem; }
+  .account__my-account-select .choices[data-type*='select-one']:after {
+    border: none;
+    margin: 0;
+    right: 1.2rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%) rotate(180deg);
+            transform: translateY(-50%) rotate(180deg);
+    background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10.5 5.5'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bopacity:0.5;%7D.cls-2%7Bfill:%236e6e6e;%7D%3C/style%3E%3C/defs%3E%3Cg class='cls-1'%3E%3Cpath class='cls-2' d='M5.25,5.5a.73.73,0,0,1-.5-.19l-4.5-4A.75.75,0,0,1,.19.25.76.76,0,0,1,1.25.19l4,3.56,4-3.56a.76.76,0,0,1,1.06.06.75.75,0,0,1-.06,1.06l-4.5,4A.73.73,0,0,1,5.25,5.5Z'/%3E%3C/g%3E%3C/svg%3E");
+    width: 12px;
+    height: 6px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s; }
+  .account__my-account-select .choices__placeholder {
+    opacity: 1;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    color: rgba(0, 0, 0, 0.35); }
+  .account__my-account-select .choices__list--dropdown {
+    word-break: initial;
+    border: 1px solid #7abed1;
+    background: white;
+    border-radius: 1rem !important;
+    margin-top: 1rem;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+    display: block !important;
+    opacity: 0;
+    visibility: hidden; }
+    .account__my-account-select .choices__list--dropdown.is-active {
+      opacity: 1;
+      visibility: visible;
+      -webkit-transition: opacity 0.3s, visibility 0.3s;
+      transition: opacity 0.3s, visibility 0.3s; }
+  .account__my-account-select .choices__list--dropdown .choices__item {
+    font-size: 1.7rem;
+    line-height: 1.2;
+    padding: 0 2.5rem;
+    padding: 1rem 2.5rem; }
+  .account__my-account-select .choices__list--dropdown .choices__item--selectable.is-highlighted {
+    background: #7abed1;
+    color: white; }
+  .account__my-account-select .choices__list--dropdown .choices__list {
+    max-height: 20rem;
+    -webkit-overflow-scrolling: touch; }
+    .account__my-account-select .choices__list--dropdown .choices__list::-webkit-scrollbar {
+      background-color: white;
+      width: 0.4rem; }
+    .account__my-account-select .choices__list--dropdown .choices__list::-webkit-scrollbar-thumb {
+      background-color: var(--primary-color); }
+    .account__my-account-select .choices__list--dropdown .choices__list::-webkit-scrollbar-button {
+      display: none; }
+    .account__my-account-select .choices__list--dropdown .choices__list::-webkit-scrollbar-track {
+      background-color: white; }
+    @media only screen and (max-width: 640px) {
+      .account__my-account-select .choices__list--dropdown .choices__list {
+        max-height: 15rem; } }
+
+.account__my-data-additional-info {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2.8rem; }
+  @media only screen and (max-width: 640px) {
+    .account__my-data-additional-info {
+      grid-template-columns: repeat(1, minmax(0, 1fr)); } }
+
+.account__my-data-additional-info-block-heading {
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  margin-bottom: 2rem; }
+
+.account__my-data-additional-info-block-items {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 2.2rem;
+  grid-column-gap: 1rem; }
+
+.account__my-data-additional-info-block-item {
+  grid-column: 1 / -1;
+  grid-column: span 4;
+  position: relative; }
+  .account__my-data-additional-info-block-item--small {
+    grid-column: span 1; }
+    @media only screen and (max-width: 640px) {
+      .account__my-data-additional-info-block-item--small {
+        grid-column: span 2; } }
+  .account__my-data-additional-info-block-item--medium {
+    grid-column: span 2; }
+  .account__my-data-additional-info-block-item--semilarge {
+    grid-column: span 3; }
+    @media only screen and (max-width: 640px) {
+      .account__my-data-additional-info-block-item--semilarge {
+        grid-column: span 2; } }
+
+.account__my-data-submit {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  padding: 1.5rem 2.4rem;
+  background: #e56a59;
+  border-radius: 1rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-left: auto;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  color: white;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s;
+  transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s; }
+  .account__my-data-submit::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    background: #df5c4a;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    z-index: -1;
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%); }
+  .account__my-data-submit::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 140%;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    background: #d24932;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+    z-index: -1;
+    -webkit-transform: translateX(20%);
+            transform: translateX(20%); }
+  .no-touch .account__my-data-submit:hover {
+    color: white;
+    border-color: #d24932;
+    -webkit-transition: color 0.2s ease .1s, border-color .2s;
+    transition: color 0.2s ease .1s, border-color .2s; }
+    .no-touch .account__my-data-submit:hover::before {
+      -webkit-transform: translateX(10%) scale(2);
+              transform: translateX(10%) scale(2);
+      -webkit-transition: -webkit-transform 0.7s ease-out;
+      transition: -webkit-transform 0.7s ease-out;
+      transition: transform 0.7s ease-out;
+      transition: transform 0.7s ease-out, -webkit-transform 0.7s ease-out; }
+    .no-touch .account__my-data-submit:hover::after {
+      -webkit-transform: translateX(-20%) scale(2.4);
+              transform: translateX(-20%) scale(2.4);
+      -webkit-transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s, -webkit-transform 1.4s ease-out 0.2s; }
+  @media only screen and (max-width: 640px) {
+    .account__my-data-submit {
+      margin-top: 2rem; } }
+
+.account__status {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(224, 244, 248, 0.45);
+  padding: 2rem 2.5rem;
+  border-radius: 1.5rem;
+  font-size: 1.7rem;
+  line-height: 2rem;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 3.5rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-weight: 300; }
+  @media only screen and (max-width: 640px) {
+    .account__status {
+      font-size: 1.4rem;
+      line-height: 1.2;
+      padding: 1.4rem 1.4rem;
+      border-radius: 1rem; } }
+  .account__status::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 3rem;
+    width: 3rem;
+    height: 1.5rem;
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-image: url("../img/blue-corner.svg");
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1); }
+    @media only screen and (max-width: 640px) {
+      .account__status::before {
+        left: 2rem; } }
+  .account__status a {
+    color: #7abed1; }
+    .account__status a:link, .account__status a:visited {
+      color: #7abed1; }
+  .account__status strong {
+    font-weight: 400; }
+  .account__status svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-right: 1.3rem; }
+    .account__status svg.icon-status-warning {
+      fill: #e56a59; }
+    .account__status svg.icon-status-declined {
+      fill: #e56a59; }
+    .account__status svg.icon-status-ok {
+      fill: #6bc18f; }
+
+.account__my-schedule-heading {
+  font-weight: normal;
+  font-size: 1.7rem;
+  line-height: 2.2rem;
+  margin-bottom: 2.5rem; }
+
+.account__my-schedule-regimes-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media only screen and (max-width: 640px) {
+    .account__my-schedule-regimes-links {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: initial;
+          -ms-flex-align: initial;
+              align-items: initial; } }
+
+.account__my-schedule-top-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2.2rem; }
+  @media only screen and (max-width: 640px) {
+    .account__my-schedule-top-row {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: initial;
+          -ms-flex-align: initial;
+              align-items: initial; } }
+
+.account__my-schedule-regime-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  padding: 1.1rem 1.9rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 1rem;
+  margin-right: 1.5rem;
+  -webkit-transition: background-color 0.2s, border 0.2s;
+  transition: background-color 0.2s, border 0.2s;
+  position: relative; }
+  @media only screen and (max-width: 640px) {
+    .account__my-schedule-regime-link {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 1rem; }
+      .account__my-schedule-regime-link:last-child {
+        margin-bottom: 0; } }
+  .account__my-schedule-regime-link.active {
+    background: #eefbff;
+    border: 1px solid #7abed1; }
+    .account__my-schedule-regime-link.active .account__my-schedule-regime-info svg {
+      fill: #7abed1; }
+  .no-touch .account__my-schedule-regime-link:hover .account__my-schedule-regime-dropdown {
+    opacity: 1;
+    visibility: inherit;
+    -webkit-transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity 0.3s, visibility 0.3s; }
+
+.account__my-schedule-regime-info {
+  margin-left: 0.8rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0; }
+  .account__my-schedule-regime-info svg {
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: rgba(0, 0, 0, 0.15);
+    display: block;
+    -webkit-transition: fill 0.2s;
+    transition: fill 0.2s; }
+
+.account__my-schedule-regime-dropdown {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s;
+  transition: opacity 0.3s, visibility 0s linear 0.3s;
+  width: 40rem;
+  padding-left: 1.2rem; }
+
+.account__my-schedule-regime-dropdown-inner {
+  background-color: #fff;
+  -webkit-filter: drop-shadow(0px 0.7rem 2.4rem rgba(0, 0, 0, 0.08));
+          filter: drop-shadow(0px 0.7rem 2.4rem rgba(0, 0, 0, 0.08));
+  border-radius: 1rem;
+  padding: 2.5rem 3.5rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 300;
+  position: relative;
+  z-index: 1; }
+  .account__my-schedule-regime-dropdown-inner::before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 1rem;
+    height: 3rem;
+    background-image: url("../img/rounded-left-pointer.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain; }
+  .account__my-schedule-regime-dropdown-inner b {
+    font-weight: 400; }
+
+.account__my-schedule-regime-form-blocks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 1rem; }
+  @media only screen and (max-width: 640px) {
+    .account__my-schedule-regime-form-blocks {
+      grid-template-columns: repeat(1, minmax(0, 1fr)); } }
+
+.account__my-schedule-regime-form-block {
+  padding: 3.4rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr)); }
+  @media only screen and (max-width: 640px) {
+    .account__my-schedule-regime-form-block {
+      padding: 2rem 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch; }
+      .account__my-schedule-regime-form-block .select-time__card {
+        width: 20%;
+        -ms-flex-negative: 0;
+            flex-shrink: 0; } }
+  .account__my-schedule-regime-form-block .select-time__card-checkbox {
+    margin-bottom: 0; }
+  .account__my-schedule-regime-form-block .select-time__card-inner {
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    padding-bottom: 0.6rem; }
+  .account__my-schedule-regime-form-block .select-time__card-checkbox-content {
+    border-radius: 0; }
+    .first-checked .account__my-schedule-regime-form-block .select-time__card-checkbox-content {
+      border-top-left-radius: 0.6rem;
+      border-top-right-radius: 0.6rem; }
+    .last-checked .account__my-schedule-regime-form-block .select-time__card-checkbox-content {
+      border-bottom-left-radius: 0.6rem;
+      border-bottom-right-radius: 0.6rem; }
+
+.account__my-schedule-regime-controls-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 1rem;
+  margin-top: 2.5rem; }
+  @media only screen and (max-width: 640px) {
+    .account__my-schedule-regime-controls-wrapper {
+      grid-template-columns: repeat(1, minmax(0, 1fr)); } }
+
+.account__my-schedule-regime-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  @media only screen and (max-width: 640px) {
+    .account__my-schedule-regime-controls {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: initial;
+          -ms-flex-align: initial;
+              align-items: initial;
+      -webkit-box-pack: initial;
+          -ms-flex-pack: initial;
+              justify-content: initial; } }
+
+.account__my-schedule-regime-reset {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: #6e6e6e;
+  margin-right: 3rem;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
+  .account__my-schedule-regime-reset svg {
+    width: 1.4rem;
+    height: 1rem;
+    fill: #7abed1;
+    margin-right: 0.7rem; }
+  .no-touch .account__my-schedule-regime-reset:hover {
+    color: black; }
+
+.account__my-schedule-regime-submit {
+  padding: 1.5rem 2.5rem;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  text-align: center;
+  color: white;
+  background: #e56a59;
+  border-radius: 1rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+  margin-left: auto;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s;
+  transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s; }
+  .account__my-schedule-regime-submit::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    background: #df5c4a;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    z-index: -1;
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%); }
+  .account__my-schedule-regime-submit::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 140%;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    background: #d24932;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+    z-index: -1;
+    -webkit-transform: translateX(20%);
+            transform: translateX(20%); }
+  .no-touch .account__my-schedule-regime-submit:hover {
+    color: white;
+    border-color: #d24932;
+    -webkit-transition: color 0.2s ease .1s, border-color .2s;
+    transition: color 0.2s ease .1s, border-color .2s; }
+    .no-touch .account__my-schedule-regime-submit:hover::before {
+      -webkit-transform: translateX(10%) scale(2);
+              transform: translateX(10%) scale(2);
+      -webkit-transition: -webkit-transform 0.7s ease-out;
+      transition: -webkit-transform 0.7s ease-out;
+      transition: transform 0.7s ease-out;
+      transition: transform 0.7s ease-out, -webkit-transform 0.7s ease-out; }
+    .no-touch .account__my-schedule-regime-submit:hover::after {
+      -webkit-transform: translateX(-20%) scale(2.4);
+              transform: translateX(-20%) scale(2.4);
+      -webkit-transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s, -webkit-transform 1.4s ease-out 0.2s; }
+  @media only screen and (max-width: 640px) {
+    .account__my-schedule-regime-submit {
+      margin-left: 0;
+      margin-top: 2rem; } }
+
+.account__my-schedule-regime-controls--fullwidth {
+  grid-column: 1 / -1; }
+
 .not-found__bg-image {
   position: absolute;
   left: 0;
@@ -10881,6 +11670,10 @@ textarea.modals__help-form-input {
           flex-grow: 1;
   line-height: 130%;
   margin-top: 0.2rem; }
+  .auth-psycho__checkbox-text a {
+    color: #7abed1; }
+    .auth-psycho__checkbox-text a:link, .auth-psycho__checkbox-text a:visited {
+      color: #7abed1; }
 
 .auth-psycho__enter-link,
 .auth-psycho__submit {

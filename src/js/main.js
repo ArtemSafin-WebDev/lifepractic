@@ -24,6 +24,9 @@ import selectTimeForm from './selectTimeForm';
 import recommendations from './recommendations';
 import mobileCalendar from './mobileCalendar';
 import videoPlayer from './videoPlayer';
+import passportMasks from './passportMasks';
+import scheduleRegimes from './scheduleRegimes';
+import selectTimeCheckboxes from './selectTimeCheckboxes';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -49,6 +52,9 @@ document.addEventListener('DOMContentLoaded', function() {
     recommendations();
     mobileCalendar();
     videoPlayer();
+    passportMasks();
+    scheduleRegimes();
+    selectTimeCheckboxes();
 });
 
 window.addEventListener('load', function() {
