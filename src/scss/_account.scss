@@ -1312,7 +1312,7 @@
     &.active {
         position: relative;
         opacity: 1;
-        visibility: visible;
+        visibility: inherit;
         z-index: 2;
         transform: translateX(0);
         transition: opacity 0.4s, visibility 0.4s;
@@ -3976,7 +3976,7 @@
     &:hover {
         .account__my-data-checkbox-info-dropdown {
             opacity: 1;
-            visibility: visible;
+            visibility: inherit;
             transition: opacity 0.3s, visibility 0.3s;
         }
         & > svg {
@@ -4125,7 +4125,7 @@
         visibility: hidden;
         &.is-active {
             opacity: 1;
-            visibility: visible;
+            visibility: inherit;
             transition: opacity 0.3s, visibility 0.3s;
         }
     }

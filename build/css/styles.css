@@ -6824,7 +6824,7 @@ textarea.modals__help-form-input {
 
 .payment__existing-cards-radio-input:checked ~ .payment__existing-cards-radio-content .payment__existing-cards-radio-btn {
   opacity: 1;
-  visibility: visible;
+  visibility: inherit;
   -webkit-transition: opacity 0.3s, visibility 0.3s;
   transition: opacity 0.3s, visibility 0.3s; }
 
@@ -6840,7 +6840,7 @@ textarea.modals__help-form-input {
 .payment__existing-cards-radio-btn--other-card {
   background: rgba(122, 190, 209, 0.35);
   opacity: 1;
-  visibility: visible; }
+  visibility: inherit; }
   .payment__existing-cards-radio-btn--other-card svg {
     width: 1.2rem;
     height: 1.2rem;
@@ -8512,7 +8512,7 @@ textarea.modals__help-form-input {
   .account__my-notes-tab-item.active {
     position: relative;
     opacity: 1;
-    visibility: visible;
+    visibility: inherit;
     z-index: 2;
     -webkit-transform: translateX(0);
             transform: translateX(0);
@@ -11523,7 +11523,7 @@ textarea.modals__help-form-input {
         flex-shrink: 0; }
   .account__my-data-checkbox-info:hover .account__my-data-checkbox-info-dropdown {
     opacity: 1;
-    visibility: visible;
+    visibility: inherit;
     -webkit-transition: opacity 0.3s, visibility 0.3s;
     transition: opacity 0.3s, visibility 0.3s; }
   .account__my-data-checkbox-info:hover > svg {
@@ -11657,7 +11657,7 @@ textarea.modals__help-form-input {
     visibility: hidden; }
     .account__my-account-select .choices__list--dropdown.is-active {
       opacity: 1;
-      visibility: visible;
+      visibility: inherit;
       -webkit-transition: opacity 0.3s, visibility 0.3s;
       transition: opacity 0.3s, visibility 0.3s; }
   .account__my-account-select .choices__list--dropdown .choices__item {

@@ -5,6 +5,8 @@ export default function() {
 
 
     function openModal(id) {
+        console.trace();
+        console.log('Opening modal', id)
         if (activeModal) {
             closeModal(activeModal);
         }
@@ -35,10 +37,14 @@ export default function() {
             const link = event.target.matches('.js-open-modal') ? event.target : event.target.closest('.js-open-modal');
             const hash = link.hash;
             openModal(hash);
+
+            console.log('Opening modal from 1 line', event.target, event.target.closest('.js-open-modal'))
         } else if (event.target.matches('.js-close-modal') || event.target.closest('.js-close-modal')) {
             event.preventDefault();
             const modalToClose = event.target.closest('.js-modal');
             closeModal(modalToClose);
+
+          
         } else if (event.target.matches('.js-modal')) {
             event.preventDefault();
             const modalToClose = event.target;
