@@ -226,6 +226,21 @@
             transition: transform 1.4s ease-out 0.2s;
         }
     }
+
+    &:focus-visible {
+        color: white;
+        border-color: #d24932;
+        transition: color 0.2s ease 0.1s, border-color 0.2s;
+        &::before {
+            transform: translateX(10%) scale(2);
+            transition: transform 0.7s ease-out;
+        }
+
+        &::after {
+            transform: translateX(-20%) scale(2.4);
+            transition: transform 1.4s ease-out 0.2s;
+        }
+    }
 }
 
 @mixin blueHover() {
@@ -265,6 +280,22 @@
     }
 
     .no-touch &:hover {
+        color: white;
+        border-color: #7abed1;
+
+        transition: color 0.2s ease 0.1s, border-color 0.2s;
+        &::before {
+            transform: translateX(10%) scale(2);
+            transition: transform 0.5s ease-out;
+        }
+
+        &::after {
+            transform: translateX(-20%) scale(2.4);
+            transition: transform 1s ease-out 0.2s;
+        }
+    }
+
+    &:focus-visible { 
         color: white;
         border-color: #7abed1;
 

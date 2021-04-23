@@ -1113,7 +1113,8 @@ a {
   background-color: transparent;
   text-decoration: none;
   -webkit-transition: color .2s;
-  transition: color .2s; }
+  transition: color .2s;
+  outline: none; }
   a:link, a:visited {
     color: inherit; }
 
@@ -1479,6 +1480,8 @@ select:-webkit-autofill:focus {
     color: #6e6e6e; }
   .page-header__nav-link:hover {
     color: #7abed1; }
+  .page-header__nav-link:focus-visible {
+    color: #7abed1; }
   @media only screen and (max-width: 1024px) {
     .page-header__nav-link {
       font-size: 1.8rem; } }
@@ -1526,6 +1529,8 @@ select:-webkit-autofill:focus {
     color: black; }
   .page-header__btn:hover {
     color: #7abed1; }
+  .page-header__btn:focus-visible {
+    color: #7abed1; }
   .page-header__btn--login {
     padding: 1rem 1.8rem;
     border: 1px solid #7abed1;
@@ -1533,6 +1538,9 @@ select:-webkit-autofill:focus {
     -ms-flex-negative: 0;
         flex-shrink: 0; }
     .page-header__btn--login:hover {
+      color: white;
+      background-color: #7abed1; }
+    .page-header__btn--login:focus-visible {
       color: white;
       background-color: #7abed1; }
 
@@ -2220,6 +2228,25 @@ select:-webkit-autofill:focus {
       transition: -webkit-transform 1.4s ease-out 0.2s;
       transition: transform 1.4s ease-out 0.2s;
       transition: transform 1.4s ease-out 0.2s, -webkit-transform 1.4s ease-out 0.2s; }
+  .home__choose-btn:focus-visible {
+    color: white;
+    border-color: #d24932;
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
+    .home__choose-btn:focus-visible::before {
+      -webkit-transform: translateX(10%) scale(2);
+              transform: translateX(10%) scale(2);
+      -webkit-transition: -webkit-transform 0.7s ease-out;
+      transition: -webkit-transform 0.7s ease-out;
+      transition: transform 0.7s ease-out;
+      transition: transform 0.7s ease-out, -webkit-transform 0.7s ease-out; }
+    .home__choose-btn:focus-visible::after {
+      -webkit-transform: translateX(-20%) scale(2.4);
+              transform: translateX(-20%) scale(2.4);
+      -webkit-transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s, -webkit-transform 1.4s ease-out 0.2s; }
 
 .home__choose-btn-people {
   display: -webkit-box;
@@ -2337,6 +2364,25 @@ select:-webkit-autofill:focus {
       transition: transform 0.5s ease-out;
       transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out; }
     .no-touch .home__register-btn:hover::after {
+      -webkit-transform: translateX(-20%) scale(2.4);
+              transform: translateX(-20%) scale(2.4);
+      -webkit-transition: -webkit-transform 1s ease-out 0.2s;
+      transition: -webkit-transform 1s ease-out 0.2s;
+      transition: transform 1s ease-out 0.2s;
+      transition: transform 1s ease-out 0.2s, -webkit-transform 1s ease-out 0.2s; }
+  .home__register-btn:focus-visible {
+    color: white;
+    border-color: #7abed1;
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
+    .home__register-btn:focus-visible::before {
+      -webkit-transform: translateX(10%) scale(2);
+              transform: translateX(10%) scale(2);
+      -webkit-transition: -webkit-transform 0.5s ease-out;
+      transition: -webkit-transform 0.5s ease-out;
+      transition: transform 0.5s ease-out;
+      transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out; }
+    .home__register-btn:focus-visible::after {
       -webkit-transform: translateX(-20%) scale(2.4);
               transform: translateX(-20%) scale(2.4);
       -webkit-transition: -webkit-transform 1s ease-out 0.2s;
@@ -2659,6 +2705,9 @@ select:-webkit-autofill:focus {
           flex-grow: 1;
   -webkit-transition: border-color 0.2s;
   transition: border-color 0.2s; }
+  .auth__form-input:focus-visible,
+  .modals__help-form-input:focus-visible {
+    border-color: #7abed1; }
   .auth__form-input.parsley-error,
   .modals__help-form-input.parsley-error {
     border-color: var(--primary-color); }
@@ -2767,6 +2816,25 @@ select:-webkit-autofill:focus {
       transition: -webkit-transform 1s ease-out 0.2s;
       transition: transform 1s ease-out 0.2s;
       transition: transform 1s ease-out 0.2s, -webkit-transform 1s ease-out 0.2s; }
+  .auth__form-get-code-btn:focus-visible {
+    color: white;
+    border-color: #7abed1;
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
+    .auth__form-get-code-btn:focus-visible::before {
+      -webkit-transform: translateX(10%) scale(2);
+              transform: translateX(10%) scale(2);
+      -webkit-transition: -webkit-transform 0.5s ease-out;
+      transition: -webkit-transform 0.5s ease-out;
+      transition: transform 0.5s ease-out;
+      transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out; }
+    .auth__form-get-code-btn:focus-visible::after {
+      -webkit-transform: translateX(-20%) scale(2.4);
+              transform: translateX(-20%) scale(2.4);
+      -webkit-transition: -webkit-transform 1s ease-out 0.2s;
+      transition: -webkit-transform 1s ease-out 0.2s;
+      transition: transform 1s ease-out 0.2s;
+      transition: transform 1s ease-out 0.2s, -webkit-transform 1s ease-out 0.2s; }
   @media only screen and (max-width: 640px) {
     .auth__form-get-code-btn {
       padding: 1.5rem 1.2rem; } }
@@ -2812,7 +2880,8 @@ select:-webkit-autofill:focus {
   line-height: 2.2rem;
   color: #7abed1;
   -ms-flex-item-align: start;
-      align-self: flex-start; }
+      align-self: flex-start;
+  outline: none; }
   .auth__form-already-has-an-account:link, .auth__form-already-has-an-account:visited {
     color: #7abed1; }
   .auth__form-already-has-an-account svg {
@@ -2823,6 +2892,8 @@ select:-webkit-autofill:focus {
     margin-right: 1.5rem;
     fill: #7abed1; }
   .auth__form-already-has-an-account:hover .auth__form-already-has-an-account-text {
+    border-color: #7abed1; }
+  .auth__form-already-has-an-account:focus-visible .auth__form-already-has-an-account-text {
     border-color: #7abed1; }
 
 .auth__form-already-has-an-account-text {
@@ -2946,6 +3017,31 @@ select:-webkit-autofill:focus {
         transition: -webkit-transform 1s ease-out 0.2s;
         transition: transform 1s ease-out 0.2s;
         transition: transform 1s ease-out 0.2s, -webkit-transform 1s ease-out 0.2s; }
+    .auth__form-btn:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit):focus-visible,
+    .auth__enter-link:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit):focus-visible,
+    .modals__help-form-submit:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit):focus-visible {
+      color: white;
+      border-color: #7abed1;
+      -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+      transition: color 0.2s ease 0.1s, border-color 0.2s; }
+      .auth__form-btn:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit):focus-visible::before,
+      .auth__enter-link:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit):focus-visible::before,
+      .modals__help-form-submit:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit):focus-visible::before {
+        -webkit-transform: translateX(10%) scale(2);
+                transform: translateX(10%) scale(2);
+        -webkit-transition: -webkit-transform 0.5s ease-out;
+        transition: -webkit-transform 0.5s ease-out;
+        transition: transform 0.5s ease-out;
+        transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out; }
+      .auth__form-btn:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit):focus-visible::after,
+      .auth__enter-link:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit):focus-visible::after,
+      .modals__help-form-submit:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit):focus-visible::after {
+        -webkit-transform: translateX(-20%) scale(2.4);
+                transform: translateX(-20%) scale(2.4);
+        -webkit-transition: -webkit-transform 1s ease-out 0.2s;
+        transition: -webkit-transform 1s ease-out 0.2s;
+        transition: transform 1s ease-out 0.2s;
+        transition: transform 1s ease-out 0.2s, -webkit-transform 1s ease-out 0.2s; }
   @media only screen and (max-width: 640px) {
     .auth__form-btn,
     .auth__enter-link,
@@ -3040,6 +3136,31 @@ select:-webkit-autofill:focus {
       .no-touch .auth__form-btn--submit:not([disabled]):hover::after, .no-touch
       .auth__enter-link:not([disabled]):hover::after, .no-touch
       .modals__help-form-submit:not([disabled]):hover::after {
+        -webkit-transform: translateX(-20%) scale(2.4);
+                transform: translateX(-20%) scale(2.4);
+        -webkit-transition: -webkit-transform 1.4s ease-out 0.2s;
+        transition: -webkit-transform 1.4s ease-out 0.2s;
+        transition: transform 1.4s ease-out 0.2s;
+        transition: transform 1.4s ease-out 0.2s, -webkit-transform 1.4s ease-out 0.2s; }
+    .auth__form-btn--submit:not([disabled]):focus-visible,
+    .auth__enter-link:not([disabled]):focus-visible,
+    .modals__help-form-submit:not([disabled]):focus-visible {
+      color: white;
+      border-color: #d24932;
+      -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+      transition: color 0.2s ease 0.1s, border-color 0.2s; }
+      .auth__form-btn--submit:not([disabled]):focus-visible::before,
+      .auth__enter-link:not([disabled]):focus-visible::before,
+      .modals__help-form-submit:not([disabled]):focus-visible::before {
+        -webkit-transform: translateX(10%) scale(2);
+                transform: translateX(10%) scale(2);
+        -webkit-transition: -webkit-transform 0.7s ease-out;
+        transition: -webkit-transform 0.7s ease-out;
+        transition: transform 0.7s ease-out;
+        transition: transform 0.7s ease-out, -webkit-transform 0.7s ease-out; }
+      .auth__form-btn--submit:not([disabled]):focus-visible::after,
+      .auth__enter-link:not([disabled]):focus-visible::after,
+      .modals__help-form-submit:not([disabled]):focus-visible::after {
         -webkit-transform: translateX(-20%) scale(2.4);
                 transform: translateX(-20%) scale(2.4);
         -webkit-transition: -webkit-transform 1.4s ease-out 0.2s;
@@ -3264,7 +3385,7 @@ select:-webkit-autofill:focus {
   margin-bottom: 10rem; }
   @media only screen and (max-width: 640px) {
     .poll {
-      margin-bottom: 5rem; } }
+      margin-bottom: 15rem; } }
 
 .poll__main-heading {
   text-align: center;
@@ -4671,6 +4792,25 @@ textarea.modals__help-form-input {
       transition: -webkit-transform 1.4s ease-out 0.2s;
       transition: transform 1.4s ease-out 0.2s;
       transition: transform 1.4s ease-out 0.2s, -webkit-transform 1.4s ease-out 0.2s; }
+  .modals__help-form-submit:focus-visible {
+    color: white;
+    border-color: #d24932;
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
+    .modals__help-form-submit:focus-visible::before {
+      -webkit-transform: translateX(10%) scale(2);
+              transform: translateX(10%) scale(2);
+      -webkit-transition: -webkit-transform 0.7s ease-out;
+      transition: -webkit-transform 0.7s ease-out;
+      transition: transform 0.7s ease-out;
+      transition: transform 0.7s ease-out, -webkit-transform 0.7s ease-out; }
+    .modals__help-form-submit:focus-visible::after {
+      -webkit-transform: translateX(-20%) scale(2.4);
+              transform: translateX(-20%) scale(2.4);
+      -webkit-transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s, -webkit-transform 1.4s ease-out 0.2s; }
 
 .modals__modal-cancel {
   padding: 4rem;
@@ -5145,6 +5285,25 @@ textarea.modals__help-form-input {
       transition: -webkit-transform 1s ease-out 0.2s;
       transition: transform 1s ease-out 0.2s;
       transition: transform 1s ease-out 0.2s, -webkit-transform 1s ease-out 0.2s; }
+  .modals__modal-used-btn:focus-visible {
+    color: white;
+    border-color: #7abed1;
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
+    .modals__modal-used-btn:focus-visible::before {
+      -webkit-transform: translateX(10%) scale(2);
+              transform: translateX(10%) scale(2);
+      -webkit-transition: -webkit-transform 0.5s ease-out;
+      transition: -webkit-transform 0.5s ease-out;
+      transition: transform 0.5s ease-out;
+      transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out; }
+    .modals__modal-used-btn:focus-visible::after {
+      -webkit-transform: translateX(-20%) scale(2.4);
+              transform: translateX(-20%) scale(2.4);
+      -webkit-transition: -webkit-transform 1s ease-out 0.2s;
+      transition: -webkit-transform 1s ease-out 0.2s;
+      transition: transform 1s ease-out 0.2s;
+      transition: transform 1s ease-out 0.2s, -webkit-transform 1s ease-out 0.2s; }
   .modals__modal-used-btn:last-child {
     margin-right: 0; }
   @media only screen and (max-width: 640px) {
@@ -5313,6 +5472,25 @@ textarea.modals__help-form-input {
       transition: -webkit-transform 1.4s ease-out 0.2s;
       transition: transform 1.4s ease-out 0.2s;
       transition: transform 1.4s ease-out 0.2s, -webkit-transform 1.4s ease-out 0.2s; }
+  .modals__modal-cancel-reason-form-submit-btn:focus-visible {
+    color: white;
+    border-color: #d24932;
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
+    .modals__modal-cancel-reason-form-submit-btn:focus-visible::before {
+      -webkit-transform: translateX(10%) scale(2);
+              transform: translateX(10%) scale(2);
+      -webkit-transition: -webkit-transform 0.7s ease-out;
+      transition: -webkit-transform 0.7s ease-out;
+      transition: transform 0.7s ease-out;
+      transition: transform 0.7s ease-out, -webkit-transform 0.7s ease-out; }
+    .modals__modal-cancel-reason-form-submit-btn:focus-visible::after {
+      -webkit-transform: translateX(-20%) scale(2.4);
+              transform: translateX(-20%) scale(2.4);
+      -webkit-transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s, -webkit-transform 1.4s ease-out 0.2s; }
   @media only screen and (max-width: 640px) {
     .modals__modal-cancel-reason-form-submit-btn {
       width: 100%; } }
@@ -5353,7 +5531,7 @@ textarea.modals__help-form-input {
       margin-bottom: 28rem; } }
   @media only screen and (max-width: 640px) {
     .payment {
-      margin-bottom: 5rem;
+      margin-bottom: 14rem;
       padding-top: 6rem; } }
 
 .payment__heading {
@@ -7169,6 +7347,25 @@ textarea.modals__help-form-input {
       transition: -webkit-transform 1.4s ease-out 0.2s;
       transition: transform 1.4s ease-out 0.2s;
       transition: transform 1.4s ease-out 0.2s, -webkit-transform 1.4s ease-out 0.2s; }
+  .account__my-notes-results-card-subscribe-btn:focus-visible {
+    color: white;
+    border-color: #d24932;
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
+    .account__my-notes-results-card-subscribe-btn:focus-visible::before {
+      -webkit-transform: translateX(10%) scale(2);
+              transform: translateX(10%) scale(2);
+      -webkit-transition: -webkit-transform 0.7s ease-out;
+      transition: -webkit-transform 0.7s ease-out;
+      transition: transform 0.7s ease-out;
+      transition: transform 0.7s ease-out, -webkit-transform 0.7s ease-out; }
+    .account__my-notes-results-card-subscribe-btn:focus-visible::after {
+      -webkit-transform: translateX(-20%) scale(2.4);
+              transform: translateX(-20%) scale(2.4);
+      -webkit-transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s, -webkit-transform 1.4s ease-out 0.2s; }
   @media screen and (max-width: 1100px) {
     .account__my-notes-results-card-subscribe-btn {
       font-size: 1em;
@@ -7704,6 +7901,25 @@ textarea.modals__help-form-input {
       transition: transform 0.5s ease-out;
       transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out; }
     .no-touch .account__my-notes-choose-specialist-link:hover::after {
+      -webkit-transform: translateX(-20%) scale(2.4);
+              transform: translateX(-20%) scale(2.4);
+      -webkit-transition: -webkit-transform 1s ease-out 0.2s;
+      transition: -webkit-transform 1s ease-out 0.2s;
+      transition: transform 1s ease-out 0.2s;
+      transition: transform 1s ease-out 0.2s, -webkit-transform 1s ease-out 0.2s; }
+  .account__my-notes-choose-specialist-link:focus-visible {
+    color: white;
+    border-color: #7abed1;
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
+    .account__my-notes-choose-specialist-link:focus-visible::before {
+      -webkit-transform: translateX(10%) scale(2);
+              transform: translateX(10%) scale(2);
+      -webkit-transition: -webkit-transform 0.5s ease-out;
+      transition: -webkit-transform 0.5s ease-out;
+      transition: transform 0.5s ease-out;
+      transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out; }
+    .account__my-notes-choose-specialist-link:focus-visible::after {
       -webkit-transform: translateX(-20%) scale(2.4);
               transform: translateX(-20%) scale(2.4);
       -webkit-transition: -webkit-transform 1s ease-out 0.2s;
@@ -8491,6 +8707,25 @@ textarea.modals__help-form-input {
       transition: -webkit-transform 1s ease-out 0.2s;
       transition: transform 1s ease-out 0.2s;
       transition: transform 1s ease-out 0.2s, -webkit-transform 1s ease-out 0.2s; }
+  .account__my-video-change-time-btn:focus-visible {
+    color: white;
+    border-color: #7abed1;
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
+    .account__my-video-change-time-btn:focus-visible::before {
+      -webkit-transform: translateX(10%) scale(2);
+              transform: translateX(10%) scale(2);
+      -webkit-transition: -webkit-transform 0.5s ease-out;
+      transition: -webkit-transform 0.5s ease-out;
+      transition: transform 0.5s ease-out;
+      transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out; }
+    .account__my-video-change-time-btn:focus-visible::after {
+      -webkit-transform: translateX(-20%) scale(2.4);
+              transform: translateX(-20%) scale(2.4);
+      -webkit-transition: -webkit-transform 1s ease-out 0.2s;
+      transition: -webkit-transform 1s ease-out 0.2s;
+      transition: transform 1s ease-out 0.2s;
+      transition: transform 1s ease-out 0.2s, -webkit-transform 1s ease-out 0.2s; }
   .account__my-video-change-time-btn:last-child {
     margin-bottom: 0; }
 
@@ -9165,6 +9400,25 @@ textarea.modals__help-form-input {
       transition: -webkit-transform 1.4s ease-out 0.2s;
       transition: transform 1.4s ease-out 0.2s;
       transition: transform 1.4s ease-out 0.2s, -webkit-transform 1.4s ease-out 0.2s; }
+  .account__my-notes-day-table-link:focus-visible {
+    color: white;
+    border-color: #d24932;
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
+    .account__my-notes-day-table-link:focus-visible::before {
+      -webkit-transform: translateX(10%) scale(2);
+              transform: translateX(10%) scale(2);
+      -webkit-transition: -webkit-transform 0.7s ease-out;
+      transition: -webkit-transform 0.7s ease-out;
+      transition: transform 0.7s ease-out;
+      transition: transform 0.7s ease-out, -webkit-transform 0.7s ease-out; }
+    .account__my-notes-day-table-link:focus-visible::after {
+      -webkit-transform: translateX(-20%) scale(2.4);
+              transform: translateX(-20%) scale(2.4);
+      -webkit-transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s, -webkit-transform 1.4s ease-out 0.2s; }
   @media only screen and (max-width: 1200px) {
     .account__my-notes-day-table-link {
       display: none; } }
@@ -9438,7 +9692,8 @@ textarea.modals__help-form-input {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  padding-right: calc(.2rem + 1px); }
   @media only screen and (max-width: 640px) {
     .account__schedule-week-days-grid-event {
       padding: 0.3rem; } }
@@ -9464,6 +9719,9 @@ textarea.modals__help-form-input {
           transform: translateZ(0);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden; }
+  @media only screen and (max-width: 1024px) {
+    .account__schedule-week-days-grid-event-inner {
+      padding: 1rem; } }
   @media only screen and (max-width: 640px) {
     .account__schedule-week-days-grid-event-inner {
       padding: 0.5rem 1.2rem;
@@ -10277,6 +10535,25 @@ textarea.modals__help-form-input {
       transition: -webkit-transform 1s ease-out 0.2s;
       transition: transform 1s ease-out 0.2s;
       transition: transform 1s ease-out 0.2s, -webkit-transform 1s ease-out 0.2s; }
+  .account__stats-card-link:focus-visible {
+    color: white;
+    border-color: #7abed1;
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
+    .account__stats-card-link:focus-visible::before {
+      -webkit-transform: translateX(10%) scale(2);
+              transform: translateX(10%) scale(2);
+      -webkit-transition: -webkit-transform 0.5s ease-out;
+      transition: -webkit-transform 0.5s ease-out;
+      transition: transform 0.5s ease-out;
+      transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out; }
+    .account__stats-card-link:focus-visible::after {
+      -webkit-transform: translateX(-20%) scale(2.4);
+              transform: translateX(-20%) scale(2.4);
+      -webkit-transition: -webkit-transform 1s ease-out 0.2s;
+      transition: -webkit-transform 1s ease-out 0.2s;
+      transition: transform 1s ease-out 0.2s;
+      transition: transform 1s ease-out 0.2s, -webkit-transform 1s ease-out 0.2s; }
 
 .account__stats-card-diagram {
   width: 100%;
@@ -10754,6 +11031,25 @@ textarea.modals__help-form-input {
       transition: -webkit-transform 1.4s ease-out 0.2s;
       transition: transform 1.4s ease-out 0.2s;
       transition: transform 1.4s ease-out 0.2s, -webkit-transform 1.4s ease-out 0.2s; }
+  .account__my-data-submit:focus-visible {
+    color: white;
+    border-color: #d24932;
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
+    .account__my-data-submit:focus-visible::before {
+      -webkit-transform: translateX(10%) scale(2);
+              transform: translateX(10%) scale(2);
+      -webkit-transition: -webkit-transform 0.7s ease-out;
+      transition: -webkit-transform 0.7s ease-out;
+      transition: transform 0.7s ease-out;
+      transition: transform 0.7s ease-out, -webkit-transform 0.7s ease-out; }
+    .account__my-data-submit:focus-visible::after {
+      -webkit-transform: translateX(-20%) scale(2.4);
+              transform: translateX(-20%) scale(2.4);
+      -webkit-transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s, -webkit-transform 1.4s ease-out 0.2s; }
   @media only screen and (max-width: 640px) {
     .account__my-data-submit {
       margin-top: 2rem; } }
@@ -11118,6 +11414,25 @@ textarea.modals__help-form-input {
       transition: -webkit-transform 1.4s ease-out 0.2s;
       transition: transform 1.4s ease-out 0.2s;
       transition: transform 1.4s ease-out 0.2s, -webkit-transform 1.4s ease-out 0.2s; }
+  .account__my-schedule-regime-submit:focus-visible {
+    color: white;
+    border-color: #d24932;
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
+    .account__my-schedule-regime-submit:focus-visible::before {
+      -webkit-transform: translateX(10%) scale(2);
+              transform: translateX(10%) scale(2);
+      -webkit-transition: -webkit-transform 0.7s ease-out;
+      transition: -webkit-transform 0.7s ease-out;
+      transition: transform 0.7s ease-out;
+      transition: transform 0.7s ease-out, -webkit-transform 0.7s ease-out; }
+    .account__my-schedule-regime-submit:focus-visible::after {
+      -webkit-transform: translateX(-20%) scale(2.4);
+              transform: translateX(-20%) scale(2.4);
+      -webkit-transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s, -webkit-transform 1.4s ease-out 0.2s; }
   @media only screen and (max-width: 640px) {
     .account__my-schedule-regime-submit {
       margin-left: 0;
@@ -11125,6 +11440,17 @@ textarea.modals__help-form-input {
 
 .account__my-schedule-regime-controls--fullwidth {
   grid-column: 1 / -1; }
+
+.account__layout-left-col.js-sticky-sidebar {
+  will-change: min-height; }
+
+.account__sticky-sidebar-inner {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  /* For browsers don't support translate3d. */
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  will-change: position, transform; }
 
 .not-found__bg-image {
   position: absolute;
@@ -11306,6 +11632,25 @@ textarea.modals__help-form-input {
       transition: transform 0.7s ease-out;
       transition: transform 0.7s ease-out, -webkit-transform 0.7s ease-out; }
     .no-touch .not-found__link:hover::after {
+      -webkit-transform: translateX(-20%) scale(2.4);
+              transform: translateX(-20%) scale(2.4);
+      -webkit-transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s, -webkit-transform 1.4s ease-out 0.2s; }
+  .not-found__link:focus-visible {
+    color: white;
+    border-color: #d24932;
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
+    .not-found__link:focus-visible::before {
+      -webkit-transform: translateX(10%) scale(2);
+              transform: translateX(10%) scale(2);
+      -webkit-transition: -webkit-transform 0.7s ease-out;
+      transition: -webkit-transform 0.7s ease-out;
+      transition: transform 0.7s ease-out;
+      transition: transform 0.7s ease-out, -webkit-transform 0.7s ease-out; }
+    .not-found__link:focus-visible::after {
       -webkit-transform: translateX(-20%) scale(2.4);
               transform: translateX(-20%) scale(2.4);
       -webkit-transition: -webkit-transform 1.4s ease-out 0.2s;
@@ -11768,6 +12113,28 @@ textarea.modals__help-form-input {
       transition: -webkit-transform 1.4s ease-out 0.2s;
       transition: transform 1.4s ease-out 0.2s;
       transition: transform 1.4s ease-out 0.2s, -webkit-transform 1.4s ease-out 0.2s; }
+  .auth-psycho__enter-link:focus-visible,
+  .auth-psycho__submit:focus-visible {
+    color: white;
+    border-color: #d24932;
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
+    .auth-psycho__enter-link:focus-visible::before,
+    .auth-psycho__submit:focus-visible::before {
+      -webkit-transform: translateX(10%) scale(2);
+              transform: translateX(10%) scale(2);
+      -webkit-transition: -webkit-transform 0.7s ease-out;
+      transition: -webkit-transform 0.7s ease-out;
+      transition: transform 0.7s ease-out;
+      transition: transform 0.7s ease-out, -webkit-transform 0.7s ease-out; }
+    .auth-psycho__enter-link:focus-visible::after,
+    .auth-psycho__submit:focus-visible::after {
+      -webkit-transform: translateX(-20%) scale(2.4);
+              transform: translateX(-20%) scale(2.4);
+      -webkit-transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: -webkit-transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s;
+      transition: transform 1.4s ease-out 0.2s, -webkit-transform 1.4s ease-out 0.2s; }
   @media only screen and (max-width: 640px) {
     .auth-psycho__enter-link,
     .auth-psycho__submit {
@@ -11789,6 +12156,10 @@ textarea.modals__help-form-input {
   line-height: 1.8rem;
   color: #6e6e6e;
   margin-top: 1rem; }
+  .auth-psycho__form-remark a {
+    color: #7abed1; }
+    .auth-psycho__form-remark a:link, .auth-psycho__form-remark a:visited {
+      color: #7abed1; }
 
 .recommendations {
   position: fixed;

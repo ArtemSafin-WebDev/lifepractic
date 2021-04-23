@@ -2977,6 +2977,7 @@
     padding: 0.2rem;
     display: flex;
     flex-direction: column;
+    padding-right: calc(.2rem + 1px);
 
     @include breakpoint(mobile) {
         padding: 0.3rem;
@@ -2993,6 +2994,10 @@
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     transform: translateZ(0);
     backface-visibility: hidden;
+
+    @include breakpoint(tablet) {
+        padding: 1rem;
+    }
 
     @include breakpoint(mobile) {
         padding: 0.5rem 1.2rem;
@@ -4496,8 +4501,6 @@
         align-items: initial;
         justify-content: initial;
     }
-
-
 }
 
 .account__my-schedule-regime-reset {
@@ -4545,4 +4548,14 @@
 
 .account__my-schedule-regime-controls--fullwidth {
     grid-column: 1 / -1;
+}
+
+.account__layout-left-col.js-sticky-sidebar {
+    will-change: min-height;
+}
+
+.account__sticky-sidebar-inner {
+    transform: translate(0, 0); /* For browsers don't support translate3d. */
+    transform: translate3d(0, 0, 0);
+    will-change: position, transform;
 }

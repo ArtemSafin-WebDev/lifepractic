@@ -264,4 +264,12 @@
     line-height: 1.8rem;
     color: #6e6e6e;
     margin-top: 1rem;
+
+    a {
+        color: #7abed1;
+        &:link,
+        &:visited {
+            color: #7abed1;
+        }
+    }
 }

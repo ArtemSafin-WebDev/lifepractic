@@ -33,6 +33,7 @@
     "picturefill": "^3.0.3",
     "plyr": "^3.6.4",
     "smoothscroll-polyfill": "^0.4.4",
+    "sticky-sidebar": "^3.3.1",
     "swiper": "^6.3.2"
   },
   "devDependencies": {

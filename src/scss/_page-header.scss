@@ -225,6 +225,10 @@
         color: #7abed1;
     }
 
+    &:focus-visible {
+        color: #7abed1;
+    }
+
     @include breakpoint(tablet) {
         font-size: 1.8rem;
     }
@@ -281,6 +285,10 @@
         color: #7abed1;
     }
 
+    &:focus-visible {
+        color: #7abed1;
+    }
+
     &--login {
         padding: 1rem 1.8rem;
         border: 1px solid #7abed1;
@@ -288,6 +296,11 @@
         flex-shrink: 0;
 
         &:hover {
+            color: white;
+            background-color: #7abed1;
+        }
+
+        &:focus-visible {
             color: white;
             background-color: #7abed1;
         }

@@ -173,6 +173,7 @@ a {
     background-color: transparent;
     text-decoration: none;
     transition: color .2s;
+    outline: none;
     &:link,
     &:visited {
         color: inherit;

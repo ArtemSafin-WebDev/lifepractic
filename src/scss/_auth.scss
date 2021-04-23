@@ -161,6 +161,10 @@
     width: 50%;
     flex-grow: 1;
     transition: border-color 0.2s;
+
+    &:focus-visible {
+        border-color: #7abed1;
+    }
     &.parsley-error {
         border-color: var(--primary-color);
     }
@@ -256,6 +260,7 @@
     line-height: 2.2rem;
     color: #7abed1;
     align-self: flex-start;
+    outline: none;
     &:link,
     &:visited {
         color: #7abed1;
@@ -273,6 +278,12 @@
             border-color: #7abed1;
         }
     }
+    &:focus-visible {
+        .auth__form-already-has-an-account-text {
+            border-color: #7abed1;
+        }
+    }
+    
 }
 
 .auth__form-already-has-an-account-text {
@@ -321,6 +332,9 @@
 
         @include blueHover();
     }
+
+
+ 
   
 
     @include breakpoint(mobile) {
@@ -356,6 +370,8 @@
     &:not([disabled]) {
         @include redHover();
     }
+
+   
 }
 
 

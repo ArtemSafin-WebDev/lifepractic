@@ -28,6 +28,7 @@ import passportMasks from './passportMasks';
 import scheduleRegimes from './scheduleRegimes';
 import selectTimeCheckboxes from './selectTimeCheckboxes';
 import cardAutoswitch from './cardAutoswitch';
+import stickySidebar from './stickySidebar';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -57,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     scheduleRegimes();
     selectTimeCheckboxes();
     cardAutoswitch();
+    stickySidebar();
 });
 
 window.addEventListener('load', function() {
