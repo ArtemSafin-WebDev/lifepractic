@@ -59,7 +59,7 @@
                 Данные карты защищены по международному стандарту PCI DSS
             </div>
 
-            <form action="/" method="POST" class="payment__form" data-need-validation id="payment-form">
+            <form action="/" method="POST" class="payment__form js-card-autoswitch" data-need-validation id="payment-form">
                 <div class="payment__cards">
                     <div class="payment__front-card">
                         <div class="payment__systems">
@@ -90,12 +90,12 @@
                                         ММ/ГГ
                                     </label>
                                     <div class="payment__card-combined-input-wrapper" id="dateerrors">
-                                        <input type="tel" class="payment__card-combined-input js-card-date" id="cardmonth" placeholder="ММ"
+                                        <input type="tel" class="payment__card-combined-input js-card-date js-card-month" id="cardmonth" placeholder="ММ"
                                             required data-parsley-carddate data-parsley-class-handler="#dateerrors">
                                         <span class="payment__card-combined-input-divider">
                                             /
                                         </span>
-                                        <input type="tel" class="payment__card-combined-input js-card-date" id="cardyear" placeholder="ГГ"
+                                        <input type="tel" class="payment__card-combined-input js-card-date js-card-year" id="cardyear" placeholder="ГГ"
                                             required data-parsley-carddate data-parsley-class-handler="#dateerrors">
                                     </div>
 

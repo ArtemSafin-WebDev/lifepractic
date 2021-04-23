@@ -27,6 +27,7 @@ import videoPlayer from './videoPlayer';
 import passportMasks from './passportMasks';
 import scheduleRegimes from './scheduleRegimes';
 import selectTimeCheckboxes from './selectTimeCheckboxes';
+import cardAutoswitch from './cardAutoswitch';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -55,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     passportMasks();
     scheduleRegimes();
     selectTimeCheckboxes();
+    cardAutoswitch();
 });
 
 window.addEventListener('load', function() {

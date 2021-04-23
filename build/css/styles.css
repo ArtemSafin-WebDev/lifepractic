@@ -1057,7 +1057,17 @@ textarea {
           box-shadow: none;
   display: block;
   width: 100%;
-  overflow: auto; }
+  overflow: auto;
+  scrollbar-width: none; }
+  textarea::-webkit-scrollbar {
+    background-color: white;
+    width: 0.6rem; }
+  textarea::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color); }
+  textarea::-webkit-scrollbar-button {
+    display: none; }
+  textarea::-webkit-scrollbar-track {
+    background-color: #f5f5f5; }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -2141,8 +2151,8 @@ select:-webkit-autofill:focus {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  -webkit-transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s;
-  transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s; }
+  -webkit-transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s;
+  transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s; }
   .home__choose-btn:link, .home__choose-btn:visited {
     color: white; }
   @media only screen and (max-width: 860px) {
@@ -2194,8 +2204,8 @@ select:-webkit-autofill:focus {
   .no-touch .home__choose-btn:hover {
     color: white;
     border-color: #d24932;
-    -webkit-transition: color 0.2s ease .1s, border-color .2s;
-    transition: color 0.2s ease .1s, border-color .2s; }
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
     .no-touch .home__choose-btn:hover::before {
       -webkit-transform: translateX(10%) scale(2);
               transform: translateX(10%) scale(2);
@@ -2267,8 +2277,8 @@ select:-webkit-autofill:focus {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  -webkit-transition: color 0.2s ease 0.3s, border-color .2s;
-  transition: color 0.2s ease 0.3s, border-color .2s; }
+  -webkit-transition: color 0.2s ease 0.3s, border-color 0.2s;
+  transition: color 0.2s ease 0.3s, border-color 0.2s; }
   @media only screen and (max-width: 860px) {
     .home__register-btn {
       font-size: 2.2rem;
@@ -2317,8 +2327,8 @@ select:-webkit-autofill:focus {
   .no-touch .home__register-btn:hover {
     color: white;
     border-color: #7abed1;
-    -webkit-transition: color 0.2s ease 0.1s, border-color .2s;
-    transition: color 0.2s ease 0.1s, border-color .2s; }
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
     .no-touch .home__register-btn:hover::before {
       -webkit-transform: translateX(10%) scale(2);
               transform: translateX(10%) scale(2);
@@ -2695,13 +2705,17 @@ select:-webkit-autofill:focus {
   border: 1px solid #7abed1;
   border-radius: 1rem;
   padding: 1.7rem 4.5rem;
-  -webkit-transition: color 0.2s, background-color 0.2s, border-color 0.2s;
-  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  -webkit-transition: color 0.2s, background-color 0.2s, border-color 0.2s, opacity .2s;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s, opacity .2s;
   position: relative;
   z-index: 1;
   overflow: hidden;
-  -webkit-transition: color 0.2s ease 0.3s, border-color .2s;
-  transition: color 0.2s ease 0.3s, border-color .2s; }
+  -webkit-transition: color 0.2s ease 0.3s, border-color 0.2s;
+  transition: color 0.2s ease 0.3s, border-color 0.2s; }
+  .auth__form-get-code-btn[disabled], .auth__form-get-code-btn.disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: .5; }
   .auth__form-get-code-btn::before {
     content: '';
     position: absolute;
@@ -2737,8 +2751,8 @@ select:-webkit-autofill:focus {
   .no-touch .auth__form-get-code-btn:hover {
     color: white;
     border-color: #7abed1;
-    -webkit-transition: color 0.2s ease 0.1s, border-color .2s;
-    transition: color 0.2s ease 0.1s, border-color .2s; }
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
     .no-touch .auth__form-get-code-btn:hover::before {
       -webkit-transform: translateX(10%) scale(2);
               transform: translateX(10%) scale(2);
@@ -2869,8 +2883,8 @@ select:-webkit-autofill:focus {
     position: relative;
     z-index: 1;
     overflow: hidden;
-    -webkit-transition: color 0.2s ease 0.3s, border-color .2s;
-    transition: color 0.2s ease 0.3s, border-color .2s; }
+    -webkit-transition: color 0.2s ease 0.3s, border-color 0.2s;
+    transition: color 0.2s ease 0.3s, border-color 0.2s; }
     .auth__form-btn:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit)::before,
     .auth__enter-link:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit)::before,
     .modals__help-form-submit:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit)::before {
@@ -2912,8 +2926,8 @@ select:-webkit-autofill:focus {
     .modals__help-form-submit:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit):hover {
       color: white;
       border-color: #7abed1;
-      -webkit-transition: color 0.2s ease 0.1s, border-color .2s;
-      transition: color 0.2s ease 0.1s, border-color .2s; }
+      -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+      transition: color 0.2s ease 0.1s, border-color 0.2s; }
       .no-touch .auth__form-btn:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit):hover::before, .no-touch
       .auth__enter-link:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit):hover::before, .no-touch
       .modals__help-form-submit:not([disabled]):not(.auth__form-btn--submit):not(.auth__enter-link):not(.modals__help-form-submit):hover::before {
@@ -2969,8 +2983,8 @@ select:-webkit-autofill:focus {
     position: relative;
     z-index: 1;
     overflow: hidden;
-    -webkit-transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s;
-    transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s; }
+    -webkit-transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s; }
     .auth__form-btn--submit:not([disabled])::before,
     .auth__enter-link:not([disabled])::before,
     .modals__help-form-submit:not([disabled])::before {
@@ -3012,8 +3026,8 @@ select:-webkit-autofill:focus {
     .modals__help-form-submit:not([disabled]):hover {
       color: white;
       border-color: #d24932;
-      -webkit-transition: color 0.2s ease .1s, border-color .2s;
-      transition: color 0.2s ease .1s, border-color .2s; }
+      -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+      transition: color 0.2s ease 0.1s, border-color 0.2s; }
       .no-touch .auth__form-btn--submit:not([disabled]):hover::before, .no-touch
       .auth__enter-link:not([disabled]):hover::before, .no-touch
       .modals__help-form-submit:not([disabled]):hover::before {
@@ -4604,8 +4618,8 @@ textarea.modals__help-form-input {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  -webkit-transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s;
-  transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s; }
+  -webkit-transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s;
+  transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s; }
   .modals__help-form-submit::before {
     content: '';
     position: absolute;
@@ -4641,8 +4655,8 @@ textarea.modals__help-form-input {
   .no-touch .modals__help-form-submit:hover {
     color: white;
     border-color: #d24932;
-    -webkit-transition: color 0.2s ease .1s, border-color .2s;
-    transition: color 0.2s ease .1s, border-color .2s; }
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
     .no-touch .modals__help-form-submit:hover::before {
       -webkit-transform: translateX(10%) scale(2);
               transform: translateX(10%) scale(2);
@@ -5076,8 +5090,8 @@ textarea.modals__help-form-input {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  -webkit-transition: color 0.2s ease 0.3s, border-color .2s;
-  transition: color 0.2s ease 0.3s, border-color .2s; }
+  -webkit-transition: color 0.2s ease 0.3s, border-color 0.2s;
+  transition: color 0.2s ease 0.3s, border-color 0.2s; }
   .modals__modal-used-btn:link, .modals__modal-used-btn:visited {
     color: black; }
   .modals__modal-used-btn::before {
@@ -5115,8 +5129,8 @@ textarea.modals__help-form-input {
   .no-touch .modals__modal-used-btn:hover {
     color: white;
     border-color: #7abed1;
-    -webkit-transition: color 0.2s ease 0.1s, border-color .2s;
-    transition: color 0.2s ease 0.1s, border-color .2s; }
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
     .no-touch .modals__modal-used-btn:hover::before {
       -webkit-transform: translateX(10%) scale(2);
               transform: translateX(10%) scale(2);
@@ -5244,8 +5258,8 @@ textarea.modals__help-form-input {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  -webkit-transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s;
-  transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s; }
+  -webkit-transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s;
+  transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s; }
   .modals__modal-cancel-reason-form-submit-btn:link, .modals__modal-cancel-reason-form-submit-btn:visited {
     color: white; }
   .modals__modal-cancel-reason-form-submit-btn::before {
@@ -5283,8 +5297,8 @@ textarea.modals__help-form-input {
   .no-touch .modals__modal-cancel-reason-form-submit-btn:hover {
     color: white;
     border-color: #d24932;
-    -webkit-transition: color 0.2s ease .1s, border-color .2s;
-    transition: color 0.2s ease .1s, border-color .2s; }
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
     .no-touch .modals__modal-cancel-reason-form-submit-btn:hover::before {
       -webkit-transform: translateX(10%) scale(2);
               transform: translateX(10%) scale(2);
@@ -7100,8 +7114,8 @@ textarea.modals__help-form-input {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  -webkit-transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s;
-  transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s; }
+  -webkit-transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s;
+  transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s; }
   .account__my-notes-results-card-subscribe-btn:link, .account__my-notes-results-card-subscribe-btn:visited {
     color: #e56a59; }
   .account__my-notes-results-card-subscribe-btn::before {
@@ -7139,8 +7153,8 @@ textarea.modals__help-form-input {
   .no-touch .account__my-notes-results-card-subscribe-btn:hover {
     color: white;
     border-color: #d24932;
-    -webkit-transition: color 0.2s ease .1s, border-color .2s;
-    transition: color 0.2s ease .1s, border-color .2s; }
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
     .no-touch .account__my-notes-results-card-subscribe-btn:hover::before {
       -webkit-transform: translateX(10%) scale(2);
               transform: translateX(10%) scale(2);
@@ -7643,8 +7657,8 @@ textarea.modals__help-form-input {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  -webkit-transition: color 0.2s ease 0.3s, border-color .2s;
-  transition: color 0.2s ease 0.3s, border-color .2s; }
+  -webkit-transition: color 0.2s ease 0.3s, border-color 0.2s;
+  transition: color 0.2s ease 0.3s, border-color 0.2s; }
   .account__my-notes-choose-specialist-link::before {
     content: '';
     position: absolute;
@@ -7680,8 +7694,8 @@ textarea.modals__help-form-input {
   .no-touch .account__my-notes-choose-specialist-link:hover {
     color: white;
     border-color: #7abed1;
-    -webkit-transition: color 0.2s ease 0.1s, border-color .2s;
-    transition: color 0.2s ease 0.1s, border-color .2s; }
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
     .no-touch .account__my-notes-choose-specialist-link:hover::before {
       -webkit-transform: translateX(10%) scale(2);
               transform: translateX(10%) scale(2);
@@ -8424,8 +8438,8 @@ textarea.modals__help-form-input {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  -webkit-transition: color 0.2s ease 0.3s, border-color .2s;
-  transition: color 0.2s ease 0.3s, border-color .2s; }
+  -webkit-transition: color 0.2s ease 0.3s, border-color 0.2s;
+  transition: color 0.2s ease 0.3s, border-color 0.2s; }
   .account__my-video-change-time-btn::before {
     content: '';
     position: absolute;
@@ -8461,8 +8475,8 @@ textarea.modals__help-form-input {
   .no-touch .account__my-video-change-time-btn:hover {
     color: white;
     border-color: #7abed1;
-    -webkit-transition: color 0.2s ease 0.1s, border-color .2s;
-    transition: color 0.2s ease 0.1s, border-color .2s; }
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
     .no-touch .account__my-video-change-time-btn:hover::before {
       -webkit-transform: translateX(10%) scale(2);
               transform: translateX(10%) scale(2);
@@ -9096,8 +9110,8 @@ textarea.modals__help-form-input {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  -webkit-transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s;
-  transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s; }
+  -webkit-transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s;
+  transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s; }
   .account__my-notes-day-table-link:link, .account__my-notes-day-table-link:visited {
     color: var(--primary-color); }
   .account__my-notes-day-table-link::before {
@@ -9135,8 +9149,8 @@ textarea.modals__help-form-input {
   .no-touch .account__my-notes-day-table-link:hover {
     color: white;
     border-color: #d24932;
-    -webkit-transition: color 0.2s ease .1s, border-color .2s;
-    transition: color 0.2s ease .1s, border-color .2s; }
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
     .no-touch .account__my-notes-day-table-link:hover::before {
       -webkit-transform: translateX(10%) scale(2);
               transform: translateX(10%) scale(2);
@@ -10208,8 +10222,8 @@ textarea.modals__help-form-input {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  -webkit-transition: color 0.2s ease 0.3s, border-color .2s;
-  transition: color 0.2s ease 0.3s, border-color .2s; }
+  -webkit-transition: color 0.2s ease 0.3s, border-color 0.2s;
+  transition: color 0.2s ease 0.3s, border-color 0.2s; }
   .account__stats-card-link:link, .account__stats-card-link:visited {
     color: black; }
   .account__stats-card-link::before {
@@ -10247,8 +10261,8 @@ textarea.modals__help-form-input {
   .no-touch .account__stats-card-link:hover {
     color: white;
     border-color: #7abed1;
-    -webkit-transition: color 0.2s ease 0.1s, border-color .2s;
-    transition: color 0.2s ease 0.1s, border-color .2s; }
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
     .no-touch .account__stats-card-link:hover::before {
       -webkit-transform: translateX(10%) scale(2);
               transform: translateX(10%) scale(2);
@@ -10687,8 +10701,8 @@ textarea.modals__help-form-input {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  -webkit-transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s;
-  transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s; }
+  -webkit-transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s;
+  transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s; }
   .account__my-data-submit::before {
     content: '';
     position: absolute;
@@ -10724,8 +10738,8 @@ textarea.modals__help-form-input {
   .no-touch .account__my-data-submit:hover {
     color: white;
     border-color: #d24932;
-    -webkit-transition: color 0.2s ease .1s, border-color .2s;
-    transition: color 0.2s ease .1s, border-color .2s; }
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
     .no-touch .account__my-data-submit:hover::before {
       -webkit-transform: translateX(10%) scale(2);
               transform: translateX(10%) scale(2);
@@ -11051,8 +11065,8 @@ textarea.modals__help-form-input {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  -webkit-transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s;
-  transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s; }
+  -webkit-transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s;
+  transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s; }
   .account__my-schedule-regime-submit::before {
     content: '';
     position: absolute;
@@ -11088,8 +11102,8 @@ textarea.modals__help-form-input {
   .no-touch .account__my-schedule-regime-submit:hover {
     color: white;
     border-color: #d24932;
-    -webkit-transition: color 0.2s ease .1s, border-color .2s;
-    transition: color 0.2s ease .1s, border-color .2s; }
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
     .no-touch .account__my-schedule-regime-submit:hover::before {
       -webkit-transform: translateX(10%) scale(2);
               transform: translateX(10%) scale(2);
@@ -11243,8 +11257,8 @@ textarea.modals__help-form-input {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  -webkit-transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s;
-  transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s; }
+  -webkit-transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s;
+  transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s; }
   .not-found__link:link, .not-found__link:visited {
     color: white; }
   .not-found__link::before {
@@ -11282,8 +11296,8 @@ textarea.modals__help-form-input {
   .no-touch .not-found__link:hover {
     color: white;
     border-color: #d24932;
-    -webkit-transition: color 0.2s ease .1s, border-color .2s;
-    transition: color 0.2s ease .1s, border-color .2s; }
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
     .no-touch .not-found__link:hover::before {
       -webkit-transform: translateX(10%) scale(2);
               transform: translateX(10%) scale(2);
@@ -11692,8 +11706,8 @@ textarea.modals__help-form-input {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  -webkit-transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s;
-  transition: color 0.2s ease 0.1s, background-color .2s, border-color .2s; }
+  -webkit-transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s;
+  transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s; }
   .auth-psycho__enter-link:link, .auth-psycho__enter-link:visited,
   .auth-psycho__submit:link,
   .auth-psycho__submit:visited {
@@ -11736,8 +11750,8 @@ textarea.modals__help-form-input {
   .auth-psycho__submit:hover {
     color: white;
     border-color: #d24932;
-    -webkit-transition: color 0.2s ease .1s, border-color .2s;
-    transition: color 0.2s ease .1s, border-color .2s; }
+    -webkit-transition: color 0.2s ease 0.1s, border-color 0.2s;
+    transition: color 0.2s ease 0.1s, border-color 0.2s; }
     .no-touch .auth-psycho__enter-link:hover::before, .no-touch
     .auth-psycho__submit:hover::before {
       -webkit-transform: translateX(10%) scale(2);
