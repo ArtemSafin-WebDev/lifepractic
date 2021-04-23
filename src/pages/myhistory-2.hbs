@@ -1,0 +1,393 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<div class="account">
+    <div class="container">
+
+
+        <div class="account__layout">
+            <div class="account__layout-left-col">
+                <div class="account__panel">
+                    <div class="account__user">
+                        <div class="account__image-container">
+                            <img src="img/account-user-photo.jpg" alt="" class="account__image">
+                        </div>
+                        <div class="account__user-name">
+                            Татьяна
+                        </div>
+
+
+                    </div>
+                    <a href="#add-balance" class="account__balance js-open-modal">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-wallet">
+                            <use xlink:href="#wallet"></use>
+                        </svg>
+                        2500 ₽
+                        <div class="account__balance-plus">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-plus">
+                                <use xlink:href="#plus"></use>
+                            </svg>
+                        </div>
+                    </a>
+                    <nav class="account__menu">
+                        <a href="#" class="account__menu-link active">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-account-pencil">
+                                <use xlink:href="#account-pencil"></use>
+                            </svg>
+                            <span class="account__menu-link-text">
+                                Мои сеансы
+                            </span>
+
+                        </a>
+                        <a href="#" class="account__menu-link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-diary">
+                                <use xlink:href="#diary"></use>
+                            </svg>
+
+                            <span class="account__menu-link-text">
+                                Дневник
+                            </span>
+                        </a>
+                        <a href="#" class="account__menu-link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-account-person">
+                                <use xlink:href="#account-person"></use>
+                            </svg>
+
+                            <span class="account__menu-link-text">
+                                Личные данные
+                            </span>
+                        </a>
+                        <a href="#" class="account__menu-link ">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-account-cards">
+                                <use xlink:href="#account-cards"></use>
+                            </svg>
+
+
+
+                            <span class="account__menu-link-text">
+                                Мои платежи
+                            </span>
+                        </a>
+                        <a href="#" class="account__menu-link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-account-exit">
+                                <use xlink:href="#account-exit"></use>
+                            </svg>
+
+
+                            <span class="account__menu-link-text">
+                                Выйти
+                            </span>
+                        </a>
+                    </nav>
+
+                    <a href="#" class="account__find-psycho">
+                        подобрать психолога
+                        <img src="img/find-psycho-icon.svg" alt="" class="account__find-psycho-icon">
+                    </a>
+
+                </div>
+            </div>
+            <div class="account__layout-right-col">
+                <div class="account__main-content account__main-content--fullwidth">
+
+
+
+
+                    <div class="account__my-notes">
+                        <div class="account__my-notes-tabs-nav">
+                            <a href="#" class="account__my-notes-tabs-nav-link">
+                                История платежей
+                            </a>
+                            <a href="#" class="account__my-notes-tabs-nav-link">
+                                Карта
+                            </a>
+                        </div>
+                        <div class="account__my-notes-row">
+                            <div class="account__my-notes-left-col">
+                                <div class="account__my-notes-tab-items">
+                                    <div class="account__my-notes-tab-item">
+                                        <div class="account__my-history">
+
+                                            <div class="account__my-history-table">
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>
+                                                                №
+                                                            </th>
+                                                            <th>
+                                                                Сеанс
+                                                            </th>
+                                                            <th>
+                                                                Дата и время
+                                                            </th>
+                                                            <th>
+                                                                Сумма
+                                                            </th>
+                                                            <th>
+                                                                Статус
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+
+                                                                <div class="account__my-history-table-number">
+                                                                    1
+                                                                </div>
+                                                            </td>
+                                                            <td>
+
+                                                                <div class="account__my-history-table-specialist">
+                                                                    Тенькова Зарина
+                                                                </div>
+                                                                <div class="account__my-history-table-event">
+                                                                    Сеанс психолога
+                                                                </div>
+
+                                                            </td>
+                                                            <td>
+                                                                <div class="account__my-history-table-date">
+                                                                    12.12.2020
+                                                                </div>
+                                                                <div class="account__my-history-table-time">
+                                                                    12:12
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="account__my-history-table-price">
+                                                                    1500 ₽
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="account__my-history-table-status">
+                                                                    В работе
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+
+                                                                <div class="account__my-history-table-number">
+                                                                    2
+                                                                </div>
+                                                            </td>
+                                                            <td>
+
+                                                                <div class="account__my-history-table-specialist">
+                                                                    Дмитирий Токмаков
+                                                                </div>
+                                                                <div class="account__my-history-table-event">
+                                                                    Сеанс психолога
+                                                                </div>
+
+                                                            </td>
+                                                            <td>
+                                                                <div class="account__my-history-table-date">
+                                                                    20.10.2020
+                                                                </div>
+                                                                <div class="account__my-history-table-time">
+                                                                    14:10
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="account__my-history-table-price">
+                                                                    1500 ₽
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div
+                                                                    class="account__my-history-table-status account__my-history-table-status--cancelled">
+                                                                    Отменен
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+
+                                                                <div class="account__my-history-table-number">
+                                                                    3
+                                                                </div>
+                                                            </td>
+                                                            <td>
+
+                                                                <div class="account__my-history-table-specialist">
+                                                                    Ирина Золотова
+                                                                </div>
+                                                                <div class="account__my-history-table-event">
+                                                                    Сеанс психолога
+                                                                </div>
+
+                                                            </td>
+                                                            <td>
+                                                                <div class="account__my-history-table-date">
+                                                                    20.10.2020
+                                                                </div>
+                                                                <div class="account__my-history-table-time">
+                                                                    14:10
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="account__my-history-table-price">
+                                                                    1500 ₽
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div
+                                                                    class="account__my-history-table-status account__my-history-table-status--paid">
+                                                                    Оплачен
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+
+                                                                <div class="account__my-history-table-number">
+                                                                    4
+                                                                </div>
+                                                            </td>
+                                                            <td>
+
+                                                                <div class="account__my-history-table-specialist">
+                                                                    Тенькова Зарина
+                                                                </div>
+                                                                <div class="account__my-history-table-event">
+                                                                    Сеанс психолога
+                                                                </div>
+
+                                                            </td>
+                                                            <td>
+                                                                <div class="account__my-history-table-date">
+                                                                    12.12.2020
+                                                                </div>
+                                                                <div class="account__my-history-table-time">
+                                                                    12:12
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="account__my-history-table-price">
+                                                                    1500 ₽
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="account__my-history-table-status">
+                                                                    В работе
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+
+                                                                <div class="account__my-history-table-number">
+                                                                    5
+                                                                </div>
+                                                            </td>
+                                                            <td>
+
+                                                                <div class="account__my-history-table-specialist">
+                                                                    Дмитирий Токмаков
+                                                                </div>
+                                                                <div class="account__my-history-table-event">
+                                                                    Сеанс психолога
+                                                                </div>
+
+                                                            </td>
+                                                            <td>
+                                                                <div class="account__my-history-table-date">
+                                                                    20.10.2020
+                                                                </div>
+                                                                <div class="account__my-history-table-time">
+                                                                    14:10
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="account__my-history-table-price">
+                                                                    1500 ₽
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div
+                                                                    class="account__my-history-table-status account__my-history-table-status--cancelled">
+                                                                    Отменен
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+
+                                                                <div class="account__my-history-table-number">
+                                                                    6
+                                                                </div>
+                                                            </td>
+                                                            <td>
+
+                                                                <div class="account__my-history-table-specialist">
+                                                                    Ирина Золотова
+                                                                </div>
+                                                                <div class="account__my-history-table-event">
+                                                                    Сеанс психолога
+                                                                </div>
+
+                                                            </td>
+                                                            <td>
+                                                                <div class="account__my-history-table-date">
+                                                                    20.10.2020
+                                                                </div>
+                                                                <div class="account__my-history-table-time">
+                                                                    14:10
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="account__my-history-table-price">
+                                                                    1500 ₽
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div
+                                                                    class="account__my-history-table-status account__my-history-table-status--paid">
+                                                                    Оплачен
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="account__my-notes-tab-item">
+                                        <div class="account__no-card">
+                                            <div class="account__no-card-content">
+                                                <h3 class="account__no-card-heading">
+                                                    У вас не привязана карта
+                                                </h3>
+                                                <div class="account__no-card-text">
+                                                    <p>
+                                                        Вы можете привязать карту VISA, Master Card, МИР
+                                                        и оплачивать с нее. Это удобный и безопасный способ оплаты
+                                                        сеансов
+                                                    </p>
+                                                </div>
+                                                <a href="#add-card" class="account__no-card-link js-open-modal">
+                                                    привязать карту
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+{{/content}}
+{{/extend}}

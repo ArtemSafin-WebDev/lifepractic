@@ -548,16 +548,13 @@
 }
 
 .payment__card-combined-input {
-   
     width: 2.2rem;
-  
+
     text-transform: uppercase;
     color: black;
     display: block;
     font-size: 1.4rem;
     line-height: 1.7rem;
-
- 
 
     @include placeholder {
         color: rgba(0, 0, 0, 0.1);
@@ -568,10 +565,162 @@
     }
 }
 
-
 .payment__card-combined-input-divider {
     font-size: 1.4rem;
     line-height: 1.7rem;
     color: rgba(0, 0, 0, 0.1);
-    margin: 0 .3rem;
+    margin: 0 0.3rem;
+}
+
+.payment__email-check-check-2 {
+    margin-top: 2rem;
+}
+
+.payment__email-check-check-2-wrapper {
+    position: relative;
+}
+
+.payment__existing-cards {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+.payment__existing-cards-radio {
+    display: block;
+    margin-bottom: 2.4rem;
+    user-select: none;
+    cursor: pointer;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.payment__existing-cards-radio-input {
+    display: none;
+}
+
+.payment__existing-cards-radio-content {
+    display: flex;
+    align-items: center;
+}
+
+.payment__existing-cards-radio-icon-container {
+    position: relative;
+    width: 9rem;
+    background: rgba(122, 190, 209, 0.15);
+    border-radius: 0.8rem;
+    margin-right: 2.4rem;
+    flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        margin-right: 1rem;
+    }
+    &::before {
+        content: '';
+        padding-bottom: 70%;
+        display: block;
+        
+    }
+}
+
+.payment__existing-cards-radio-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 4rem;
+    height: 4rem;
+    @include objectFitContain();
+}
+
+.payment__existing-cards-radio-text {
+    width: 30%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.payment__existing-cards-radio-number {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    margin-bottom: 0.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
+}
+
+.payment__existing-cards-radio-date {
+    font-weight: 300;
+
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
+
+}
+
+.payment__existing-cards-radio-btn {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    margin-left: 2rem;
+    flex-shrink: 0;
+    background: #6bc18f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    svg {
+        width: 1.4rem;
+        height: 1.4rem;
+        fill: white;
+    }
+}
+
+.payment__existing-cards-radio-input:checked ~ .payment__existing-cards-radio-content .payment__existing-cards-radio-btn {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.payment__existing-cards-radio-text--grey {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: rgba(black, 0.4);
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
+}
+
+
+.payment__existing-cards-radio-btn--other-card {
+    background: rgba(122, 190, 209, 0.35);
+    opacity: 1;
+    visibility: visible;
+    svg {
+        width: 1.2rem;
+        height: 1.2rem;
+        fill: white;
+    }
+}
+
+
+.payment__existing-cards-radio-icon-container--other-card {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../img/other-card-bg.svg');
+    background-color: white;
+    border: 1px solid #F1F8FA;
 }

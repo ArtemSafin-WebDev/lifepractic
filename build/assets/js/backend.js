@@ -50,6 +50,36 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    var paymentForm1 = document.querySelector('#payment-form-1');
+
+    if (paymentForm1) {
+        paymentForm1.addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (window.openModal) {
+                window.openModal('#payment-done');
+            }
+        });
+    }
+    var paymentForm2 = document.querySelector('#payment-form-1');
+
+    if (paymentForm2) {
+        paymentForm1.addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (window.openModal) {
+                window.openModal('#payment-failed');
+            }
+        });
+    }
+    var deleteCardForm = document.querySelector('#delete-card-form');
+
+    if (deleteCardForm) {
+        deleteCardForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (window.openModal) {
+                window.openModal('#card-deleted');
+            }
+        });
+    }
 
     var accountForm = document.querySelector('#account-form');
     var accountSuccess = document.querySelector('.account__success');
@@ -129,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 getCodeBtn.style.display = 'none';
                 getCodeRemark.style.display = 'none';
                 codePhoneInput.setAttribute('readonly', '');
-                enterCodeRow.style.display = ''
+                enterCodeRow.style.display = '';
             } else {
                 console.log('not valid phone');
             }

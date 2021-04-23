@@ -139,8 +139,8 @@
     font-weight: 300;
     font-size: 1.7rem;
     line-height: 2rem;
-    padding: 1.5rem;
-    padding-left: 0;
+    padding: 1.5rem 2.2rem;
+
     position: relative;
     z-index: 1;
     margin-bottom: 1rem;
@@ -165,7 +165,7 @@
     &::before {
         content: '';
         position: absolute;
-        left: -2.2rem;
+        left: 0rem;
         right: 0;
         top: 0;
         bottom: 0;
@@ -1490,6 +1490,10 @@
     background-position: right 2rem center;
     background-repeat: no-repeat;
     transition: border-color 0.2s;
+
+    &--money {
+        background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10.11 11.9'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill-opacity: 0.35; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M2.07,11.9a.34.34,0,0,1-.37-.37V9.08H.37A.41.41,0,0,1,.1,9,.37.37,0,0,1,0,8.7V8.43a.36.36,0,0,1,.1-.27.36.36,0,0,1,.27-.1H1.7V7H.37a.41.41,0,0,1-.27-.1A.37.37,0,0,1,0,6.66V6.39a.36.36,0,0,1,.1-.27A.36.36,0,0,1,.37,6H1.7V.39A.36.36,0,0,1,1.8.12.34.34,0,0,1,2.07,0H6.21A4.16,4.16,0,0,1,9.06.92a3.24,3.24,0,0,1,1,2.6,3.3,3.3,0,0,1-1,2.62A4.2,4.2,0,0,1,6.21,7H2.77v1H6.49a.37.37,0,0,1,.28.1.41.41,0,0,1,.1.27V8.7a.35.35,0,0,1-.38.38H2.77v2.45a.34.34,0,0,1-.12.27.36.36,0,0,1-.27.1ZM6.12,6a3.27,3.27,0,0,0,2.19-.63A2.35,2.35,0,0,0,9,3.52a2.29,2.29,0,0,0-.73-1.85A3.22,3.22,0,0,0,6.12,1H2.77V6Z' /%3E%3C/svg%3E");
+    }
     &.parsley-error {
         border-color: var(--primary-color);
     }
@@ -1911,6 +1915,12 @@
     }
 }
 
+.account__my-video-connecting-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .account__my-video-connecting-photo-container {
     width: 16.6rem;
     height: 16.6rem;
@@ -1919,7 +1929,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     position: relative;
 
     z-index: 1;
@@ -1954,7 +1964,7 @@
     font-size: 2.5rem;
     line-height: 1.2;
     font-weight: 400;
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.6rem;
 }
 
 .account__my-video-connecting-text {
@@ -2977,7 +2987,7 @@
     padding: 0.2rem;
     display: flex;
     flex-direction: column;
-    padding-right: calc(.2rem + 1px);
+    padding-right: calc(0.2rem + 1px);
 
     @include breakpoint(mobile) {
         padding: 0.3rem;
@@ -4558,4 +4568,498 @@
     transform: translate(0, 0); /* For browsers don't support translate3d. */
     transform: translate3d(0, 0, 0);
     will-change: position, transform;
+}
+
+.account__balance {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 2.2rem;
+    border-radius: 1rem;
+
+    font-size: 1.7rem;
+    line-height: 2rem;
+    background-color: #e4f2f6;
+    margin-bottom: 2.5rem;
+    margin-top: -2rem;
+    transition: background-color 0.2s;
+    .icon-wallet {
+        flex-shrink: 0;
+        width: 1.7rem;
+        height: 1.7rem;
+        margin-right: 2.4rem;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: #d3e6eb;
+    }
+}
+
+.account__balance-plus {
+    width: 2.8rem;
+    height: 2.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+
+    margin-left: auto;
+    svg {
+        width: 1.2rem;
+        height: 1.2rem;
+        fill: white;
+    }
+}
+
+.account__find-psycho {
+    padding: 1.4rem 2.8rem;
+    background: #ffffff;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6.5rem;
+    margin-bottom: 6.5rem;
+    transition: color 0.2s, background-color 0.2s;
+
+    .no-touch &:hover {
+        background-color: #7abed1;
+        color: white;
+    }
+}
+
+.account__find-psycho-icon {
+    margin-left: 2rem;
+    width: 4.2rem;
+    height: auto;
+    @include objectFitContain();
+}
+
+.account__no-card {
+    background: #f1fafc;
+    padding: 4rem 5rem;
+    color: black;
+    border-radius: 1.5rem;
+    max-width: 84rem;
+    width: 100%;
+    background-image: url('../img/no-card-bg.svg');
+    background-size: auto 100%;
+    background-position: right center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+        background-image: none;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        right: 6rem;
+        bottom: 0;
+        width: 23rem;
+        height: 115%;
+        background-image: url('../img/no-card-woman.svg');
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+        pointer-events: none;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
+    &::after {
+        content: '';
+        width: 3rem;
+        height: 1.5rem;
+        position: absolute;
+        top: 100%;
+        left: 2.5rem;
+        transform: scaleX(-1);
+        background-image: url('../img/blue-corner.svg');
+        background-position: center top;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+}
+
+.account__no-card-content {
+    padding-right: 23rem;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+    }
+}
+
+.account__no-card-heading {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.8rem;
+    font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.account__no-card-text {
+    font-weight: 300;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+}
+
+.account__no-card-link {
+    padding: 1.7rem 3.5rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid #7abed1;
+    border-radius: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    @include blueHover();
+}
+
+.account__my-cards {
+    max-width: 70rem;
+}
+
+.account__my-cards-header {
+    display: grid;
+    grid-template-columns: 14rem minmax(0, 1fr);
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: 9.5rem minmax(0, 1fr);
+        margin-bottom: 1.6rem;
+    }
+}
+
+.account__my-cards-header-item {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: rgba(0, 0, 0, 0.35);
+}
+
+.account__my-cards-content {
+}
+
+.account__my-cards-card {
+    margin-bottom: 2rem;
+    padding: 2.2rem 2.5rem;
+    background-color: #f2f9fb;
+    border-radius: 0.6rem;
+    display: grid;
+    grid-template-columns: 11.5rem minmax(0, 1fr);
+    align-items: center;
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+        grid-template-columns: auto minmax(0, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 'card-image card-number' 'card-buttons card-buttons';
+        grid-gap: 2rem;
+    }
+}
+
+.account__my-cards-card-info {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(mobile) {
+        display: contents;
+    }
+}
+
+.account__my-cards-card-number {
+    font-size: 1.4rem;
+    line-height: 1.2;
+
+    @include breakpoint(mobile) {
+        grid-area: card-number;
+    }
+}
+
+.account__my-cards-card-btns {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    flex-shrink: 0;
+    @include breakpoint(mobile) {
+        grid-area: card-buttons;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 2rem;
+        flex-shrink: 1;
+        margin: 0;
+    }
+}
+
+.account__my-cards-card-btn {
+    padding: 0.8rem 1.7rem;
+
+    border: 1px solid currentColor;
+    border-radius: 0.6rem;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.2;
+
+    flex-shrink: 1;
+    margin-right: 1.8rem;
+    transition: background-color 0.2s, color 0.2s;
+    color: #e56a59;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    @include breakpoint(mobile) {
+        margin: 0;
+        padding: 0.8rem;
+    }
+
+    &:link,
+    &:visited {
+        color: #e56a59;
+    }
+
+    &:hover {
+        background-color: #e56a59;
+        color: white;
+    }
+
+    &--grey {
+        color: #6e6e6e;
+        &:link,
+        &:visited {
+            color: #6e6e6e;
+        }
+
+        &:hover {
+            background-color: #6e6e6e;
+            color: white;
+        }
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.account__my-cards-card-icon-container {
+    width: 5.5rem;
+    height: 3.6rem;
+    flex-shrink: 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+
+    @include breakpoint(mobile) {
+        grid-area: card-image;
+    }
+}
+
+.account__my-cards-card-icon {
+    width: 3rem;
+    height: 3rem;
+    @include objectFitContain();
+}
+
+.account__my-video-completed {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: 400;
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+}
+
+.account__diary-heading {
+    font-size: 3.5rem;
+    line-height: 4.8rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 1.2;
+    }
+}
+
+.account__diary-empty-card {
+    position: relative;
+    max-width: 95rem;
+    width: 100%;
+    background: #f1fafc;
+    border-radius: 1.5rem;
+    padding: 5.5rem;
+    padding-right: 40rem;
+    background-image: url('../img/diary-empty-bg.svg');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+
+    z-index: 1;
+
+    @include breakpoint(mobile) {
+        padding: 1.8rem;
+        max-width: none;
+        background-image: none;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        width: 3.5rem;
+        height: 1.5rem;
+        background-position: center top;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('../img/blue-corner.svg');
+        transform: scaleX(-1);
+        z-index: -1;
+        pointer-events: none;
+    }
+}
+
+.account__diary-empty-card-title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 2.8rem;
+    font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+}
+
+.account__diary-empty-card-text {
+    font-weight: 300;
+    font-size: 1.7rem;
+    line-height: 2rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
+    p {
+        margin-bottom: 1.5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.account__diary-empty-card-illustration {
+    position: absolute;
+    z-index: -1;
+    width: 34.7rem;
+    height: auto;
+    bottom: 0;
+    right: 6.4rem;
+    object-fit: contain;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.account__diary-catalog {
+    width: 100%;
+    max-width: 105rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 1rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+.account__diary-catalog-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.account__diary-card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 3rem;
+    background: #fffbf3;
+    border-radius: 1.5rem;
+    min-height: 27rem;
+    transition: background-color .3s, transform .3s, box-shadow .3s;
+ 
+    backface-visibility: hidden;
+    transform: translateZ(0);
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+        min-height: auto;
+    }
+
+    .no-touch &:hover {
+        background-color: white !important;
+        transform: translateZ(0) scale(1.02);
+        box-shadow: 0px .7rem 2.4rem rgba(0, 0, 0, 0.08);
+    }
+}
+
+.account__diary-card-date {
+    margin-bottom: 2.3rem;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: #7abed1;
+}
+
+.account__diary-card-text {
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    margin-bottom: 4rem;
+    font-weight: 300;
+
+    strong {
+        font-weight: 400;
+    }
+}
+
+.account__diary-card-author {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: rgba(0, 0, 0, 0.35);
+
+    margin-top: auto;
 }

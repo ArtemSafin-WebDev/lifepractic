@@ -249,6 +249,18 @@ td, th {
     }
 }
 
+.parsley-errors-list {
+    width: 100%;
+    order: 20;
+    font-weight: 300;
+    &.filled {
+        margin-top: 0.5rem;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        color: var(--primary-color);
+    }
+}
+
 ::selection {
     color: white;
     background-color: var(--primary-color);

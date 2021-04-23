@@ -29,6 +29,7 @@ import scheduleRegimes from './scheduleRegimes';
 import selectTimeCheckboxes from './selectTimeCheckboxes';
 import cardAutoswitch from './cardAutoswitch';
 import stickySidebar from './stickySidebar';
+import myDiary from './myDiary';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -59,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     selectTimeCheckboxes();
     cardAutoswitch();
     stickySidebar();
+    myDiary();
 });
 
 window.addEventListener('load', function() {

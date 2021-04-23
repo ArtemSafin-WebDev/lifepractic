@@ -1,0 +1,286 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<div class="account">
+    <div class="container">
+
+
+        <div class="account__layout">
+            <div class="account__layout-left-col">
+                <div class="account__panel">
+                    <div class="account__user">
+                        <div class="account__image-container">
+                            <img src="img/account-user-photo.jpg" alt="" class="account__image">
+                        </div>
+                        <div class="account__user-name">
+                            Татьяна
+                        </div>
+
+
+                    </div>
+                    <a href="#add-balance" class="account__balance js-open-modal">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-wallet">
+                            <use xlink:href="#wallet"></use>
+                        </svg>
+                        2500 ₽
+                        <div class="account__balance-plus">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-plus">
+                                <use xlink:href="#plus"></use>
+                            </svg>
+                        </div>
+                    </a>
+                    <nav class="account__menu">
+                        <a href="#" class="account__menu-link active">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-account-pencil">
+                                <use xlink:href="#account-pencil"></use>
+                            </svg>
+                            <span class="account__menu-link-text">
+                                Мои сеансы
+                            </span>
+
+                        </a>
+                        <a href="#" class="account__menu-link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-diary">
+                                <use xlink:href="#diary"></use>
+                            </svg>
+
+                            <span class="account__menu-link-text">
+                                Дневник
+                            </span>
+                        </a>
+                        <a href="#" class="account__menu-link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-account-person">
+                                <use xlink:href="#account-person"></use>
+                            </svg>
+
+                            <span class="account__menu-link-text">
+                                Личные данные
+                            </span>
+                        </a>
+                        <a href="#" class="account__menu-link ">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-account-cards">
+                                <use xlink:href="#account-cards"></use>
+                            </svg>
+
+
+
+                            <span class="account__menu-link-text">
+                                Мои платежи
+                            </span>
+                        </a>
+                        <a href="#" class="account__menu-link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-account-exit">
+                                <use xlink:href="#account-exit"></use>
+                            </svg>
+
+
+                            <span class="account__menu-link-text">
+                                Выйти
+                            </span>
+                        </a>
+                    </nav>
+
+                    <a href="#" class="account__find-psycho">
+                        подобрать психолога
+                        <img src="img/find-psycho-icon.svg" alt="" class="account__find-psycho-icon">
+                    </a>
+
+                </div>
+            </div>
+            <div class="account__layout-right-col">
+                <div class="account__main-content account__main-content--fullwidth">
+
+
+
+
+                    <div class="account__diary">
+                        <h1 class="account__diary-heading">
+                            Дневник записей сеансов
+                        </h1>
+                        <ul class="account__diary-catalog">
+                            <li class="account__diary-catalog-item">
+                                <a href="#my-diary" class="account__diary-card js-open-modal">
+                                    <div class="account__diary-card-date">
+                                        12.12.2020
+                                    </div>
+                                    <div class="account__diary-card-text">
+                                        <p>
+                                            <strong>
+                                                Основное, чему я учу семьи,
+                                            </strong>
+                                            —
+                                            это выражать свои ожидания, желания, неудовлетворённости напрямую...
+                                        </p>
+                                    </div>
+                                    <div class="account__diary-card-author">
+                                        Сеанс с психологом: Дмитрий Токмаков
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="account__diary-catalog-item">
+                                <a href="#my-diary" class="account__diary-card js-open-modal"
+                                    style="background:#F3F9FB;">
+                                    <div class="account__diary-card-date">
+                                        12.12.2020
+                                    </div>
+                                    <div class="account__diary-card-text">
+                                        <p>
+                                            <strong>
+                                                Основное, чему я учу семьи,
+                                            </strong>
+                                            —
+                                            это выражать свои ожидания, желания, неудовлетворённости напрямую...
+                                        </p>
+                                    </div>
+                                    <div class="account__diary-card-author">
+                                        Сеанс с психологом: Дмитрий Токмаков
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="account__diary-catalog-item">
+                                <a href="#my-diary" class="account__diary-card js-open-modal" style="background:#FFF2F4;">
+                                    <div class="account__diary-card-date">
+                                        12.12.2020
+                                    </div>
+                                    <div class="account__diary-card-text">
+                                        <p>
+                                            <strong>
+                                                Основное, чему я учу семьи,
+                                            </strong>
+                                            —
+                                            это выражать свои ожидания, желания, неудовлетворённости напрямую...
+                                        </p>
+                                    </div>
+                                    <div class="account__diary-card-author">
+                                        Сеанс с психологом: Дмитрий Токмаков
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="account__diary-catalog-item">
+                                <a href="#my-diary" class="account__diary-card js-open-modal" style="background:#FFF2F4;">
+                                    <div class="account__diary-card-date">
+                                        12.12.2020
+                                    </div>
+                                    <div class="account__diary-card-text">
+                                        <p>
+                                            <strong>
+                                                Основное, чему я учу семьи,
+                                            </strong>
+                                            —
+                                            это выражать свои ожидания, желания, неудовлетворённости напрямую...
+                                        </p>
+                                    </div>
+                                    <div class="account__diary-card-author">
+                                        Сеанс с психологом: Дмитрий Токмаков
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="account__diary-catalog-item">
+                                <a href="#my-diary" class="account__diary-card js-open-modal" style="background: #FFFBF3;">
+                                    <div class="account__diary-card-date">
+                                        12.12.2020
+                                    </div>
+                                    <div class="account__diary-card-text">
+                                        <p>
+                                            <strong>
+                                                Основное, чему я учу семьи,
+                                            </strong>
+                                            —
+                                            это выражать свои ожидания, желания, неудовлетворённости напрямую...
+                                        </p>
+                                    </div>
+                                    <div class="account__diary-card-author">
+                                        Сеанс с психологом: Дмитрий Токмаков
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="account__diary-catalog-item">
+                                <a href="#my-diary" class="account__diary-card js-open-modal" style="background: #F3F9FB;">
+                                    <div class="account__diary-card-date">
+                                        12.12.2020
+                                    </div>
+                                    <div class="account__diary-card-text">
+                                        <p>
+                                            <strong>
+                                                Основное, чему я учу семьи,
+                                            </strong>
+                                            —
+                                            это выражать свои ожидания, желания, неудовлетворённости напрямую...
+                                        </p>
+                                    </div>
+                                    <div class="account__diary-card-author">
+                                        Сеанс с психологом: Дмитрий Токмаков
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="account__diary-catalog-item">
+                                <a href="#my-diary" class="account__diary-card js-open-modal" style="background: #FFFBF3;">
+                                    <div class="account__diary-card-date">
+                                        12.12.2020
+                                    </div>
+                                    <div class="account__diary-card-text">
+                                        <p>
+                                            <strong>
+                                                Основное, чему я учу семьи,
+                                            </strong>
+                                            —
+                                            это выражать свои ожидания, желания, неудовлетворённости напрямую...
+                                        </p>
+                                    </div>
+                                    <div class="account__diary-card-author">
+                                        Сеанс с психологом: Дмитрий Токмаков
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="account__diary-catalog-item">
+                                <a href="#my-diary" class="account__diary-card js-open-modal" style="background: #F3F9FB;">
+                                    <div class="account__diary-card-date">
+                                        12.12.2020
+                                    </div>
+                                    <div class="account__diary-card-text">
+                                        <p>
+                                            <strong>
+                                                Основное, чему я учу семьи,
+                                            </strong>
+                                            —
+                                            это выражать свои ожидания, желания, неудовлетворённости напрямую...
+                                        </p>
+                                    </div>
+                                    <div class="account__diary-card-author">
+                                        Сеанс с психологом: Дмитрий Токмаков
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="account__diary-catalog-item">
+                                <a href="#my-diary" class="account__diary-card js-open-modal" style="background: #FFF2F4;">
+                                    <div class="account__diary-card-date">
+                                        12.12.2020
+                                    </div>
+                                    <div class="account__diary-card-text">
+                                        <p>
+                                            <strong>
+                                                Основное, чему я учу семьи,
+                                            </strong>
+                                            —
+                                            это выражать свои ожидания, желания, неудовлетворённости напрямую...
+                                        </p>
+                                    </div>
+                                    <div class="account__diary-card-author">
+                                        Сеанс с психологом: Дмитрий Токмаков
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+{{/content}}
+{{/extend}}
