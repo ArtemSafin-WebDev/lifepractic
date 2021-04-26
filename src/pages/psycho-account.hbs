@@ -77,7 +77,7 @@
                             <div class="account__my-notes-left-col">
                                 <div class="account__my-notes-tab-items">
                                     <div class="account__my-notes-tab-item">
-                                        <form class="account__my-data" action="/" method="POST" data-need-validation>
+                                        <div class="account__my-data-slider js-account-my-data-slider">
                                             <div class="account__my-data-checkboxes">
                                                 <label class="account__my-data-checkbox">
                                                     <input type="radio" name="persontype" value="1"
@@ -111,214 +111,439 @@
                                                     </span>
                                                 </label>
                                             </div>
-                                            {{!-- <div class="account__status">
-                                                <svg width="14" height="14" aria-hidden="true"
-                                                    class="icon-status-warning">
-                                                    <use xlink:href="#status-warning"></use>
-                                                </svg>
-                                                <div class="account__status-text">
-                                                    <strong>Статус: </strong> Ожидает модерации
-                                                </div>
+                                            <div class="swiper-container">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <form class="account__my-data" action="/" method="POST"
+                                                            data-need-validation>
 
-                                            </div> --}}
-                                            {{!-- <div class="account__status">
-                                                <svg width="14" height="14" aria-hidden="true"
-                                                    class="icon-status-declined">
-                                                    <use xlink:href="#status-declined"></use>
-                                                </svg>
-                                                <div class="account__status-text">
-                                                    <strong>Статус: </strong> Отклонена модератором <a href="#">(как
-                                                        исправить?)</a>
-                                                </div>
-                                            </div> --}}
-                                            <div class="account__status">
-                                                <svg width="14" height="14" aria-hidden="true" class="icon-status-ok">
-                                                    <use xlink:href="#status-ok"></use>
-                                                </svg>
-                                                <div class="account__status-text">
-                                                    <strong>Статус: </strong> Одобрено модератором
-                                                </div>
-                                            </div>
-                                            <div class="account__my-data-main-info">
-                                                <div class="account__my-data-main-info-item">
-                                                    <input type="text" class="account__my-account-form-input"
-                                                        name="name" id="name" placeholder="ФИО"
-                                                        value="Токмаков Дмитрий Николаевич" required>
+                                                            {{!-- <div class="account__status">
+                                                                <svg width="14" height="14" aria-hidden="true"
+                                                                    class="icon-status-warning">
+                                                                    <use xlink:href="#status-warning"></use>
+                                                                </svg>
+                                                                <div class="account__status-text">
+                                                                    <strong>Статус: </strong> Ожидает модерации
+                                                                </div>
 
-                                                    <label for="name" class="account__my-account-form-label">
-                                                        ФИО
-                                                    </label>
-                                                </div>
-                                                <div class="account__my-data-main-info-item">
-                                                    <input type="text" class="account__my-account-form-input"
-                                                        name="address" id="address" placeholder="Адрес">
+                                                            </div> --}}
+                                                            {{!-- <div class="account__status">
+                                                                <svg width="14" height="14" aria-hidden="true"
+                                                                    class="icon-status-declined">
+                                                                    <use xlink:href="#status-declined"></use>
+                                                                </svg>
+                                                                <div class="account__status-text">
+                                                                    <strong>Статус: </strong> Отклонена модератором <a
+                                                                        href="#">(как
+                                                                        исправить?)</a>
+                                                                </div>
+                                                            </div> --}}
+                                                            <div class="account__status">
+                                                                <svg width="14" height="14" aria-hidden="true"
+                                                                    class="icon-status-ok">
+                                                                    <use xlink:href="#status-ok"></use>
+                                                                </svg>
+                                                                <div class="account__status-text">
+                                                                    <strong>Статус: </strong> Одобрено модератором
+                                                                </div>
+                                                            </div>
+                                                            <div class="account__my-data-main-info">
+                                                                <div class="account__my-data-main-info-item">
+                                                                    <input type="text"
+                                                                        class="account__my-account-form-input"
+                                                                        name="name" id="name" placeholder="ФИО"
+                                                                        value="Токмаков Дмитрий Николаевич" required>
 
-                                                    <label for="address" class="account__my-account-form-label">
-                                                        Адрес
-                                                    </label>
-                                                </div>
-                                                <div class="account__my-data-main-info-item">
-                                                    <input type="tel" class="account__my-account-form-input"
-                                                        name="phone" id="phone" placeholder="Телефон">
+                                                                    <label for="name"
+                                                                        class="account__my-account-form-label">
+                                                                        ФИО
+                                                                    </label>
+                                                                </div>
+                                                                <div class="account__my-data-main-info-item">
+                                                                    <input type="text"
+                                                                        class="account__my-account-form-input"
+                                                                        name="address" id="address" placeholder="Адрес">
 
-                                                    <label for="address" class="account__my-account-form-label">
-                                                        Телефон
-                                                    </label>
-                                                </div>
-                                                <div class="account__my-data-main-info-item">
-                                                    <input type="text" class="account__my-account-form-input" name="inn"
-                                                        id="inn" placeholder="ИНН" data-inn-mask>
+                                                                    <label for="address"
+                                                                        class="account__my-account-form-label">
+                                                                        Адрес
+                                                                    </label>
+                                                                </div>
+                                                                <div class="account__my-data-main-info-item">
+                                                                    <input type="tel"
+                                                                        class="account__my-account-form-input"
+                                                                        name="phone" id="phone" placeholder="Телефон">
 
-                                                    <label for="inn" class="account__my-account-form-label">
-                                                        ИНН
-                                                    </label>
-                                                </div>
-                                                <div class="account__my-data-main-info-item">
-                                                    <input type="text" class="account__my-account-form-input"
-                                                        name="email" id="email" placeholder="E-mail">
+                                                                    <label for="address"
+                                                                        class="account__my-account-form-label">
+                                                                        Телефон
+                                                                    </label>
+                                                                </div>
+                                                                <div class="account__my-data-main-info-item">
+                                                                    <input type="text"
+                                                                        class="account__my-account-form-input"
+                                                                        name="inn" id="inn" placeholder="ИНН"
+                                                                        data-inn-mask>
 
-                                                    <label for="email" class="account__my-account-form-label">
-                                                        E-mail
-                                                    </label>
-                                                </div>
-                                                <div class="account__my-data-main-info-item">
-                                                    <label class="account__my-account-file-upload js-file-upload">
-                                                        <input type="file"
-                                                            class="account__my-account-file-upload-input js-upload-avatar"
-                                                            accept="image/*">
-                                                        <span
-                                                            class="account__my-account-file-upload-text js-file-upload-text">
-                                                            Загрузить фото
-                                                        </span>
-                                                        <svg width="14" height="14" aria-hidden="true"
-                                                            class="icon-file">
-                                                            <use xlink:href="#file"></use>
-                                                        </svg>
-                                                    </label>
-                                                </div>
-                                                <div class="account__my-data-main-info-item">
-                                                    <div class="account__my-account-select">
-                                                        <select name="gender" class="js-custom-select">
-                                                            <option value="" placeholder>Пол</option>
-                                                            <option value="m">Мужской</option>
-                                                            <option value="f">Женский</option>
-                                                        </select>
+                                                                    <label for="inn"
+                                                                        class="account__my-account-form-label">
+                                                                        ИНН
+                                                                    </label>
+                                                                </div>
+                                                                <div class="account__my-data-main-info-item">
+                                                                    <input type="text"
+                                                                        class="account__my-account-form-input"
+                                                                        name="email" id="email" placeholder="E-mail">
+
+                                                                    <label for="email"
+                                                                        class="account__my-account-form-label">
+                                                                        E-mail
+                                                                    </label>
+                                                                </div>
+                                                                <div class="account__my-data-main-info-item">
+                                                                    <label
+                                                                        class="account__my-account-file-upload js-file-upload">
+                                                                        <input type="file"
+                                                                            class="account__my-account-file-upload-input js-upload-avatar"
+                                                                            accept="image/*">
+                                                                        <span
+                                                                            class="account__my-account-file-upload-text js-file-upload-text">
+                                                                            Загрузить фото
+                                                                        </span>
+                                                                        <svg width="14" height="14" aria-hidden="true"
+                                                                            class="icon-file">
+                                                                            <use xlink:href="#file"></use>
+                                                                        </svg>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="account__my-data-main-info-item">
+                                                                    <div class="account__my-account-select">
+                                                                        <select name="gender" class="js-custom-select">
+                                                                            <option value="" placeholder>Пол</option>
+                                                                            <option value="m">Мужской</option>
+                                                                            <option value="f">Женский</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="account__my-data-additional-info">
+                                                                <div class="account__my-data-additional-info-block">
+                                                                    <h3
+                                                                        class="account__my-data-additional-info-block-heading">
+                                                                        Банковские реквизиты
+                                                                    </h3>
+                                                                    <div
+                                                                        class="account__my-data-additional-info-block-items">
+                                                                        <div
+                                                                            class="account__my-data-additional-info-block-item">
+                                                                            <input type="text"
+                                                                                class="account__my-account-form-input"
+                                                                                name="text" id="bik"
+                                                                                placeholder="БИК банка">
+
+                                                                            <label for="email"
+                                                                                class="account__my-account-form-label">
+                                                                                БИК банка
+                                                                            </label>
+                                                                        </div>
+                                                                        <div
+                                                                            class="account__my-data-additional-info-block-item">
+                                                                            <input type="text"
+                                                                                class="account__my-account-form-input"
+                                                                                name="text" id="bankname"
+                                                                                placeholder="Наименование банка">
+
+                                                                            <label for="bankname"
+                                                                                class="account__my-account-form-label">
+                                                                                Наименование банка
+                                                                            </label>
+                                                                        </div>
+                                                                        <div
+                                                                            class="account__my-data-additional-info-block-item">
+                                                                            <input type="text"
+                                                                                class="account__my-account-form-input"
+                                                                                name="text" id="coraccount"
+                                                                                placeholder="Корреспондентский счет">
+
+                                                                            <label for="coraccount"
+                                                                                class="account__my-account-form-label">
+                                                                                Корреспондентский счет
+                                                                            </label>
+                                                                        </div>
+                                                                        <div
+                                                                            class="account__my-data-additional-info-block-item">
+                                                                            <input type="text"
+                                                                                class="account__my-account-form-input"
+                                                                                name="text" id="paymentaccount"
+                                                                                placeholder="Расчетный счет">
+
+                                                                            <label for="paymentaccount"
+                                                                                class="account__my-account-form-label">
+                                                                                Расчетный счет
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="account__my-data-additional-info-block">
+                                                                    <h3
+                                                                        class="account__my-data-additional-info-block-heading">
+                                                                        Паспортные данные
+                                                                    </h3>
+                                                                    <div
+                                                                        class="account__my-data-additional-info-block-items">
+                                                                        <div
+                                                                            class="account__my-data-additional-info-block-item account__my-data-additional-info-block-item--small">
+                                                                            <input type="text"
+                                                                                class="account__my-account-form-input"
+                                                                                name="text" id="passportseries"
+                                                                                placeholder="Серия"
+                                                                                data-passport-series-mask
+                                                                                data-parsley-passportseries>
+
+                                                                            <label for="passportseries"
+                                                                                class="account__my-account-form-label">
+                                                                                Серия
+                                                                            </label>
+                                                                        </div>
+                                                                        <div
+                                                                            class="account__my-data-additional-info-block-item account__my-data-additional-info-block-item--semilarge">
+                                                                            <input type="text"
+                                                                                class="account__my-account-form-input"
+                                                                                name="text" id="passportnumber"
+                                                                                placeholder="Номер"
+                                                                                data-passport-number-mask
+                                                                                data-parsley-passportnumber>
+
+                                                                            <label for="passportnumber"
+                                                                                class="account__my-account-form-label">
+                                                                                Номер
+                                                                            </label>
+                                                                        </div>
+                                                                        <div
+                                                                            class="account__my-data-additional-info-block-item">
+                                                                            <input type="text"
+                                                                                class="account__my-account-form-input"
+                                                                                name="text" id="issuedby"
+                                                                                placeholder="Кем выдан">
+
+                                                                            <label for="issuedby"
+                                                                                class="account__my-account-form-label">
+                                                                                Кем выдан
+                                                                            </label>
+                                                                        </div>
+                                                                        <div
+                                                                            class="account__my-data-additional-info-block-item account__my-data-additional-info-block-item--medium">
+                                                                            <input type="text"
+                                                                                class="account__my-account-form-input"
+                                                                                name="text" id="issuedate"
+                                                                                placeholder="Дата выдачи" data-date-mask
+                                                                                data-parsley-date>
+
+                                                                            <label for="issuedate"
+                                                                                class="account__my-account-form-label">
+                                                                                Дата выдачи
+                                                                            </label>
+                                                                        </div>
+                                                                        <div
+                                                                            class="account__my-data-additional-info-block-item account__my-data-additional-info-block-item--medium">
+                                                                            <input type="text"
+                                                                                class="account__my-account-form-input"
+                                                                                name="text" id="issueoffice"
+                                                                                placeholder="Дата выдачи"
+                                                                                data-department-mask
+                                                                                data-parsley-department>
+
+                                                                            <label for="issueoffice"
+                                                                                class="account__my-account-form-label">
+                                                                                Код подразделени
+                                                                            </label>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <button type="submit" class="account__my-data-submit">
+                                                                отправить на модерацию
+                                                            </button>
+                                                        </form>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <form class="account__my-data" action="/" method="POST"
+                                                            data-need-validation>
+
+
+                                                            <div class="account__status">
+                                                                <svg width="14" height="14" aria-hidden="true"
+                                                                    class="icon-status-ok">
+                                                                    <use xlink:href="#status-ok"></use>
+                                                                </svg>
+                                                                <div class="account__status-text">
+                                                                    <strong>Статус: </strong> Одобрено модератором
+                                                                </div>
+                                                            </div>
+                                                            <div class="account__my-data-main-info">
+                                                                <div class="account__my-data-main-info-item">
+                                                                    <input type="text"
+                                                                        class="account__my-account-form-input"
+                                                                        name="name" id="name-ip" placeholder="ФИО"
+                                                                        value="Токмаков Дмитрий Николаевич" required>
+
+                                                                    <label for="name-ip"
+                                                                        class="account__my-account-form-label">
+                                                                        ФИО
+                                                                    </label>
+                                                                </div>
+                                                                <div class="account__my-data-main-info-item">
+                                                                    <input type="text"
+                                                                        class="account__my-account-form-input"
+                                                                        name="address" id="address-ip"
+                                                                        placeholder="Юридический адрес">
+
+                                                                    <label for="address-ip"
+                                                                        class="account__my-account-form-label">
+                                                                        Юридический адрес
+                                                                    </label>
+                                                                </div>
+                                                                <div class="account__my-data-main-info-item">
+                                                                    <input type="tel"
+                                                                        class="account__my-account-form-input"
+                                                                        name="phone-ip" id="phone-ip"
+                                                                        placeholder="Телефон">
+
+                                                                    <label for="address"
+                                                                        class="account__my-account-form-label">
+                                                                        Телефон
+                                                                    </label>
+                                                                </div>
+                                                                <div class="account__my-data-main-info-item">
+                                                                    <input type="text"
+                                                                        class="account__my-account-form-input"
+                                                                        name="inn" id="inn-ip" placeholder="ИНН"
+                                                                        data-inn-mask>
+
+                                                                    <label for="inn-ip"
+                                                                        class="account__my-account-form-label">
+                                                                        ИНН
+                                                                    </label>
+                                                                </div>
+                                                                <div class="account__my-data-main-info-item">
+                                                                    <input type="text"
+                                                                        class="account__my-account-form-input"
+                                                                        name="email" id="email-ip" placeholder="E-mail">
+
+                                                                    <label for="email-ip"
+                                                                        class="account__my-account-form-label">
+                                                                        E-mail
+                                                                    </label>
+                                                                </div>
+                                                                <div class="account__my-data-main-info-item">
+                                                                    <input type="text"
+                                                                        class="account__my-account-form-input"
+                                                                        name="ogrnip" id="ogrnip" placeholder="ОГРНИП">
+
+                                                                    <label for="ogrnip"
+                                                                        class="account__my-account-form-label">
+                                                                        ОГРНИП
+                                                                    </label>
+                                                                </div>
+                                                                <div class="account__my-data-main-info-item">
+                                                                    <div class="account__my-account-select">
+                                                                        <select name="gender" class="js-custom-select">
+                                                                            <option value="" placeholder>Пол</option>
+                                                                            <option value="m">Мужской</option>
+                                                                            <option value="f">Женский</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="account__my-data-main-info-item">
+                                                                    <label
+                                                                        class="account__my-account-file-upload js-file-upload">
+                                                                        <input type="file"
+                                                                            class="account__my-account-file-upload-input js-upload-avatar"
+                                                                            accept="image/*">
+                                                                        <span
+                                                                            class="account__my-account-file-upload-text js-file-upload-text">
+                                                                            Загрузить фото
+                                                                        </span>
+                                                                        <svg width="14" height="14" aria-hidden="true"
+                                                                            class="icon-file">
+                                                                            <use xlink:href="#file"></use>
+                                                                        </svg>
+                                                                    </label>
+                                                                </div>
+
+
+                                                            </div>
+                                                            <div class="account__my-data-additional-info">
+                                                                <div class="account__my-data-additional-info-block">
+                                                                    <h3
+                                                                        class="account__my-data-additional-info-block-heading">
+                                                                        Банковские реквизиты
+                                                                    </h3>
+                                                                    <div
+                                                                        class="account__my-data-additional-info-block-items">
+                                                                        <div
+                                                                            class="account__my-data-additional-info-block-item">
+                                                                            <input type="text"
+                                                                                class="account__my-account-form-input"
+                                                                                name="text" id="bik"
+                                                                                placeholder="БИК банка">
+
+                                                                            <label for="email"
+                                                                                class="account__my-account-form-label">
+                                                                                БИК банка
+                                                                            </label>
+                                                                        </div>
+                                                                        <div
+                                                                            class="account__my-data-additional-info-block-item">
+                                                                            <input type="text"
+                                                                                class="account__my-account-form-input"
+                                                                                name="text" id="bankname"
+                                                                                placeholder="Наименование банка">
+
+                                                                            <label for="bankname"
+                                                                                class="account__my-account-form-label">
+                                                                                Наименование банка
+                                                                            </label>
+                                                                        </div>
+                                                                        <div
+                                                                            class="account__my-data-additional-info-block-item">
+                                                                            <input type="text"
+                                                                                class="account__my-account-form-input"
+                                                                                name="text" id="coraccount"
+                                                                                placeholder="Корреспондентский счет">
+
+                                                                            <label for="coraccount"
+                                                                                class="account__my-account-form-label">
+                                                                                Корреспондентский счет
+                                                                            </label>
+                                                                        </div>
+                                                                        <div
+                                                                            class="account__my-data-additional-info-block-item">
+                                                                            <input type="text"
+                                                                                class="account__my-account-form-input"
+                                                                                name="text" id="paymentaccount"
+                                                                                placeholder="Расчетный счет">
+
+                                                                            <label for="paymentaccount"
+                                                                                class="account__my-account-form-label">
+                                                                                Расчетный счет
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <button type="submit" class="account__my-data-submit">
+                                                                отправить на модерацию
+                                                            </button>
+                                                        </form>
                                                     </div>
                                                 </div>
-
                                             </div>
-                                            <div class="account__my-data-additional-info">
-                                                <div class="account__my-data-additional-info-block">
-                                                    <h3 class="account__my-data-additional-info-block-heading">
-                                                        Банковские реквизиты
-                                                    </h3>
-                                                    <div class="account__my-data-additional-info-block-items">
-                                                        <div class="account__my-data-additional-info-block-item">
-                                                            <input type="text" class="account__my-account-form-input"
-                                                                name="text" id="bik" placeholder="БИК банка">
+                                        </div>
 
-                                                            <label for="email" class="account__my-account-form-label">
-                                                                БИК банка
-                                                            </label>
-                                                        </div>
-                                                        <div class="account__my-data-additional-info-block-item">
-                                                            <input type="text" class="account__my-account-form-input"
-                                                                name="text" id="bankname"
-                                                                placeholder="Наименование банка">
-
-                                                            <label for="bankname"
-                                                                class="account__my-account-form-label">
-                                                                Наименование банка
-                                                            </label>
-                                                        </div>
-                                                        <div class="account__my-data-additional-info-block-item">
-                                                            <input type="text" class="account__my-account-form-input"
-                                                                name="text" id="coraccount"
-                                                                placeholder="Корреспондентский счет">
-
-                                                            <label for="coraccount"
-                                                                class="account__my-account-form-label">
-                                                                Корреспондентский счет
-                                                            </label>
-                                                        </div>
-                                                        <div class="account__my-data-additional-info-block-item">
-                                                            <input type="text" class="account__my-account-form-input"
-                                                                name="text" id="paymentaccount"
-                                                                placeholder="Расчетный счет">
-
-                                                            <label for="paymentaccount"
-                                                                class="account__my-account-form-label">
-                                                                Расчетный счет
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="account__my-data-additional-info-block">
-                                                    <h3 class="account__my-data-additional-info-block-heading">
-                                                        Паспортные данные
-                                                    </h3>
-                                                    <div class="account__my-data-additional-info-block-items">
-                                                        <div
-                                                            class="account__my-data-additional-info-block-item account__my-data-additional-info-block-item--small">
-                                                            <input type="text" class="account__my-account-form-input"
-                                                                name="text" id="passportseries" placeholder="Серия"
-                                                                data-passport-series-mask data-parsley-passportseries>
-
-                                                            <label for="passportseries"
-                                                                class="account__my-account-form-label">
-                                                                Серия
-                                                            </label>
-                                                        </div>
-                                                        <div
-                                                            class="account__my-data-additional-info-block-item account__my-data-additional-info-block-item--semilarge">
-                                                            <input type="text" class="account__my-account-form-input"
-                                                                name="text" id="passportnumber" placeholder="Номер"
-                                                                data-passport-number-mask data-parsley-passportnumber>
-
-                                                            <label for="passportnumber"
-                                                                class="account__my-account-form-label">
-                                                                Номер
-                                                            </label>
-                                                        </div>
-                                                        <div class="account__my-data-additional-info-block-item">
-                                                            <input type="text" class="account__my-account-form-input"
-                                                                name="text" id="issuedby" placeholder="Кем выдан">
-
-                                                            <label for="issuedby"
-                                                                class="account__my-account-form-label">
-                                                                Кем выдан
-                                                            </label>
-                                                        </div>
-                                                        <div
-                                                            class="account__my-data-additional-info-block-item account__my-data-additional-info-block-item--medium">
-                                                            <input type="text" class="account__my-account-form-input"
-                                                                name="text" id="issuedate" placeholder="Дата выдачи"
-                                                                data-date-mask data-parsley-date>
-
-                                                            <label for="issuedate"
-                                                                class="account__my-account-form-label">
-                                                                Дата выдачи
-                                                            </label>
-                                                        </div>
-                                                        <div
-                                                            class="account__my-data-additional-info-block-item account__my-data-additional-info-block-item--medium">
-                                                            <input type="text" class="account__my-account-form-input"
-                                                                name="text" id="issueoffice" placeholder="Дата выдачи"
-                                                                data-department-mask data-parsley-department>
-
-                                                            <label for="issueoffice"
-                                                                class="account__my-account-form-label">
-                                                                Код подразделени
-                                                            </label>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <button type="submit" class="account__my-data-submit">
-                                                отправить на модерацию
-                                            </button>
-                                        </form>
                                     </div>
                                     <div class="account__my-notes-tab-item">
                                         <div class="account__my-schedule">
@@ -384,23 +609,18 @@
                                                         <div class="swiper-wrapper">
                                                             <div class="swiper-slide">
                                                                 <form action="/" method="POST"
-                                                                    class="account__my-schedule-regime-form">
+                                                                    class="account__my-schedule-regime-form account__my-schedule-regime-form--every-week">
                                                                     <div
                                                                         class="account__my-schedule-regime-form-blocks">
                                                                         <div
                                                                             class="account__my-schedule-regime-form-block">
                                                                             <div class="select-time__card">
-                                                                                <div class="select-time__card-day">
-                                                                                    Пн
-                                                                                </div>
+
                                                                                 <div class="select-time__card-inner">
                                                                                     <div class="select-time__card-date">
-                                                                                        22
+                                                                                        Пн
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="select-time__card-month">
-                                                                                        дек
-                                                                                    </div>
+
                                                                                     <div
                                                                                         class="select-time__card-checkboxes">
                                                                                         <label
@@ -577,17 +797,12 @@
 
 
                                                                             <div class="select-time__card">
-                                                                                <div class="select-time__card-day">
-                                                                                    Вт
-                                                                                </div>
+
                                                                                 <div class="select-time__card-inner">
                                                                                     <div class="select-time__card-date">
-                                                                                        23
+                                                                                        Вт
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="select-time__card-month">
-                                                                                        дек
-                                                                                    </div>
+
                                                                                     <div
                                                                                         class="select-time__card-checkboxes">
                                                                                         <label
@@ -763,17 +978,12 @@
                                                                             </div>
 
                                                                             <div class="select-time__card">
-                                                                                <div class="select-time__card-day">
-                                                                                    Ср
-                                                                                </div>
+
                                                                                 <div class="select-time__card-inner">
                                                                                     <div class="select-time__card-date">
-                                                                                        24
+                                                                                        Ср
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="select-time__card-month">
-                                                                                        дек
-                                                                                    </div>
+
                                                                                     <div
                                                                                         class="select-time__card-checkboxes">
                                                                                         <label
@@ -949,17 +1159,12 @@
                                                                             </div>
 
                                                                             <div class="select-time__card">
-                                                                                <div class="select-time__card-day">
-                                                                                    Чт
-                                                                                </div>
+
                                                                                 <div class="select-time__card-inner">
                                                                                     <div class="select-time__card-date">
-                                                                                        25
+                                                                                        Чт
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="select-time__card-month">
-                                                                                        дек
-                                                                                    </div>
+
                                                                                     <div
                                                                                         class="select-time__card-checkboxes">
                                                                                         <label
@@ -1135,17 +1340,12 @@
                                                                             </div>
 
                                                                             <div class="select-time__card">
-                                                                                <div class="select-time__card-day">
-                                                                                    Пт
-                                                                                </div>
+
                                                                                 <div class="select-time__card-inner">
                                                                                     <div class="select-time__card-date">
-                                                                                        26
+                                                                                        Пт
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="select-time__card-month">
-                                                                                        дек
-                                                                                    </div>
+
                                                                                     <div
                                                                                         class="select-time__card-checkboxes">
                                                                                         <label
@@ -1322,18 +1522,13 @@
 
 
                                                                             <div class="select-time__card">
-                                                                                <div class="select-time__card-day">
-                                                                                    Cб
-                                                                                </div>
+
                                                                                 <div class="select-time__card-inner">
                                                                                     <div
                                                                                         class="select-time__card-date select-time__card-date--weekend">
-                                                                                        27
+                                                                                        Cб
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="select-time__card-month select-time__card-month--weekend">
-                                                                                        дек
-                                                                                    </div>
+
                                                                                     <div
                                                                                         class="select-time__card-checkboxes">
                                                                                         <label
@@ -1508,18 +1703,13 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="select-time__card">
-                                                                                <div class="select-time__card-day">
-                                                                                    Вс
-                                                                                </div>
+
                                                                                 <div class="select-time__card-inner">
                                                                                     <div
                                                                                         class="select-time__card-date select-time__card-date--weekend">
-                                                                                        28
+                                                                                        Вс
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="select-time__card-month select-time__card-month--weekend">
-                                                                                        дек
-                                                                                    </div>
+
                                                                                     <div
                                                                                         class="select-time__card-checkboxes">
                                                                                         <label
@@ -4370,6 +4560,15 @@
                                                         </div>
                                                     </div>
                                                 </div>
+
+
+                                            </div>
+
+                                            <div class="account__success account__success--relative">
+                                                <img src="img/success-bg.svg" alt="" class="account__success-image">
+                                                <div class="account__success-text">
+                                                    Ваши данные<br> сохранены
+                                                </div>
                                             </div>
 
                                         </div>
@@ -4380,9 +4579,13 @@
                         </div>
 
                     </div>
+
+
                 </div>
             </div>
         </div>
+
+
 
     </div>
 </div>

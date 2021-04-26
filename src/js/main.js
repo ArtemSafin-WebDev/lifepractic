@@ -30,6 +30,7 @@ import selectTimeCheckboxes from './selectTimeCheckboxes';
 import cardAutoswitch from './cardAutoswitch';
 import stickySidebar from './stickySidebar';
 import myDiary from './myDiary';
+import accountMyDataSlider from './accountMyData';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -61,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
     cardAutoswitch();
     stickySidebar();
     myDiary();
+    accountMyDataSlider();
 });
 
 window.addEventListener('load', function() {

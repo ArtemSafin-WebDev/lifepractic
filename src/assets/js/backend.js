@@ -105,6 +105,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+
+    var regimeForms = Array.prototype.slice.call(document.querySelectorAll('.account__my-schedule-regime-form'));
+
+    regimeForms.forEach(function(form) {
+        form.addEventListener('submit', event => {
+            event.preventDefault();
+            var success = document.querySelector('.account__success');
+
+
+            if (success) {
+                success.classList.add('active');
+
+                setTimeout(function() {
+                    success.classList.remove('active');
+                }, 2000)
+            }
+        })
+    })
+
     var validateOnTheFly = Array.prototype.slice.call(document.querySelectorAll('.js-validate-on-the-fly'));
 
     validateOnTheFly.forEach(function(form) {
