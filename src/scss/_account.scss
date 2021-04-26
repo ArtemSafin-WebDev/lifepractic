@@ -3186,9 +3186,37 @@
     transition: opacity 0.3s, visibility 0s linear 0.3s;
 
     @include breakpoint(mobile) {
-        display: none;
+        top: 100% !important;
+        transform: translateX(-50%);
+        left: 50% !important;
+        right: auto !important;
+        bottom: auto !important;
+        width: 18rem;
+
+
+        td:last-child & {
+            right: 0 !important;
+            top: 100% !important;
+            bottom: auto !important;
+            left: auto !important;
+            transform: none !important;
+        }
+
+        td:first-child & {
+            right: auto !important;
+            top: 100% !important;
+            bottom: auto !important;
+            left: 0 !important;
+            transform: none !important;
+        }
     }
 }
+
+.account__schedule-month {
+    @include breakpoint(mobile) {
+        padding-bottom: 22rem;
+    }
+} 
 
 .account__schedule-month-dropdown-inner {
     background-color: #fff;
@@ -3210,6 +3238,15 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-image: url('../img/rounded-left-pointer.svg');
+
+        @include breakpoint(mobile) {
+            bottom: 100%;
+            top: auto;
+            right: auto;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+        }
     }
 }
 
@@ -3224,6 +3261,12 @@
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+    @include breakpoint(mobile) {
+        height: 4rem;
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
 }
 
 .account__schedule-month-dropdown-content {
@@ -3235,6 +3278,10 @@
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
+
+    @include breakpoint(mobile) {
+        max-height: 20rem;
+    }
 
     &::-webkit-scrollbar {
         background-color: white;
@@ -3260,6 +3307,10 @@
     display: flex;
     align-items: center;
     padding: 0 4rem;
+
+    @include breakpoint(mobile) {
+        padding: 0 1.5rem;
+    }
     .no-touch &:hover,
     .touch &:active {
         .account__schedule-month-dropdown-card-arrow {
