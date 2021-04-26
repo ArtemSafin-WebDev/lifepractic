@@ -8760,6 +8760,8 @@ textarea.modals__help-form-input {
   background-repeat: no-repeat;
   -webkit-transition: border-color 0.2s;
   transition: border-color 0.2s; }
+  .account__my-account-form-input[readonly] {
+    background-image: none; }
   .account__my-account-form-input--money {
     background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10.11 11.9'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill-opacity: 0.35; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M2.07,11.9a.34.34,0,0,1-.37-.37V9.08H.37A.41.41,0,0,1,.1,9,.37.37,0,0,1,0,8.7V8.43a.36.36,0,0,1,.1-.27.36.36,0,0,1,.27-.1H1.7V7H.37a.41.41,0,0,1-.27-.1A.37.37,0,0,1,0,6.66V6.39a.36.36,0,0,1,.1-.27A.36.36,0,0,1,.37,6H1.7V.39A.36.36,0,0,1,1.8.12.34.34,0,0,1,2.07,0H6.21A4.16,4.16,0,0,1,9.06.92a3.24,3.24,0,0,1,1,2.6,3.3,3.3,0,0,1-1,2.62A4.2,4.2,0,0,1,6.21,7H2.77v1H6.49a.37.37,0,0,1,.28.1.41.41,0,0,1,.1.27V8.7a.35.35,0,0,1-.38.38H2.77v2.45a.34.34,0,0,1-.12.27.36.36,0,0,1-.27.1ZM6.12,6a3.27,3.27,0,0,0,2.19-.63A2.35,2.35,0,0,0,9,3.52a2.29,2.29,0,0,0-.73-1.85A3.22,3.22,0,0,0,6.12,1H2.77V6Z' /%3E%3C/svg%3E"); }
   .account__my-account-form-input.parsley-error {
