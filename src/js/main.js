@@ -31,6 +31,8 @@ import cardAutoswitch from './cardAutoswitch';
 import stickySidebar from './stickySidebar';
 import myDiary from './myDiary';
 import accountMyDataSlider from './accountMyData';
+import helpModal from './helpModal';
+import faqAccordions from './faqAccordions';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -63,6 +65,9 @@ document.addEventListener('DOMContentLoaded', function() {
     stickySidebar();
     myDiary();
     accountMyDataSlider();
+    helpModal();
+    faqAccordions();
+    
 });
 
 window.addEventListener('load', function() {

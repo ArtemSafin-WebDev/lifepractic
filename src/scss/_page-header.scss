@@ -2,9 +2,11 @@
     position: absolute;
     left: 0;
     width: 100%;
-    z-index: 100;
+    // z-index: 100;
     top: 0;
     pointer-events: none;
+
+ 
     .home-page & {
         @include breakpointMF(small-tablet) {
             opacity: 0;
@@ -17,7 +19,7 @@
         left: 0;
         top: 0;
         width: 100%;
-        z-index: 100;
+        z-index: 500;
         background: white;
         transition: box-shadow 0.3s;
 
@@ -52,7 +54,7 @@
     font-size: 16px;
     line-height: 19px;
     position: relative;
-    z-index: 130;
+    z-index: 400;
     pointer-events: initial;
     @include breakpoint(small-tablet) {
         font-size: 2.4rem;

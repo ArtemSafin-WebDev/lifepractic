@@ -1,0 +1,48 @@
+<div class="help-modal">
+    {{#if hasCornerImage}}
+    <div class="corner-illustration">
+        {{> corner-illustration }}
+    </div>
+    {{/if}}
+    {{#if hasCornerImage}}
+    <div class="right-corner-illustration">
+        {{> right-corner-illustration }}
+    </div>
+    {{/if}}
+    <div class="container">
+        <div class="help-modal__content">
+
+
+            <img src="img/help-modal-illustration.svg" alt="" class="help-modal__illustration">
+            <h3 class="help-modal__heading">
+                Добрый день!<br>
+                Чем можем вам помочь?
+            </h3>
+            <div class="help-modal__questions">
+                <a href="#" class="help-modal__question">
+                    Как пользоваться сервисом?
+                </a>
+                <a href="#" class="help-modal__question">
+                    Общие вопросы
+                </a>
+                <a href="#" class="help-modal__question">
+                    Работа с психологом
+                </a>
+                <a href="#" class="help-modal__question">
+                    Оплата
+                </a>
+                <a href="#" class="help-modal__question">
+                    Не нашли ответа на ваш вопрос?
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="#" class="help-modal-btn">
+    <svg width="14" height="14" aria-hidden="true" class="icon-help-modal-questionmark">
+        <use xlink:href="#help-modal-questionmark"></use>
+    </svg>
+    <svg width="14" height="14" aria-hidden="true" class="icon-help-modal-cross">
+        <use xlink:href="#help-modal-cross"></use>
+    </svg>
+</a>
