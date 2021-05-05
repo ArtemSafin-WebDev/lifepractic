@@ -115,9 +115,9 @@
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide">
                                                         <form class="account__my-data" action="/" method="POST"
-                                                            data-need-validation>
+                                                            data-need-validation id="account-selfemployed">
 
-                                                            {{!-- <div class="account__status">
+                                                            <div class="account__status" style="display: none;">
                                                                 <svg width="14" height="14" aria-hidden="true"
                                                                     class="icon-status-warning">
                                                                     <use xlink:href="#status-warning"></use>
@@ -126,7 +126,7 @@
                                                                     <strong>Статус: </strong> Ожидает модерации
                                                                 </div>
 
-                                                            </div> --}}
+                                                            </div>
                                                             {{!-- <div class="account__status">
                                                                 <svg width="14" height="14" aria-hidden="true"
                                                                     class="icon-status-declined">
@@ -137,7 +137,7 @@
                                                                         href="#">(как
                                                                         исправить?)</a>
                                                                 </div>
-                                                            </div> --}}
+                                                            </div>
                                                             <div class="account__status">
                                                                 <svg width="14" height="14" aria-hidden="true"
                                                                     class="icon-status-ok">
@@ -146,7 +146,7 @@
                                                                 <div class="account__status-text">
                                                                     <strong>Статус: </strong> Одобрено модератором
                                                                 </div>
-                                                            </div>
+                                                            </div> --}}
                                                             <div class="account__my-data-main-info">
                                                                 <div class="account__my-data-main-info-item">
                                                                     <input type="text"
@@ -201,20 +201,25 @@
                                                                     </label>
                                                                 </div>
                                                                 <div class="account__my-data-main-info-item">
-                                                                    <label
-                                                                        class="account__my-account-file-upload js-file-upload">
-                                                                        <input type="file"
-                                                                            class="account__my-account-file-upload-input js-upload-avatar"
-                                                                            accept="image/*">
-                                                                        <span
-                                                                            class="account__my-account-file-upload-text js-file-upload-text">
-                                                                            Загрузить фото
-                                                                        </span>
-                                                                        <svg width="14" height="14" aria-hidden="true"
-                                                                            class="icon-file">
-                                                                            <use xlink:href="#file"></use>
-                                                                        </svg>
-                                                                    </label>
+                                                                    <div
+                                                                        class="account__my-account-file-upload-wrapper">
+
+
+                                                                        <label
+                                                                            class="account__my-account-file-upload js-file-upload js-photo-upload">
+                                                                            <input type="file"
+                                                                                class="account__my-account-file-upload-input js-upload-avatar"
+                                                                                accept="image/*">
+                                                                            <span
+                                                                                class="account__my-account-file-upload-text js-file-upload-text">
+                                                                                Загрузить фото
+                                                                            </span>
+                                                                            <svg width="14" height="14"
+                                                                                aria-hidden="true" class="icon-file">
+                                                                                <use xlink:href="#file"></use>
+                                                                            </svg>
+                                                                        </label>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="account__my-data-main-info-item">
                                                                     <div class="account__my-account-select">
@@ -242,7 +247,7 @@
                                                                                 name="text" id="bik"
                                                                                 placeholder="БИК банка">
 
-                                                                            <label for="email"
+                                                                            <label for="bik"
                                                                                 class="account__my-account-form-label">
                                                                                 БИК банка
                                                                             </label>
@@ -370,10 +375,10 @@
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <form class="account__my-data" action="/" method="POST"
-                                                            data-need-validation>
+                                                            data-need-validation id="account-ip">
 
 
-                                                            <div class="account__status">
+                                                            <div class="account__status" style="display: none;">
                                                                 <svg width="14" height="14" aria-hidden="true"
                                                                     class="icon-status-ok">
                                                                     <use xlink:href="#status-ok"></use>
@@ -487,10 +492,10 @@
                                                                             class="account__my-data-additional-info-block-item">
                                                                             <input type="text"
                                                                                 class="account__my-account-form-input"
-                                                                                name="text" id="bik"
+                                                                                name="text" id="bik-ip"
                                                                                 placeholder="БИК банка">
 
-                                                                            <label for="email"
+                                                                            <label for="bik-ip"
                                                                                 class="account__my-account-form-label">
                                                                                 БИК банка
                                                                             </label>
@@ -499,10 +504,10 @@
                                                                             class="account__my-data-additional-info-block-item">
                                                                             <input type="text"
                                                                                 class="account__my-account-form-input"
-                                                                                name="text" id="bankname"
+                                                                                name="text" id="bankname-ip"
                                                                                 placeholder="Наименование банка">
 
-                                                                            <label for="bankname"
+                                                                            <label for="bankname-ip"
                                                                                 class="account__my-account-form-label">
                                                                                 Наименование банка
                                                                             </label>
@@ -511,10 +516,10 @@
                                                                             class="account__my-data-additional-info-block-item">
                                                                             <input type="text"
                                                                                 class="account__my-account-form-input"
-                                                                                name="text" id="coraccount"
+                                                                                name="text" id="coraccount-ip"
                                                                                 placeholder="Корреспондентский счет">
 
-                                                                            <label for="coraccount"
+                                                                            <label for="coraccount-ip"
                                                                                 class="account__my-account-form-label">
                                                                                 Корреспондентский счет
                                                                             </label>
@@ -523,10 +528,10 @@
                                                                             class="account__my-data-additional-info-block-item">
                                                                             <input type="text"
                                                                                 class="account__my-account-form-input"
-                                                                                name="text" id="paymentaccount"
+                                                                                name="text" id="paymentaccount-ip"
                                                                                 placeholder="Расчетный счет">
 
-                                                                            <label for="paymentaccount"
+                                                                            <label for="paymentaccount-ip"
                                                                                 class="account__my-account-form-label">
                                                                                 Расчетный счет
                                                                             </label>
@@ -600,6 +605,20 @@
                                                                 </div>
                                                             </div>
 
+                                                        </a>
+                                                    </div>
+                                                    <div class="account__my-schedule-arrows">
+                                                        <a href="#" class="account__my-schedule-arrow">
+                                                            <svg width="14" height="14" aria-hidden="true"
+                                                                class="icon-arrow-left">
+                                                                <use xlink:href="#arrow-left"></use>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="#" class="account__my-schedule-arrow">
+                                                            <svg width="14" height="14" aria-hidden="true"
+                                                                class="icon-arrow-right">
+                                                                <use xlink:href="#arrow-right"></use>
+                                                            </svg>
                                                         </a>
                                                     </div>
                                                 </div>

@@ -11,7 +11,10 @@ export default function accountMyDataSlider() {
         const checkboxes = Array.from(element.querySelectorAll('.account__my-data-checkbox-input'));
         const slider = new Swiper(container, {
             effect: 'fade',
-            loop: true,
+            loop: false,
+           
+            preventClicksPropagation: false,
+            
             watchOverflow: true,
             touchStartPreventDefault: false,
             allowTouchMove: false,
@@ -35,7 +38,7 @@ export default function accountMyDataSlider() {
             checkbox.addEventListener('change', event => {
                 event.preventDefault();
                 if (checkbox.checked) {
-                    slider.slideToLoop(checkboxIndex);
+                    slider.slideTo(checkboxIndex);
                 }
                 console.log('Clicked index', checkboxIndex);
               
@@ -45,9 +48,9 @@ export default function accountMyDataSlider() {
 
         const checkedBoxIndex = checkboxes.findIndex(checkbox => checkbox.checked);
         if (checkedBoxIndex !== -1) {
-            slider.slideToLoop(checkedBoxIndex);
+            slider.slideTo(checkedBoxIndex);
         } else {
-            slider.slideToLoop(0);
+            slider.slideTo(0);
         }
     })
 

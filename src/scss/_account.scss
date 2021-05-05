@@ -57,8 +57,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 2rem;
-    margin-right: auto;
+    margin: 0 auto;
 
     @include breakpoint(small-tablet) {
         margin: 0;
@@ -216,7 +215,7 @@
     padding-right: 6.2rem;
     margin-right: calc(-1 * (100vw - 100% - 27rem) / 2);
     padding-right: calc((100vw - 100% - 27rem) / 2);
-
+   
     &--fullwidth {
         padding-right: 6.2rem;
     }
@@ -354,6 +353,8 @@
 .account__my-notes {
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 70;
 }
 
 .account__my-notes-tabs-nav {
@@ -1518,8 +1519,7 @@
     position: relative;
     padding: 0 2.5rem;
     height: 5.4rem;
-   
-   
+
     border: 1px dashed #c5c5c5;
     color: rgba(0, 0, 0, 0.35);
     font-weight: 300;
@@ -1527,8 +1527,7 @@
     line-height: 1.2;
     border-radius: 1rem;
     justify-content: space-between;
-    
-   
+
     max-width: 100%;
     svg {
         fill: #c5c5c5;
@@ -1571,9 +1570,7 @@
     flex-shrink: 0;
     color: white;
     transition: background-color 0.2s;
-    &:hover {
-        background: #d35241;
-    }
+    @include redHover();
 }
 
 .account__my-history {
@@ -1879,7 +1876,7 @@
     @include breakpoint(mobile) {
         width: 100%;
         flex-grow: 0;
-        margin-bottom: 6rem;
+        margin-bottom: 3rem;
     }
 }
 
@@ -2231,10 +2228,8 @@
     pointer-events: none;
     opacity: 0;
     visibility: hidden;
-    
+
     transition: opacity 0.3s, visibility 0s linear 0.3s;
-
-
 
     &--relative {
         position: relative;
@@ -2243,7 +2238,6 @@
         display: none;
         margin-top: 2rem;
     }
-  
 
     @include breakpoint(small-tablet) {
         position: relative;
@@ -3026,11 +3020,12 @@
     border-radius: 1rem;
     align-items: center;
     display: flex;
-    padding: 1rem 2.2rem;
+    justify-content: center;
+    padding: 1rem;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     transform: translateZ(0);
     backface-visibility: hidden;
-
+    white-space: nowrap;
     @include breakpoint(tablet) {
         padding: 1rem;
     }
@@ -3072,8 +3067,8 @@
 }
 
 .account__schedule-week-days-grid-event-content {
-    width: 30%;
-    flex-grow: 1;
+    // width: 30%;
+    // flex-grow: 1;
 }
 
 .account__schedule-week-days-grid-event-username {
@@ -3172,17 +3167,21 @@
         @include breakpoint(mobile) {
             padding: 0.2rem;
         }
-        &:hover {
-            background: #ffefee;
-            .account__schedule-month-table-day {
-                font-weight: 400;
-            }
-            .account__schedule-month-dropdown {
-                opacity: 1;
-                visibility: inherit;
-                transition: opacity 0.3s, visibility 0.3s;
+
+        @include breakpointMF(tablet) {
+            &:hover {
+                background: #ffefee;
+                .account__schedule-month-table-day {
+                    font-weight: 400;
+                }
+                .account__schedule-month-dropdown {
+                    opacity: 1;
+                    visibility: inherit;
+                    transition: opacity 0.3s ease, visibility 0.3s;
+                }
             }
         }
+       
 
         &:nth-last-child(1),
         &:nth-last-child(2) {
@@ -3211,35 +3210,83 @@
     visibility: hidden;
     transition: opacity 0.3s, visibility 0s linear 0.3s;
 
-    @include breakpoint(mobile) {
-        top: 100% !important;
-        transform: translateX(-50%);
-        left: 50% !important;
-        right: auto !important;
-        bottom: auto !important;
-        width: 18rem;
+    
 
-        td:last-child & {
-            right: 0 !important;
-            top: 100% !important;
-            bottom: auto !important;
-            left: auto !important;
-            transform: none !important;
-        }
+    @include breakpoint(small-tablet) {
+        top: 0;
+        left: 0;
+        position: fixed;
+        left: 0 !important;
+        top: 0 !important;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(black, .2);
+        width: 100%;
+        height: 100%;
+        transform: none !important;
+        z-index: 900;
+        padding: 2rem var(--content-padding);
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
 
-        td:first-child & {
-            right: auto !important;
-            top: 100% !important;
-            bottom: auto !important;
-            left: 0 !important;
-            transform: none !important;
+        &.active {
+            opacity: 1;
+            visibility: inherit;
+            transition: opacity 0.3s ease, visibility 0.3s;
         }
+        
+        // top: 100% !important;
+        // transform: translateX(-50%);
+        // left: 50% !important;
+        // right: auto !important;
+        // bottom: auto !important;
+        // width: 18rem;
+
+        // td:last-child & {
+        //     right: 0 !important;
+        //     top: 100% !important;
+        //     bottom: auto !important;
+        //     left: auto !important;
+        //     transform: none !important;
+        // }
+
+        // td:first-child & {
+        //     right: auto !important;
+        //     top: 100% !important;
+        //     bottom: auto !important;
+        //     left: 0 !important;
+        //     transform: none !important;
+        // }
     }
 }
 
 .account__schedule-month {
     @include breakpoint(mobile) {
         padding-bottom: 22rem;
+    }
+}
+
+.account__schedule-month-dropdown-close {
+    display: none;
+
+    @include breakpoint(small-tablet) {
+        display: block;
+
+        position: absolute;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1.8rem;
+        height: 1.8rem;
+
+        svg {
+            fill: #7ABED1;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
     }
 }
 
@@ -3250,6 +3297,10 @@
     border-radius: 1rem;
     position: relative;
     z-index: 1;
+    @include breakpoint(small-tablet) {
+        margin: auto 0;
+    }
+   
 
     &::before {
         content: '';
@@ -3264,7 +3315,7 @@
         background-size: contain;
         background-image: url('../img/rounded-left-pointer.svg');
 
-        @include breakpoint(mobile) {
+        @include breakpoint(small-tablet) {
             bottom: 100%;
             top: auto;
             right: auto;
@@ -3286,11 +3337,12 @@
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-
+    position: relative;
     @include breakpoint(mobile) {
         height: 4rem;
         font-size: 1.6rem;
         line-height: 1.2;
+      
     }
 }
 
@@ -3304,8 +3356,10 @@
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
 
-    @include breakpoint(mobile) {
-        max-height: 20rem;
+    @include breakpoint(small-tablet) {
+        max-height: none;
+        overflow: visible;
+
     }
 
     &::-webkit-scrollbar {
@@ -3336,16 +3390,19 @@
     @include breakpoint(mobile) {
         padding: 0 1.5rem;
     }
-    .no-touch &:hover,
-    .touch &:active {
-        .account__schedule-month-dropdown-card-arrow {
-            border-color: #7abed1;
 
-            svg {
-                fill: #7abed1;
+    @include breakpointMF(laptop) {
+        .no-touch &:hover {
+            .account__schedule-month-dropdown-card-arrow {
+                border-color: #7abed1;
+    
+                svg {
+                    fill: #7abed1;
+                }
             }
         }
     }
+  
 }
 
 .account__schedule-month-dropdown-card-photo-container {
@@ -3491,6 +3548,10 @@
     background: #f3f9fb;
     border-radius: 1rem;
     color: var(--text-color);
+
+    .touch &:not(.account__schedule-month-clients-card--total) {
+        pointer-events: none;
+    }
 
     @include breakpoint(mobile) {
         margin-bottom: 0;
@@ -4297,6 +4358,16 @@
     }
 }
 
+.account__my-data-slider {
+    .swiper-container {
+        overflow: visible;
+    }
+
+    .swiper-wrapper {
+        height: auto !important;
+    }
+}
+
 .account__my-data-submit {
     font-size: 1.4rem;
     line-height: 1.7rem;
@@ -4453,6 +4524,10 @@
     }
 }
 
+.account__my-schedule {
+  
+}
+
 .account__my-schedule-regime-info {
     margin-left: 0.8rem;
     flex-shrink: 0;
@@ -4511,7 +4586,7 @@
 .account__my-schedule-regime-form-blocks {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-gap: 1rem;
+    grid-gap: 10px;
 
     @include breakpoint(mobile) {
         grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -4564,17 +4639,17 @@
 
     .select-time__card-checkbox-content {
         position: relative;
-        
+
         &::before {
             content: '';
-            bottom: .6rem;
-            top: -.6rem;
+            bottom: 0.6rem;
+            top: -0.6rem;
             left: 0;
             right: 0;
             background-color: var(--primary-color);
             pointer-events: none;
             opacity: 0;
-            transition: opacity .2s;
+            transition: opacity 0.2s;
             position: absolute;
             z-index: -1;
         }
@@ -4584,7 +4659,6 @@
         .select-time__card-checkbox-content::before {
             opacity: 1;
         }
-
     }
 }
 
@@ -4728,10 +4802,7 @@
     margin-bottom: 6.5rem;
     transition: color 0.2s, background-color 0.2s;
 
-    .no-touch &:hover {
-        background-color: #7abed1;
-        color: white;
-    }
+    @include blueHover();
 }
 
 .account__find-psycho-icon {
@@ -5175,5 +5246,137 @@
         line-height: 3rem;
         text-transform: uppercase;
         margin-bottom: 1rem;
+    }
+}
+
+.account__my-account-file-upload-wrapper {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: initial;
+    }
+}
+
+.file-photo-delete {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 2.5rem;
+    flex-shrink: 0;
+    cursor: pointer;
+    user-select: none;
+
+    @include breakpoint(mobile) {
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+
+    .no-touch &:hover {
+        .file-photo-delete-image-text {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        svg {
+            fill: var(--primary-color);
+        }
+    }
+    svg {
+        width: 1rem;
+        height: 1rem;
+        flex-shrink: 0;
+        fill: rgba(0, 0, 0, 0.17);
+        margin-left: 1.3rem;
+        transition: fill 0.2s;
+    }
+}
+
+.file-photo-delete-image-container {
+    width: 4.4rem;
+    height: 4.4rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    margin-right: 1.2rem;
+
+    img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        @include objectFitCover();
+    }
+}
+
+.file-photo-delete-image-text {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.3;
+    color: rgba(0, 0, 0, 0.35);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+    white-space: nowrap;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+
+
+.account__my-schedule-arrows {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    margin-left: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility 0s linear .3s;
+
+    @include breakpoint(mobile) {
+        margin-left: auto;
+        margin-top: 2rem;
+        display: none;
+    }
+
+    .show-arrows & {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity .3s, visibility .3s;
+
+        @include breakpoint(mobile) {
+            display: flex;
+        }
+    }
+}
+
+.account__my-schedule-arrow {
+    width: 4.2rem;
+    height: 4.2rem;
+    flex-shrink: 0;
+    margin-right: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    transition: border-color .2s;
+    border-radius: 1rem;
+    svg {
+        width: 0.6rem;
+        height: 1.2rem;
+        fill: black;
+        display: block;
+        transition: fill .2s;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+
+    .no-touch &:hover {
+        border-color: #7ABED1;
+        svg {
+            fill: #7ABED1;
+        }
     }
 }

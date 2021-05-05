@@ -1,0 +1,119 @@
+.warning {
+    position: fixed;
+    left: 0;
+    bottom: 2rem;
+    width: 100%;
+    z-index: 300;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility 0s linear .3s;
+    pointer-events: none;
+    &.shown {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity .3s, visibility .3s;
+    }
+}
+
+.warning__inner {
+    max-width: 146rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    background: #e56a59;
+    border-radius: 1rem;
+    color: white;
+    padding: 1.3rem 2rem;
+    display: flex;
+    align-items: center;
+    padding-left: 4.5rem;
+    pointer-events: initial;
+
+    @include breakpoint(mobile) {
+        padding: 1.5rem;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    .icon-warning {
+        fill: white;
+        width: 2.8rem;
+        height: 2.8rem;
+        flex-shrink: 0;
+        margin-right: 1.8rem;
+
+        @include breakpoint(mobile) {
+            width: 1.8rem;
+            height: 1.8rem;
+            margin-right: 1.5rem;
+        }
+    }
+}
+
+.warning__close-btn {
+    position: absolute;
+    left: 100%;
+    bottom: 100%;
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-left: 0.4rem;
+    margin-bottom: 0.4rem;
+
+    @include breakpoint(mobile) {
+        left: auto;
+        right: 0;
+        margin-left: 0;
+        width: 1.8rem;
+        height: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .no-touch &:hover {
+        svg {
+            fill: var(--primary-color);
+        }
+    }
+    svg {
+        width: 100%;
+        height: 100%;
+        fill: rgba(0, 0, 0, 0.3);
+        transition: fill .2s;
+    }
+}
+
+.warning__text {
+    width: 30%;
+    flex-grow: 1;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+    }
+}
+
+.warning__link {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    background-color: #fff;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-flex;
+    flex-shrink: 0;
+    border-radius: 1rem;
+    padding: 1.8rem 2.4rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin-top: 2rem;
+        padding: 1.4rem 2.2rem;
+    }
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+}

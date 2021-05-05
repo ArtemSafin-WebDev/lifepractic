@@ -12,7 +12,7 @@ export default function() {
         }
         const modal = document.querySelector(id);
         if (modal) {
-            lockScroll();
+            lockScroll(modal);
             modal.classList.add('active');
             activeModal = modal;
         } else {
@@ -28,7 +28,11 @@ export default function() {
 
     window.openModal = openModal;
 
-    window.closeModal = closeModal;
+    window.closeModal = function() {
+        if (activeModal) {
+            closeModal(activeModal);
+        }
+    }
 
     document.addEventListener('click', event => {
         

@@ -85,7 +85,8 @@
                             <div class="account__my-account-form-row">
 
                                 <input type="tel" class="account__my-account-form-input js-phone-input" name="phone"
-                                    id="phone" placeholder="Телефон" required data-parsley-phone readonly value="+79046667000">
+                                    id="phone" placeholder="Телефон" required data-parsley-phone readonly
+                                    value="+79046667000">
 
                                 <label for="phone" class="account__my-account-form-label">
                                     Телефон
@@ -102,24 +103,28 @@
                             </div>
                             <div class="account__my-account-form-row">
 
-                                <input type="text" class="account__my-account-form-input js-numeric-input-no-formatting" name="age" id="age"
-                                    placeholder="Сколько вам лет?">
+                                <input type="text" class="account__my-account-form-input js-numeric-input-no-formatting"
+                                    name="age" id="age" placeholder="Сколько вам лет?">
 
                                 <label for="age" class="account__my-account-form-label">
                                     Сколько вам лет?
                                 </label>
                             </div>
+
                             <div class="account__my-account-form-row">
-                                <label class="account__my-account-file-upload js-file-upload">
-                                    <input type="file" class="account__my-account-file-upload-input js-upload-avatar"
-                                        accept="image/*">
-                                    <span class="account__my-account-file-upload-text js-file-upload-text">
-                                        Загрузить фото
-                                    </span>
-                                    <svg width="14" height="14" aria-hidden="true" class="icon-file">
-                                        <use xlink:href="#file"></use>
-                                    </svg>
-                                </label>
+                                <div class="account__my-account-file-upload-wrapper">
+                                    <label class="account__my-account-file-upload js-file-upload js-photo-upload">
+                                        <input type="file"
+                                            class="account__my-account-file-upload-input js-upload-avatar"
+                                            accept="image/*">
+                                        <span class="account__my-account-file-upload-text js-file-upload-text">
+                                            Загрузить фото
+                                        </span>
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-file">
+                                            <use xlink:href="#file"></use>
+                                        </svg>
+                                    </label>
+                                </div>
 
                             </div>
                             <div class="account__my-account-form-row">

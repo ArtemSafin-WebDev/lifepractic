@@ -3,5 +3,6 @@
     "hasCornerImage": true,
     "login": true,
     "noNav": true,
-    "accountPage": true
+    "accountPage": true,
+    "warning": true
 }

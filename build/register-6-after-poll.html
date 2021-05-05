@@ -972,8 +972,8 @@
                                     </button>
                                 </div>
                             </div>
-                            <form action="/" method="POST" class="select-time__form">
-                                <div class="select-time__slider">
+                            <form action="/" method="POST" class="select-time__form" data-need-validation>
+                                <div class="select-time__slider" id="change-time-error-container">
                                     <div class="swiper-container">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
@@ -991,7 +991,9 @@
                                                         <div class="select-time__card-checkboxes">
                                                             <label class="select-time__card-checkbox">
                                                                 <input type="radio" name="selecttime" value="10:00"
-                                                                    class="select-time__card-checkbox-input">
+                                                                    class="select-time__card-checkbox-input" required
+                                                                    data-parsley-errors-container="#change-time-error-container"
+                                                                    data-parsley-error-message="Выберите время">
                                                                 <div class="select-time__card-checkbox-content">
                                                                     10:00
                                                                 </div>
@@ -1596,36 +1598,36 @@
                                     <div class="payment__card-inputs">
                                         <div class="payment__card-row">
                                             <div class="payment__card-input-wrapper">
-                                                <label for="cardnumber" class="payment__card-label">
+                                                <label for="cardnumber2" class="payment__card-label">
                                                     Номер карты
                                                 </label>
-                                                <input type="tel" class="payment__card-input js-card-number" id="cardnumber"
+                                                <input type="tel" class="payment__card-input js-card-number" id="cardnumber2"
                                                     placeholder="0000 0000 0000 0000" required data-parsley-cardnumber>
                                             </div>
                                         </div>
                                         <div class="payment__card-row">
                                             <div class="payment__card-input-wrapper">
-                                                <label for="cardname" class="payment__card-label">
+                                                <label for="cardname2" class="payment__card-label">
                                                     Имя владельца
                                                 </label>
-                                                <input type="text" class="payment__card-input" id="cardname"
+                                                <input type="text" class="payment__card-input" id="cardname2"
                                                     placeholder="Ivan Ivanov" required>
                                             </div>
                                             <div class="payment__card-input-wrapper payment__card-input-wrapper--shortest">
-                                                <label for="carddate" class="payment__card-label">
+                                                <label class="payment__card-label">
                                                     ММ/ГГ
                                                 </label>
                                                 <div class="payment__card-combined-input-wrapper" id="dateerrors2">
                                                     <input type="tel"
                                                         class="payment__card-combined-input js-card-date js-card-month"
-                                                        id="cardmonth" placeholder="ММ" required data-parsley-carddate
+                                                        id="cardmonth2" placeholder="ММ" required data-parsley-carddate
                                                         data-parsley-class-handler="#dateerrors2">
                                                     <span class="payment__card-combined-input-divider">
                                                         /
                                                     </span>
                                                     <input type="tel"
                                                         class="payment__card-combined-input js-card-date js-card-year"
-                                                        id="cardyear" placeholder="ГГ" required data-parsley-carddate
+                                                        id="cardyear2" placeholder="ГГ" required data-parsley-carddate
                                                         data-parsley-class-handler="#dateerrors2">
                                                 </div>
         
@@ -1643,10 +1645,10 @@
         
                                             </div>
                                             <div class="payment__card-input-wrapper payment__card-input-wrapper--short">
-                                                <label for="cardcvv" class="payment__card-label">
+                                                <label for="cardcvv2" class="payment__card-label">
                                                     CVV/CVC
                                                 </label>
-                                                <input type="password" class="payment__card-input js-card-cvv" id="cardcvv"
+                                                <input type="password" class="payment__card-input js-card-cvv" id="cardcvv2"
                                                     required data-parsley-cardcvv>
                                                 <div class="payment__card-input-remark">
                                                     Последние 3<br> цифры на обороте
@@ -1662,6 +1664,108 @@
                                 <div class="payment__btns">
                                     <button class="auth__form-btn auth__form-btn--submit">
                                         Сохранить карту
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modals__modal js-modal" id="change-card">
+                <div class="modals__modal-inner modals__modal-inner--add-card">
+                    <button class="modals__modal-close js-close-modal">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                            <use xlink:href="#cross"></use>
+                        </svg>
+                    </button>
+                    <div class="modals__add-card">
+                        <h3 class="modals__add-card-heading">
+                            Изменение карты
+                        </h3>
+                        <div class="modals__add-card-secured">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-lock-colored">
+                                <use xlink:href="#lock-colored"></use>
+                            </svg>
+                            Данные карты защищены по международному стандарту PCI DSS
+                        </div>
+                        <form action="/" method="POST" class="modals__add-card-form" data-need-validation="">
+                            <div class="payment__cards">
+                                <div class="payment__front-card">
+                                    <div class="payment__systems">
+                                        <img src="img/mastercard.svg" alt="" class="payment__systems-logo" width="100">
+                                        <img src="img/visa.svg" alt="" class="payment__systems-logo" width="100">
+                                        <img src="img/mir.png" alt="" class="payment__systems-logo" width="100">
+                                    </div>
+                                    <div class="payment__card-inputs">
+                                        <div class="payment__card-row">
+                                            <div class="payment__card-input-wrapper">
+                                                <label for="cardnumber3" class="payment__card-label">
+                                                    Номер карты
+                                                </label>
+                                                <input type="tel" class="payment__card-input js-card-number" id="cardnumber3"
+                                                    placeholder="0000 0000 0000 0000" required data-parsley-cardnumber
+                                                    value="0000 0000 0000 0000">
+                                            </div>
+                                        </div>
+                                        <div class="payment__card-row">
+                                            <div class="payment__card-input-wrapper">
+                                                <label for="cardname3" class="payment__card-label">
+                                                    Имя владельца
+                                                </label>
+                                                <input type="text" class="payment__card-input" id="cardname3"
+                                                    placeholder="Ivan Ivanov" required value="Vasily Pupkin">
+                                            </div>
+                                            <div class="payment__card-input-wrapper payment__card-input-wrapper--shortest">
+                                                <label class="payment__card-label">
+                                                    ММ/ГГ
+                                                </label>
+                                                <div class="payment__card-combined-input-wrapper" id="dateerrors3">
+                                                    <input type="tel"
+                                                        class="payment__card-combined-input js-card-date js-card-month"
+                                                        id="cardmonth3" placeholder="ММ" required data-parsley-carddate
+                                                        data-parsley-class-handler="#dateerrors3" value="05">
+                                                    <span class="payment__card-combined-input-divider">
+                                                        /
+                                                    </span>
+                                                    <input type="tel"
+                                                        class="payment__card-combined-input js-card-date js-card-year"
+                                                        id="cardyear3" placeholder="ГГ" required data-parsley-carddate
+                                                        data-parsley-class-handler="#dateerrors3" value="22">
+                                                </div>
+        
+                                            </div>
+                                        </div>
+        
+                                    </div>
+        
+                                </div>
+                                <div class="payment__back-card">
+                                    <div class="payment__card-inputs">
+                                        <div class="payment__back-card-bar"></div>
+                                        <div class="payment__card-row">
+                                            <div class="payment__card-input-wrapper">
+        
+                                            </div>
+                                            <div class="payment__card-input-wrapper payment__card-input-wrapper--short">
+                                                <label for="cardcvv3" class="payment__card-label">
+                                                    CVV/CVC
+                                                </label>
+                                                <input type="password" class="payment__card-input js-card-cvv" id="cardcvv3"
+                                                    required data-parsley-cardcvv value="345">
+                                                <div class="payment__card-input-remark">
+                                                    Последние 3<br> цифры на обороте
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                    </div>
+                                </div>
+        
+        
+        
+                                <div class="payment__btns">
+                                    <button class="auth__form-btn auth__form-btn--submit">
+                                        Изменить карту
                                     </button>
                                 </div>
                             </div>
@@ -1873,10 +1977,10 @@
         
                                 <div class="payment__email-check-check-2">
                                     <div class="payment__email-check-check-2-wrapper">
-                                        <input type="email" class="account__my-account-form-input" name="email" id="check-email"
+                                        <input type="email" class="account__my-account-form-input" name="email" id="check-email2"
                                             placeholder="Сумма пополнения" data-parsley-validate-if-empty="true"
                                             data-parsley-required-if-checked="#emailcheckbox3">
-                                        <label for="check-email" class="account__my-account-form-label">
+                                        <label for="check-email2" class="account__my-account-form-label">
                                             E-mail
                                         </label>
                                     </div>
@@ -1970,6 +2074,48 @@
                     </div>
                 </div>
             </div>
+            <div class="modals__modal js-modal" id="has-session">
+                <div class="modals__modal-inner modals__modal-inner--has-session">
+                    <button class="modals__modal-close js-close-modal">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                            <use xlink:href="#cross"></use>
+                        </svg>
+                    </button>
+                    <div class="modals__has-session">
+                        <img src="img/has-session-illustration.svg" alt="" class="modals__has-session-image">
+                        <div class="modals__has-session-content">
+                            <h3 class="modals__has-session-heading">
+                                Извините у вас
+                                уже назначен
+                                сеанс на это время
+                            </h3>
+                            <div class="modals__has-session-text">
+                                <p>
+                                    Пожалуйста, выберите другой день
+                                    и время сеанса
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modals__modal js-modal" id="booked">
+                <div class="modals__modal-inner modals__modal-inner--booked">
+                    <button class="modals__modal-close js-close-modal">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                            <use xlink:href="#cross"></use>
+                        </svg>
+                    </button>
+                    <div class="modals__booked">
+                        <h3 class="modals__booked-heading">
+                            Извиняемся, другой пользователь уже оплатил этот сеанс
+                        </h3>
+                        <a href="#change-time" class="modals__booked-link js-open-modal">
+                            Выбрать другое время сеанса
+                        </a>
+                    </div>
+                </div>
+            </div>
             <div class="modals__modal js-modal" id="add-diary">
                 <div class="modals__modal-inner modals__modal-inner--add-diary">
                     <button class="modals__modal-close js-close-modal">
@@ -2008,7 +2154,7 @@
                             <use xlink:href="#cross"></use>
                         </svg>
                     </button>
-                    <form method="POST" action="/" class="modals__my-diary js-my-diary">
+                    <form method="POST" action="/" class="modals__my-diary js-my-diary" id="diary-form">
                         <div class="modals__my-diary-info">
                             <div class="modals__my-diary-date">
                                 12.12.2020
@@ -2018,14 +2164,8 @@
                             </div>
                         </div>
                         <div class="modals__my-diary-textarea-wrapper">
-        
-        
-                            <textarea name="content" class="modals__my-diary-textarea" readonly>Когда мы&nbsp;создаём семью, мы&nbsp;должны договориться по&nbsp;40&nbsp;пунктам. У&nbsp;каждого в&nbsp;голове есть свои представления о&nbsp;том, какой должна быть семья. Например, у&nbsp;него представление&nbsp;&mdash; много вместе путешествовать, а&nbsp;у&nbsp;неё&nbsp;&mdash; сидеть дома. У&nbsp;него&nbsp;&mdash; чтобы жена чистила картошку, а&nbsp;у&nbsp;неё&nbsp;&mdash; чтобы муж. Когда мы&nbsp;договариваемся об&nbsp;отношениях, то&nbsp;должны понять, подходим&nbsp;ли друг другу сексуально. У&nbsp;каждого есть свои закидоны. 
-        
-        В&nbsp;семейных проблемах всегда виноваты оба: если один создаёт проблему, то&nbsp;второй её&nbsp;терпит и&nbsp;не&nbsp;знает, как поступить, а&nbsp;значит поддерживает нездоровые отношения. В&nbsp;кабинет к&nbsp;психотерапевту семью, как правило, приводит жена, потому что женщины реже считают себя правыми и&nbsp;больше склонны к&nbsp;самоанализу. Мужчины часто имеют свойство считать правыми себя, даже когда явно неправы.
-        
-        Когда мы&nbsp;создаём семью, мы&nbsp;должны договориться по&nbsp;40&nbsp;пунктам. У&nbsp;каждого в&nbsp;голове есть свои представления о&nbsp;том, какой должна быть семья. Например, у&nbsp;него представление&nbsp;&mdash; много вместе путешествовать, а&nbsp;у&nbsp;неё&nbsp;&mdash; сидеть дома. У&nbsp;него&nbsp;&mdash; чтобы жена чистила картошку, а&nbsp;у&nbsp;неё&nbsp;&mdash; чтобы муж. Когда мы&nbsp;договариваемся об&nbsp;отношениях, то&nbsp;должны понять, подходим&nbsp;ли друг другу сексуально. У&nbsp;каждого есть свои закидоны.
-                        </textarea>
+                            <textarea name="content" class="modals__my-diary-textarea" readonly>Когда мы создаём семью, мы должны договориться по 40 пунктам. У каждого в голове есть свои представления о том, какой должна быть семья. Например, у него представление — много вместе путешествовать, а у неё — сидеть дома. У него — чтобы жена чистила картошку, а у неё — чтобы муж.&#10;&#10;Когда мы договариваемся об отношениях, то должны понять, подходим ли друг другу сексуально. У каждого есть свои закидоны. В семейных проблемах всегда виноваты оба: если один создаёт проблему, то второй её терпит и не знает, как поступить, а значит поддерживает нездоровые отношения. В кабинет к психотерапевту семью, как правило, приводит жена, потому что женщины реже считают себя правыми и больше склонны к самоанализу. Мужчины часто имеют свойство считать правыми себя, даже когда явно неправы.&#10;&#10;Когда мы создаём семью, мы должны договориться по 40 пунктам. У каждого в голове есть свои представления о том, какой должна быть семья. Например, у него представление — много вместе путешествовать, а у неё — сидеть дома. У него — чтобы жена чистила картошку, а у неё — чтобы муж. Когда мы договариваемся об отношениях, то должны понять, подходим ли друг другу сексуально. У каждого есть свои закидоны.
+                            </textarea>
                         </div>
                         <a href="#" class="modals__my-diary-edit">
                             Редактировать
@@ -2042,11 +2182,29 @@
                                 </div>
                             </div>
                         </a>
-                        <button class="modals__submit-btn" type="button">
+                        <button class="modals__submit-btn" type="submit">
         
                             Сохранить
                         </button>
                     </form>
+                </div>
+            </div>
+            <div class="modals__modal js-modal" id="moderation">
+                <div class="modals__modal-inner modals__modal-inner--moderation">
+                    <button class="modals__modal-close js-close-modal">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                            <use xlink:href="#cross"></use>
+                        </svg>
+                    </button>
+                    <div class="modals__moderation">
+                        <img src="img/moderation-illustration.svg" alt="" class="modals__moderation-illustration">
+                        <div class="modals__moderation-content">
+                            <h3 class="modals__moderation-heading">
+                                Спасибо!<br>
+                                Ваши данные отправлены на модерацию
+                            </h3>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

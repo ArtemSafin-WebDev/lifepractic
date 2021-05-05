@@ -1,6 +1,7 @@
 .modals {
     body:not(.loaded) & {
-        display: none;
+        opacity: 0;
+        visibility: hidden;
     }
 }
 
@@ -20,6 +21,10 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4s, visibility 0s linear 0.4s;
+
+    .no-touch & {
+        @include customScrollbar();
+    }
     &--about {
         padding: 10rem var(--content-padding);
     }
@@ -809,7 +814,7 @@ textarea.modals__help-form-input {
 }
 
 .modals__modal-inner--add-card {
-    max-width: 72rem;
+    max-width: 76rem;
     padding: 5.5rem;
 
     @include breakpoint(mobile) {
@@ -1060,7 +1065,6 @@ textarea.modals__help-form-input {
         margin-right: 0;
         margin-bottom: 1rem;
     }
-
 }
 
 .modals__my-diary-psycho {
@@ -1086,14 +1090,13 @@ textarea.modals__help-form-input {
     font-size: 1.7rem;
     line-height: 2.4rem;
     padding-right: 2rem;
-
+    white-space: pre-line;
     @include breakpoint(mobile) {
         padding-right: 0.8rem;
         padding-right: 0;
         font-size: 1.6rem;
         line-height: 1.3;
     }
-
 
     .edit-mode & {
         padding-right: 3rem;
@@ -1107,7 +1110,6 @@ textarea.modals__help-form-input {
         }
     }
 
-
     @include customScrollbar();
 }
 
@@ -1116,11 +1118,11 @@ textarea.modals__help-form-input {
         padding: 0 4rem;
         border: 1px solid rgba(0, 0, 0, 0.2);
         border-radius: 1rem;
-        padding-right: .5rem;
+        padding-right: 0.5rem;
 
         @include breakpoint(mobile) {
             padding: 0 2rem;
-            padding-right: .2rem;
+            padding-right: 0.2rem;
         }
     }
 }
@@ -1166,8 +1168,8 @@ textarea.modals__help-form-input {
     position: relative;
     color: black;
     svg {
-        width: 1.8rem;
-        height: 1.8rem;
+        width: 1.9rem;
+        height: 1.9rem;
         fill: rgba(#000000, 0.2);
         flex-shrink: 0;
         display: block;
@@ -1230,7 +1232,7 @@ textarea.modals__help-form-input {
     text-transform: uppercase;
     margin-top: 2.6rem;
     display: none;
-    
+
     &:link,
     &:visited {
         color: white;
@@ -1241,3 +1243,175 @@ textarea.modals__help-form-input {
         display: inline-flex;
     }
 }
+
+.modals__modal-inner--has-session {
+    max-width: 76rem;
+}
+
+.modals__has-session {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 37.4rem;
+    padding: 2rem;
+
+    @include breakpoint(mobile) {
+        min-height: auto;
+        padding: 2rem;
+    }
+}
+
+.modals__has-session-content {
+    max-width: 50%;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    width: 100%;
+    @include breakpoint(mobile) {
+        max-width: 100%;
+    }
+}
+
+.modals__has-session-heading {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 1.2;
+        margin-bottom: 1.7rem;
+        br {
+            display: none;
+        }
+    }
+}
+
+.modals__has-session-text {
+    font-weight: 300;
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+}
+
+.modals__has-session-image {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: bottom left;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.modals__modal-inner--booked {
+    max-width: 80rem;
+}
+
+.modals__booked {
+    padding: 9.5rem 8rem;
+    text-align: center;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+    }
+}
+
+.modals__booked-heading {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    font-weight: 400;
+    margin-bottom: 4.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+}
+
+.modals__booked-link {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    display: inline-flex;
+    padding: 1.8rem 2.6rem;
+    background: #e56a59;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 0 auto;
+    text-transform: uppercase;
+    @include redHover();
+
+    @include breakpoint(mobile) {
+        padding: 1.6rem 1.8rem;
+    }
+
+    &:link,
+    &:visited {
+        color: white;
+    }
+}
+
+.modals__modal-inner--moderation {
+    max-width: 75.6rem;
+}
+
+.modals__moderation {
+    display: flex;
+    align-items: center;
+   
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: initial;
+    }
+}
+
+.modals__moderation-illustration {
+    width: 50%;
+    max-height: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: left bottom;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.modals__moderation-content {
+    width: 50%;
+    padding: 2rem;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+}
+
+.modals__moderation-heading {
+    font-size: 3.5rem;
+    line-height: 1.3;
+    font-weight: 400;
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        
+    }
+}
+
+
+

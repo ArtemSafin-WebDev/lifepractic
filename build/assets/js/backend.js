@@ -105,7 +105,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-
     var regimeForms = Array.prototype.slice.call(document.querySelectorAll('.account__my-schedule-regime-form'));
 
     regimeForms.forEach(function(form) {
@@ -113,16 +112,15 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             var success = document.querySelector('.account__success');
 
-
             if (success) {
                 success.classList.add('active');
 
                 setTimeout(function() {
                     success.classList.remove('active');
-                }, 2000)
+                }, 2000);
             }
-        })
-    })
+        });
+    });
 
     var validateOnTheFly = Array.prototype.slice.call(document.querySelectorAll('.js-validate-on-the-fly'));
 
@@ -181,6 +179,35 @@ document.addEventListener('DOMContentLoaded', function() {
                 enterCodeRow.style.display = '';
             } else {
                 console.log('not valid phone');
+            }
+        });
+    });
+
+    var diaryForm = document.querySelector('#diary-form');
+    if (diaryForm) {
+        diaryForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.closeModal();
+        });
+    }
+
+    var accountForms = [document.querySelector('#account-selfemployed'), document.querySelector('#account-ip')];
+
+    accountForms.forEach(function(form) {
+        if (!form) return;
+        form.addEventListener('submit', function(event) {
+            if (
+                $(form)
+                    .parsley()
+                    .isValid()
+            ) {
+                event.preventDefault();
+                window.openModal('#moderation');
+
+                var status = form.querySelector('.account__status');
+                if (status) {
+                    status.style.display = '';
+                }
             }
         });
     });

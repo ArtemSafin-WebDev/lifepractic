@@ -33,11 +33,15 @@ import myDiary from './myDiary';
 import accountMyDataSlider from './accountMyData';
 import helpModal from './helpModal';
 import faqAccordions from './faqAccordions';
+import setScrollbarWidth from './setScrollbarWidth';
+import warning from './warning';
+import mobileMonthSchedule from './mobileMonthSchedule';
+
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
-    // navLinksHover();
+    setScrollbarWidth();
     mobileMenu();
     phoneMask();
     validation();
@@ -53,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
     customSelects();
     myNotesTabs();
     fileUpload();
-    uploadAvatar();
+    // uploadAvatar();
     selectTimeForm();
     recommendations();
     mobileCalendar();
@@ -67,6 +71,9 @@ document.addEventListener('DOMContentLoaded', function() {
     accountMyDataSlider();
     helpModal();
     faqAccordions();
+    warning();
+    mobileMonthSchedule();
+   
     
 });
 

@@ -25,6 +25,12 @@ export default function scheduleRegimes() {
                 slideChange: swiper => {
                     links.forEach(link => link.classList.remove('active'));
                     links[swiper.realIndex].classList.add('active');
+
+                    if (swiper.realIndex === 1) {
+                        element.classList.add('show-arrows');
+                    } else {
+                        element.classList.remove('show-arrows');
+                    }
                 }
             }
         });
