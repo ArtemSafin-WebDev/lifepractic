@@ -248,7 +248,7 @@
 
         <div class="corner-illustration">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 982.78 507" preserveAspectRatio="xMidYMax meet">
+                viewBox="0 0 982.78 507" preserveAspectRatio="xMinYMax meet">
                 <defs>
                     <style>
                         .corner-cls-1,
@@ -453,7 +453,17 @@
                                 <div class="select-time choose-specialist__schedule-select-time js-select-time">
                                     <div class="select-time__top-row">
                                         <div class="select-time__text">
-                                            Выберите дату и время сессии (по МСК)
+                                            <div class="select-time__text-regular">
+                                                Выберите дату и время сессии (по МСК)
+                                            </div>
+                                            <div class="select-time__text-error">
+                                                Выберите дату и время сессии (по МСК)
+        
+                                                <svg width="14" height="14" aria-hidden="true" class="icon-warning">
+                                                    <use xlink:href="#warning"></use>
+                                                </svg>
+                                            </div>
+        
                                         </div>
                                         <div class="select-time__arrows">
                                             <button class="select-time__arrow select-time__arrow--prev">
@@ -468,7 +478,7 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <form action="/" method="POST" class="select-time__form">
+                                    <form action="/" method="POST" class="select-time__form js-select-time-form">
                                         <div class="select-time__slider">
                                             <div class="swiper-container">
                                                 <div class="swiper-wrapper">
@@ -2035,8 +2045,9 @@
         
                                 <div class="payment__email-check-check-2">
                                     <div class="payment__email-check-check-2-wrapper">
-                                        <input type="email" class="account__my-account-form-input" name="email" id="check-email2"
-                                            placeholder="Сумма пополнения" data-parsley-validate-if-empty="true"
+                                        <input type="email" class="account__my-account-form-input" name="email"
+                                            id="check-email2" placeholder="Сумма пополнения"
+                                            data-parsley-validate-if-empty="true"
                                             data-parsley-required-if-checked="#emailcheckbox3">
                                         <label for="check-email2" class="account__my-account-form-label">
                                             E-mail

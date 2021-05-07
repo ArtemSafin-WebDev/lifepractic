@@ -294,9 +294,14 @@
     display: block;
     font-size: 1.4rem;
     line-height: 1.7rem;
-
+    transition: border-color .2s, color .2s;
     &.parsley-error {
         border-color: var(--primary-color);
+        color: var(--primary-color);
+
+        @include placeholder {
+            color: var(--primary-color);
+        }
     }
     @include placeholder {
         color: rgba(0, 0, 0, 0.1);

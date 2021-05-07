@@ -261,6 +261,10 @@ td, th {
     }
 }
 
+.plyr--video {
+    border-radius: 1.5rem;
+}
+
 ::selection {
     color: white;
     background-color: var(--primary-color);

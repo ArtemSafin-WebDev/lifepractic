@@ -377,6 +377,7 @@
     align-items: center;
     border-bottom: 1px solid rgba(black, 0.3);
     transition: color 0.2s, border-color 0.2s;
+    backface-visibility: hidden;
     &:last-child {
         margin-right: 0;
     }
@@ -386,7 +387,7 @@
     }
 
     &.active {
-        border-color: transparent;
+        border-color: rgba(black, 0);
     }
 
     &.active,
@@ -2022,9 +2023,7 @@
         color: white;
     }
 
-    &:hover {
-        background: #d35241;
-    }
+    @include redHover();
 
     @include breakpoint(mobile) {
         font-size: 1.2rem;
@@ -5026,6 +5025,7 @@
 
     &--grey {
         color: #6e6e6e;
+        border-color: rgba(black, .2);
         &:link,
         &:visited {
             color: #6e6e6e;
@@ -5033,6 +5033,7 @@
 
         &:hover {
             background-color: #6e6e6e;
+            border-color: #6e6e6e;
             color: white;
         }
     }
@@ -5092,7 +5093,7 @@
     width: 100%;
     background: #f1fafc;
     border-radius: 1.5rem;
-    padding: 5.5rem;
+    padding: 4.8rem 5.5rem;
     padding-right: 40rem;
     background-image: url('../img/diary-empty-bg.svg');
     background-size: auto 100%;

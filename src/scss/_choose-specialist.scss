@@ -303,8 +303,9 @@
 .choose-specialist__schedule-features-items {
     display: block;
     display: grid;
-    grid-template-columns: 1fr 0.7fr 1fr;
-    grid-gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    
 }
 
 .choose-specialist__schedule-feature-item {
@@ -315,6 +316,10 @@
     font-weight: 300;
     font-size: 1.4rem;
     line-height: 2.2rem;
+
+    br {
+        display: none;
+    }
    
     &:last-child {
         margin-bottom: 0;
@@ -399,53 +404,3 @@
 }
 
 
-.select-time__slider {
-    position: relative;
-
-    &::after {
-        content: '';
-        position: absolute;
-        top: -2rem;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        border: 1px solid #E56A59;
-        border-radius: .8rem;
-        z-index: 20;
-        pointer-events: none;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity .3s, visibility 0s linear .3s;
-    }
-
-    .choose-specialist.error &::after {
-        
-        opacity: 1;
-        visibility: inherit;
-        transition: opacity .3s, visibility .3s;
-    }
-}
-
-.select-time__text-regular {
-    .choose-specialist.error & {
-        display: none;
-    }
-}
-
-.select-time__text-error {
-    display: none;
-    color: var(--primary-color);
-
-    .choose-specialist.error & {
-        display: block;
-    }
-
-    svg {
-        display: inline-block;
-        width: 1.6rem;
-        height: 1.6rem;
-        fill: var(--primary-color);
-        vertical-align: middle;
-        margin-left: 0.5rem;
-    }
-}

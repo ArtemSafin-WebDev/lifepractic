@@ -203,3 +203,57 @@
         }
     }
 }
+
+
+
+
+.select-time__slider {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -2rem;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border: 1px solid #E56A59;
+        border-radius: .8rem;
+        z-index: 20;
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s, visibility 0s linear .3s;
+    }
+
+    .select-time.error &::after {
+        
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity .3s, visibility .3s;
+    }
+}
+
+.select-time__text-regular {
+    .select-time.error & {
+        display: none;
+    }
+}
+
+.select-time__text-error {
+    display: none;
+    color: var(--primary-color);
+
+    .select-time.error & {
+        display: block;
+    }
+
+    svg {
+        display: inline-block;
+        width: 1.6rem;
+        height: 1.6rem;
+        fill: var(--primary-color);
+        vertical-align: middle;
+        margin-left: 0.5rem;
+    }
+}

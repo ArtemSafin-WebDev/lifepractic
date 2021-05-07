@@ -4,7 +4,7 @@ export default function selectTimeForm() {
 
     elements.forEach(element => {
         const formCheckboxes = Array.from(element.querySelectorAll('input[type="radio"]'));
-        const chooseSpecialist = document.querySelector('.choose-specialist')
+        const selectTimeParent = element.closest('.select-time');
         element.addEventListener('submit', event => {
           
             const timeSelected = formCheckboxes.find(box => box.checked);
@@ -14,10 +14,10 @@ export default function selectTimeForm() {
             } else {
                 console.log('Time not selected');
                 event.preventDefault();
-                chooseSpecialist.classList.add('error');
+                selectTimeParent.classList.add('error');
 
                 setTimeout(() => {
-                    chooseSpecialist.classList.remove('error');
+                    selectTimeParent.classList.remove('error');
                 }, 3000)
             }
         })
