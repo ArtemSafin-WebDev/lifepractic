@@ -346,6 +346,8 @@
     }
 }
 
+
+
 .auth__form-btn:last-child {
     margin-right: 0;
 }
@@ -482,4 +484,14 @@
     width: 100%;
     margin: 0 auto;
     margin-top: -2rem;
+}
+
+.auth__form-btn--flex-end {
+    margin-left: auto !important;
+    flex-grow: 0 !important;
+
+    @include breakpoint(mobile) {
+        margin-left: 0 !important;
+        flex-grow: 1 !important;
+    }
 }

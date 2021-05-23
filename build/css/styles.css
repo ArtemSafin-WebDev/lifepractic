@@ -3290,6 +3290,18 @@ select:-webkit-autofill:focus {
   margin: 0 auto;
   margin-top: -2rem; }
 
+.auth__form-btn--flex-end {
+  margin-left: auto !important;
+  -webkit-box-flex: 0 !important;
+      -ms-flex-positive: 0 !important;
+          flex-grow: 0 !important; }
+  @media only screen and (max-width: 640px) {
+    .auth__form-btn--flex-end {
+      margin-left: 0 !important;
+      -webkit-box-flex: 1 !important;
+          -ms-flex-positive: 1 !important;
+              flex-grow: 1 !important; } }
+
 .corner-illustration {
   position: absolute;
   left: 0;
@@ -13472,7 +13484,11 @@ textarea.modals__help-form-input {
        object-fit: cover;
     -o-object-position: center;
        object-position: center;
-    font-family: 'object-fit: cover; object-position: center;'; }
+    font-family: 'object-fit: cover; object-position: center;';
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0); }
 
 .file-photo-delete-image-text {
   font-weight: 300;

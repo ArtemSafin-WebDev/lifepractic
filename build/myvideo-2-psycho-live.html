@@ -988,7 +988,17 @@
                         <div class="select-time choose-specialist__schedule-select-time js-select-time">
                             <div class="select-time__top-row">
                                 <div class="select-time__text">
-                                    Выберите дату и время сессии (по МСК)
+                                    <div class="select-time__text-regular">
+                                        Выберите дату и время сессии (по МСК)
+                                    </div>
+                                    <div class="select-time__text-error">
+                                        Выберите дату и время сессии (по МСК)
+        
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-warning">
+                                            <use xlink:href="#warning"></use>
+                                        </svg>
+                                    </div>
+        
                                 </div>
                                 <div class="select-time__arrows">
                                     <button class="select-time__arrow select-time__arrow--prev">
@@ -1003,8 +1013,8 @@
                                     </button>
                                 </div>
                             </div>
-                            <form action="/" method="POST" class="select-time__form" data-need-validation>
-                                <div class="select-time__slider" id="change-time-error-container">
+                            <form action="/" method="POST" class="select-time__form js-select-time-form">
+                                <div class="select-time__slider">
                                     <div class="swiper-container">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
@@ -1022,9 +1032,7 @@
                                                         <div class="select-time__card-checkboxes">
                                                             <label class="select-time__card-checkbox">
                                                                 <input type="radio" name="selecttime" value="10:00"
-                                                                    class="select-time__card-checkbox-input" required
-                                                                    data-parsley-errors-container="#change-time-error-container"
-                                                                    data-parsley-error-message="Выберите время">
+                                                                    class="select-time__card-checkbox-input">
                                                                 <div class="select-time__card-checkbox-content">
                                                                     10:00
                                                                 </div>
@@ -1373,9 +1381,9 @@
                                     </div>
                                 </div>
                                 <div class="select-time__form-btns">
-        
-                                    <button class="auth__form-btn auth__form-btn--submit modals__change-time-modal-btn">
-                                        Сохранить изменения
+                                    
+                                    <button class="auth__form-btn auth__form-btn--flex-end auth__form-btn--submit">
+                                        cохранить изменения
                                     </button>
                                 </div>
                             </form>
@@ -2117,7 +2125,7 @@
                         <img src="img/has-session-illustration.svg" alt="" class="modals__has-session-image">
                         <div class="modals__has-session-content">
                             <h3 class="modals__has-session-heading">
-                                Извините у вас
+                                Извините, у вас
                                 уже назначен
                                 сеанс на это время
                             </h3>
