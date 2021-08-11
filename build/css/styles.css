@@ -15195,6 +15195,10 @@ textarea.modals__help-form-input {
 .problems {
   margin-bottom: 15.5rem;
   text-align: center; }
+  @media only screen and (max-width: 640px) {
+    .problems {
+      margin-bottom: 8rem;
+      margin-top: 3rem; } }
 
 .problems__heading {
   text-align: center;
@@ -15206,6 +15210,12 @@ textarea.modals__help-form-input {
   color: #e56a59;
   margin-bottom: 3.4rem;
   position: relative; }
+  @media only screen and (max-width: 640px) {
+    .problems__heading {
+      font-weight: 500;
+      font-size: 2.2rem;
+      line-height: 2.5rem;
+      margin-bottom: 1rem; } }
   .problems__heading::before {
     content: '';
     top: 100%;
@@ -15220,6 +15230,10 @@ textarea.modals__help-form-input {
     background-size: contain;
     position: absolute;
     margin-top: -0.5rem; }
+    @media only screen and (max-width: 640px) {
+      .problems__heading::before {
+        width: 5.8rem;
+        height: 0.5rem; } }
 
 .problems__heading-text {
   text-align: center;
@@ -15228,6 +15242,11 @@ textarea.modals__help-form-input {
   margin-bottom: 4rem;
   font-size: 4.8rem;
   line-height: 5.2rem; }
+  @media only screen and (max-width: 640px) {
+    .problems__heading-text {
+      font-size: 2rem;
+      line-height: 2.4rem;
+      margin-bottom: 2rem; } }
 
 .problems__list {
   display: grid;
@@ -15236,6 +15255,12 @@ textarea.modals__help-form-input {
   grid-column-gap: 6rem;
   max-width: 125.4rem;
   margin: 0 auto; }
+  @media only screen and (max-width: 640px) {
+    .problems__list {
+      margin: 0;
+      max-width: none;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-gap: 2rem; } }
 
 .problems__list-item {
   display: -webkit-box;
@@ -15282,6 +15307,10 @@ textarea.modals__help-form-input {
   line-height: 2rem;
   font-weight: 300;
   color: #a8a8a8; }
+  @media only screen and (max-width: 640px) {
+    .problems__card-text {
+      font-size: 1.2rem;
+      line-height: 1.6rem; } }
   .problems__card-text em {
     font-style: normal;
     font-weight: 400;
@@ -15312,6 +15341,12 @@ textarea.modals__help-form-input {
   overflow: hidden;
   -webkit-transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s;
   transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s; }
+  @media only screen and (max-width: 640px) {
+    .problems__start-therapy {
+      padding: 2rem 2.2rem;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      margin-top: 4rem; } }
   .problems__start-therapy:link, .problems__start-therapy:visited {
     color: white; }
   .problems__start-therapy::before {
@@ -15407,6 +15442,9 @@ textarea.modals__help-form-input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  @media only screen and (max-width: 640px) {
+    .therapy__bg {
+      top: -5rem; } }
   .therapy__bg::after {
     content: '';
     display: block;
@@ -15429,65 +15467,116 @@ textarea.modals__help-form-input {
   font-weight: 400;
   text-align: center;
   margin-bottom: 20rem; }
+  @media only screen and (max-width: 640px) {
+    .therapy__heading {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 4rem; } }
 
 .therapy__illustration {
   height: 112rem;
   position: relative; }
+  @media only screen and (max-width: 640px) {
+    .therapy__illustration {
+      height: auto;
+      padding-top: 36rem; } }
 
-.therapy__solves {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 100%;
-  top: -18rem;
-  width: 100%;
-  height: auto;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-gap: 0rem;
-  grid-column-gap: 5rem;
-  max-width: 110rem;
-  z-index: 100;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-items: center; }
+@media only screen and (min-width: 641px) {
+  .therapy__solves {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 100%;
+    top: -18rem;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 0rem;
+    grid-column-gap: 5rem;
+    max-width: 110rem;
+    z-index: 100;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center; } }
 
-.therapy__solves-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 27rem;
-  height: 27rem;
-  background-color: #fff;
-  border-radius: 50%;
-  text-align: center;
-  color: black;
-  padding: 4rem; }
-  .therapy__solves-card:nth-child(3) {
-    justify-self: flex-start; }
-  .therapy__solves-card:nth-child(4) {
-    justify-self: flex-end; }
+@media only screen and (max-width: 640px) {
+  .therapy__solves {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 0.8rem;
+    margin-top: -10rem;
+    margin-bottom: 4rem; } }
+
+@media only screen and (min-width: 641px) {
+  .therapy__solves-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 27rem;
+    height: 27rem;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    color: black;
+    padding: 4rem; }
+    .therapy__solves-card:nth-child(3) {
+      justify-self: flex-start; }
+    .therapy__solves-card:nth-child(4) {
+      justify-self: flex-end; } }
+
+@media only screen and (max-width: 640px) {
+  .therapy__solves-card {
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    aspect-ratio: 1 / 1;
+    padding: 2rem; } }
 
 .therapy__solves-card-title {
   font-size: 1.7rem;
   line-height: 2.5rem;
   font-weight: 400;
   margin-bottom: 1.7rem; }
+  @media only screen and (max-width: 640px) {
+    .therapy__solves-card-title {
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      margin-bottom: 0.8rem; } }
 
 .therapy__solves-card-text {
   font-weight: 300;
   font-size: 1.7rem;
   line-height: 2.2rem;
   color: #a8a8a8; }
+  @media only screen and (max-width: 640px) {
+    .therapy__solves-card-text {
+      font-weight: 300;
+      font-size: 1.2rem;
+      line-height: 1.6rem; } }
 
 .therapy__illustration-image {
   position: absolute;
@@ -15498,7 +15587,12 @@ textarea.modals__help-form-input {
           transform: translateX(-50%);
   width: auto;
   margin-left: 10rem;
-  max-width: none; }
+  max-width: none;
+  z-index: -1; }
+  @media only screen and (max-width: 640px) {
+    .therapy__illustration-image {
+      margin-left: 3rem;
+      height: 36rem; } }
 
 .therapy__how-to-choose {
   background: #ffffff;
@@ -15513,6 +15607,14 @@ textarea.modals__help-form-input {
   z-index: 50;
   position: relative;
   margin-bottom: 29rem; }
+  @media only screen and (max-width: 640px) {
+    .therapy__how-to-choose {
+      margin: 0 calc(-1 * var(--content-padding));
+      padding: 0 var(--content-padding);
+      padding-top: 4.5rem;
+      padding-bottom: 3.2rem;
+      border-radius: 1.7rem;
+      margin-bottom: 14rem; } }
   .therapy__how-to-choose::before {
     content: '';
     position: absolute;
@@ -15523,6 +15625,14 @@ textarea.modals__help-form-input {
     left: 5rem;
     right: 5rem;
     z-index: -1; }
+    @media only screen and (max-width: 640px) {
+      .therapy__how-to-choose::before {
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 1.7rem;
+        top: -0.9rem;
+        left: 1.3rem;
+        right: 1.3rem;
+        bottom: 1.3rem; } }
   .therapy__how-to-choose::after {
     content: '';
     position: absolute;
@@ -15533,6 +15643,13 @@ textarea.modals__help-form-input {
     left: 10rem;
     right: 10rem;
     z-index: -1; }
+    @media only screen and (max-width: 640px) {
+      .therapy__how-to-choose::after {
+        border-radius: 1.7rem;
+        left: 3rem;
+        right: 3rem;
+        top: -1.5rem;
+        bottom: 2rem; } }
 
 .therapy__how-to-choose-heading {
   margin-bottom: 2rem;
@@ -15540,12 +15657,22 @@ textarea.modals__help-form-input {
   font-size: 4.8rem;
   line-height: 6.8rem;
   font-weight: 400; }
+  @media only screen and (max-width: 640px) {
+    .therapy__how-to-choose-heading {
+      font-size: 2rem;
+      line-height: 2.4rem;
+      margin-bottom: 2rem; } }
 
 .therapy__how-to-choose-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-gap: 5rem;
   margin-bottom: 8rem; }
+  @media only screen and (max-width: 640px) {
+    .therapy__how-to-choose-list {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      grid-gap: 0rem;
+      margin-bottom: 3rem; } }
 
 .therapy__how-to-choose-list-item {
   display: -webkit-box;
@@ -15564,15 +15691,35 @@ textarea.modals__help-form-input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  @media only screen and (max-width: 640px) {
+    .therapy__how-to-choose-card {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      text-align: left; } }
 
 .therapy__how-to-choose-card-image-container {
   position: relative;
   z-index: 1;
   pointer-events: none; }
+  @media only screen and (max-width: 640px) {
+    .therapy__how-to-choose-card-image-container {
+      width: 15rem;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+      margin-right: 0rem;
+      margin-left: -1rem; } }
   .therapy__how-to-choose-card-image-container::before {
     content: '';
     display: block;
     padding-bottom: 100%; }
+    @media only screen and (max-width: 640px) {
+      .therapy__how-to-choose-card-image-container::before {
+        padding-bottom: 70%; } }
 
 .therapy__how-to-choose-card-image {
   position: absolute;
@@ -15632,6 +15779,23 @@ textarea.modals__help-form-input {
     z-index: -1;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
+  @media only screen and (max-width: 640px) {
+    .therapy__how-to-choose-card-number {
+      width: 3.2rem;
+      height: 3.2rem;
+      font-size: 1rem;
+      line-height: 1.2;
+      left: auto;
+      right: 3rem;
+      bottom: auto;
+      position: absolute;
+      top: 50%;
+      margin: 0;
+      -webkit-transform: translateX(50%) translateY(-50%);
+              transform: translateX(50%) translateY(-50%); }
+      .therapy__how-to-choose-card-number::before {
+        width: 1.8rem;
+        height: 1.8rem; } }
 
 .therapy__how-to-choose-card-text {
   font-weight: 300;
@@ -15639,6 +15803,13 @@ textarea.modals__help-form-input {
   line-height: 2.5rem;
   text-align: center;
   margin-top: -2rem; }
+  @media only screen and (max-width: 640px) {
+    .therapy__how-to-choose-card-text {
+      font-weight: 300;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      margin: 0;
+      text-align: left; } }
   .therapy__how-to-choose-card-text a {
     color: #7abed1;
     border-bottom: 1px solid rgba(122, 190, 209, 0.5);
@@ -15661,6 +15832,15 @@ textarea.modals__help-form-input {
   position: relative;
   max-width: 110rem;
   margin: 0 auto; }
+  @media only screen and (max-width: 640px) {
+    .therapy__start-now {
+      padding: 2.5rem;
+      margin: 0;
+      border-radius: 1.7rem;
+      padding-bottom: 0;
+      max-width: none;
+      background-size: 100% auto;
+      background-position: center bottom; } }
 
 .therapy__start-now-heading {
   margin-bottom: 4.2rem;
@@ -15668,6 +15848,12 @@ textarea.modals__help-form-input {
   line-height: 4.2rem;
   font-weight: 400;
   max-width: 35rem; }
+  @media only screen and (max-width: 640px) {
+    .therapy__start-now-heading {
+      max-width: none;
+      font-size: 2rem;
+      line-height: 2.5rem;
+      margin-bottom: 2.7rem; } }
 
 .therapy__start-now-image {
   position: absolute;
@@ -15676,6 +15862,15 @@ textarea.modals__help-form-input {
   width: 46.7rem;
   height: auto;
   right: 4rem; }
+  @media only screen and (max-width: 640px) {
+    .therapy__start-now-image {
+      position: static;
+      width: 100%;
+      height: auto;
+      -webkit-box-ordinal-group: 13;
+          -ms-flex-order: 12;
+              order: 12;
+      margin-top: 2rem; } }
 
 .therapy__begin-now {
   font-weight: 500;
@@ -15689,6 +15884,15 @@ textarea.modals__help-form-input {
   margin-bottom: 4rem;
   font-family: 'Rage', serif;
   max-width: 23rem; }
+  @media only screen and (max-width: 640px) {
+    .therapy__begin-now {
+      font-weight: 500;
+      font-size: 2.2rem;
+      line-height: .8;
+      max-width: 15rem;
+      -webkit-transform: rotate(-12.59deg);
+              transform: rotate(-12.59deg);
+      margin-bottom: 3rem; } }
   .therapy__begin-now::before {
     content: '';
     top: 100%;
@@ -15704,6 +15908,11 @@ textarea.modals__help-form-input {
     position: absolute;
     margin-top: 0.5rem;
     margin-left: -3.5rem; }
+    @media only screen and (max-width: 640px) {
+      .therapy__begin-now::before {
+        margin-left: -1.5rem;
+        width: 6.6rem;
+        height: 0.6rem; } }
 
 .therapy__you-get {
   padding-bottom: 16rem;
@@ -15712,6 +15921,11 @@ textarea.modals__help-form-input {
   z-index: 1;
   max-width: 137rem;
   margin: 0 auto; }
+  @media only screen and (max-width: 640px) {
+    .therapy__you-get {
+      padding-bottom: 8rem;
+      margin: 0;
+      max-width: none; } }
 
 .therapy__you-get-bg {
   position: absolute;
@@ -15729,6 +15943,9 @@ textarea.modals__help-form-input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  @media only screen and (max-width: 640px) {
+    .therapy__you-get-bg {
+      top: -18rem; } }
   .therapy__you-get-bg::after {
     content: '';
     display: block;
@@ -15746,6 +15963,9 @@ textarea.modals__help-form-input {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin-top: -36rem; }
+  @media only screen and (max-width: 640px) {
+    .therapy__you-get-waves {
+      margin: 0; } }
 
 .therapy__you-get-heading {
   text-align: center;
@@ -15753,12 +15973,21 @@ textarea.modals__help-form-input {
   line-height: 6.2rem;
   font-weight: 400;
   margin-bottom: 5rem; }
+  @media only screen and (max-width: 640px) {
+    .therapy__you-get-heading {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 2rem; } }
 
 .therapy__you-get-list {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-gap: 6rem;
   grid-column-gap: 8rem; }
+  @media only screen and (max-width: 640px) {
+    .therapy__you-get-list {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      grid-gap: 2rem; } }
 
 .therapy__you-get-list-item {
   display: -webkit-box;
@@ -15781,14 +16010,34 @@ textarea.modals__help-form-input {
       -ms-flex-positive: 1;
           flex-grow: 1;
   text-align: center; }
+  @media only screen and (max-width: 640px) {
+    .therapy__you-get-card {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      text-align: left; } }
 
 .therapy__you-get-card-image-container {
   position: relative; }
+  @media only screen and (max-width: 640px) {
+    .therapy__you-get-card-image-container {
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+      margin-right: 1rem;
+      width: 13rem;
+      margin-left: -1rem; } }
   .therapy__you-get-card-image-container::before {
     content: '';
     display: block;
     width: 100%;
     padding-bottom: 100%; }
+    @media only screen and (max-width: 640px) {
+      .therapy__you-get-card-image-container::before {
+        padding-bottom: 100%; } }
 
 .therapy__you-get-card-image {
   position: absolute;
@@ -15804,12 +16053,22 @@ textarea.modals__help-form-input {
   line-height: 1.2;
   font-weight: 400;
   margin-bottom: 1rem; }
+  @media only screen and (max-width: 640px) {
+    .therapy__you-get-card-title {
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      margin-bottom: 0.5rem; } }
 
 .therapy__you-get-card-text {
   font-weight: 300;
   font-size: 1.7rem;
   line-height: 2.2rem;
   color: #a8a8a8; }
+  @media only screen and (max-width: 640px) {
+    .therapy__you-get-card-text {
+      font-weight: 300;
+      font-size: 1.4rem;
+      line-height: 1.7rem; } }
 
 .therapy__you-get-link {
   margin: 0 auto;
@@ -15836,6 +16095,12 @@ textarea.modals__help-form-input {
   overflow: hidden;
   -webkit-transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s;
   transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s; }
+  @media only screen and (max-width: 640px) {
+    .therapy__you-get-link {
+      padding: 2rem 2.2rem;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      margin-top: 4rem; } }
   .therapy__you-get-link:link, .therapy__you-get-link:visited {
     color: white; }
   .therapy__you-get-link::before {
@@ -15911,6 +16176,9 @@ textarea.modals__help-form-input {
 
 .how-we-choose {
   margin-bottom: 28rem; }
+  @media only screen and (max-width: 640px) {
+    .how-we-choose {
+      margin-bottom: 5rem; } }
 
 .how-we-choose__heading-text {
   font-weight: 500;
@@ -15923,6 +16191,12 @@ textarea.modals__help-form-input {
   text-align: center;
   position: relative;
   margin-bottom: 3.5rem; }
+  @media only screen and (max-width: 640px) {
+    .how-we-choose__heading-text {
+      font-weight: 500;
+      font-size: 2.2rem;
+      line-height: 2.5rem;
+      margin-bottom: 2rem; } }
   .how-we-choose__heading-text::before {
     content: '';
     top: 100%;
@@ -15936,7 +16210,12 @@ textarea.modals__help-form-input {
     background-position: center;
     background-size: contain;
     position: absolute;
-    margin-top: .5rem; }
+    margin-top: 0.5rem; }
+    @media only screen and (max-width: 640px) {
+      .how-we-choose__heading-text::before {
+        width: 8.4rem;
+        height: 0.9rem;
+        margin-top: 0.2rem; } }
 
 .how-we-choose__heading {
   font-size: 4.8rem;
@@ -15944,6 +16223,11 @@ textarea.modals__help-form-input {
   font-weight: 400;
   margin-bottom: 4rem;
   text-align: center; }
+  @media only screen and (max-width: 640px) {
+    .how-we-choose__heading {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 2rem; } }
 
 .how-we-choose__specialists {
   display: -webkit-box;
@@ -15957,6 +16241,9 @@ textarea.modals__help-form-input {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 7rem; }
+  @media only screen and (max-width: 640px) {
+    .how-we-choose__specialists {
+      margin-bottom: 2.2rem; } }
 
 .how-we-choose__specialists-card {
   margin-right: 2.3rem;
@@ -15968,6 +16255,11 @@ textarea.modals__help-form-input {
           backface-visibility: hidden;
   -webkit-transform: translateZ(0);
           transform: translateZ(0); }
+  @media only screen and (max-width: 640px) {
+    .how-we-choose__specialists-card {
+      width: 5.4rem;
+      height: 5.4rem;
+      margin-right: 1rem; } }
   .how-we-choose__specialists-card:last-child {
     margin-right: 0; }
 
@@ -16000,16 +16292,28 @@ textarea.modals__help-form-input {
   background: #f7f7f7;
   border-radius: 50%;
   text-align: center; }
+  @media only screen and (max-width: 640px) {
+    .how-we-choose__specialists-all {
+      width: 5.4rem;
+      height: 5.4rem; } }
 
 .how-we-choose__specialists-all-count {
   font-size: 3.2rem;
   line-height: 1.3; }
+  @media only screen and (max-width: 640px) {
+    .how-we-choose__specialists-all-count {
+      font-size: 0.9rem;
+      line-height: 1.2; } }
 
 .how-we-choose__specialists-all-text {
   font-weight: 300;
   font-size: 2rem;
   line-height: 1.3;
   text-align: center; }
+  @media only screen and (max-width: 640px) {
+    .how-we-choose__specialists-all-text {
+      font-size: 0.7rem;
+      line-height: 1.2; } }
 
 .how-we-choose__cards {
   display: grid;
@@ -16017,6 +16321,13 @@ textarea.modals__help-form-input {
   max-width: 137rem;
   margin: 0 auto;
   grid-gap: 2rem; }
+  @media only screen and (max-width: 640px) {
+    .how-we-choose__cards {
+      max-width: none;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      grid-gap: 1.5rem;
+      margin: 0;
+      max-width: none; } }
 
 .how-we-choose__card {
   display: -webkit-box;
@@ -16031,15 +16342,22 @@ textarea.modals__help-form-input {
   border: 1px solid rgba(122, 190, 209, 0.15);
   padding-bottom: 10rem;
   z-index: 1;
-  border-radius: 1.5rem; }
+  border-radius: 1.5rem;
+  background-color: #fff; }
+  @media only screen and (max-width: 640px) {
+    .how-we-choose__card {
+      padding: 3rem; } }
   .how-we-choose__card--filled {
-    background: #EBF5F8;
+    background: #ebf5f8;
     border-radius: 1.5rem;
-    border-color: #EBF5F8;
+    border-color: #ebf5f8;
     background-image: url("../img/how-we-choose-bubbles.svg");
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: 90% auto; }
+    @media only screen and (max-width: 640px) {
+      .how-we-choose__card--filled {
+        padding-bottom: 17rem; } }
 
 .how-we-choose__card-illustration {
   position: absolute;
@@ -16048,12 +16366,21 @@ textarea.modals__help-form-input {
   right: -1px;
   height: auto;
   bottom: -25.2rem; }
+  @media only screen and (max-width: 640px) {
+    .how-we-choose__card-illustration {
+      width: 26.3rem;
+      bottom: -15.8rem; } }
 
 .how-we-choose__card-heading {
   font-size: 2.5rem;
   line-height: 3rem;
   font-weight: 400;
   margin-bottom: 3.5rem; }
+  @media only screen and (max-width: 640px) {
+    .how-we-choose__card-heading {
+      font-size: 1.7rem;
+      line-height: 2.4rem;
+      margin-bottom: 1.5rem; } }
 
 .how-we-choose__card-list {
   display: -webkit-box;
@@ -16076,23 +16403,60 @@ textarea.modals__help-form-input {
   font-size: 1.7rem;
   line-height: 2rem;
   max-width: 40rem; }
+  @media only screen and (max-width: 640px) {
+    .how-we-choose__card-list-item {
+      font-weight: 300;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      margin-bottom: 1.8rem; } }
   .how-we-choose__card-list-item svg {
     width: 2rem;
     height: 2rem;
     -ms-flex-negative: 0;
         flex-shrink: 0;
     margin-right: 1.4rem; }
+    @media only screen and (max-width: 640px) {
+      .how-we-choose__card-list-item svg {
+        margin-top: -0.2rem; } }
   .how-we-choose__card-list-item:last-child {
     margin-bottom: 0; }
 
 .landing-footer {
   position: relative;
   z-index: 1;
-  background-image: url("../img/landing-footer-waves.svg");
-  background-size: cover;
-  background-position: center bottom;
-  background-repeat: no-repeat;
   padding-top: 10rem; }
+  @media only screen and (max-width: 640px) {
+    .landing-footer {
+      padding-top: 3rem; } }
+
+.landing-footer__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  pointer-events: none; }
+  .landing-footer__bg::after {
+    content: '';
+    width: 100%;
+    height: 1rem;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    background-color: #E6F2F6; }
+
+.landing-footer__waves {
+  display: block;
+  height: auto;
+  width: 100%; }
 
 .landing-footer__top-row {
   max-width: 137rem;
@@ -16105,6 +16469,14 @@ textarea.modals__help-form-input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  @media only screen and (max-width: 640px) {
+    .landing-footer__top-row {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      grid-gap: 2rem;
+      padding-bottom: 4rem;
+      margin: 0;
+      max-width: none;
+      justify-items: center; } }
 
 .landing-footer__bottom-row {
   max-width: 137rem;
@@ -16118,6 +16490,14 @@ textarea.modals__help-form-input {
   font-size: 1.4rem;
   line-height: 1.7rem;
   color: rgba(0, 0, 0, 0.35); }
+  @media only screen and (max-width: 640px) {
+    .landing-footer__bottom-row {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      grid-gap: 2rem;
+      justify-items: center;
+      padding-top: 4rem;
+      padding-bottom: 3rem;
+      text-align: center; } }
 
 .landing-footer__made-by {
   display: -webkit-inline-box;
@@ -16125,16 +16505,16 @@ textarea.modals__help-form-input {
   display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
-  justify-self: flex-end; }
+          align-items: center; }
   @media only screen and (min-width: 641px) {
     .landing-footer__made-by {
-      grid-column: 4 / 5; } }
+      grid-column: 4 / 5;
+      justify-self: flex-end; } }
   .landing-footer__made-by img {
     width: 6.4rem;
     height: auto;
     position: relative;
-    bottom: -.3rem;
+    bottom: -0.3rem;
     -ms-flex-negative: 0;
         flex-shrink: 0;
     margin-left: 0.5rem; }
@@ -16153,6 +16533,11 @@ textarea.modals__help-form-input {
   font-weight: 300;
   font-size: 2.5rem;
   line-height: 1.2; }
+  @media only screen and (max-width: 640px) {
+    .landing-footer__email {
+      font-weight: 300;
+      font-size: 1.7rem;
+      line-height: 1.2; } }
 
 .landing-footer__work {
   font-weight: 300;
@@ -16168,8 +16553,10 @@ textarea.modals__help-form-input {
   display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
-  justify-self: flex-end; }
+          align-items: center; }
+  @media only screen and (min-width: 641px) {
+    .landing-footer__social {
+      justify-self: flex-end; } }
 
 .landing-footer__social-link {
   width: 2rem;
@@ -16197,6 +16584,15 @@ textarea.modals__help-form-input {
   padding: 10rem;
   margin-bottom: 8rem;
   position: relative; }
+  @media only screen and (max-width: 640px) {
+    .landing-footer__has-questions {
+      margin: 0;
+      margin-bottom: 4rem;
+      padding: 3rem;
+      padding-bottom: 22rem;
+      background-size: 90% auto;
+      background-position: bottom right;
+      max-width: none; } }
   .landing-footer__has-questions::before {
     content: '';
     position: absolute;
@@ -16208,12 +16604,22 @@ textarea.modals__help-form-input {
     background-size: contain;
     background-position: center top;
     background-repeat: no-repeat; }
+    @media only screen and (max-width: 640px) {
+      .landing-footer__has-questions::before {
+        width: 5rem;
+        height: 2rem;
+        left: 2.5rem; } }
 
 .landing-footer__has-questions-heading {
   font-weight: normal;
   font-size: 4.8rem;
   line-height: 6.2rem;
   margin-bottom: 1.5rem; }
+  @media only screen and (max-width: 640px) {
+    .landing-footer__has-questions-heading {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 1.5rem; } }
 
 .landing-footer__has-questions-text {
   font-weight: 300;
@@ -16222,6 +16628,12 @@ textarea.modals__help-form-input {
   color: #a8a8a8;
   margin-bottom: 3.5rem;
   max-width: 60rem; }
+  @media only screen and (max-width: 640px) {
+    .landing-footer__has-questions-text {
+      font-weight: 300;
+      font-size: 1.4rem;
+      line-height: 1.9rem;
+      margin-bottom: 2.5rem; } }
 
 .landing-footer__has-questions-link {
   padding: 2.5rem 4rem;
@@ -16246,6 +16658,12 @@ textarea.modals__help-form-input {
   overflow: hidden;
   -webkit-transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s;
   transition: color 0.2s ease 0.1s, background-color 0.2s, border-color 0.2s; }
+  @media only screen and (max-width: 640px) {
+    .landing-footer__has-questions-link {
+      padding: 2rem 2.2rem;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      margin-top: 0; } }
   .landing-footer__has-questions-link:link, .landing-footer__has-questions-link:visited {
     color: white; }
   .landing-footer__has-questions-link::before {
@@ -16321,6 +16739,9 @@ textarea.modals__help-form-input {
 
 .methods {
   margin-bottom: 10rem; }
+  @media only screen and (max-width: 640px) {
+    .methods {
+      margin-bottom: 5rem; } }
 
 .methods__row {
   display: grid;
@@ -16329,6 +16750,10 @@ textarea.modals__help-form-input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  @media only screen and (max-width: 640px) {
+    .methods__row {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      grid-gap: 2rem; } }
 
 .methods__illustration {
   display: block;
@@ -16354,6 +16779,15 @@ textarea.modals__help-form-input {
   max-width: 29rem;
   text-align: center;
   z-index: 10; }
+  @media only screen and (max-width: 640px) {
+    .methods__label {
+      font-weight: 500;
+      font-size: 2.2rem;
+      line-height: 0.8;
+      letter-spacing: 0.06em;
+      max-width: 21rem;
+      margin-left: auto;
+      position: static; } }
   .methods__label::before {
     content: '';
     top: 100%;
@@ -16368,6 +16802,11 @@ textarea.modals__help-form-input {
     background-size: contain;
     position: absolute;
     margin-top: 0.5rem; }
+    @media only screen and (max-width: 640px) {
+      .methods__label::before {
+        width: 10.5rem;
+        height: 1rem;
+        margin-top: 0.3rem; } }
 
 .methods__heading {
   font-size: 4.8rem;
@@ -16375,12 +16814,22 @@ textarea.modals__help-form-input {
   margin-bottom: 2rem;
   font-weight: 400;
   max-width: 52rem; }
+  @media only screen and (max-width: 640px) {
+    .methods__heading {
+      font-size: 2rem;
+      line-height: 1.2; } }
 
 .methods__black-text {
   font-size: 1.7rem;
   line-height: 2.4rem;
   margin-bottom: 2rem;
   max-width: 52rem; }
+  @media only screen and (max-width: 640px) {
+    .methods__black-text {
+      font-size: 1.4rem;
+      line-height: 1.9rem;
+      margin-bottom: 1.5rem;
+      max-width: none; } }
 
 .methods__grey-text {
   font-weight: 300;
@@ -16389,9 +16838,18 @@ textarea.modals__help-form-input {
   color: #a8a8a8;
   margin-bottom: 5rem;
   max-width: 52rem; }
+  @media only screen and (max-width: 640px) {
+    .methods__grey-text {
+      font-size: 1.4rem;
+      line-height: 1.9rem;
+      max-width: none;
+      margin-bottom: 4rem; } }
 
 .reviews {
   margin-bottom: 25rem; }
+  @media only screen and (max-width: 640px) {
+    .reviews {
+      margin-bottom: 5rem; } }
 
 .reviews__heading-text {
   font-weight: 500;
@@ -16404,6 +16862,15 @@ textarea.modals__help-form-input {
   text-align: center;
   position: relative;
   margin-bottom: 3.5rem; }
+  @media only screen and (max-width: 640px) {
+    .reviews__heading-text {
+      font-weight: 500;
+      font-size: 2.2rem;
+      line-height: 0.8;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      max-width: 24rem;
+      text-align: center; } }
   .reviews__heading-text::before {
     content: '';
     top: 100%;
@@ -16418,6 +16885,10 @@ textarea.modals__help-form-input {
     background-size: contain;
     position: absolute;
     margin-top: 0.5rem; }
+    @media only screen and (max-width: 640px) {
+      .reviews__heading-text::before {
+        width: 7.8rem;
+        height: 0.7rem; } }
 
 .reviews__heading {
   font-size: 4.8rem;
@@ -16425,11 +16896,22 @@ textarea.modals__help-form-input {
   font-weight: 400;
   margin-bottom: 4rem;
   text-align: center; }
+  @media only screen and (max-width: 640px) {
+    .reviews__heading {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 3.5rem; } }
 
 .reviews__slider {
   max-width: 137rem;
   margin: 0 auto;
   position: relative; }
+  @media only screen and (max-width: 640px) {
+    .reviews__slider {
+      margin: 0;
+      max-width: none; }
+      .reviews__slider .swiper-container {
+        overflow: visible; } }
   .reviews__slider .swiper-slide {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -16459,8 +16941,11 @@ textarea.modals__help-form-input {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: opacity .2s;
-  transition: opacity .2s; }
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s; }
+  @media only screen and (max-width: 640px) {
+    .reviews__slider-arrow {
+      display: none; } }
   .reviews__slider-arrow--prev {
     right: 100%;
     margin-right: 3rem; }
@@ -16473,9 +16958,9 @@ textarea.modals__help-form-input {
   .reviews__slider-arrow svg {
     width: 0.8rem;
     height: 1.6rem;
-    fill: #A8A8A8;
-    -webkit-transition: fill .2s;
-    transition: fill .2s; }
+    fill: #a8a8a8;
+    -webkit-transition: fill 0.2s;
+    transition: fill 0.2s; }
   .no-touch .reviews__slider-arrow:not(.swiper-button-disabled):hover svg,
   .touch .reviews__slider-arrow:not(.swiper-button-disabled):active svg {
     fill: var(--primary-color); }
@@ -16487,6 +16972,9 @@ textarea.modals__help-form-input {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1; }
+  @media only screen and (max-width: 640px) {
+    .reviews__card {
+      padding: 2.5rem; } }
 
 .reviews__card-top-row {
   display: -webkit-box;
@@ -16551,7 +17039,7 @@ textarea.modals__help-form-input {
     width: 3.4rem;
     height: 2rem;
     position: absolute;
-    top: .1rem;
+    top: 0.1rem;
     left: -1rem;
     background-image: url("../img/quotes.svg");
     background-size: contain;
@@ -16594,8 +17082,10 @@ textarea.modals__help-form-input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-bottom: 10rem;
-  pointer-events: none; }
+  padding-bottom: 10rem; }
+  @media only screen and (max-width: 640px) {
+    .reviews__bg-wrapper {
+      padding-bottom: 5rem; } }
 
 .reviews__bg {
   position: absolute;
@@ -16611,11 +17101,23 @@ textarea.modals__help-form-input {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  pointer-events: none; }
+  @media only screen and (max-width: 640px) {
+    .reviews__bg {
+      bottom: 0;
+      top: -5rem; } }
   .reviews__bg svg {
     width: 100%;
     height: 100%;
     display: block; }
+    .reviews__bg svg.mobile {
+      display: none; }
+    @media only screen and (max-width: 640px) {
+      .reviews__bg svg.mobile {
+        display: block; }
+      .reviews__bg svg.desktop {
+        display: none; } }
 
 .reviews__bg-waves {
   display: block; }
@@ -16623,3 +17125,34 @@ textarea.modals__help-form-input {
 .reviews__choose-btn {
   margin: 0 auto;
   margin-top: 7rem; }
+  @media only screen and (max-width: 640px) {
+    .reviews__choose-btn {
+      margin-top: 4rem; } }
+
+.reviews__slider-pagination {
+  display: none; }
+  @media only screen and (max-width: 640px) {
+    .reviews__slider-pagination {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin-top: 2.2rem; }
+      .reviews__slider-pagination .swiper-pagination-bullet {
+        width: 0.5rem;
+        height: 0.5rem;
+        opacity: 1;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.15);
+        margin: 0 .25rem;
+        -webkit-transition: background-color .2s;
+        transition: background-color .2s; }
+        .reviews__slider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+          background: #7ABED1; } }

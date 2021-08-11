@@ -1,5 +1,9 @@
 .reviews {
     margin-bottom: 25rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+    }
 }
 
 .reviews__heading-text {
@@ -13,6 +17,17 @@
     text-align: center;
     position: relative;
     margin-bottom: 3.5rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 2.2rem;
+        line-height: 0.8;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        max-width: 24rem;
+
+        text-align: center;
+    }
     &::before {
         content: '';
         top: 100%;
@@ -26,6 +41,11 @@
         background-size: contain;
         position: absolute;
         margin-top: 0.5rem;
+
+        @include breakpoint(mobile) {
+            width: 7.8rem;
+            height: 0.7rem;
+        }
     }
 }
 
@@ -35,19 +55,32 @@
     font-weight: 400;
     margin-bottom: 4rem;
     text-align: center;
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 3.5rem;
+    }
 }
 
 .reviews__slider {
     max-width: 137rem;
     margin: 0 auto;
     position: relative;
-    
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        max-width: none;
+
+        .swiper-container {
+            overflow: visible;
+        }
+    }
 
     .swiper-slide {
         display: flex;
         flex-direction: column;
     }
-    
 }
 
 .reviews__slider-arrow {
@@ -60,7 +93,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: opacity .2s;
+    transition: opacity 0.2s;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 
     &--prev {
         right: 100%;
@@ -80,8 +117,8 @@
     svg {
         width: 0.8rem;
         height: 1.6rem;
-        fill: #A8A8A8;
-        transition: fill .2s;
+        fill: #a8a8a8;
+        transition: fill 0.2s;
     }
 
     .no-touch &:not(.swiper-button-disabled):hover,
@@ -97,6 +134,10 @@
     background: #ffffff;
     border-radius: 1.5rem;
     flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        padding: 2.5rem;
+    }
 }
 
 .reviews__card-top-row {
@@ -145,7 +186,6 @@
 }
 
 .reviews__card-info {
-    
 }
 
 .reviews__card-title {
@@ -163,7 +203,7 @@
         width: 3.4rem;
         height: 2rem;
         position: absolute;
-        top: .1rem;
+        top: 0.1rem;
         left: -1rem;
         background-image: url('../img/quotes.svg');
         background-size: contain;
@@ -196,15 +236,17 @@
     }
 }
 
-
 .reviews__bg-wrapper {
     position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
     padding-bottom: 10rem;
-    pointer-events: none;
+   
 
+    @include breakpoint(mobile) {
+        padding-bottom: 5rem;
+    }
 }
 
 .reviews__bg {
@@ -218,22 +260,67 @@
     // height: auto;
     display: flex;
     flex-direction: column;
+    pointer-events: none;
+    @include breakpoint(mobile) {
+        bottom: 0;
+        top: -5rem;
+    }
 
     svg {
         width: 100%;
         height: 100%;
         display: block;
+
+        &.mobile {
+            display: none;
+        }
+
+        @include breakpoint(mobile) {
+            &.mobile {
+                display: block;
+            }
+
+            &.desktop {
+                display: none;
+            }
+        }
     }
 }
 
 .reviews__bg-waves {
     display: block;
-  
-    
 }
 
 .reviews__choose-btn {
     margin: 0 auto;
     margin-top: 7rem;
-    
+
+    @include breakpoint(mobile) {
+        margin-top: 4rem;
+    }
+}
+
+.reviews__slider-pagination {
+    display: none;
+    @include breakpoint(mobile) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2.2rem;
+
+        .swiper-pagination-bullet {
+            width: 0.5rem;
+            height: 0.5rem;
+            opacity: 1;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background-color: rgba(#000000, 0.15);
+            margin: 0 .25rem;
+            transition: background-color .2s;
+
+            &.swiper-pagination-bullet-active {
+                background: #7ABED1;
+            }
+        }
+    }
 }
