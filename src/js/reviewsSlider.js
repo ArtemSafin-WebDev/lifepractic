@@ -27,6 +27,11 @@ export default function reviewsSlider() {
             },
             breakpoints: {
                 641: {
+                    slidesPerView: 2,
+                    slidesPerColumn: 2,
+                    slidesPerColumnFill: 'row'
+                },
+                1024: {
                     slidesPerView: 4,
                     slidesPerColumn: 2,
                     slidesPerColumnFill: 'row'

@@ -68,6 +68,11 @@
     margin: 0 auto;
     position: relative;
 
+    @include breakpoint(tablet) {
+        max-width: none;
+        margin: 0;
+    }
+
     @include breakpoint(mobile) {
         margin: 0;
         max-width: none;
@@ -102,11 +107,18 @@
     &--prev {
         right: 100%;
         margin-right: 3rem;
+
+        @include breakpoint(tablet) {
+            margin-right: 1rem;
+        }
     }
 
     &--next {
         left: 100%;
         margin-left: 3rem;
+        @include breakpoint(tablet) {
+            margin-left: 1rem;
+        }
     }
 
     &.swiper-button-disabled {
@@ -242,7 +254,6 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 10rem;
-   
 
     @include breakpoint(mobile) {
         padding-bottom: 5rem;
@@ -315,11 +326,11 @@
             flex-shrink: 0;
             border-radius: 50%;
             background-color: rgba(#000000, 0.15);
-            margin: 0 .25rem;
-            transition: background-color .2s;
+            margin: 0 0.25rem;
+            transition: background-color 0.2s;
 
             &.swiper-pagination-bullet-active {
-                background: #7ABED1;
+                background: #7abed1;
             }
         }
     }

@@ -43,6 +43,11 @@
     max-width: 29rem;
     text-align: center;
     z-index: 10;
+    margin-top: -5rem;
+
+    @include breakpoint(small-tablet) {
+        margin-top: -8rem;
+    }
 
     @include breakpoint(mobile) {
         font-weight: 500;
