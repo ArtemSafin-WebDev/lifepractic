@@ -36,6 +36,7 @@ import faqAccordions from './faqAccordions';
 import setScrollbarWidth from './setScrollbarWidth';
 import warning from './warning';
 import mobileMonthSchedule from './mobileMonthSchedule';
+import reviewsSlider from './reviewsSlider';
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -73,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     faqAccordions();
     warning();
     mobileMonthSchedule();
+    reviewsSlider();
    
     
 });

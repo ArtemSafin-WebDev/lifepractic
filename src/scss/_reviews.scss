@@ -1,0 +1,239 @@
+.reviews {
+    margin-bottom: 25rem;
+}
+
+.reviews__heading-text {
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 3.7rem;
+    letter-spacing: 0.06em;
+    color: #e56a59;
+    font-family: 'Rage';
+    font-style: italic;
+    text-align: center;
+    position: relative;
+    margin-bottom: 3.5rem;
+    &::before {
+        content: '';
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 12rem;
+        height: 1.1rem;
+        background-image: url('../img/dash.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        margin-top: 0.5rem;
+    }
+}
+
+.reviews__heading {
+    font-size: 4.8rem;
+    line-height: 6.2rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.reviews__slider {
+    max-width: 137rem;
+    margin: 0 auto;
+    position: relative;
+    
+
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+.reviews__slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .2s;
+
+    &--prev {
+        right: 100%;
+        margin-right: 3rem;
+    }
+
+    &--next {
+        left: 100%;
+        margin-left: 3rem;
+    }
+
+    &.swiper-button-disabled {
+        opacity: 0;
+        cursor: default;
+    }
+
+    svg {
+        width: 0.8rem;
+        height: 1.6rem;
+        fill: #A8A8A8;
+        transition: fill .2s;
+    }
+
+    .no-touch &:not(.swiper-button-disabled):hover,
+    .touch &:not(.swiper-button-disabled):active {
+        svg {
+            fill: var(--primary-color);
+        }
+    }
+}
+
+.reviews__card {
+    padding: 3.2rem;
+    background: #ffffff;
+    border-radius: 1.5rem;
+    flex-grow: 1;
+}
+
+.reviews__card-top-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.reviews__card-photo-container {
+    flex-shrink: 0;
+    margin-right: 1.7rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transform: translateZ(0);
+}
+
+.reviews__card-photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reviews__card-info {
+    width: 50%;
+    flex-grow: 1;
+}
+
+.reviews__card-name {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+}
+
+.reviews__card-date {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: rgba(0, 0, 0, 0.35);
+}
+
+.reviews__card-info {
+    
+}
+
+.reviews__card-title {
+    font-size: 1.7rem;
+    line-height: 2.3rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        z-index: -1;
+        pointer-events: none;
+        width: 3.4rem;
+        height: 2rem;
+        position: absolute;
+        top: .1rem;
+        left: -1rem;
+        background-image: url('../img/quotes.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+.reviews__card-text {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: #a8a8a8;
+    margin-bottom: 2rem;
+}
+
+.reviews__card-read-more {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: #7abed1;
+    margin-top: auto;
+    svg {
+        width: 1rem;
+        height: 1rem;
+        flex-shrink: 0;
+        margin-right: 1rem;
+    }
+}
+
+
+.reviews__bg-wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10rem;
+    pointer-events: none;
+
+}
+
+.reviews__bg {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    top: -12rem;
+    bottom: -5rem;
+    // top: 50%;
+    // height: auto;
+    display: flex;
+    flex-direction: column;
+
+    svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+}
+
+.reviews__bg-waves {
+    display: block;
+  
+    
+}
+
+.reviews__choose-btn {
+    margin: 0 auto;
+    margin-top: 7rem;
+    
+}
