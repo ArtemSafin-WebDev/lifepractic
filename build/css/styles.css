@@ -6683,8 +6683,8 @@ textarea.modals__help-form-input {
   display: block;
   font-size: 1.4rem;
   line-height: 1.7rem;
-  -webkit-transition: border-color .2s, color .2s;
-  transition: border-color .2s, color .2s; }
+  -webkit-transition: border-color 0.2s, color 0.2s;
+  transition: border-color 0.2s, color 0.2s; }
   .payment__card-input.parsley-error {
     border-color: var(--primary-color);
     color: var(--primary-color); }
@@ -7156,7 +7156,22 @@ textarea.modals__help-form-input {
   background-repeat: no-repeat;
   background-image: url("../img/other-card-bg.svg");
   background-color: white;
-  border: 1px solid #F1F8FA; }
+  border: 1px solid #f1f8fa; }
+
+.payment__existing-wrapper {
+  padding: 5rem 6rem;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0.7rem 2.4rem rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 0.7rem 2.4rem rgba(0, 0, 0, 0.08);
+  border-radius: 1rem; }
+  @media only screen and (max-width: 640px) {
+    .payment__existing-wrapper {
+      padding: 2rem; } }
+
+.payment__btns--existing .auth__form-btn {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
 
 .message {
   display: -webkit-box;

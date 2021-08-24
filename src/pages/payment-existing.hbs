@@ -1,0 +1,152 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="payment">
+    <div class="container">
+        <h1 class="payment__heading">
+            Оплата заказа
+        </h1>
+        <div class="payment__heading-text">
+            К оплате принимаются карты платежных систем VISA, Master Card и МИР.
+            Для оплаты введите данные вашей банковской карты в соответствующие поля
+        </div>
+        <div class="payment__content">
+            <div class="payment__details">
+                <div class="payment__details-description">
+                    <div class="payment__details-row">
+                        <div class="payment__details-col">
+                            <div class="payment__details-description-title">
+                                Описание платежа
+                            </div>
+                        </div>
+                        <div class="payment__details-col">
+                            <div class="payment__details-description-title">
+                                Номер заказа
+                            </div>
+                        </div>
+                        <div class="payment__details-col">
+                            <div class="payment__details-description-title">
+                                Сумма платежа
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment__details-data">
+                    <div class="payment__details-row">
+                        <div class="payment__details-col">
+                            <div class="payment__details-data-title">
+                                Сеанс<br>
+                                с психо&shy;терапевтом
+                            </div>
+                        </div>
+                        <div class="payment__details-col">
+                            <div class="payment__details-data-title">
+                                №12958
+                            </div>
+                        </div>
+                        <div class="payment__details-col">
+                            <div class="payment__details-data-title">
+                                <strong>
+                                    2500 ₽
+                                </strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="payment__secure">
+                <img src="img/lock.svg" alt="" class="payment__secure-icon">
+                Данные карты защищены по международному стандарту PCI DSS
+            </div>
+            <div class="payment__existing-wrapper">
+                <form action="/" method="POST" class="modals__add-card-form" data-need-validation=""
+                    id="payment-form-2">
+                    
+
+                    <div class="payment__cards">
+                        <div class="payment__existing-cards">
+                            <label class="payment__existing-cards-radio">
+                                <input type="radio" value="1" name="card" class="payment__existing-cards-radio-input"
+                                    checked>
+                                <span class="payment__existing-cards-radio-content">
+                                    <span class="payment__existing-cards-radio-icon-container">
+                                        <img src="img/mastercard.svg" alt="" class="payment__existing-cards-radio-icon">
+                                    </span>
+                                    <span class="payment__existing-cards-radio-text">
+                                        <span class="payment__existing-cards-radio-number">
+                                            MasterCard**** 3101
+                                        </span>
+                                        <span class="payment__existing-cards-radio-date">06/24</span>
+                                    </span>
+                                    <span class="payment__existing-cards-radio-btn">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                            <use xlink:href="#checkmark"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                            </label>
+                            <a href="#add-card" class="payment__existing-cards-radio js-open-modal">
+
+                                <span class="payment__existing-cards-radio-content">
+                                    <span
+                                        class="payment__existing-cards-radio-icon-container payment__existing-cards-radio-icon-container--other-card">
+
+                                    </span>
+                                    <span
+                                        class="payment__existing-cards-radio-text payment__existing-cards-radio-text--grey">
+                                        Оплатить другой картой
+                                    </span>
+                                    <span
+                                        class="payment__existing-cards-radio-btn payment__existing-cards-radio-btn--other-card">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-plus">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                            </a>
+
+
+                        </div>
+
+                        <div class="payment__email-check-check-2">
+                            <div class="payment__email-check-check-2-wrapper">
+                                <input type="email" class="account__my-account-form-input" name="email"
+                                    id="check-email2" placeholder="Сумма пополнения"
+                                    data-parsley-validate-if-empty="true"
+                                    data-parsley-required-if-checked="#emailcheckbox3">
+                                <label for="check-email2" class="account__my-account-form-label">
+                                    E-mail
+                                </label>
+                            </div>
+
+                            <label class="payment__email-check-checkbox">
+                                <input type="checkbox" name="emailcheckbox" id="emailcheckbox3"
+                                    class="payment__email-check-checkbox-input" checked>
+                                <span class="payment__email-check-checkbox-mark">
+
+                                </span>
+                                <span class="payment__email-check-checkbox-text">
+                                    Отправить электронный чек на email
+                                </span>
+
+                            </label>
+                        </div>
+
+                        <div class="payment__btns payment__btns--existing">
+                            <a href="#" class="auth__form-btn">
+                                Назад
+                            </a>
+                            <button class="auth__form-btn auth__form-btn--submit">
+                                Оплатить
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

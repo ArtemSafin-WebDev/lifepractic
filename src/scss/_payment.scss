@@ -294,7 +294,7 @@
     display: block;
     font-size: 1.4rem;
     line-height: 1.7rem;
-    transition: border-color .2s, color .2s;
+    transition: border-color 0.2s, color 0.2s;
     &.parsley-error {
         border-color: var(--primary-color);
         color: var(--primary-color);
@@ -625,7 +625,6 @@
         content: '';
         padding-bottom: 70%;
         display: block;
-        
     }
 }
 
@@ -667,7 +666,6 @@
         font-size: 1.4rem;
         line-height: 1.2;
     }
-
 }
 
 .payment__existing-cards-radio-btn {
@@ -708,7 +706,6 @@
     }
 }
 
-
 .payment__existing-cards-radio-btn--other-card {
     background: rgba(122, 190, 209, 0.35);
     opacity: 1;
@@ -720,12 +717,29 @@
     }
 }
 
-
 .payment__existing-cards-radio-icon-container--other-card {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-image: url('../img/other-card-bg.svg');
     background-color: white;
-    border: 1px solid #F1F8FA;
+    border: 1px solid #f1f8fa;
+}
+
+.payment__existing-wrapper {
+    padding: 5rem 6rem;
+    background: #ffffff;
+    box-shadow: 0px .7rem 2.4rem rgba(0, 0, 0, 0.08);
+    border-radius: 1rem;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+    }
+}
+
+
+.payment__btns--existing {
+    .auth__form-btn {
+        flex-grow: 1;
+    }
 }
