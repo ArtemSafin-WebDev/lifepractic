@@ -13644,6 +13644,17 @@ textarea.modals__help-form-input {
     .no-touch .account__my-schedule-arrow:hover svg {
       fill: #7ABED1; }
 
+.select-multiple .choices__inner {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.select-multiple .choices__input.choices__input--cloned {
+  margin-top: 10px;
+  width: 100% !important;
+  border: 1px solid #00bcd4; }
+
 .not-found__bg-image {
   position: absolute;
   left: 0;

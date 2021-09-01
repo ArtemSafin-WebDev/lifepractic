@@ -5458,3 +5458,17 @@
         }
     }
 }
+
+.select-multiple {
+    .choices__inner {
+        flex-direction: column;
+    }
+
+    .choices__input {
+        &.choices__input--cloned {
+            margin-top: 10px;
+            width: 100% !important;
+            border: 1px solid #00bcd4;
+        }
+    }
+}
