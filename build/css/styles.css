@@ -9064,7 +9064,8 @@ textarea.modals__help-form-input {
   transition: color 0.3s, -webkit-transform 0.3s;
   transition: transform 0.3s, color 0.3s;
   transition: transform 0.3s, color 0.3s, -webkit-transform 0.3s;
-  pointer-events: none; }
+  pointer-events: none;
+  white-space: nowrap; }
   .parsley-error ~ .account__my-account-form-label {
     color: var(--primary-color); }
 
