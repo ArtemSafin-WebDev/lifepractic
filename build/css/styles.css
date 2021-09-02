@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Swiper 6.4.15
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -17284,6 +17285,13 @@ textarea.modals__help-form-input {
   line-height: 2rem;
   color: #a8a8a8;
   margin-bottom: 2rem; }
+  .reviews__card-text.mod-crop {
+    /*обезаем до 3-х строк*/
+    height: calc(2rem * 5);
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden; }
 
 .reviews__card-read-more {
   display: -webkit-box;
