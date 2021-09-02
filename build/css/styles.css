@@ -4269,6 +4269,16 @@ select:-webkit-autofill:focus {
     .choose-specialist__help-text a:link, .choose-specialist__help-text a:visited {
       color: #7ABED1; }
 
+.choose-specialist__sum {
+  margin-top: 2rem;
+  color: #e56a59;
+  font-size: 2rem;
+  line-height: 2rem;
+  max-height: 0;
+  overflow: hidden; }
+  .choose-specialist__sum.mod-show {
+    max-height: 2.1rem; }
+
 .select-time {
   display: -webkit-box;
   display: -ms-flexbox;

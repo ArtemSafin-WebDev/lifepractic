@@ -3,9 +3,12 @@ export default function chooseSpecialist() {
 
     elements.forEach(element => {
         const tabBtns = Array.from(element.querySelectorAll('.choose-specialist__choices-item:not(.choose-specialist__choices-item--need-help)'));
+        const cardCheckbox = element.querySelectorAll('.select-time__card-checkbox');
+        const sum = element.querySelectorAll('.choose-specialist__sum');
 
         const tabItems = Array.from(element.querySelectorAll('.choose-specialist__schedule'));
 
+        let currentSlide = 0;
 
         const setActiveTab = (index) => {
             tabBtns.forEach(btn => btn.classList.remove('active'));
@@ -21,7 +24,15 @@ export default function chooseSpecialist() {
             btn.addEventListener('click', event => {
                 event.preventDefault();
                 setActiveTab(btnIndex);
+                currentSlide = btnIndex;
             })
+        })
+
+        cardCheckbox.forEach(elem => {
+            elem.onclick = () => {
+                console.log(currentSlide)
+                sum[currentSlide].classList.add('mod-show');
+            }
         })
     })
 }

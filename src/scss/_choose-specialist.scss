@@ -249,8 +249,8 @@
 .choose-specialist__schedule-content {
     display: flex;
     padding: 6.2rem;
-   
- 
+
+
 
     @include breakpoint(mobile) {
         padding: 1.6rem;
@@ -305,14 +305,14 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1rem;
-    
+
 }
 
 .choose-specialist__schedule-feature-item {
     width: 100%;
     display: flex;
     flex-direction: column;
-    
+
     font-weight: 300;
     font-size: 1.4rem;
     line-height: 2.2rem;
@@ -320,7 +320,7 @@
     br {
         display: none;
     }
-   
+
     &:last-child {
         margin-bottom: 0;
     }
@@ -329,7 +329,7 @@
         font-weight: 300;
         font-size: 1.3rem;
         line-height: 1.6rem;
-        
+
     }
 }
 
@@ -403,4 +403,15 @@
     }
 }
 
+.choose-specialist__sum {
+    margin-top: 2rem;
+    color: #e56a59;
+    font-size: 2rem;
+    line-height: 2rem;
+    max-height: 0;
+    overflow: hidden;
 
+    &.mod-show {
+        max-height: 2.1rem;
+    }
+}
