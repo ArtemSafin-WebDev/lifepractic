@@ -215,7 +215,7 @@
     padding-right: 6.2rem;
     margin-right: calc(-1 * (100vw - 100% - 27rem) / 2);
     padding-right: calc((100vw - 100% - 27rem) / 2);
-   
+
     &--fullwidth {
         padding-right: 6.2rem;
     }
@@ -1938,7 +1938,7 @@
             height: 40px;
         }
     }
-    
+
 
     .video-grid {
         position: absolute;
@@ -3255,7 +3255,7 @@
                 }
             }
         }
-       
+
 
         &:nth-last-child(1),
         &:nth-last-child(2) {
@@ -3284,7 +3284,7 @@
     visibility: hidden;
     transition: opacity 0.3s, visibility 0s linear 0.3s;
 
-    
+
 
     @include breakpoint(small-tablet) {
         top: 0;
@@ -3310,7 +3310,7 @@
             visibility: inherit;
             transition: opacity 0.3s ease, visibility 0.3s;
         }
-        
+
         // top: 100% !important;
         // transform: translateX(-50%);
         // left: 50% !important;
@@ -3374,7 +3374,7 @@
     @include breakpoint(small-tablet) {
         margin: auto 0;
     }
-   
+
 
     &::before {
         content: '';
@@ -3416,7 +3416,7 @@
         height: 4rem;
         font-size: 1.6rem;
         line-height: 1.2;
-      
+
     }
 }
 
@@ -3469,14 +3469,14 @@
         .no-touch &:hover {
             .account__schedule-month-dropdown-card-arrow {
                 border-color: #7abed1;
-    
+
                 svg {
                     fill: #7abed1;
                 }
             }
         }
     }
-  
+
 }
 
 .account__schedule-month-dropdown-card-photo-container {
@@ -4599,7 +4599,7 @@
 }
 
 .account__my-schedule {
-  
+
 }
 
 .account__my-schedule-regime-info {
@@ -5459,7 +5459,7 @@
     }
 }
 
-.select-multiple {
+.account__my-account-select {
     .choices__inner {
         flex-direction: column;
     }
