@@ -17412,3 +17412,14 @@ textarea.modals__help-form-input {
         transition: background-color 0.2s; }
         .reviews__slider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
           background: #7abed1; } }
+
+.choices__inner {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.choices__input.choices__input--cloned {
+  margin-top: 10px;
+  width: 100% !important;
+  border: 1px solid #00bcd4; }
