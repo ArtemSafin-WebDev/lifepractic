@@ -1507,6 +1507,11 @@
     @include placeholder {
         opacity: 0;
     }
+
+    textarea {
+        padding: 1.8rem 2.5rem !important;
+        height: 8rem !important;
+    }
 }
 
 .account__my-account-form-input:not(:placeholder-shown) ~ .account__my-account-form-label,

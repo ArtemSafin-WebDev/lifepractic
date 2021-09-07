@@ -9111,6 +9111,9 @@ textarea.modals__help-form-input {
     opacity: 0; }
   .account__my-account-form-input:-ms-input-placeholder {
     opacity: 0; }
+  .account__my-account-form-input textarea {
+    padding: 1.8rem 2.5rem !important;
+    height: 8rem !important; }
 
 .account__my-account-form-input:not(:-moz-placeholder-shown) ~ .account__my-account-form-label {
   transform: scale(0.8) translateY(-3.4rem) translateX(0.2rem); }
