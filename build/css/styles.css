@@ -12642,6 +12642,10 @@ textarea.modals__help-form-input {
       grid-template-columns: repeat(1, minmax(0, 1fr)); } }
 
 .account__my-schedule-regime-form-block {
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+      -ms-user-select: none !important;
+          user-select: none !important;
   padding: 3.4rem;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 1rem;

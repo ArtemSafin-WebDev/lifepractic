@@ -4673,6 +4673,7 @@
 }
 
 .account__my-schedule-regime-form-block {
+    user-select: none !important;
     padding: 3.4rem;
     border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 1rem;
