@@ -7,7 +7,7 @@ dayjs.extend(customParseFormat)
 window.Parsley.addValidator('phone', {
     requirementType: 'string',
     validateString: function(value) {
-        return /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/.test(value);
+        return /^[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/.test(value);
     },
     messages: {
         en: 'This value should be a mobile number',

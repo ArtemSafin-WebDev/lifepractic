@@ -133,8 +133,8 @@
                         <label for="phone" class="auth__form-label">
                             Телефон
                         </label>
-                        <div class="auth__form-input-wrapper">
-                            <input type="tel" name="phone" id="phone" class="auth__form-input js-phone-input" required data-parsley-phone>
+                        <div class="auth__form-input-wrapper" id="error-handler">
+                            <input type="tel" name="phone" id="phone" class="auth__form-input js-phone-input" required data-parsley-errors-container="#error-handler" data-parsley-class-handler=".country-phone">
                             <button class="auth__form-get-code-btn" type="button">
                                 Получить код
                             </button>
@@ -142,6 +142,7 @@
                                 Пожалуйста, введите свой номер телефона, мы пришлем вам проверочный код
                             </div>
                         </div>
+
                     </div>
                     <div class="auth__form-bottom-block">
                         <a href="#" class="auth__form-already-has-an-account">

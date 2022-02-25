@@ -6,6 +6,9 @@ import homeAnimations from './homeAnimations';
 import mobileMenu from './mobileMenu';
 import phoneMask from './phoneMask';
 import validation from './validation';
+import './jquery-ui-1.10.4.custom.min'
+import './counties';
+import './phonecode'
 import cornerAnimation from './cornerAnimation';
 import onlyNumeric from './onlyNumeric';
 import selectTime from './selectTime';
@@ -44,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     detectTouch();
     setScrollbarWidth();
     mobileMenu();
-    phoneMask();
+    //phoneMask();
     validation();
     onlyNumeric();
     selectTime();
@@ -81,6 +84,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
+    $(function(){
+        $('#phone').phonecode({
+            preferCo: 'ru'
+        });
+    });
     setTimeout(() => {
         document.body.classList.add('animatable');
         if (!window.matchMedia("(max-width: 640px)").matches) {

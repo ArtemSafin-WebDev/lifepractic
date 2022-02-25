@@ -1,6 +1,7 @@
 import Inputmask from 'inputmask';
 
 
+/*
 export default function phoneMask() {
     const phoneInputs = Array.from(document.querySelectorAll('.js-phone-input'));
     phoneInputs.forEach(input => {
@@ -8,3 +9,4 @@ export default function phoneMask() {
         instance.mask(input);
     });
 }
+*/
