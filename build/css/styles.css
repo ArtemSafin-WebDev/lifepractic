@@ -16131,6 +16131,7 @@ textarea.modals__help-form-input {
   line-height: 2.2rem;
   margin-bottom: 4rem;
   font-weight: 300;
+  word-break: break-word;
 }
 .account__diary-card-text strong {
   font-weight: 400;
