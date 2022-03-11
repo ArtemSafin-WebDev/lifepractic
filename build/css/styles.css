@@ -4727,6 +4727,7 @@ select:-webkit-autofill:focus {
 }
 
 .choose-specialist__choices-item {
+  width: auto;
   margin: 0 1.1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4736,6 +4737,7 @@ select:-webkit-autofill:focus {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  padding-top: 0.7rem;
   padding-bottom: 3.5rem;
   position: relative;
 }

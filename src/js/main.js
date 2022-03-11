@@ -40,7 +40,7 @@ import setScrollbarWidth from './setScrollbarWidth';
 import warning from './warning';
 import mobileMonthSchedule from './mobileMonthSchedule';
 import reviewsSlider from './reviewsSlider';
-
+import chooseSpecialistSlider from "./chooseSpecialistSlider";
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -78,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     warning();
     mobileMonthSchedule();
     reviewsSlider();
+    chooseSpecialistSlider();
    
     
 });
