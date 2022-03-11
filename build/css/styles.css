@@ -4081,7 +4081,12 @@ select:-webkit-autofill:focus {
 }
 
 .poll {
-  margin-bottom: 10rem;
+  margin-bottom: 18rem;
+}
+@media (max-width: 1260px) {
+  .poll {
+    margin-bottom: 24rem;
+  }
 }
 @media only screen and (max-width: 640px) {
   .poll {

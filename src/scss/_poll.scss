@@ -1,5 +1,9 @@
 .poll {
-    margin-bottom: 10rem;
+    margin-bottom: 18rem;
+
+    @media (max-width: 1260px) {
+        margin-bottom: 24rem;
+    }
 
     @include breakpoint(mobile) {
         margin-bottom: 15rem;
